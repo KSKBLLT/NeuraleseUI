@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "id": "train_begin",
+  "source": {
+    "kind": "scene",
+    "path": "res://scenes/train_begin.tscn"
+  },
+  "load_order": 40,
+  "menu": {
+    "visible": true,
+    "section": "training",
+    "order": 40
+  },
+  "roles": [],
+  "llm": {
+    "type": "train_begin"
+  },
+  "runtime": {
+    "handler": "ignored_training",
+    "roles": [
+      "final_ignored"
+    ]
+  },
+  "display": {
+    "category": "train"
+  }
+}

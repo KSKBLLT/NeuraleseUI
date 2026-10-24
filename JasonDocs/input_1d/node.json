@@ -1,0 +1,274 @@
+{
+  "schema_version": 1,
+  "node_id": "input_1d",
+  "status": "stable",
+  "generated": {
+    "node_id": "input_1d",
+    "created_with": "input_1d",
+    "scene_path": "res://scenes/input_1d.tscn",
+    "scene_uid": "uid://coifi5ok0t7lo",
+    "root_instance_path": null,
+    "script_path": "res://scripts/input_1d.gd",
+    "inheritance_chain": [
+      "res://scripts/input_1d.gd",
+      "res://scripts/io_graph.gd",
+      "res://scripts/base_graph.gd"
+    ],
+    "inherits_graph": true,
+    "server_typename": "InputNode",
+    "layer_name": null,
+    "title_candidates": {
+      "en": "Input1D",
+      "ru": "Ввод1D",
+      "kz": "Кіріс1D"
+    },
+    "localized_properties": {
+      "ports": {},
+      "settings": {},
+      "controls": {
+        "ColorRect/root/Label2": {
+          "property": "text",
+          "values": {
+            "en": "Input1D",
+            "ru": "Ввод1D",
+            "kz": "Кіріс1D"
+          }
+        },
+        "input/LineEdit": {
+          "property": "placeholder_text",
+          "values": {
+            "en": "Feature name",
+            "ru": "Имя признака",
+            "kz": "Белгі атауы"
+          }
+        },
+        "input/ColorRect2": {
+          "property": "text",
+          "values": {
+            "en": "Add +",
+            "ru": "Доб.+",
+            "kz": "Қос.+"
+          }
+        },
+        "run": {
+          "property": "text",
+          "values": {
+            "en": "Run!",
+            "ru": "Пуск",
+            "kz": "Қосу"
+          }
+        }
+      },
+      "title": {
+        "source_path": "ColorRect/root/Label2",
+        "property": "text",
+        "values": {
+          "en": "Input1D",
+          "ru": "Ввод1D",
+          "kz": "Кіріс1D"
+        }
+      }
+    },
+    "base_config": {
+      "input_features": "[]"
+    },
+    "ports": [
+      {
+        "id": "output_o_input_out",
+        "scene_node": "o",
+        "scene_path": ".",
+        "hint": 0,
+        "server_name": "input_out",
+        "direction": "output",
+        "datatypes": [
+          "input1d"
+        ],
+        "multiple": true,
+        "config_conn": false,
+        "keyword": null,
+        "conn_count_keyword": null,
+        "visual": {
+          "color": "#fffc99ff",
+          "gradient_color": "#fffc99ff",
+          "dir_vector": {
+            "x": 1.0,
+            "y": 0.0
+          },
+          "side": "right",
+          "relative_to": {
+            "role": "graph_rect",
+            "scene_path": "ColorRect"
+          },
+          "absolute_scene_rect": {
+            "x": 56.0,
+            "y": -32.0,
+            "w": 16.0,
+            "h": 21.0
+          },
+          "reference_rect": {
+            "x": -87.0,
+            "y": -65.0,
+            "w": 150.0,
+            "h": 95.0
+          },
+          "relative_rect": {
+            "x": 0.9533333333333334,
+            "y": 0.3473684210526316,
+            "w": 0.10666666666666667,
+            "h": 0.22105263157894736
+          },
+          "relative_origin": {
+            "x": 1.06,
+            "y": 0.45789473684210524
+          },
+          "color_family": "yellow",
+          "color_label": {
+            "en": "Yellow",
+            "ru": "Жёлтый",
+            "kz": "Сары"
+          },
+          "side_label": {
+            "en": "on the right",
+            "ru": "справа",
+            "kz": "оң жақта"
+          },
+          "verbal_label": {
+            "en": "Yellow port on the right",
+            "ru": "Жёлтый порт справа",
+            "kz": "Сары порт оң жақта"
+          },
+          "text_color": "#7a7700"
+        }
+      }
+    ],
+    "settings": [
+      {
+        "id": "input_features",
+        "source": "base_config",
+        "default": "[]",
+        "ui_kind": null,
+        "ui_path": null,
+        "options": []
+      },
+      {
+        "id": "title",
+        "source": "script",
+        "default": null,
+        "ui_kind": null,
+        "ui_path": null,
+        "options": []
+      }
+    ],
+    "icon_source": "res://node_icons/en/IconInput1d.png",
+    "static_compatible_nodes": [
+      {
+        "from_port": "output_o_input_out",
+        "to_node": "reshape2d",
+        "to_port": "input_o2_layer_in",
+        "datatypes": [
+          "input1d"
+        ],
+        "confidence": "static_datatype_intersection"
+      },
+      {
+        "from_port": "output_o_input_out",
+        "to_node": "layer",
+        "to_port": "input_ni_layer_in",
+        "datatypes": [
+          "input1d"
+        ],
+        "confidence": "static_datatype_intersection"
+      },
+      {
+        "from_port": "output_o_input_out",
+        "to_node": "gru_cell",
+        "to_port": "input_ni_layer_in",
+        "datatypes": [
+          "input1d"
+        ],
+        "confidence": "static_datatype_intersection"
+      }
+    ]
+  },
+  "docs": {
+    "title": {
+      "en": "Input1D",
+      "ru": "Вход чисел",
+      "kz": "Кіріс1D"
+    },
+    "summary": {
+      "en": "Defines a one-dimensional feature input for tabular or vector data.",
+      "ru": "Вводит в модель несколько чисел, которые вместе образуют один вход.",
+      "kz": "Кестелік немесе векторлық деректер үшін бір өлшемді белгілер кірісін анықтайды."
+    },
+    "operation": {
+      "en": "Collects named input features and their types into one vector that can feed Dense layers. The model link associates the input with the active model.",
+      "ru": "Эту ноду ставят в начале модели, когда нейросеть должна увидеть несколько чисел. Добавляй нужные ячейки и выбирай, какие числа будут находиться в каждой из них. Нода собирает значения всех ячеек в одну цепочку и передаёт её первому слою нейросети.",
+      "kz": "Аталған белгілер мен олардың түрлерін Dense қабаттарына арналған бір векторға жинайды. Модель байланысы кірісті белсенді модельмен байланыстырады."
+    },
+    "compact": {
+      "body": {
+        "en": "Defines a one-dimensional feature input for tabular or vector data.",
+        "ru": "Вводит в модель цепочку чисел.",
+        "kz": "Кестелік немесе векторлық деректер үшін бір өлшемді белгілер кірісін анықтайды."
+      }
+    },
+    "ports": {
+      "output_o_input_out": {
+        "label": {
+          "en": "input_out",
+          "ru": "Входные числа",
+          "kz": "input_out"
+        },
+        "description": {
+          "en": "Sends input1d data to compatible downstream nodes.",
+          "ru": "Жёлтый порт справа передаёт цепочку чисел в полносвязный слой или в ноду изменения формы.",
+          "kz": "input1d түріндегі деректерді үйлесімді келесі түйіндерге береді."
+        }
+      }
+    },
+    "settings": {
+      "input_features": {
+        "label": {
+          "en": "input_features",
+          "ru": "Входные числа",
+          "kz": "input_features"
+        },
+        "description": {
+          "en": "Defines feature names and data types for the input vector.",
+          "ru": "Задаёт названия входных чисел, их типы и порядок в цепочке.",
+          "kz": "Кіріс векторы белгілерінің атаулары мен түрлерін анықтайды."
+        }
+      },
+      "title": {
+        "label": {
+          "en": "title",
+          "ru": "Название входа",
+          "kz": "title"
+        },
+        "description": {
+          "en": "Sets the visible name of this node's data group.",
+          "ru": "Даёт этой группе входных чисел понятное название, чтобы её было легче найти на графе.",
+          "kz": "Түйін деректер тобының көрінетін атауын анықтайды."
+        }
+      }
+    },
+    "connects_to": [],
+    "examples": [
+      {
+        "body": {
+          "ru": "Например, можно добавить ячейки «Возраст», «Рост» и «Вес». Нода соберёт введённые числа в одну цепочку именно в таком порядке.",
+          "en": "For an Iris model, add four columns: sepal length, sepal width, petal length, and petal width.",
+          "kz": "Iris моделі үшін төрт баған қосыңыз: тостағанша ұзындығы мен ені, күлте ұзындығы мен ені."
+        }
+      },
+      {
+        "body": {
+          "ru": "Если первой стоит ячейка «Возраст», возраст станет первым числом в цепочке, которую увидит нейросеть.",
+          "en": "The column order here must match the column order in the dataset.",
+          "kz": "Мұндағы бағандар реті деректер жинағындағы бағандар ретімен сәйкес болуы керек."
+        }
+      }
+    ]
+  }
+}

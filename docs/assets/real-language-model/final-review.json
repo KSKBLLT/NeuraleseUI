@@ -1,0 +1,93 @@
+{
+  "reviewed_base": "4f590d8a9d2547e49f05844177d22a36d803578e",
+  "reviewed_head": "361d4c1ae9f68d52d515a55ea7568fc6c092f892",
+  "reviewer": "fresh-context final_review",
+  "critical": [],
+  "minor_deferred": [],
+  "important": [
+    {
+      "finding": "Fresh request after idle inherited an expired 30-second worker deadline",
+      "status": "fixed",
+      "verification": "test_language_real_backend RED→GREEN; a busy queue does not reset the oldest response window"
+    },
+    {
+      "finding": "Accepted connection preview resolved only one upstream branch, reassigning heads and physical layers",
+      "status": "fixed",
+      "verification": "test_language_profiles partial component and incremental random-ID sibling regressions RED→GREEN; native real network PASS"
+    },
+    {
+      "finding": "Disconnect during a pending generation step left controller running and Step blocked",
+      "status": "fixed",
+      "verification": "test_language_connection_refresh delayed request / side-branch disconnect RED→GREEN"
+    },
+    {
+      "finding": "Empty or whitespace-only final training edit left stale tensors and snapshot",
+      "status": "fixed",
+      "verification": "test_language_training empty and whitespace final-snapshot regressions RED→GREEN"
+    }
+  ],
+  "rulings": [
+    {
+      "decision": "Preserve identity near 8–12 layers and quality-gate aggressive physical pruning",
+      "reason": "Tiny-model pruning lost held-out quality",
+      "cost_if_wrong": "No two-physical-layer speedup; original ten blocks remain grouped into visual stages"
+    },
+    {
+      "decision": "Move runtime lock and portable model payload to packaging task",
+      "reason": "Development runtime could be tested on macOS while Windows runtime assembly belonged to task 7",
+      "cost_if_wrong": "Packaging verification was delayed until task 7; native Windows execution remains unverified"
+    },
+    {
+      "decision": "Use regularized relation-constrained PCA and canonical casefold word pooling",
+      "reason": "Deterministic fixed linear basis, no per-word coordinate overrides",
+      "cost_if_wrong": "Weak generalization outside anchor analogies; held-out failures and neighbor recall@10 0.16 are disclosed"
+    },
+    {
+      "decision": "Use reversible embedding LERP and attention/residual gates with ordinary training UI",
+      "reason": "User explicitly requested pretrained recovery and no simulation badges",
+      "cost_if_wrong": "Illustrates recovery of existing skills, without backprop or learning new facts"
+    },
+    {
+      "decision": "Use held-out next-token accuracy and cross-entropy, long-context compute and rotating validation batches",
+      "reason": "User explicitly requested computational pacing and a realistic varied metric",
+      "cost_if_wrong": "More CPU work and a corpus-dependent final percentage rather than a fixed score"
+    },
+    {
+      "decision": "Keep a single isotropic camera fit for displayed word vectors",
+      "reason": "User superseded the fixed on-screen scale by requesting less crowding; raw coordinates and basis remain fixed",
+      "cost_if_wrong": "Screen scale changes with visible words; angles and relative distances remain intact"
+    },
+    {
+      "decision": "Preserve branch without merge while unrelated base tests fail",
+      "reason": "All current full-suite failures reproduce on the clean base in the same environment",
+      "cost_if_wrong": "Numeric Windows runtime and existing application failures still need their own validation/fixes before integration"
+    },
+    {
+      "decision": "Reduce each batch to two packed 128-token training windows while keeping the same validation examples and twelve stages",
+      "reason": "User changed the target epoch duration to about three seconds",
+      "cost_if_wrong": "Training loss averages fewer tokens; wall-clock duration still varies with hardware, while the accuracy trajectory is unchanged"
+    }
+  ],
+  "reviewer_declined_topics": [
+    "Gradient training and simulation labels: superseded by the explicit ordinary pretrained-recovery UI request",
+    "Literal physical depth matching: quality fallback deliberately preserves ten source blocks",
+    "Fixed on-screen projection scale: superseded by the less-crowded view request; raw projection is fixed",
+    "General semantic analogy quality: limited held-out performance explicitly disclosed",
+    "Windows acceptance: packaging tests do not establish native Windows execution"
+  ],
+  "additional_fixes": [
+    "Long isolated embedding labels use available plot width before truncation",
+    "Native button fixture waits for actual dispatch and uses app perfbench startup",
+    "TextOutput removed with legacy project migration; BestAnswer lower spline starts white"
+  ],
+  "verification": {
+    "target_python_pass": 181,
+    "node_scene_sources_pass": 28,
+    "full_godot_pass": 97,
+    "full_godot_baseline_fail": 7,
+    "full_python_pass": 719,
+    "full_python_skipped": 12,
+    "full_python_baseline_fail": 51,
+    "full_python_baseline_error": 2
+  }
+}

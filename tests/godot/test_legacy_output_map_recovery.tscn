@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="PackedScene" path="res://scenes/project.tscn" id="1_project"]
+[ext_resource type="Script" path="res://tests/godot/test_legacy_output_map_recovery.gd" id="2_test"]
+
+[node name="base" instance=ExtResource("1_project")]
+
+[node name="LegacyOutputMapRecoveryTest" type="Node" parent="." index="100"]
+script = ExtResource("2_test")

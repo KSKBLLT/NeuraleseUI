@@ -1,0 +1,468 @@
+{
+  "schema_version": 1,
+  "calibration": [
+    "The cat sat on the mat. The dog ran to the door.",
+    "A bird sat in a tree and watched the sun.",
+    "A mother and a father helped their child.",
+    "A king and a queen lived in a castle.",
+    "The little boy put his blue cup on the table.",
+    "Two children played with a red ball in the park."
+  ],
+  "heldout": [
+    "Lily went to the park with her friend. They played a game and went home.",
+    "Tom has three red balls and two blue balls. He has five balls.",
+    "The cup is on the table. The table is next to the chair."
+  ],
+  "block_influence": [
+    0.7174172004063925,
+    0.11128051454822223,
+    0.11820423603057861,
+    0.12646626432736716,
+    0.13640437896052995,
+    0.12792573993404707,
+    0.11059455946087837,
+    0.15002180387576422,
+    0.2993267700076103,
+    0.24710349490245184
+  ],
+  "baseline": {
+    "nll": 6.194541295369466,
+    "teacher_kl": 1.5832128201035782e-09,
+    "top1_agreement": 1.0,
+    "task_accuracy": 0.6666666666666666,
+    "seconds": 0.4360791670624167,
+    "task_outputs": [
+      {
+        "prompt": "Add 26 and 49.",
+        "expected": "75",
+        "actual": "I start with the ones.\nOnes: 6 + 9 = 15. Write 5 and carry 1.\nWritten digits: 5.\nTens: 2 + 4 + 1 = 7. Write 7 and carry 0.\nWritten digits: 75.\nAnswer: 75"
+      },
+      {
+        "prompt": "Copy exactly: red cup",
+        "expected": "red cup",
+        "actual": "red cup"
+      },
+      {
+        "prompt": "Mia has a red bag. What color is it?",
+        "expected": "red",
+        "actual": "The color of the bag is not given."
+      }
+    ]
+  },
+  "candidates": [
+    {
+      "id": "prune-2",
+      "layers": 2,
+      "method": "prune",
+      "source_layers": [
+        0,
+        9
+      ],
+      "quality_passed": false,
+      "metrics": {
+        "nll": 8.700605392456055,
+        "teacher_kl": 3.8424609502156577,
+        "top1_agreement": 0.16990741218129793,
+        "task_accuracy": 0.0,
+        "seconds": 0.27651304099708796,
+        "task_outputs": [
+          {
+            "prompt": "Add 26 and 49.",
+            "expected": "75",
+            "actual": ""
+          },
+          {
+            "prompt": "Copy exactly: red cup",
+            "expected": "red cup",
+            "actual": " ask ask ask ask ask ask ask ask ask ask ask ask ask ask ask ask ask ask ask ask ask ask ask ask ask ask ask ask ask ask ask ask ask ask ask ask ask ask ask ask ask ask ask ask ask ask ask ask ask ask ask ask ask ask ask ask ask ask ask ask ask ask ask ask ask ask ask ask ask ask ask ask ask ask ask ask ask ask ask ask ask ask ask ask ask ask ask ask ask ask ask ask ask ask ask ask"
+          },
+          {
+            "prompt": "Mia has a red bag. What color is it?",
+            "expected": "red",
+            "actual": ""
+          }
+        ]
+      }
+    },
+    {
+      "id": "lerp-2",
+      "layers": 2,
+      "method": "lerp",
+      "source_layers": [
+        [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        [
+          5,
+          6,
+          7,
+          8,
+          9
+        ]
+      ],
+      "quality_passed": false,
+      "metrics": {
+        "nll": 37.45213317871094,
+        "teacher_kl": 27.24836603800456,
+        "top1_agreement": 0.2138888935248057,
+        "task_accuracy": 0.0,
+        "seconds": 0.793266291031614,
+        "task_outputs": [
+          {
+            "prompt": "Add 26 and 49.",
+            "expected": "75",
+            "actual": "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
+          },
+          {
+            "prompt": "Copy exactly: red cup",
+            "expected": "red cup",
+            "actual": "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
+          },
+          {
+            "prompt": "Mia has a red bag. What color is it?",
+            "expected": "red",
+            "actual": "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
+          }
+        ]
+      }
+    },
+    {
+      "id": "slerp-2",
+      "layers": 2,
+      "method": "slerp",
+      "source_layers": [
+        [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        [
+          5,
+          6,
+          7,
+          8,
+          9
+        ]
+      ],
+      "quality_passed": false,
+      "metrics": {
+        "nll": 14.2455415725708,
+        "teacher_kl": 8.245552062988281,
+        "top1_agreement": 0.17222222685813904,
+        "task_accuracy": 0.0,
+        "seconds": 0.7947615419980139,
+        "task_outputs": [
+          {
+            "prompt": "Add 26 and 49.",
+            "expected": "75",
+            "actual": "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
+          },
+          {
+            "prompt": "Copy exactly: red cup",
+            "expected": "red cup",
+            "actual": "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
+          },
+          {
+            "prompt": "Mia has a red bag. What color is it?",
+            "expected": "red",
+            "actual": "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
+          }
+        ]
+      }
+    },
+    {
+      "id": "prune-4",
+      "layers": 4,
+      "method": "prune",
+      "source_layers": [
+        0,
+        7,
+        8,
+        9
+      ],
+      "quality_passed": false,
+      "metrics": {
+        "nll": 8.194665114084879,
+        "teacher_kl": 4.3712771733601885,
+        "top1_agreement": 0.12916666766007742,
+        "task_accuracy": 0.0,
+        "seconds": 0.7532868339912966,
+        "task_outputs": [
+          {
+            "prompt": "Add 26 and 49.",
+            "expected": "75",
+            "actual": "W"
+          },
+          {
+            "prompt": "Copy exactly: red cup",
+            "expected": "red cup",
+            "actual": "cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc"
+          },
+          {
+            "prompt": "Mia has a red bag. What color is it?",
+            "expected": "red",
+            "actual": "RRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRR"
+          }
+        ]
+      }
+    },
+    {
+      "id": "lerp-4",
+      "layers": 4,
+      "method": "lerp",
+      "source_layers": [
+        [
+          0,
+          1,
+          2
+        ],
+        [
+          3,
+          4,
+          5
+        ],
+        [
+          6,
+          7
+        ],
+        [
+          8,
+          9
+        ]
+      ],
+      "quality_passed": false,
+      "metrics": {
+        "nll": 18.81986427307129,
+        "teacher_kl": 11.622923215230307,
+        "top1_agreement": 0.19166666766007742,
+        "task_accuracy": 0.0,
+        "seconds": 1.0808116249972954,
+        "task_outputs": [
+          {
+            "prompt": "Add 26 and 49.",
+            "expected": "75",
+            "actual": "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
+          },
+          {
+            "prompt": "Copy exactly: red cup",
+            "expected": "red cup",
+            "actual": "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
+          },
+          {
+            "prompt": "Mia has a red bag. What color is it?",
+            "expected": "red",
+            "actual": "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
+          }
+        ]
+      }
+    },
+    {
+      "id": "slerp-4",
+      "layers": 4,
+      "method": "slerp",
+      "source_layers": [
+        [
+          0,
+          1,
+          2
+        ],
+        [
+          3,
+          4,
+          5
+        ],
+        [
+          6,
+          7
+        ],
+        [
+          8,
+          9
+        ]
+      ],
+      "quality_passed": false,
+      "metrics": {
+        "nll": 11.375916798909506,
+        "teacher_kl": 6.340447584788005,
+        "top1_agreement": 0.10694444676240285,
+        "task_accuracy": 0.0,
+        "seconds": 1.2238190420903265,
+        "task_outputs": [
+          {
+            "prompt": "Add 26 and 49.",
+            "expected": "75",
+            "actual": " use use use use use use use use use use use use use use use use use use use use use use use use use use use use use use use use use use use use use use use use use use use use use use use use use use use use use use use use use use use use use use use use use use use use use use use use use use use use use use use use use use use use use use use use use use use use use use use use"
+          },
+          {
+            "prompt": "Copy exactly: red cup",
+            "expected": "red cup",
+            "actual": " use use use use use use use use use use use use use use use use use use use use use use use use use use use use use use use use use use use use use use use use use use use use use use use use use use use use use use use use use use use use use use use use use use use use use use use use use use use use use use use use use use use use use use use use use use use use use use use use"
+          },
+          {
+            "prompt": "Mia has a red bag. What color is it?",
+            "expected": "red",
+            "actual": " use use use use use use use use use use use use use use use use use use use use use use use use use use use use use use use use use use use use use use use use use use use use use use use use use use use use use use use use use use use use use use use use use use use use use use use use use use use use use use use use use use use use use use use use use use use use use use use use"
+          }
+        ]
+      }
+    },
+    {
+      "id": "prune-6",
+      "layers": 6,
+      "method": "prune",
+      "source_layers": [
+        0,
+        4,
+        5,
+        7,
+        8,
+        9
+      ],
+      "quality_passed": false,
+      "metrics": {
+        "nll": 9.16697645187378,
+        "teacher_kl": 4.439762989679973,
+        "top1_agreement": 0.21527778108914694,
+        "task_accuracy": 0.0,
+        "seconds": 0.030281332903541625,
+        "task_outputs": [
+          {
+            "prompt": "Add 26 and 49.",
+            "expected": "75",
+            "actual": ""
+          },
+          {
+            "prompt": "Copy exactly: red cup",
+            "expected": "red cup",
+            "actual": ""
+          },
+          {
+            "prompt": "Mia has a red bag. What color is it?",
+            "expected": "red",
+            "actual": ""
+          }
+        ]
+      }
+    },
+    {
+      "id": "lerp-6",
+      "layers": 6,
+      "method": "lerp",
+      "source_layers": [
+        [
+          0,
+          1
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          6,
+          7
+        ],
+        [
+          8
+        ],
+        [
+          9
+        ]
+      ],
+      "quality_passed": false,
+      "metrics": {
+        "nll": 10.908708254496256,
+        "teacher_kl": 5.689764340718587,
+        "top1_agreement": 0.10555555671453476,
+        "task_accuracy": 0.0,
+        "seconds": 1.6386417920002714,
+        "task_outputs": [
+          {
+            "prompt": "Add 26 and 49.",
+            "expected": "75",
+            "actual": "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
+          },
+          {
+            "prompt": "Copy exactly: red cup",
+            "expected": "red cup",
+            "actual": "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
+          },
+          {
+            "prompt": "Mia has a red bag. What color is it?",
+            "expected": "red",
+            "actual": "\n\n\n\n tried tried tried tried tried tried tried tried tried tried tried tried tried tried tried tried tried tried tried tried tried tried tried tried tried tried tried tried tried tried tried tried tried tried tried tried tried tried tried tried tried tried tried tried tried tried tried tried tried tried tried tried tried tried tried tried tried tried tried tried tried tried tried tried tried tried tried tried tried tried tried tried tried tried tried tried tried tried tried tried tried tried tried tried tried tried tried tried tried tried tried tried"
+          }
+        ]
+      }
+    },
+    {
+      "id": "slerp-6",
+      "layers": 6,
+      "method": "slerp",
+      "source_layers": [
+        [
+          0,
+          1
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          6,
+          7
+        ],
+        [
+          8
+        ],
+        [
+          9
+        ]
+      ],
+      "quality_passed": false,
+      "metrics": {
+        "nll": 10.515437126159668,
+        "teacher_kl": 5.858821551005046,
+        "top1_agreement": 0.03935185198982557,
+        "task_accuracy": 0.0,
+        "seconds": 1.5449631249066442,
+        "task_outputs": [
+          {
+            "prompt": "Add 26 and 49.",
+            "expected": "75",
+            "actual": " had had had had had had had had had had had had had had had had had had had had had had had had had had had had had had had had had had had had had had had had had had had had had had had had had had had had had had had had had had had had had had had had had had had had had had had had had had had had had had had had had had had had had had had had had had had had had had had had"
+          },
+          {
+            "prompt": "Copy exactly: red cup",
+            "expected": "red cup",
+            "actual": "hehehehehehehehehehehehehehehehehehehehehehehehehehehehehehehehehehehehehehehehehehehehehehehehehehehehehehehehehehehehehehehehehehehehehehehehehehehehehehehehehehehehehehehehehehehehehehehehe"
+          },
+          {
+            "prompt": "Mia has a red bag. What color is it?",
+            "expected": "red",
+            "actual": "sesesesesesesesesesesesesese was was was was was was was was was was was was was was was was was was was was was was was was was was was was was was was was was was was was was was was was was was was was was was was was was was was was was was was was was was was was was was was was was was was was was was was was was was was was was was was was was was"
+          }
+        ]
+      }
+    }
+  ],
+  "selected": {
+    "2": "identity",
+    "4": "identity",
+    "6": "identity"
+  },
+  "note": "A passing candidate still needs a verified exported artifact before it can be selected."
+}

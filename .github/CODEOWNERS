@@ -1,0 +1,5 @@
+/release/setup-lock.json @hex358 @Lyamon4
+/.github/workflows/build-windows-branch.yml @hex358 @Lyamon4
+/.github/workflows/build-macos-branch.yml @hex358 @Lyamon4
+/.github/workflows/release-windows.yml @hex358 @Lyamon4
+/.github/workflows/promote-windows-release.yml @hex358 @Lyamon4

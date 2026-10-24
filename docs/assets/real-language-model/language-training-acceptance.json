@@ -1,0 +1,239 @@
+{
+  "dataset": {
+    "name": "language_stories",
+    "simulated": true,
+    "size": 12.0
+  },
+  "epoch_seconds": 2.7,
+  "event": "completed",
+  "mapping": {
+    "cache_key": "111f9dd124df8a837c12be08eba3b79b6dc6f527f2bbef5b3663d386b0c80902",
+    "effective_depth": 10,
+    "node_mapping": {
+      "15725505": {
+        "layer": 9,
+        "layers": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9
+        ],
+        "op": "softmax",
+        "stage": 1
+      },
+      "16401470": {
+        "head": 0,
+        "layer": 9,
+        "layers": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9
+        ],
+        "op": "attention_head",
+        "stage": 1
+      },
+      "17852508": {
+        "layer": 9,
+        "layers": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9
+        ],
+        "op": "token_labels",
+        "stage": 1
+      },
+      "20464975": {
+        "layer": 9,
+        "layers": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9
+        ],
+        "op": "embedding",
+        "stage": 1
+      },
+      "20541293": {
+        "layer": 9,
+        "layers": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9
+        ],
+        "op": "tokenizer",
+        "stage": 1
+      },
+      "50100904": {
+        "head": 3,
+        "layer": 9,
+        "layers": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9
+        ],
+        "op": "attention_head",
+        "stage": 1
+      },
+      "61481993": {
+        "head": 2,
+        "layer": 9,
+        "layers": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9
+        ],
+        "op": "attention_head",
+        "stage": 1
+      },
+      "69819326": {
+        "layer": 9,
+        "layers": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9
+        ],
+        "op": "layer",
+        "stage": 1
+      },
+      "79261719": {
+        "layer": 9,
+        "layers": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9
+        ],
+        "op": "text_input",
+        "stage": 1
+      },
+      "81033852": {
+        "layer": 9,
+        "layers": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9
+        ],
+        "op": "autoregression",
+        "stage": 1
+      },
+      "90273079": {
+        "head": 1,
+        "layer": 9,
+        "layers": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9
+        ],
+        "op": "attention_head",
+        "stage": 1
+      },
+      "987108": {
+        "layer": 9,
+        "layers": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9
+        ],
+        "op": "concat",
+        "stage": 1
+      }
+    },
+    "profile_id": "identity",
+    "requested_depth": 1
+  },
+  "metrics": {
+    "accuracy": 0.168674698795181,
+    "evaluation_passes": 6.0,
+    "training_loss": 5.55076345535085,
+    "training_tokens": 254.0,
+    "validation_loss": 7.0361894762084,
+    "validation_tokens": 83.0
+  },
+  "mode": "pretrained",
+  "model_id": "clean1000-6f27137365b90aaa",
+  "progress": 1.0,
+  "simulated": true,
+  "source_hash": "6f27137365b90aaa97a3992a6ada4a060916a88e4742423a4b5b4424f7bebb76",
+  "weights_written": false
+}

@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://dkvdc86x6s4p3"]
+
+[ext_resource type="Script" uid="uid://bw7xgr4ylv188" path="res://scripts/inference_animation_settings.gd" id="1"]
+
+[node name="InferenceAnimationSettings" type="Node" unique_id=1660965536]
+script = ExtResource("1")
+hop_delay = 0.03
+node_highlight_color = Color(1, 0.952941, 0.65098, 1)
+node_highlight_shadow_opacity = 1.0

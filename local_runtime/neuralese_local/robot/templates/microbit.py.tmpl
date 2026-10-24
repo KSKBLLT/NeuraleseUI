@@ -1,0 +1,187 @@
+# {{BANNER}}
+#
+# Robot: BBC micro:bit v2
+# Link:  USB serial (plug the micro:bit into the computer with a data cable)
+#
+# This program does not contain the neural network. It reads the sensors, sends
+# the readings to the computer, and does what the computer sends back. The
+# computer runs the model. That is why this program never has to change when you
+# train a new model -- only when you choose different sensors or motors.
+#
+# Safety: if the computer stops answering for {{WATCHDOG_MS}} ms, everything is
+# switched off automatically.
+
+from microbit import *
+{{IMPORTS}}
+
+PROTOCOL = {{PROTOCOL}}
+PLATFORM = "{{PLATFORM_ID}}"
+CFG_HASH = "{{CFG_HASH}}"
+N_IN = {{N_IN}}
+N_OUT = {{N_OUT}}
+PERIOD_MS = {{PERIOD_MS}}
+WATCHDOG_MS = {{WATCHDOG_MS}}
+SEQ_MOD = {{SEQ_MOD}}
+SAFE = {{SAFE_VALUES}}
+
+uart.init(baudrate={{BAUD}})
+
+{{SETUP}}
+
+
+def _crc(text):
+    total = 0
+    for char in text:
+        total += ord(char)
+    return total & 0xFFFF
+
+
+def _send(payload):
+    uart.write(payload + "," + ("%04x" % _crc(payload)) + "\n")
+
+
+def _parse(line):
+    # Returns the split fields, or None if the line is damaged. A half-received
+    # line must never be acted on: it can decode as a perfectly plausible motor
+    # command.
+    index = line.rfind(",")
+    if index < 0:
+        return None
+    head = line[:index]
+    try:
+        if int(line[index + 1:], 16) != _crc(head):
+            return None
+    except Exception:
+        return None
+    return head.split(",")
+
+
+def read_sensors():
+    return [{{READ_SENSORS}}]
+
+
+def apply_outputs(values):
+{{APPLY_ACTUATORS}}
+
+
+def safe_stop():
+    apply_outputs(SAFE)
+
+
+def show_error(code):
+    safe_stop()
+    display.show(Image.NO)
+
+
+# --- connect ---------------------------------------------------------------
+# Say hello until the computer answers. Nothing moves until it does.
+
+hello = "H,%d,%s,%s,%d,%d,%d,%d" % (
+    PROTOCOL, PLATFORM, CFG_HASH, N_IN, N_OUT, {{RATE_HZ}}, WATCHDOG_MS)
+
+buffer = ""
+connected = False
+last_hello = -10000
+
+display.show(Image.ARROW_E)
+while not connected:
+    now = running_time()
+    if now - last_hello >= 250:
+        _send(hello)
+        last_hello = now
+    if uart.any():
+        chunk = uart.read()
+        if chunk:
+            buffer += chunk.decode("ascii", "ignore")
+        while "\n" in buffer:
+            line, buffer = buffer.split("\n", 1)
+            fields = _parse(line.strip())
+            if not fields:
+                continue
+            if fields[0] == "K":
+                connected = True
+            elif fields[0] == "E":
+                show_error(fields[1] if len(fields) > 1 else "?")
+                while True:
+                    sleep(1000)
+    sleep(10)
+
+display.show(Image.YES)
+sleep(200)
+display.clear()
+
+# --- run -------------------------------------------------------------------
+
+seq = 0
+last_send = running_time()
+last_command = running_time()
+stopped = False
+
+while True:
+    now = running_time()
+
+    if uart.any():
+        chunk = uart.read()
+        if chunk:
+            buffer += chunk.decode("ascii", "ignore")
+        if len(buffer) > {{MAX_LINE}} and "\n" not in buffer:
+            # Noise with no line ending at all. Throw it away rather than let it
+            # grow forever. The newline check matters: without it a brief stall
+            # that lets a few complete commands queue up would discard all of
+            # them, including the newest.
+            buffer = ""
+        while "\n" in buffer:
+            line, buffer = buffer.split("\n", 1)
+            fields = _parse(line.strip())
+            if not fields:
+                continue
+            kind = fields[0]
+            if kind == "A" and len(fields) == N_OUT + 2:
+                try:
+                    values = [int(field) for field in fields[2:]]
+                except Exception:
+                    continue
+                apply_outputs(values)
+                last_command = now
+                stopped = False
+            elif kind == "K":
+                # A fresh computer accepted us after the old one went away.
+                last_command = now
+                stopped = False
+                display.clear()
+            elif kind == "X":
+                safe_stop()
+                display.show(Image.SQUARE_SMALL)
+                while True:
+                    sleep(1000)
+            elif kind == "E":
+                show_error(fields[1] if len(fields) > 1 else "?")
+                while True:
+                    sleep(1000)
+
+    # Watchdog. The computer answers every reading, so silence means the link
+    # is gone -- and a robot that keeps its last motor command after losing the
+    # link is a robot that drives into something.
+    if not stopped and now - last_command > WATCHDOG_MS:
+        safe_stop()
+        stopped = True
+        display.show(Image.CONFUSED)
+
+    if stopped and now - last_hello >= 250:
+        # The computer has gone. Start announcing ourselves again so that when
+        # Neuralese comes back it can complete a fresh handshake -- it is not
+        # allowed to act on sensor readings from a robot it has not agreed a
+        # mapping with, so without this a reconnect would never take.
+        _send(hello)
+        last_hello = now
+
+    if now - last_send >= PERIOD_MS:
+        last_send = now
+        seq = (seq + 1) % SEQ_MOD
+        readings = read_sensors()
+        payload = "S," + str(seq)
+        for value in readings:
+            payload += "," + str(int(value))
+        _send(payload)
+
+    sleep(2)

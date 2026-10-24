@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "id": "flatten",
+  "source": {
+    "kind": "scene",
+    "path": "res://scenes/flatten.tscn"
+  },
+  "load_order": 80,
+  "menu": {
+    "visible": true,
+    "section": "shape_output",
+    "order": 10
+  },
+  "roles": [],
+  "llm": {
+    "type": "flatten"
+  },
+  "runtime": {
+    "handler": "flatten",
+    "default_input_port": "layer_in",
+    "default_output_port": "layer_out"
+  },
+  "display": {
+    "category": "shape",
+    "title": {
+      "en": "Flatten1D",
+      "ru": "Плоск1D",
+      "kz": "Жазық1D"
+    },
+    "outline_color": "#ffb8f4ff"
+  }
+}

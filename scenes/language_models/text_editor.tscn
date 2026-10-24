@@ -1,0 +1,35 @@
+[gd_scene load_steps=5 format=3]
+[ext_resource type="Theme" path="res://resources/theme_headers.tres" id="1"]
+[ext_resource type="FontFile" path="res://game_assets/fonts/JetBrainsMono-VariableFont_wght.ttf" id="2"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tb6sx"]
+content_margin_left = 0.0
+content_margin_top = 0.0
+content_margin_right = 0.0
+content_margin_bottom = 0.0
+bg_color = Color(0, 0, 0, 0)
+corner_radius_top_left = 0
+corner_radius_top_right = 0
+corner_radius_bottom_right = 0
+corner_radius_bottom_left = 0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_o277e"]
+content_margin_left = 0.0
+content_margin_top = 0.0
+content_margin_right = 0.0
+content_margin_bottom = 0.0
+bg_color = Color(0, 0, 0, 0)
+corner_radius_top_left = 0
+corner_radius_top_right = 0
+corner_radius_bottom_right = 0
+corner_radius_bottom_left = 0
+
+[node name="LanguageText" type="TextEdit"]
+theme = ExtResource("1")
+theme_override_fonts/font = ExtResource("2")
+theme_override_font_sizes/font_size = 12
+theme_override_styles/normal = SubResource("StyleBoxFlat_tb6sx")
+theme_override_styles/focus = SubResource("StyleBoxFlat_o277e")
+theme_override_styles/read_only = SubResource("StyleBoxFlat_tb6sx")
+context_menu_enabled = false
+deselect_on_focus_loss_enabled = false
+wrap_mode = 1

@@ -1,0 +1,286 @@
+{
+  "schema_version": 1,
+  "node_id": "attention_head",
+  "status": "stable",
+  "generated": {
+    "node_id": "attention_head",
+    "created_with": "attention_head",
+    "scene_path": "res://scenes/language_models/attention_head.tscn",
+    "scene_uid": "uid://kmwxdlngmx3a",
+    "root_instance_path": "res://scenes/base_graph.tscn",
+    "script_path": "res://scripts/language_models/language_node.gd",
+    "inheritance_chain": [
+      "res://scripts/language_models/language_node.gd",
+      "res://scripts/base_graph.gd"
+    ],
+    "inherits_graph": true,
+    "server_typename": "AttentionHeadNode",
+    "layer_name": null,
+    "title_candidates": {
+      "en": "AttentionHead",
+      "ru": "ГоловаВнимания",
+      "kz": "НазарБасы"
+    },
+    "localized_properties": {
+      "ports": {},
+      "settings": {},
+      "controls": {
+        "ColorRect/root/Label": {
+          "property": "text",
+          "values": {
+            "en": "AttentionHead",
+            "ru": "ГоловаВнимания",
+            "kz": "НазарБасы"
+          }
+        }
+      },
+      "title": {
+        "source_path": "ColorRect/root/Label",
+        "property": "text",
+        "values": {
+          "en": "AttentionHead",
+          "ru": "ГоловаВнимания",
+          "kz": "НазарБасы"
+        }
+      }
+    },
+    "base_config": {},
+    "ports": [
+      {
+        "id": "input_input_layer_in",
+        "scene_node": "Input",
+        "scene_path": ".",
+        "hint": 1,
+        "server_name": "layer_in",
+        "direction": "input",
+        "datatypes": [
+          "language_vectors"
+        ],
+        "multiple": false,
+        "config_conn": false,
+        "keyword": null,
+        "conn_count_keyword": "layer",
+        "visual": {
+          "color": "#7f9effff",
+          "gradient_color": "#7f9effff",
+          "dir_vector": {
+            "x": -1.0,
+            "y": 0.0
+          },
+          "side": "left",
+          "relative_to": {
+            "role": "graph_rect",
+            "scene_path": "ColorRect"
+          },
+          "absolute_scene_rect": {
+            "x": -8.0,
+            "y": 112.5,
+            "w": 18.0,
+            "h": 19.0
+          },
+          "reference_rect": {
+            "x": 0.0,
+            "y": 0.0,
+            "w": 109.0,
+            "h": 73.0
+          },
+          "relative_rect": {
+            "x": -0.07339449541284404,
+            "y": 1.5410958904109588,
+            "w": 0.1651376146788991,
+            "h": 0.2602739726027397
+          },
+          "relative_origin": {
+            "x": -0.07339449541284404,
+            "y": 1.6712328767123288
+          },
+          "color_family": "lilac",
+          "color_label": {
+            "en": "Lilac",
+            "ru": "Сиреневый",
+            "kz": "Ашық күлгін"
+          },
+          "side_label": {
+            "en": "on the left",
+            "ru": "слева",
+            "kz": "сол жақта"
+          },
+          "verbal_label": {
+            "en": "Lilac port on the left",
+            "ru": "Сиреневый порт слева",
+            "kz": "Ашық күлгін порт сол жақта"
+          },
+          "text_color": "#3868ff"
+        }
+      },
+      {
+        "id": "output_output_layer_out",
+        "scene_node": "Output",
+        "scene_path": ".",
+        "hint": 0,
+        "server_name": "layer_out",
+        "direction": "output",
+        "datatypes": [
+          "language_vectors"
+        ],
+        "multiple": true,
+        "config_conn": false,
+        "keyword": null,
+        "conn_count_keyword": "layer",
+        "visual": {
+          "color": "#7f9effff",
+          "gradient_color": "#7f9effff",
+          "dir_vector": {
+            "x": 1.0,
+            "y": 0.0
+          },
+          "side": "right",
+          "relative_to": {
+            "role": "graph_rect",
+            "scene_path": "ColorRect"
+          },
+          "absolute_scene_rect": {
+            "x": 250.0,
+            "y": 112.5,
+            "w": 18.0,
+            "h": 19.0
+          },
+          "reference_rect": {
+            "x": 0.0,
+            "y": 0.0,
+            "w": 109.0,
+            "h": 73.0
+          },
+          "relative_rect": {
+            "x": 2.293577981651376,
+            "y": 1.5410958904109588,
+            "w": 0.1651376146788991,
+            "h": 0.2602739726027397
+          },
+          "relative_origin": {
+            "x": 2.458715596330275,
+            "y": 1.6712328767123288
+          },
+          "color_family": "lilac",
+          "color_label": {
+            "en": "Lilac",
+            "ru": "Сиреневый",
+            "kz": "Ашық күлгін"
+          },
+          "side_label": {
+            "en": "on the right",
+            "ru": "справа",
+            "kz": "оң жақта"
+          },
+          "verbal_label": {
+            "en": "Lilac port on the right",
+            "ru": "Сиреневый порт справа",
+            "kz": "Ашық күлгін порт оң жақта"
+          },
+          "text_color": "#3868ff"
+        }
+      }
+    ],
+    "settings": [],
+    "icon_source": "res://node_icons/en/IconAttentionHead.png",
+    "static_compatible_nodes": [
+      {
+        "from_port": "output_output_layer_out",
+        "to_node": "softmax",
+        "to_port": "input_o2_layer_in",
+        "datatypes": [
+          "language_vectors"
+        ],
+        "confidence": "language_sequence_contract"
+      },
+      {
+        "from_port": "output_output_layer_out",
+        "to_node": "layer",
+        "to_port": "input_ni_layer_in",
+        "datatypes": [
+          "language_vectors"
+        ],
+        "confidence": "language_sequence_contract"
+      },
+      {
+        "from_port": "output_output_layer_out",
+        "to_node": "concat",
+        "to_port": "input_connection_o_layer_in",
+        "datatypes": [
+          "language_vectors"
+        ],
+        "confidence": "language_sequence_contract"
+      },
+      {
+        "from_port": "output_output_layer_out",
+        "to_node": "attention_head",
+        "to_port": "input_input_layer_in",
+        "datatypes": [
+          "language_vectors"
+        ],
+        "confidence": "language_sequence_contract"
+      }
+    ]
+  },
+  "docs": {
+    "title": {
+      "en": "AttentionHead",
+      "ru": "ГоловаВнимания",
+      "kz": "НазарБасы"
+    },
+    "summary": {
+      "en": "Shows one real model attention head.",
+      "ru": "Показывает настоящую голову внимания модели.",
+      "kz": "Модельдің нақты назар басын көрсетеді."
+    },
+    "operation": {
+      "en": "Shows an actual causal attention head from the model: 4 query heads, 2 key/value heads and 64 numbers per head. Parallel nodes select different heads; sequential nodes select later stages. The word heatmap groups the real token weights. Up to eight words fit in one window; the native scrollbar moves through longer text. Some attention belongs to hidden chat-template tokens.",
+      "ru": "Показывает настоящую causal attention head модели: 4 головы запросов, 2 головы ключей/значений и 64 числа на голову. Параллельные ноды выбирают разные головы, последовательные — более поздние этапы. Карта слов объединяет реальные веса токенов. В окне до восьми слов; длинный текст листается штатной полосой прокрутки. Часть внимания относится к скрытым токенам шаблона чата.",
+      "kz": "Модельдің нақты себепті назар басын көрсетеді: 4 сұрау басы, 2 кілт/мән басы және әр баста 64 сан. Параллель нодтар әртүрлі бастарды, тізбекті нодтар кейінгі кезеңдерді таңдайды. Сөз картасы нақты токен салмақтарын біріктіреді. Бір терезеде сегіз сөзге дейін; ұзын мәтінді айналдыру жолағымен қараңыз. Назардың бір бөлігі жасырын чат үлгісі токендеріне тиесілі."
+    },
+    "compact": {
+      "body": {
+        "en": "Shows one real model attention head.",
+        "ru": "Показывает настоящую голову внимания модели.",
+        "kz": "Модельдің нақты назар басын көрсетеді."
+      }
+    },
+    "ports": {
+      "input_input_layer_in": {
+        "label": {
+          "en": "layer_in",
+          "ru": "layer_in",
+          "kz": "layer_in"
+        },
+        "description": {
+          "en": "Token vectors: float32 [T,D].",
+          "ru": "Векторы токенов: float32 [T,D].",
+          "kz": "Токен векторлары: float32 [T,D]."
+        }
+      },
+      "output_output_layer_out": {
+        "label": {
+          "en": "layer_out",
+          "ru": "layer_out",
+          "kz": "layer_out"
+        },
+        "description": {
+          "en": "Token vectors: float32 [T,D].",
+          "ru": "Векторы токенов: float32 [T,D].",
+          "kz": "Токен векторлары: float32 [T,D]."
+        }
+      }
+    },
+    "settings": {},
+    "connects_to": [],
+    "examples": [
+      {
+        "body": {
+          "en": "Build TextInput → Tokenizer → Embedding → AttentionHead → Softmax → BestAnswer → Autoregression. Enter “Copy exactly: red cup”, set Bold to 0 and press Step. Each press adds one model token.",
+          "ru": "Соберите ВводТекста → Токенизатор → Эмбеддинг → ГоловаВнимания → Софтмакс → ЛучшийОтвет → Авторегрессия. Введите «Copy exactly: red cup», поставьте «Смело» на 0 и нажимайте «Шаг». Каждое нажатие добавляет один токен модели.",
+          "kz": "МәтінКірісі → Токенизатор → Эмбеддинг → НазарБасы → Softmax → ҮздікЖауап → Авторегрессия тізбегін құрыңыз. «Copy exactly: red cup» енгізіп, «Батыл» мәнін 0 етіңіз. Әр «Қадам» модельдің бір токенін қосады."
+        }
+      }
+    ]
+  }
+}

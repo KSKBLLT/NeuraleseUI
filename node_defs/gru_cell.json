@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "id": "gru_cell",
+  "source": {
+    "kind": "scene",
+    "path": "res://scenes/gru_cell.tscn"
+  },
+  "load_order": 200,
+  "menu": {
+    "visible": true,
+    "section": "layers",
+    "order": 25
+  },
+  "llm": {
+    "type": "gru_cell"
+  },
+  "runtime": {
+    "handler": "gru_cell",
+    "default_input_port": "layer_in",
+    "default_output_port": "layer_out"
+  },
+  "display": {
+    "category": "learn"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "id": "maxpool",
+  "source": {
+    "kind": "scene",
+    "path": "res://scenes/maxpool.tscn"
+  },
+  "load_order": 110,
+  "menu": {
+    "visible": true,
+    "section": "layers",
+    "order": 22
+  },
+  "roles": [],
+  "llm": {
+    "type": "maxpool_layer"
+  },
+  "runtime": {
+    "handler": "neuron_layer",
+    "default_input_port": "layer_in",
+    "default_output_port": "layer_out"
+  },
+  "display": {
+    "category": "ops"
+  }
+}

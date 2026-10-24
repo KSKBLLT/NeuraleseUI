@@ -1,0 +1,193 @@
+Godot Engine v4.7.1.stable.steam.a13da4feb - https://godotengine.org
+
+ERROR: Failed to read the root certificate store.
+   at: get_system_ca_certificates (platform/windows/os_windows.cpp:2582)
+Could not find version of build tools that matches Target SDK, using 35.0.0
+WARNING: Instantiated LuaDefaultObjectMetatable used as default value for LuaAPI's "object_metatable" property.
+   at: class_get_default_property_value (core/object/class_db.cpp:2238)
+[   0% ] first_scan_filesystem | Started Project initialization (5 steps)
+[   0% ] first_scan_filesystem | Scanning file structure...
+[  16% ] first_scan_filesystem | Loading global class names...
+Unicode parsing error, some characters were replaced with � (U+FFFD): Invalid UTF-8 leading byte (ff)
+Unicode parsing error, some characters were replaced with � (U+FFFD): Invalid UTF-8 leading byte (fe)
+ERROR: Cannot create file 'D:/SteamLibrary/steamapps/common/Godot Engine/editor_data/cache/editor_doc_cache-4.7.res'.
+   at: save (core/io/resource_format_binary.cpp:2117)
+ERROR: Cannot save editor help cache (D:/SteamLibrary/steamapps/common/Godot Engine/editor_data/cache/editor_doc_cache-4.7.res).
+   at: _gen_doc_thread (editor/doc/editor_help.cpp:3071)
+Unicode parsing error, some characters were replaced with � (U+FFFD): Invalid UTF-8 leading byte (ff)
+Unicode parsing error, some characters were replaced with � (U+FFFD): Invalid UTF-8 leading byte (fe)
+[  33% ] first_scan_filesystem | Verifying GDExtensions...
+[  50% ] first_scan_filesystem | Creating autoload scripts...
+Unicode parsing error, some characters were replaced with � (U+FFFD): Unexpected NUL character
+Unicode parsing error, some characters were replaced with � (U+FFFD): Unexpected NUL character
+Unicode parsing error, some characters were replaced with � (U+FFFD): Unexpected NUL character
+SCRIPT ERROR: Invalid call function 'open_or_create' in base 'Node (Cookies)': Attempt to call a method on a placeholder instance. Check if the script is in tool mode.
+   at: get_stored (res://scripts/glob.gd:385)
+   GDScript backtrace (most recent call first):
+       [0] get_stored (res://scripts/glob.gd:385)
+       [1] get_var (res://scripts/glob.gd:382)
+       [2] _enter_tree (res://scripts/glob.gd:1542)
+[  66% ] first_scan_filesystem | Initializing plugins...
+[godot-mcp] Plugin initialized
+[  83% ] first_scan_filesystem | Starting file scan...
+[ DONE ] first_scan_filesystem
+
+ERROR: [godot-mcp] Failed to start server on 127.0.0.1:6550: Already in use
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] error (res://addons/godot_mcp/core/mcp_log.gd:14)
+       [1] start_server (res://addons/godot_mcp/websocket_server.gd:54)
+       [2] _do_restart_server (res://addons/godot_mcp/plugin.gd:223)
+Unicode parsing error, some characters were replaced with � (U+FFFD): Invalid UTF-8 leading byte (ff)
+Unicode parsing error, some characters were replaced with � (U+FFFD): Invalid UTF-8 leading byte (fe)
+Unicode parsing error, some characters were replaced with � (U+FFFD): Invalid UTF-8 leading byte (ff)
+Unicode parsing error, some characters were replaced with � (U+FFFD): Invalid UTF-8 leading byte (fe)
+[   0% ] update_scripts_classes | Started Registering global classes... (2 steps)
+[   0% ] update_scripts_classes | 
+[  33% ] update_scripts_classes | 
+[ DONE ] update_scripts_classes
+
+[   0% ] loading_editor_layout | Started Loading editor (5 steps)
+[   0% ] loading_editor_layout | Loading editor layout...
+[  16% ] loading_editor_layout | Loading docks...
+[  33% ] loading_editor_layout | Reopening scenes...
+ERROR: Cannot assign contents of "Array[PackedStringArray]" to "Array[String]".
+   at: assign (core/variant/array.cpp:276)
+ERROR: Cannot assign contents of "Array[PackedStringArray]" to "Array[String]".
+   at: assign (core/variant/array.cpp:276)
+ERROR: Cannot assign contents of "Array[PackedStringArray]" to "Array[String]".
+   at: assign (core/variant/array.cpp:276)
+[  50% ] loading_editor_layout | Loading central editor layout...
+[  66% ] loading_editor_layout | Loading plugin window layout...
+SCRIPT ERROR: Parse Error: Function "get_children()" not found in base self.
+   at: GDScript::reload (res://scratch/new_part.gd:2)
+SCRIPT ERROR: Parse Error: Function "add_theme_stylebox_override()" not found in base self.
+   at: GDScript::reload (res://scratch/new_part.gd:6)
+SCRIPT ERROR: Parse Error: Function "add_child()" not found in base self.
+   at: GDScript::reload (res://scratch/new_part.gd:10)
+SCRIPT ERROR: Parse Error: Identifier "NodePaletteStyle" not declared in the current scope.
+   at: GDScript::reload (res://scratch/new_part.gd:11)
+SCRIPT ERROR: Parse Error: Function "add_child()" not found in base self.
+   at: GDScript::reload (res://scratch/new_part.gd:19)
+SCRIPT ERROR: Parse Error: Function "mapped_input_width()" not found in base self.
+   at: GDScript::reload (res://scratch/new_part.gd:40)
+SCRIPT ERROR: Parse Error: Identifier "_target_input_width" not declared in the current scope.
+   at: GDScript::reload (res://scratch/new_part.gd:41)
+SCRIPT ERROR: Parse Error: Identifier "_target_input_width" not declared in the current scope.
+   at: GDScript::reload (res://scratch/new_part.gd:42)
+SCRIPT ERROR: Parse Error: Function "mapped_output_width()" not found in base self.
+   at: GDScript::reload (res://scratch/new_part.gd:52)
+SCRIPT ERROR: Parse Error: Identifier "_target_output_width" not declared in the current scope.
+   at: GDScript::reload (res://scratch/new_part.gd:53)
+SCRIPT ERROR: Parse Error: Identifier "_target_output_width" not declared in the current scope.
+   at: GDScript::reload (res://scratch/new_part.gd:54)
+SCRIPT ERROR: Parse Error: Identifier "_agent_id" not declared in the current scope.
+   at: GDScript::reload (res://scratch/new_part.gd:70)
+SCRIPT ERROR: Parse Error: Identifier "Registry" not declared in the current scope.
+   at: GDScript::reload (res://scratch/new_part.gd:70)
+SCRIPT ERROR: Parse Error: Identifier "PaletteTitleFont" not declared in the current scope.
+   at: GDScript::reload (res://scratch/new_part.gd:73)
+SCRIPT ERROR: Parse Error: Identifier "request_close" not declared in the current scope.
+   at: GDScript::reload (res://scratch/new_part.gd:101)
+SCRIPT ERROR: Parse Error: Identifier "_agent_id" not declared in the current scope.
+   at: GDScript::reload (res://scratch/new_part.gd:113)
+SCRIPT ERROR: Parse Error: Identifier "Registry" not declared in the current scope.
+   at: GDScript::reload (res://scratch/new_part.gd:113)
+SCRIPT ERROR: Parse Error: Identifier "_active_sensor_ids" not declared in the current scope.
+   at: GDScript::reload (res://scratch/new_part.gd:114)
+SCRIPT ERROR: Parse Error: Identifier "Registry" not declared in the current scope.
+   at: GDScript::reload (res://scratch/new_part.gd:116)
+SCRIPT ERROR: Parse Error: Cannot infer the type of "def" variable because the value doesn't have a set type.
+   at: GDScript::reload (res://scratch/new_part.gd:116)
+SCRIPT ERROR: Parse Error: Identifier "_target_input_width" not declared in the current scope.
+   at: GDScript::reload (res://scratch/new_part.gd:123)
+SCRIPT ERROR: Parse Error: Identifier "_target_input_width" not declared in the current scope.
+   at: GDScript::reload (res://scratch/new_part.gd:124)
+SCRIPT ERROR: Parse Error: Identifier "_agent_id" not declared in the current scope.
+   at: GDScript::reload (res://scratch/new_part.gd:126)
+SCRIPT ERROR: Parse Error: Identifier "Registry" not declared in the current scope.
+   at: GDScript::reload (res://scratch/new_part.gd:126)
+SCRIPT ERROR: Parse Error: Identifier "Registry" not declared in the current scope.
+   at: GDScript::reload (res://scratch/new_part.gd:127)
+SCRIPT ERROR: Parse Error: Identifier "_active_sensor_ids" not declared in the current scope.
+   at: GDScript::reload (res://scratch/new_part.gd:130)
+SCRIPT ERROR: Parse Error: Identifier "_agent_id" not declared in the current scope.
+   at: GDScript::reload (res://scratch/new_part.gd:150)
+SCRIPT ERROR: Parse Error: Identifier "Registry" not declared in the current scope.
+   at: GDScript::reload (res://scratch/new_part.gd:150)
+SCRIPT ERROR: Parse Error: Identifier "Registry" not declared in the current scope.
+   at: GDScript::reload (res://scratch/new_part.gd:151)
+SCRIPT ERROR: Parse Error: Identifier "_active_actuator_ids" not declared in the current scope.
+   at: GDScript::reload (res://scratch/new_part.gd:154)
+SCRIPT ERROR: Parse Error: Identifier "_active_sensor_ids" not declared in the current scope.
+   at: GDScript::reload (res://scratch/new_part.gd:252)
+SCRIPT ERROR: Parse Error: Identifier "_on_sensor_toggled" not declared in the current scope.
+   at: GDScript::reload (res://scratch/new_part.gd:253)
+SCRIPT ERROR: Parse Error: Identifier "_active_actuator_ids" not declared in the current scope.
+   at: GDScript::reload (res://scratch/new_part.gd:260)
+SCRIPT ERROR: Parse Error: Identifier "_on_actuator_toggled" not declared in the current scope.
+   at: GDScript::reload (res://scratch/new_part.gd:261)
+SCRIPT ERROR: Parse Error: Identifier "_binding" not declared in the current scope.
+   at: GDScript::reload (res://scratch/new_part.gd:269)
+SCRIPT ERROR: Parse Error: Identifier "ModelBinding" not declared in the current scope.
+   at: GDScript::reload (res://scratch/new_part.gd:269)
+SCRIPT ERROR: Parse Error: Cannot infer the type of "validation" variable because the value doesn't have a set type.
+   at: GDScript::reload (res://scratch/new_part.gd:269)
+SCRIPT ERROR: Parse Error: Identifier "_target_input_width" not declared in the current scope.
+   at: GDScript::reload (res://scratch/new_part.gd:272)
+SCRIPT ERROR: Parse Error: Function "mapped_input_width()" not found in base self.
+   at: GDScript::reload (res://scratch/new_part.gd:272)
+SCRIPT ERROR: Parse Error: Identifier "_target_input_width" not declared in the current scope.
+   at: GDScript::reload (res://scratch/new_part.gd:272)
+SCRIPT ERROR: Parse Error: Identifier "_target_output_width" not declared in the current scope.
+   at: GDScript::reload (res://scratch/new_part.gd:274)
+SCRIPT ERROR: Parse Error: Function "mapped_output_width()" not found in base self.
+   at: GDScript::reload (res://scratch/new_part.gd:274)
+SCRIPT ERROR: Parse Error: Identifier "_target_output_width" not declared in the current scope.
+   at: GDScript::reload (res://scratch/new_part.gd:274)
+SCRIPT ERROR: Parse Error: Function "mapped_input_width()" not found in base self.
+   at: GDScript::reload (res://scratch/new_part.gd:278)
+SCRIPT ERROR: Parse Error: Function "mapped_output_width()" not found in base self.
+   at: GDScript::reload (res://scratch/new_part.gd:278)
+SCRIPT ERROR: Parse Error: Function "mapped_input_width()" not found in base self.
+   at: GDScript::reload (res://scratch/new_part.gd:282)
+SCRIPT ERROR: Parse Error: Function "mapped_output_width()" not found in base self.
+   at: GDScript::reload (res://scratch/new_part.gd:282)
+SCRIPT ERROR: Parse Error: Function "mapped_input_width()" not found in base self.
+   at: GDScript::reload (res://scratch/new_part.gd:283)
+SCRIPT ERROR: Parse Error: Function "mapped_output_width()" not found in base self.
+   at: GDScript::reload (res://scratch/new_part.gd:283)
+SCRIPT ERROR: Parse Error: Identifier "_target_input_width" not declared in the current scope.
+   at: GDScript::reload (res://scratch/new_part.gd:287)
+SCRIPT ERROR: Parse Error: Function "mapped_input_width()" not found in base self.
+   at: GDScript::reload (res://scratch/new_part.gd:287)
+SCRIPT ERROR: Parse Error: Identifier "_target_input_width" not declared in the current scope.
+   at: GDScript::reload (res://scratch/new_part.gd:287)
+SCRIPT ERROR: Parse Error: Identifier "_target_input_width" not declared in the current scope.
+   at: GDScript::reload (res://scratch/new_part.gd:288)
+SCRIPT ERROR: Parse Error: Function "mapped_input_width()" not found in base self.
+   at: GDScript::reload (res://scratch/new_part.gd:288)
+SCRIPT ERROR: Parse Error: Identifier "_target_output_width" not declared in the current scope.
+   at: GDScript::reload (res://scratch/new_part.gd:289)
+SCRIPT ERROR: Parse Error: Function "mapped_output_width()" not found in base self.
+   at: GDScript::reload (res://scratch/new_part.gd:289)
+SCRIPT ERROR: Parse Error: Identifier "_target_output_width" not declared in the current scope.
+   at: GDScript::reload (res://scratch/new_part.gd:289)
+SCRIPT ERROR: Parse Error: Identifier "_target_output_width" not declared in the current scope.
+   at: GDScript::reload (res://scratch/new_part.gd:290)
+SCRIPT ERROR: Parse Error: Function "mapped_output_width()" not found in base self.
+   at: GDScript::reload (res://scratch/new_part.gd:290)
+ERROR: Failed to load script "res://scratch/new_part.gd" with error "Parse error".
+   at: load (modules/gdscript/gdscript_resource_format.cpp:46)
+Unicode parsing error, some characters were replaced with � (U+FFFD): Unexpected NUL character
+Unicode parsing error, some characters were replaced with � (U+FFFD): Unexpected NUL character
+[  83% ] loading_editor_layout | Editor layout ready.
+[ DONE ] loading_editor_layout
+
+Unicode parsing error, some characters were replaced with � (U+FFFD): Unexpected NUL character
+Unicode parsing error, some characters were replaced with � (U+FFFD): Unexpected NUL character
+[godot-mcp] Plugin disabled
+ERROR: Cannot save file 'D:/SteamLibrary/steamapps/common/Godot Engine/editor_data/editor_settings-4.7.tres'.
+   at: save (scene/resources/resource_format_text.cpp:1768)
+ERROR: Error saving editor settings to D:/SteamLibrary/steamapps/common/Godot Engine/editor_data/editor_settings-4.7.tres
+   at: save (editor/settings/editor_settings.cpp:1525)

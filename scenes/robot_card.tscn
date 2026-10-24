@@ -1,0 +1,192 @@
+[gd_scene load_steps=7 format=3]
+
+[ext_resource type="Script" path="res://scripts/robot/robot_card.gd" id="1_card"]
+[ext_resource type="Shader" uid="uid://pgxkyhcutym8" path="res://shaders/block_screen.gdshader" id="2_shader"]
+[ext_resource type="Material" path="res://resources/card_alphamult.tres" id="3_font_material"]
+[ext_resource type="Theme" path="res://resources/theme_base.tres" id="4_theme"]
+[ext_resource type="Script" path="res://scripts/button_config.gd" id="5_button_config"]
+[ext_resource type="Script" path="res://scripts/robot/robot_logo_art.gd" id="6_art"]
+
+[sub_resource type="ShaderMaterial" id="CardMaterial"]
+resource_local_to_scene = true
+shader = ExtResource("2_shader")
+shader_parameter/shape = 0
+shader_parameter/mult_tuning = Color(0.26, 0.26, 0.26, 1)
+shader_parameter/color_mult = Color(0.91, 0.91, 0.91, 1)
+shader_parameter/smoothness = 20.0
+shader_parameter/corner_radius = 17.833
+shader_parameter/blurred_background = true
+shader_parameter/outline_width = 1.5
+shader_parameter/mult = 1.7
+shader_parameter/blur_level = 7.0
+shader_parameter/gaussian_mix = 1.0
+shader_parameter/gaussian_step = 1.0
+shader_parameter/use_bg = false
+
+[sub_resource type="Resource" id="CardButtonConfig"]
+script = ExtResource("5_button_config")
+as_mult = true
+hover_color = Color(1.04, 1.04, 1.04, 1)
+hover_mult = 1.0
+_hover_scale = 1.01
+press_color = Color(0.96, 0.96, 0.96, 1)
+_press_scale = 0.985
+press_mult = 1.0
+animation_scale = 0.0
+animation_speed = 2.2
+animation_decay = 5.5
+animation_duration = 0.8
+
+[node name="RobotCard" type="ColorRect"]
+custom_minimum_size = Vector2(410, 204)
+mouse_default_cursor_shape = 2
+color = Color(1, 1, 1, 0)
+script = ExtResource("1_card")
+button_type = 1
+base_size = Vector2(410, 204)
+alignment = Vector2(0.5, 0.5)
+mouse_open = false
+config = SubResource("CardButtonConfig")
+in_splash = true
+
+[node name="Surface" type="ColorRect" parent="."]
+material = SubResource("CardMaterial")
+instance_shader_parameters/outline_color = Color(0.39, 0.86, 0.86, 1)
+instance_shader_parameters/tuning = Color(0.24, 0.29, 0.42, 0.52)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(1, 1, 1, 1)
+
+[node name="Label" type="Label" parent="."]
+visible = false
+material = ExtResource("3_font_material")
+mouse_filter = 2
+
+[node name="Margin" type="MarginContainer" parent="Surface"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_constants/margin_left = 12
+theme_override_constants/margin_top = 12
+theme_override_constants/margin_right = 14
+theme_override_constants/margin_bottom = 12
+
+[node name="Row" type="HBoxContainer" parent="Surface/Margin"]
+layout_mode = 2
+mouse_filter = 2
+theme = ExtResource("4_theme")
+theme_override_constants/separation = 14
+
+[node name="PreviewFrame" type="PanelContainer" parent="Surface/Margin/Row"]
+material = ExtResource("3_font_material")
+custom_minimum_size = Vector2(124, 178)
+layout_mode = 2
+mouse_filter = 2
+
+[node name="PreviewMargin" type="MarginContainer" parent="Surface/Margin/Row/PreviewFrame"]
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/margin_left = 4
+theme_override_constants/margin_top = 4
+theme_override_constants/margin_right = 4
+theme_override_constants/margin_bottom = 4
+
+[node name="PreviewStack" type="Control" parent="Surface/Margin/Row/PreviewFrame/PreviewMargin"]
+layout_mode = 2
+mouse_filter = 2
+
+[node name="Preview" type="TextureRect" parent="Surface/Margin/Row/PreviewFrame/PreviewMargin/PreviewStack"]
+material = ExtResource("3_font_material")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Art" type="Control" parent="Surface/Margin/Row/PreviewFrame/PreviewMargin/PreviewStack"]
+material = ExtResource("3_font_material")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("6_art")
+
+[node name="Info" type="VBoxContainer" parent="Surface/Margin/Row"]
+custom_minimum_size = Vector2(236, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_filter = 2
+theme_override_constants/separation = 6
+
+[node name="Title" type="Label" parent="Surface/Margin/Row/Info"]
+material = ExtResource("3_font_material")
+layout_mode = 2
+mouse_filter = 2
+theme_override_colors/font_color = Color(0.94, 0.94, 0.96, 1)
+theme_override_font_sizes/font_size = 20
+text = "Robot"
+vertical_alignment = 1
+text_overrun_behavior = 3
+
+[node name="Description" type="RichTextLabel" parent="Surface/Margin/Row/Info"]
+material = ExtResource("3_font_material")
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+size_flags_vertical = 3
+mouse_filter = 2
+theme_override_colors/default_color = Color(0.79, 0.8, 0.84, 1)
+theme_override_font_sizes/normal_font_size = 13
+bbcode_enabled = false
+text = "Robot model"
+fit_content = false
+scroll_active = false
+autowrap_mode = 2
+
+[node name="Tags" type="HFlowContainer" parent="Surface/Margin/Row/Info"]
+custom_minimum_size = Vector2(0, 29)
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/h_separation = 6
+theme_override_constants/v_separation = 4
+
+[node name="OpenRow" type="HBoxContainer" parent="Surface/Margin/Row/Info"]
+custom_minimum_size = Vector2(0, 34)
+layout_mode = 2
+mouse_filter = 2
+
+[node name="Spacer" type="Control" parent="Surface/Margin/Row/Info/OpenRow"]
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_filter = 2
+
+[node name="OpenBadge" type="PanelContainer" parent="Surface/Margin/Row/Info/OpenRow"]
+material = ExtResource("3_font_material")
+custom_minimum_size = Vector2(150, 34)
+layout_mode = 2
+mouse_filter = 2
+
+[node name="OpenLabel" type="Label" parent="Surface/Margin/Row/Info/OpenRow/OpenBadge"]
+material = ExtResource("3_font_material")
+layout_mode = 2
+mouse_filter = 2
+theme_override_colors/font_color = Color(0.92, 0.94, 0.96, 1)
+theme_override_font_sizes/font_size = 14
+text = "Connect  →"
+horizontal_alignment = 1
+vertical_alignment = 1

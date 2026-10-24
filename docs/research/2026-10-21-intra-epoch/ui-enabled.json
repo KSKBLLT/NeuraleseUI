@@ -1,0 +1,92 @@
+{
+  "epoch_seconds": [
+    [
+      2.217153,
+      2.258416,
+      2.115488
+    ],
+    [
+      2.148073,
+      2.155451,
+      2.128589
+    ],
+    [
+      2.14336,
+      2.111864,
+      2.113602
+    ],
+    [
+      2.159132,
+      2.131749,
+      2.150071
+    ],
+    [
+      2.120319,
+      2.161563,
+      2.149949
+    ]
+  ],
+  "preview_applied": 97,
+  "preview_messages": 97,
+  "raw_metrics": [
+    {
+      "accuracy": 0.168674698795181,
+      "evaluation_passes": 6.0,
+      "training_loss": 5.22636385034977,
+      "training_tokens": 254.0,
+      "validation_loss": 7.0361894762084,
+      "validation_tokens": 83.0
+    },
+    {
+      "accuracy": 0.168674698795181,
+      "evaluation_passes": 6.0,
+      "training_loss": 5.22636385034977,
+      "training_tokens": 254.0,
+      "validation_loss": 7.0361894762084,
+      "validation_tokens": 83.0
+    },
+    {
+      "accuracy": 0.168674698795181,
+      "evaluation_passes": 6.0,
+      "training_loss": 5.22636385034977,
+      "training_tokens": 254.0,
+      "validation_loss": 7.0361894762084,
+      "validation_tokens": 83.0
+    },
+    {
+      "accuracy": 0.168674698795181,
+      "evaluation_passes": 6.0,
+      "training_loss": 5.22636385034977,
+      "training_tokens": 254.0,
+      "validation_loss": 7.0361894762084,
+      "validation_tokens": 83.0
+    },
+    {
+      "accuracy": 0.168674698795181,
+      "evaluation_passes": 6.0,
+      "training_loss": 5.22636385034977,
+      "training_tokens": 254.0,
+      "validation_loss": 7.0361894762084,
+      "validation_tokens": 83.0
+    }
+  ],
+  "renderer": "headless",
+  "run_seconds": [
+    6.767952,
+    6.581571,
+    6.529015,
+    6.617181,
+    6.584034
+  ],
+  "training_steps_per_run": [
+    36,
+    36,
+    36,
+    36,
+    36
+  ],
+  "godot_process_cpu_seconds": 62.426297,
+  "variant": "current",
+  "total_seconds": 42.338010916952044,
+  "godot_peak_rss_bytes": 716079104
+}

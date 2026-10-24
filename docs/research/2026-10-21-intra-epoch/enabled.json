@@ -1,0 +1,188 @@
+{
+  "variant": "intra-epoch",
+  "preview": true,
+  "repeats": 5,
+  "epochs": 3,
+  "seconds_median": 1.2459227500949055,
+  "seconds_p95": 1.4702389580197632,
+  "peak_rss_bytes": 742768640,
+  "runs": [
+    [
+      {
+        "seconds": 1.2429458750411868,
+        "cpu_seconds": 2.23367,
+        "forward_calls": 108,
+        "preview_messages": 3,
+        "preview_bytes": 82489,
+        "max_preview_bytes": 27582,
+        "terminal_bytes": 17194781,
+        "final_accuracy": 0.03614457831325301,
+        "final_loss": 9.268975578585993
+      },
+      {
+        "seconds": 1.2397092909086496,
+        "cpu_seconds": 2.2297189999999993,
+        "forward_calls": 108,
+        "preview_messages": 4,
+        "preview_bytes": 110592,
+        "max_preview_bytes": 27665,
+        "terminal_bytes": 17192616,
+        "final_accuracy": 0.10843373493975904,
+        "final_loss": 7.229886463901151
+      },
+      {
+        "seconds": 1.2467337499838322,
+        "cpu_seconds": 2.230139000000001,
+        "forward_calls": 108,
+        "preview_messages": 4,
+        "preview_bytes": 110400,
+        "max_preview_bytes": 27628,
+        "terminal_bytes": 17199083,
+        "final_accuracy": 0.1686746987951807,
+        "final_loss": 7.036189476208397
+      }
+    ],
+    [
+      {
+        "seconds": 1.2483217909466475,
+        "cpu_seconds": 2.2362249999999975,
+        "forward_calls": 108,
+        "preview_messages": 3,
+        "preview_bytes": 82489,
+        "max_preview_bytes": 27582,
+        "terminal_bytes": 17194780,
+        "final_accuracy": 0.03614457831325301,
+        "final_loss": 9.268975578585993
+      },
+      {
+        "seconds": 1.243362332927063,
+        "cpu_seconds": 2.2394120000000015,
+        "forward_calls": 108,
+        "preview_messages": 4,
+        "preview_bytes": 110593,
+        "max_preview_bytes": 27665,
+        "terminal_bytes": 17192620,
+        "final_accuracy": 0.10843373493975904,
+        "final_loss": 7.229886463901151
+      },
+      {
+        "seconds": 1.2722970000468194,
+        "cpu_seconds": 2.2791880000000013,
+        "forward_calls": 108,
+        "preview_messages": 4,
+        "preview_bytes": 110404,
+        "max_preview_bytes": 27629,
+        "terminal_bytes": 17199096,
+        "final_accuracy": 0.1686746987951807,
+        "final_loss": 7.036189476208397
+      }
+    ],
+    [
+      {
+        "seconds": 1.4702389580197632,
+        "cpu_seconds": 2.5812139999999992,
+        "forward_calls": 108,
+        "preview_messages": 4,
+        "preview_bytes": 109942,
+        "max_preview_bytes": 27576,
+        "terminal_bytes": 17194791,
+        "final_accuracy": 0.03614457831325301,
+        "final_loss": 9.268975578585993
+      },
+      {
+        "seconds": 1.2459227500949055,
+        "cpu_seconds": 2.2439110000000007,
+        "forward_calls": 108,
+        "preview_messages": 4,
+        "preview_bytes": 110592,
+        "max_preview_bytes": 27665,
+        "terminal_bytes": 17192625,
+        "final_accuracy": 0.10843373493975904,
+        "final_loss": 7.229886463901151
+      },
+      {
+        "seconds": 1.241271625040099,
+        "cpu_seconds": 2.226144999999999,
+        "forward_calls": 108,
+        "preview_messages": 4,
+        "preview_bytes": 110310,
+        "max_preview_bytes": 27587,
+        "terminal_bytes": 17199093,
+        "final_accuracy": 0.1686746987951807,
+        "final_loss": 7.036189476208397
+      }
+    ],
+    [
+      {
+        "seconds": 1.2438473331276327,
+        "cpu_seconds": 2.2289139999999996,
+        "forward_calls": 108,
+        "preview_messages": 3,
+        "preview_bytes": 82492,
+        "max_preview_bytes": 27583,
+        "terminal_bytes": 17194794,
+        "final_accuracy": 0.03614457831325301,
+        "final_loss": 9.268975578585993
+      },
+      {
+        "seconds": 1.2488925841171294,
+        "cpu_seconds": 2.235395000000004,
+        "forward_calls": 108,
+        "preview_messages": 4,
+        "preview_bytes": 110596,
+        "max_preview_bytes": 27666,
+        "terminal_bytes": 17192628,
+        "final_accuracy": 0.10843373493975904,
+        "final_loss": 7.229886463901151
+      },
+      {
+        "seconds": 1.2508802921511233,
+        "cpu_seconds": 2.2361369999999994,
+        "forward_calls": 108,
+        "preview_messages": 4,
+        "preview_bytes": 110404,
+        "max_preview_bytes": 27629,
+        "terminal_bytes": 17199093,
+        "final_accuracy": 0.1686746987951807,
+        "final_loss": 7.036189476208397
+      }
+    ],
+    [
+      {
+        "seconds": 1.2455226250458509,
+        "cpu_seconds": 2.23095,
+        "forward_calls": 108,
+        "preview_messages": 3,
+        "preview_bytes": 82492,
+        "max_preview_bytes": 27583,
+        "terminal_bytes": 17194789,
+        "final_accuracy": 0.03614457831325301,
+        "final_loss": 9.268975578585993
+      },
+      {
+        "seconds": 1.2434697919525206,
+        "cpu_seconds": 2.2273540000000054,
+        "forward_calls": 108,
+        "preview_messages": 4,
+        "preview_bytes": 110596,
+        "max_preview_bytes": 27666,
+        "terminal_bytes": 17192627,
+        "final_accuracy": 0.10843373493975904,
+        "final_loss": 7.229886463901151
+      },
+      {
+        "seconds": 1.246654166141525,
+        "cpu_seconds": 2.2285500000000056,
+        "forward_calls": 108,
+        "preview_messages": 4,
+        "preview_bytes": 110404,
+        "max_preview_bytes": 27629,
+        "terminal_bytes": 17199094,
+        "final_accuracy": 0.1686746987951807,
+        "final_loss": 7.036189476208397
+      }
+    ]
+  ],
+  "python": "3.11.15 (main, May 10 2026, 19:23:07) [Clang 22.1.3 ]",
+  "source_package": "/Users/alim/.codex/worktrees/real-language-model-plan/neuralese/local_runtime"
+}

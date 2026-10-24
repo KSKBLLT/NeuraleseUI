@@ -1,0 +1,89 @@
+[gd_scene load_steps=4 format=3]
+
+[ext_resource type="Script" path="res://scripts/project_gallery.gd" id="1_gallery"]
+[ext_resource type="Theme" uid="uid://cx365ld2mgjne" path="res://resources/theme_base.tres" id="2_theme"]
+[ext_resource type="Script" path="res://scripts/project_grid.gd" id="3_grid"]
+
+[node name="ProjectGallery" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_theme")
+script = ExtResource("1_gallery")
+
+[node name="GalleryInset" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 0.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 15
+theme_override_constants/margin_right = 15
+
+[node name="Scroll" type="ScrollContainer" parent="GalleryInset"]
+layout_mode = 1
+size_flags_horizontal = 3
+size_flags_vertical = 3
+horizontal_scroll_mode = 0
+
+[node name="GridCenter" type="CenterContainer" parent="GalleryInset/Scroll"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Grid" type="GridContainer" parent="GalleryInset/Scroll/GridCenter"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_constants/h_separation = 16
+theme_override_constants/v_separation = 16
+columns = 3
+script = ExtResource("3_grid")
+cell_size = Vector2(230, 192)
+batch_size = 2
+
+[node name="LoadingState" type="CenterContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Copy" type="Label" parent="LoadingState"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.72, 0.74, 0.78, 1)
+theme_override_font_sizes/font_size = 17
+text = "Загрузка проектов..."
+horizontal_alignment = 1
+
+[node name="EmptyState" type="CenterContainer" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Copy" type="VBoxContainer" parent="EmptyState"]
+layout_mode = 2
+theme_override_constants/separation = 8
+alignment = 1
+
+[node name="Title" type="Label" parent="EmptyState/Copy"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.88, 0.9, 0.94, 1)
+theme_override_font_sizes/font_size = 22
+text = "Здесь пока нет проектов"
+horizontal_alignment = 1
+
+[node name="Body" type="Label" parent="EmptyState/Copy"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.62, 0.65, 0.71, 1)
+theme_override_font_sizes/font_size = 15
+text = "Создайте первый проект, чтобы начать работу."
+horizontal_alignment = 1

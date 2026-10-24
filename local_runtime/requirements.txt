@@ -1,0 +1,17 @@
+numpy==1.26.4
+onnx==1.14.1
+onnxruntime-training-cpu==1.19.2
+lmdb==2.2.0
+
+# Robot export. pyserial is the default link for micro:bit and SPIKE Prime;
+# the EV3 uses TCP from the standard library and needs nothing extra.
+pyserial==3.5
+
+# Language-only dependencies are shipped in language_vendor, including the
+# native offline tokenizer. They do not require installation with pip.
+
+# Bluetooth is an opt-in alternative to the USB cable, not the default: it needs
+# pairing plus an OS Bluetooth permission prompt, which is a wall for a child.
+# `bleak` is therefore NOT installed here -- BleTransport imports it lazily and
+# reports a readable "not installed" error. Add it if you want BLE:
+# bleak==0.22.3

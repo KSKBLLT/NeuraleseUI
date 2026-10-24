@@ -1,0 +1,11 @@
+- [Godot tooling setup](godot-tooling-setup.md) — installed MCP/skills; "declined" = app can't show prompts (env var fixes); config needs session restart
+- [Robot drive conversion is canon](robot-drive-conversion-is-canon.md) — port AdaptiveRobotController exactly; golden-test vs datalogs; check logs before calling anything hardcoded
+- [Brain Mapping = training contract](brain-mapping-is-training-contract.md) — model_binding says what the model saw; not a UI style source; outputs steer/throttle
+- [Driving the Neuralese UI](driving-neuralese-ui.md) — path to smart-car sim, middle-drag pan, slow clicks for BlockComponent, clean .mcp/ and recordings after
+- [Style is the shader](neuralese-style-is-shader.md) — surfaces = blurred backdrop + instance tint/outline; reuse splash.tres/add_button.tres; never name colours by eye
+- [Robot export progress](robot-export-progress.md) — teachneurons branch robot-integration; 705670a runtime, ef63ba1 window, cd2e255 cards; open items listed
+- [Old robot export layer is stale](old-robot-export-layer-is-stale.md) — ROBOT_EXPORT.md + NLR/1 bridge (Aug 2026) outdated; prototype is the source; ask before reusing
+- [UI caveats and duplication](ui-caveats-and-duplication.md) — duplicate existing elements; splash menu and Simulations bottom bar traps (ROBOT_UI_PLAN §2а); existing tests not binding
+- [Robot UI rejected 2/10](robot-ui-rejected-2-of-10.md) — why the first robot window failed; flow + mockup approval before code; app components only; no autowrap; keep blur base tint
+- [Nested windows in Neuralese](neuralese-nested-windows.md) — never stack splashes: parent hides keeping blur (can_go/can_tween_zero false), child inner:true, parent splash() back
+- [Simplify means remove](simplify-means-remove.md) — fewer elements/states/code; conditional visibility is not a simplification, call it what it is

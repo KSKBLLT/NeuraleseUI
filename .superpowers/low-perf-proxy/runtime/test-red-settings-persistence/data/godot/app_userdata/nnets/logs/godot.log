@@ -1,0 +1,83 @@
+Godot Engine v4.7.1.stable.official.a13da4feb - https://godotengine.org
+WARNING: Started the engine as `root`/superuser. This is a security risk, and subsystems like audio may not work correctly.
+Set the environment variable `GODOT_SILENCE_ROOT_WARNING` to 1 to silence this warning.
+   at: setup2 (main/main.cpp:3577)
+
+Unicode parsing error, some characters were replaced with � (U+FFFD): Unexpected NUL character
+Unicode parsing error, some characters were replaced with � (U+FFFD): Unexpected NUL character
+Unicode parsing error, some characters were replaced with � (U+FFFD): Unexpected NUL character
+ERROR: Cannot assign contents of "Array[PackedStringArray]" to "Array[String]".
+   at: assign (core/variant/array.cpp:276)
+ERROR: Condition "len < 4" is true. Returning: ERR_INVALID_DATA
+   at: decode_variant (core/io/marshalls.cpp:191)
+   GDScript backtrace (most recent call first):
+       [0] get_stored (res://scripts/glob.gd:386)
+       [1] get_var (res://scripts/glob.gd:381)
+       [2] _enter_tree (res://scripts/glob.gd:1538)
+ERROR: Error when trying to encode Variant.
+   at: get_var (core/io/file_access.cpp:372)
+   GDScript backtrace (most recent call first):
+       [0] get_stored (res://scripts/glob.gd:386)
+       [1] get_var (res://scripts/glob.gd:381)
+       [2] _enter_tree (res://scripts/glob.gd:1538)
+ERROR: Condition "len < 4" is true. Returning: ERR_INVALID_DATA
+   at: decode_variant (core/io/marshalls.cpp:191)
+   GDScript backtrace (most recent call first):
+       [0] get_stored (res://scripts/glob.gd:386)
+       [1] get_var (res://scripts/glob.gd:381)
+       [2] _enter_tree (res://scripts/glob.gd:1543)
+ERROR: Error when trying to encode Variant.
+   at: get_var (core/io/file_access.cpp:372)
+   GDScript backtrace (most recent call first):
+       [0] get_stored (res://scripts/glob.gd:386)
+       [1] get_var (res://scripts/glob.gd:381)
+       [2] _enter_tree (res://scripts/glob.gd:1543)
+ERROR: Condition "len < 4" is true. Returning: ERR_INVALID_DATA
+   at: decode_variant (core/io/marshalls.cpp:191)
+   GDScript backtrace (most recent call first):
+       [0] get_stored (res://scripts/glob.gd:386)
+       [1] get_var (res://scripts/glob.gd:381)
+       [2] cache (res://scripts/learner.gd:19)
+       [3] _enter_tree (res://scripts/learner.gd:33)
+ERROR: Error when trying to encode Variant.
+   at: get_var (core/io/file_access.cpp:372)
+   GDScript backtrace (most recent call first):
+       [0] get_stored (res://scripts/glob.gd:386)
+       [1] get_var (res://scripts/glob.gd:381)
+       [2] cache (res://scripts/learner.gd:19)
+       [3] _enter_tree (res://scripts/learner.gd:33)
+ERROR: Condition "len < 4" is true. Returning: ERR_INVALID_DATA
+   at: decode_variant (core/io/marshalls.cpp:191)
+   GDScript backtrace (most recent call first):
+       [0] get_stored (res://scripts/glob.gd:386)
+       [1] set_var (res://scripts/glob.gd:375)
+       [2] cache (res://scripts/learner.gd:25)
+       [3] _enter_tree (res://scripts/learner.gd:33)
+ERROR: Error when trying to encode Variant.
+   at: get_var (core/io/file_access.cpp:372)
+   GDScript backtrace (most recent call first):
+       [0] get_stored (res://scripts/glob.gd:386)
+       [1] set_var (res://scripts/glob.gd:375)
+       [2] cache (res://scripts/learner.gd:25)
+       [3] _enter_tree (res://scripts/learner.gd:33)
+Test Debug Scene Running...
+Frame 0 - res://scripts/node_palette.gd:234 in function '_apply_toggle_endpoint'
+Frame 1 - res://scripts/node_palette.gd:214 in function 'set_collapsed'
+Frame 2 - res://scripts/node_palette.gd:33 in function '_ready'
+ERROR: Condition "len < 4" is true. Returning: ERR_INVALID_DATA
+   at: decode_variant (core/io/marshalls.cpp:191)
+   GDScript backtrace (most recent call first):
+       [0] get_stored (res://scripts/glob.gd:386)
+       [1] get_var (res://scripts/glob.gd:381)
+       [2] _run (res://tests/godot/test_graphics_quality_ui.gd:36)
+ERROR: Error when trying to encode Variant.
+   at: get_var (core/io/file_access.cpp:372)
+   GDScript backtrace (most recent call first):
+       [0] get_stored (res://scripts/glob.gd:386)
+       [1] get_var (res://scripts/glob.gd:381)
+       [2] _run (res://tests/godot/test_graphics_quality_ui.gd:36)
+ERROR: settings selection must persist graphics quality
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] _finish (res://tests/godot/test_graphics_quality_ui.gd:61)
+       [1] _run (res://tests/godot/test_graphics_quality_ui.gd:47)

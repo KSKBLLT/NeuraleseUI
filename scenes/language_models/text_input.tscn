@@ -1,0 +1,49 @@
+[gd_scene format=3 uid="uid://bj7ktnxomy241"]
+
+[ext_resource type="PackedScene" path="res://scenes/input_base.tscn" id="1_base"]
+[ext_resource type="Script" uid="uid://bw1e7c35hxwxl" path="res://scripts/language_models/text_input.gd" id="2_script"]
+[ext_resource type="Script" uid="uid://dtwj74o465brs" path="res://scripts/loc.gd" id="4_loc"]
+
+[node name="Base" unique_id=862414739 instance=ExtResource("1_base")]
+offset_right = 109.0
+offset_bottom = 73.0
+script = ExtResource("2_script")
+language_kind = &"text_input"
+server_typename = &"TextInputNode"
+base_config = Dictionary[StringName, Variant]({
+&"text": "The cat sat on the"
+})
+
+[node name="ColorRect" parent="." index="0"]
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 109.0
+offset_bottom = 73.0
+mouse_filter = 2
+
+[node name="Label" parent="ColorRect/root" index="0"]
+text = "TextInput"
+
+[node name="Loc" type="Node" parent="ColorRect/root/Label" index="0" unique_id=1241628102]
+script = ExtResource("4_loc")
+auto = true
+localizations_ru = Dictionary[String, String]({
+"_": "ВводТекста"
+})
+localizations_kz = Dictionary[String, String]({
+"_": "МәтінКірісі"
+})
+
+[node name="o" parent="." index="1"]
+layout_mode = 0
+offset_left = 103.0
+offset_top = 26.0
+offset_right = 119.0
+offset_bottom = 47.0
+_accepted_datatypes = "language_text"
+server_name = &"text_out"
+unpadded_area = Vector4(0, 10, 10, 10)
+max_splines_by_keyword = Dictionary[StringName, int]({
+&"layer": 32
+})
+conn_count_keyword = "layer"

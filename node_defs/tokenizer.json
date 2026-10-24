@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "id": "tokenizer",
+  "source": {
+    "kind": "scene",
+    "path": "res://scenes/language_models/tokenizer.tscn"
+  },
+  "load_order": 211,
+  "menu": {
+    "visible": true,
+    "section": "language",
+    "order": 61
+  },
+  "roles": [
+    "language"
+  ],
+  "llm": {
+    "type": "tokenizer"
+  },
+  "runtime": {},
+  "display": {
+    "category": "data"
+  }
+}

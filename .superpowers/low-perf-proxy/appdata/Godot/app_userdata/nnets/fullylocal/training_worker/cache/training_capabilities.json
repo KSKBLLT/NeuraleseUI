@@ -1,0 +1,16 @@
+{
+  "capabilities": {
+    "artifact_format": "ort",
+    "key": "3|1.19.2|windows|amd64",
+    "nominal_checkpoint": false,
+    "onnx_load_ms": 87.86699999473058,
+    "ort_format_generation": true,
+    "ort_format_loading": true,
+    "ort_load_ms": 6.840100017143413,
+    "ort_version": "1.19.2",
+    "probe_error": "",
+    "reusable_cpu_ortvalue_inputs": true,
+    "reusable_cpu_ortvalue_inputs_error": ""
+  },
+  "schema": 3
+}

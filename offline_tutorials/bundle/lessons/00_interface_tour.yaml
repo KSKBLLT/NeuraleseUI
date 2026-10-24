@@ -1,0 +1,414 @@
+lesson_title:
+  en: First steps
+  ru: Первые шаги
+  kz: Алғашқы қадамдар
+
+tutorial_ui:
+  show_progress: false
+  arrow_style:
+    color: "#ff7f50"
+    thickness: 11
+    head_size: 30
+    wobble_amplitude: 8
+    shadow:
+      enabled: true
+      color: "#000000b8"
+      offset: [4, 5]
+      thickness_add: 5
+      head_size_add: 6
+  highlight_style:
+    center_opacity: 0.5
+    padding: 30
+    fade_in: 0.16
+    fade_out: 0.18
+
+flow:
+- step welcome:
+    title:
+      en: Welcome
+      ru: Добро пожаловать
+      kz: Қош келдіңіз
+    actions:
+    - hide_arrows: {}
+    - hide_ui_highlights: {}
+    - explain:
+        text:
+          en:
+          - Hello! Welcome to Neuralese.
+          - Here you can build artificial intelligence (AI) from ordinary blocks — just like in Scratch!
+          - Let’s learn how to use Neuralese.
+          ru:
+          - Привет! Добро пожаловать в Neuralese.
+          - В этом приложении можно собирать искусственный интеллект (ИИ) из обычных блоков — как в Scratch!
+          - Давай научимся пользоваться Neuralese.
+          kz:
+          - Сәлем! Neuralese-ке қош келдің!
+          - Мұнда жасанды интеллектіні (ЖИ) Scratch-тағыдай қарапайым блоктардан құрастыруға болады.
+          - Енді Neuralese-пен жұмыс істеуді үйренейік.
+        wait: next
+    - explain_next: {}
+
+- step top_panel:
+    title:
+      en: The top panel
+      ru: Верхняя панель
+      kz: Жоғарғы панель
+    actions:
+    - hide_arrows: {}
+    - hide_ui_highlights: {}
+    - explain:
+        text:
+          en:
+          - See the panel at the top?
+          - The folder button on the left opens the main Neuralese menu.
+          - To close that menu, click an empty area.
+          ru:
+          - Видишь панель сверху?
+          - Слева находится кнопка с папкой. Она открывает главное меню Neuralese.
+          - Чтобы закрыть меню, нажми на пустое место.
+          kz:
+          - Жоғарыдағы панельді көріп тұрсың ба?
+          - Сол жақтағы бума батырмасы Neuralese-тің басты мәзірін ашады.
+          - Мәзірді жабу үшін бос жерді бас.
+        wait: next
+    - explain_next: {}
+
+- step open_projects:
+    title:
+      en: Open the main menu
+      ru: Открой главное меню
+      kz: Басты мәзірді аш
+    actions:
+    - hide_arrows: {}
+    - hide_ui_highlights: {}
+    - arrow:
+        ui: projects
+        side: bottom
+    - highlight_ui: projects
+    - explain:
+        text:
+          en:
+          - Try clicking the folder.
+          ru:
+          - Попробуй нажать на папку.
+          kz:
+          - Бума батырмасын басып көр.
+        wait: none
+    - wait_ui: projects
+    - wait_dialog_closed: workslist
+    - hide_arrows: {}
+    - hide_ui_highlights: {}
+    - explain_next: {}
+
+- step main_tabs:
+    title:
+      en: Three main tabs
+      ru: Три главные вкладки
+      kz: Үш негізгі қойынды
+    actions:
+    - hide_arrows: {}
+    - hide_ui_highlights: {}
+    - explain:
+        text:
+          en:
+          - 'The three buttons in the middle are the main tabs: Simulations, Graphs, and Datasets.'
+          ru:
+          - 'Видишь три кнопки посередине? Это главные вкладки: «Симуляции», «Графы» и «Датасеты».'
+          kz:
+          - 'Ортадағы үш батырманы көріп тұрсың ба? Олар негізгі қойындылар: «Симуляциялар», «Графтар» және «Датасеттер».'
+        wait: next
+    - explain_next: {}
+
+- step open_simulations:
+    title:
+      en: Open Simulations
+      ru: Открой Симуляции
+      kz: Симуляцияларды аш
+    actions:
+    - hide_arrows: {}
+    - hide_ui_highlights: {}
+    - arrow:
+        ui: simulations
+        side: bottom
+    - highlight_ui: simulations
+    - explain:
+        text:
+          en:
+          - Click Simulations.
+          ru:
+          - Нажми на «Симуляции».
+          kz:
+          - «Симуляциялар» батырмасын бас.
+        wait: none
+    - wait_ui: simulations
+    - hide_arrows: {}
+    - hide_ui_highlights: {}
+    - explain_next: {}
+
+- step simulations:
+    title:
+      en: Simulations
+      ru: Симуляции
+      kz: Симуляциялар
+    actions:
+    - hide_arrows: {}
+    - hide_ui_highlights: {}
+    - explain:
+        text:
+          en:
+          - In Simulations, you can check how your neural network behaves in different situations. We will return here later.
+          ru:
+          - В «Симуляциях» ты будешь проверять, как твоя нейросеть ведёт себя в разных ситуациях. Позже мы рассмотрим эту вкладку подробнее.
+          kz:
+          - «Симуляциялар» бөлімінде нейрондық желің әртүрлі жағдайда қалай әрекет ететінін тексересің. Бұл бөлімге кейін қайта ораламыз.
+        wait: next
+    - explain_next: {}
+
+- step open_datasets:
+    title:
+      en: Open Datasets
+      ru: Открой Датасеты
+      kz: Датасеттерді аш
+    actions:
+    - hide_arrows: {}
+    - hide_ui_highlights: {}
+    - arrow:
+        ui: datasets
+        side: bottom
+    - highlight_ui: datasets
+    - explain:
+        text:
+          en:
+          - Click Datasets.
+          ru:
+          - Нажми на «Датасеты».
+          kz:
+          - «Датасеттер» батырмасын бас.
+        wait: none
+    - wait_ui: datasets
+    - hide_arrows: {}
+    - hide_ui_highlights: {}
+    - explain_next: {}
+
+- step datasets:
+    title:
+      en: Datasets
+      ru: Датасеты
+      kz: Датасеттер
+    actions:
+    - hide_arrows: {}
+    - hide_ui_highlights: {}
+    - explain:
+        text:
+          en:
+          - Here you collect examples of questions and answers that your neural network can learn from.
+          ru:
+          - Здесь ты будешь собирать примеры вопросов и ответов, на которых сможет учиться твоя нейросеть.
+          kz:
+          - Мұнда нейрондық желі үйренетін сұрақтар мен жауаптардың мысалдарын жинайсың.
+        wait: next
+    - explain_next: {}
+
+- step open_graphs:
+    title:
+      en: Open Graphs
+      ru: Открой Графы
+      kz: Графтарды аш
+    actions:
+    - hide_arrows: {}
+    - hide_ui_highlights: {}
+    - arrow:
+        ui: graphs
+        side: bottom
+    - highlight_ui: graphs
+    - explain:
+        text:
+          en:
+          - Click Graphs.
+          ru:
+          - Нажми на «Графы».
+          kz:
+          - «Графтар» батырмасын бас.
+        wait: none
+    - wait_ui: graphs
+    - hide_arrows: {}
+    - hide_ui_highlights: {}
+    - explain_next: {}
+
+- step graphs:
+    title:
+      en: Graphs
+      ru: Графы
+      kz: Графтар
+    actions:
+    - hide_arrows: {}
+    - hide_ui_highlights: {}
+    - explain:
+        text:
+          en:
+          - The Graphs tab is where you build neural networks. Let’s make one very small chain.
+          ru:
+          - Во вкладке «Графы» ты будешь собирать нейросети. Давай сделаем одну совсем короткую цепочку.
+          kz:
+          - «Графтар» қойындысында нейрондық желілерді құрастырасың. Енді өте қысқа бір тізбек жасап көрейік.
+        wait: next
+    - explain_next: {}
+
+- step add_input:
+    title:
+      en: Add the first node
+      ru: Добавь первую ноду
+      kz: Бірінші ноданы қос
+    persistent: true
+    actions:
+    - hide_arrows: {}
+    - hide_ui_highlights: {}
+    - arrow:
+        ui: node_palette
+        side: right
+    - highlight_ui: node_palette
+    - explain:
+        text:
+          en:
+          - Find Input1D in the node panel on the left and drag it onto an empty area of the workspace.
+          ru:
+          - Найди «Ввод1D» на панели нод слева и перетащи его на свободное место рабочего поля.
+          kz:
+          - Сол жақтағы нодалар панелінен «Input1D» нодасын тауып, жұмыс алаңының бос жеріне сүйреп апар.
+        wait: none
+    - create:
+        tour_input: input_1d
+    - require:
+        node:
+          bind: tour_input
+    - hide_arrows: {}
+    - hide_ui_highlights: {}
+    - explain:
+        text:
+          en:
+          - Done. The first node is now on the workspace.
+          ru:
+          - Готово. Первая нода появилась на рабочем поле.
+          kz:
+          - Дайын. Бірінші нода жұмыс алаңында пайда болды.
+        wait: next
+    - explain_next: {}
+
+- step add_dense:
+    title:
+      en: Add the second node
+      ru: Добавь вторую ноду
+      kz: Екінші ноданы қос
+    persistent: true
+    actions:
+    - hide_arrows: {}
+    - hide_ui_highlights: {}
+    - explain:
+        text:
+          en:
+          - Now drag a Dense node onto the workspace and place it to the right of Input1D.
+          ru:
+          - Теперь перетащи на поле ноду «Плотн» и поставь её справа от «Ввод1D».
+          kz:
+          - Енді «Тығыз» нодасын алаңға сүйреп, оны «Input1D» нодасының оң жағына қой.
+        wait: none
+    - create:
+        tour_dense: layer
+    - require:
+        node:
+          bind: tour_dense
+    - explain:
+        text:
+          en:
+          - Done. There are now two nodes on the workspace.
+          ru:
+          - Готово. Теперь на рабочем поле две ноды.
+          kz:
+          - Дайын. Енді жұмыс алаңында екі нода бар.
+        wait: next
+    - explain_next: {}
+
+- step connect_nodes:
+    title:
+      en: Connect the nodes
+      ru: Соедини ноды
+      kz: Нодаларды қос
+    persistent: true
+    actions:
+    - hide_arrows: {}
+    - hide_ui_highlights: {}
+    - explain:
+        text:
+          en:
+          - Drag a line from the port on the right of Input1D to the data port on the left of Dense.
+          ru:
+          - Протяни линию от жёлтого порта справа у «Ввод1D» к зелёному порту слева у «Плотн».
+          kz:
+          - «Input1D» нодасының оң жағындағы сары порттан «Тығыз» нодасының сол жағындағы жасыл портқа сызық тарт.
+        wait: none
+    - require:
+        connection:
+          from: tour_input
+          to: tour_dense
+          out_port: 0
+          in_port: 1
+    - confetti:
+        whole_screen: true
+        wait: false
+    - explain:
+        text:
+          en:
+          - Done! You have built your first two-node chain.
+          ru:
+          - Готово! Ты собрал свою первую цепочку из двух нод.
+          kz:
+          - Дайын! Сен екі нодадан тұратын алғашқы тізбегіңді құрастырдың.
+        wait: next
+    - explain_next: {}
+
+- step axon:
+    title:
+      en: Ask Axon
+      ru: Спроси Аксона
+      kz: Axon-нан сұра
+    actions:
+    - hide_arrows: {}
+    - hide_ui_highlights: {}
+    - arrow:
+        ui: axon
+        side: bottom
+    - highlight_ui: axon
+    - explain:
+        text:
+          en:
+          - If you get stuck, open Axon. You can ask it what to do next in ordinary words.
+          ru:
+          - Если что-то не получается, открой Аксона. Ему можно обычными словами написать, что ты хочешь сделать.
+          kz:
+          - Бір нәрсе түсініксіз болса, Axon-ды аш. Оған не істегің келетінін қарапайым сөздермен жаза аласың.
+        wait: next
+    - explain_next: {}
+
+- step finish:
+    title:
+      en: You are ready
+      ru: Можно начинать
+      kz: Бастауға болады
+    actions:
+    - hide_arrows: {}
+    - hide_ui_highlights: {}
+    - explain:
+        text:
+          en:
+          - You now know where the main Neuralese tools are and how to start building a model. You are ready to explore.
+          ru:
+          - Теперь ты знаешь, где находятся главные инструменты Neuralese и как начать собирать модель. Можно продолжать самостоятельно.
+          kz:
+          - Енді Neuralese-тің негізгі құралдары қайда екенін және модельді қалай құрастыруды бастау керегін білесің. Әрі қарай өзің зерттей аласың.
+        wait: next
+    - confetti:
+        whole_screen: true
+        wait: false
+    - explain_next: {}
+    - hide_arrows: {}
+    - hide_ui_highlights: {}

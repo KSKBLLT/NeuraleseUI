@@ -1,0 +1,329 @@
+{
+  "schema_version": 1,
+  "python": "CPython 3.11",
+  "packages": [
+    {
+      "wheel": "tokenizers-0.22.2-cp39-abi3-win_amd64.whl",
+      "sha256": "c9ea31edff2968b44a88f97d784c2f16dc0729b8b143ed004699ebca91f05c48",
+      "platform": "windows-x64",
+      "files": {
+        "tokenizers-0.22.2.dist-info/METADATA": {
+          "bytes": 7428,
+          "sha256": "5ad9bccf21ae53d45f812703c80c7c03ecea300823655a2968f9e6778779bdb3"
+        },
+        "tokenizers/__init__.py": {
+          "bytes": 2739,
+          "sha256": "510d5e23458612433da9f1fe430b5009fb88ba90508ee4340d2397b32c319080"
+        },
+        "tokenizers/decoders/__init__.py": {
+          "bytes": 387,
+          "sha256": "42bd636c0d9fbeac23801058384c9a0e32c1c03c2405fb4fe63377b51bd3d638"
+        },
+        "tokenizers/implementations/__init__.py": {
+          "bytes": 316,
+          "sha256": "f592367091cf0940995cfdfb18d9911ed07321888a5b3caa932d6bb5c61dacfc"
+        },
+        "tokenizers/implementations/base_tokenizer.py": {
+          "bytes": 16265,
+          "sha256": "d9114c96c585a92f0069c5cad9d6d3f630925673b2f3a1115b099a587f2f6454"
+        },
+        "tokenizers/implementations/bert_wordpiece.py": {
+          "bytes": 5671,
+          "sha256": "8d150c4985350bb9d510364c29dc86dd5a7bf825289e0135906261bce3ff1073"
+        },
+        "tokenizers/implementations/byte_level_bpe.py": {
+          "bytes": 4394,
+          "sha256": "a567db49e69ec3d6ad58a5fc35fdb321189aeaa840c1731f66069e20d227ce8f"
+        },
+        "tokenizers/implementations/char_level_bpe.py": {
+          "bytes": 5599,
+          "sha256": "06dd79ac4719452cc9d917c47aad98bce5d9f30fd4606abd8ba3b7cbee35023e"
+        },
+        "tokenizers/implementations/sentencepiece_bpe.py": {
+          "bytes": 3824,
+          "sha256": "e3f74915c36ccaf0bf175c019d60c1aae5acb1b50c57890ff811177ae1dcc6d2"
+        },
+        "tokenizers/implementations/sentencepiece_unigram.py": {
+          "bytes": 7826,
+          "sha256": "2868e12335ee930264a5aa354087b95d5ac42003232a219a1c4ce90072fed48f"
+        },
+        "tokenizers/models/__init__.py": {
+          "bytes": 184,
+          "sha256": "a84ef7ab270f00a71ecbfa52f28bf5148cf5d0bd986f3cb513ed4a19e7b6ed08"
+        },
+        "tokenizers/normalizers/__init__.py": {
+          "bytes": 870,
+          "sha256": "3e06ffc04d50428bf7b7f496e2f72c5d8ea55410d8c8635f606909324df023b7"
+        },
+        "tokenizers/pre_tokenizers/__init__.py": {
+          "bytes": 614,
+          "sha256": "42f366313b55d111a468a48df614f010f8a60f538b1d153a3dbcd5c57c0ce330"
+        },
+        "tokenizers/processors/__init__.py": {
+          "bytes": 316,
+          "sha256": "5f538a2adaf721479e75ef39988d5c2c5d0caa60d196becb345318744cb928c5"
+        },
+        "tokenizers/tokenizers.pyd": {
+          "bytes": 7395328,
+          "sha256": "7acb83f5b89136597e0d14b788d82917bf2870df94575bf77e12731c4e49c4df"
+        },
+        "tokenizers/tools/__init__.py": {
+          "bytes": 56,
+          "sha256": "9892d5ac737514fdb709fe3f1095a8614761f324dbe416c914d7daf04739bc73"
+        },
+        "tokenizers/tools/visualizer-styles.css": {
+          "bytes": 5020,
+          "sha256": "83df1126e7140a36273cbc17c9c7dc57e7406c7333a89a6767b3683ff7025019"
+        },
+        "tokenizers/tools/visualizer.py": {
+          "bytes": 15241,
+          "sha256": "8d67318454ecca242bf994260c94a3cc4712199bd96682837acd88adad44560f"
+        },
+        "tokenizers/trainers/__init__.py": {
+          "bytes": 256,
+          "sha256": "bfd09db6855abb00fa6f5c0003a47982848b66c9416cf139bd91ccd9df2c80a3"
+        },
+        "tokenizers-0.22.2.dist-info/licenses/LICENSE": {
+          "bytes": 11357,
+          "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+        }
+      },
+      "license_source": "https://github.com/huggingface/tokenizers/blob/v0.22.2/LICENSE"
+    },
+    {
+      "wheel": "tokenizers-0.22.2-cp39-abi3-macosx_11_0_arm64.whl",
+      "sha256": "1e418a55456beedca4621dbab65a318981467a2b188e982a23e117f115ce5001",
+      "platform": "macos-arm64",
+      "files": {
+        "tokenizers-0.22.2.dist-info/METADATA": {
+          "bytes": 7254,
+          "sha256": "15a5ddaf489f592b77e0a934c0eeb46b51130a94064ca129232afdb0a3868efc"
+        },
+        "tokenizers/__init__.py": {
+          "bytes": 2639,
+          "sha256": "148ecb122f3fee03be9abb1fe213dd85fbc691bf2ad2b437ff531533781a6a3a"
+        },
+        "tokenizers/decoders/__init__.py": {
+          "bytes": 372,
+          "sha256": "85fc0ce821540ef94c1862f8fb1b1a698cfcd4af4fe6b408e592f950758af18e"
+        },
+        "tokenizers/implementations/__init__.py": {
+          "bytes": 310,
+          "sha256": "57302ca65688a3bae5e0014ef0c8aeee283b31f663be89f055b959c34d7347a3"
+        },
+        "tokenizers/implementations/base_tokenizer.py": {
+          "bytes": 15806,
+          "sha256": "3ed4364d29a8306953a4bf2873c7c3bf0255218ea2b161a6a6cf5ca26cec5a31"
+        },
+        "tokenizers/implementations/bert_wordpiece.py": {
+          "bytes": 5520,
+          "sha256": "b0a0ae9b414a3d875280914937c2c37ab541a130d14aacaa49dadc9be96f42a2"
+        },
+        "tokenizers/implementations/byte_level_bpe.py": {
+          "bytes": 4272,
+          "sha256": "8817a933fcf5b392b2ef314356b60b7372f96f262b228ba4efe934246b85d74b"
+        },
+        "tokenizers/implementations/char_level_bpe.py": {
+          "bytes": 5449,
+          "sha256": "35a83f1c5abc46f72e72a8bc321575fb4c6da11d02ec58c739e70555444beecb"
+        },
+        "tokenizers/implementations/sentencepiece_bpe.py": {
+          "bytes": 3721,
+          "sha256": "734f1f29fea2f7613646c2a0b31cbb2f365f617f3e3000874911bc53f239cad6"
+        },
+        "tokenizers/implementations/sentencepiece_unigram.py": {
+          "bytes": 7630,
+          "sha256": "d91a087c556988c9093ad382b2433f54278210b59a0bf6cd9ddb3a1afb44d0a4"
+        },
+        "tokenizers/models/__init__.py": {
+          "bytes": 176,
+          "sha256": "7896781d3010669c672882cdca559a4c5ab15f2f816ba38ab3058de3b7de795f"
+        },
+        "tokenizers/normalizers/__init__.py": {
+          "bytes": 841,
+          "sha256": "ff4eb0e1ca9122dbde12021d75868b3127209123a4200308cd809eb1be400385"
+        },
+        "tokenizers/pre_tokenizers/__init__.py": {
+          "bytes": 598,
+          "sha256": "295f7e12c03290610d514ce419609bbf89fa60cea161ad617e763e83306930d1"
+        },
+        "tokenizers/processors/__init__.py": {
+          "bytes": 307,
+          "sha256": "c4cd8310ac0ab4722e987b2ccccf00324abe0256aabc16455d680b53c48d84e6"
+        },
+        "tokenizers/tokenizers.abi3.so": {
+          "bytes": 8261072,
+          "sha256": "899b244f19f1ddd6506c45ea0f7163f38952f2a552272a687a6ef4b9ddcc7327"
+        },
+        "tokenizers/tools/__init__.py": {
+          "bytes": 55,
+          "sha256": "c46f1c681f4e1c2f1c6c1d354b9bd8575e0767184ee9e59b2de86c6fbd29a62a"
+        },
+        "tokenizers/tools/visualizer-styles.css": {
+          "bytes": 4850,
+          "sha256": "cc0c9dab5a06583f10125978f9ec8bf0b970d01d6cb72fe1a48137b58c4bd369"
+        },
+        "tokenizers/tools/visualizer.py": {
+          "bytes": 14834,
+          "sha256": "8edc646b4d6984d3f8eee412a1c21014efc33272f7647770a211950eaa9824fa"
+        },
+        "tokenizers/trainers/__init__.py": {
+          "bytes": 248,
+          "sha256": "513bb6d8019ca7be88be95b8e712d16c95844f4e0dc4f5ba35f09bd98633d043"
+        },
+        "tokenizers-0.22.2.dist-info/licenses/LICENSE": {
+          "bytes": 11357,
+          "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+        }
+      },
+      "license_source": "https://github.com/huggingface/tokenizers/blob/v0.22.2/LICENSE"
+    },
+    {
+      "wheel": "jinja2-3.1.6-py3-none-any.whl",
+      "sha256": "85ece4451f492d0c13c5dd7c13a64681a86afae63a5f347908daf103ce6d2f67",
+      "platform": "common",
+      "files": {
+        "jinja2-3.1.6.dist-info/METADATA": {
+          "bytes": 2871,
+          "sha256": "68c5548fb67c4132a13898d9b31ec50c6bea2abdd915d921f214355c3a6499c8"
+        },
+        "jinja2-3.1.6.dist-info/entry_points.txt": {
+          "bytes": 58,
+          "sha256": "38bf39818535783f1cb8f9629227c59e05e97818dac65eab209f0a902ff7afe2"
+        },
+        "jinja2-3.1.6.dist-info/licenses/LICENSE.txt": {
+          "bytes": 1475,
+          "sha256": "3b49dcee4105eb37bac10faf1be260408fe85d252b8e9df2e0979fc1e094437b"
+        },
+        "jinja2/__init__.py": {
+          "bytes": 1928,
+          "sha256": "c717a93bd8bb0c7b2a910ae004476e2ed7e8cf6402b93ebf81b2f85d237585b5"
+        },
+        "jinja2/_identifier.py": {
+          "bytes": 1958,
+          "sha256": "ff361cb4d2b346a964fe6bab4cd973ae3bb514524bed56bf223aaa77b8a2da55"
+        },
+        "jinja2/async_utils.py": {
+          "bytes": 2834,
+          "sha256": "bcaf8f76cba8ace3275929c4913de25094489139d880ed93e8c9c6c43807239a"
+        },
+        "jinja2/bccache.py": {
+          "bytes": 14061,
+          "sha256": "821d2ab3daee9675e8d0f857e634c9cb6507cc8f3016743ade8fefc3b9e1cd18"
+        },
+        "jinja2/compiler.py": {
+          "bytes": 74131,
+          "sha256": "f51a42425e57f3c0479652623ec1cf876f791e1d2e029bf0149350baeb542de3"
+        },
+        "jinja2/constants.py": {
+          "bytes": 1433,
+          "sha256": "18ca05c9d045fe476969128fa0ce5c97932f8aab9544b57266d7e9e7ed7a8e0d"
+        },
+        "jinja2/debug.py": {
+          "bytes": 6297,
+          "sha256": "0a71ea0831ddf81546bed8bff19b13a259d7361037102b18fba9ffda9c14f07c"
+        },
+        "jinja2/defaults.py": {
+          "bytes": 1267,
+          "sha256": "6e805c4b0efc87e969db461b697489b2a900236b8dfe60ff4ed0b27697aae705"
+        },
+        "jinja2/environment.py": {
+          "bytes": 61513,
+          "sha256": "f6786b3fb0a1f8d6c65f4d30bf2af8cb2fae84d1ead8e09ceb48201ab9e2fdf9"
+        },
+        "jinja2/exceptions.py": {
+          "bytes": 5071,
+          "sha256": "8a81de1eb5b009635a5d7d629c798755b96f73885a3bb017b230a9dc67d6bf1d"
+        },
+        "jinja2/ext.py": {
+          "bytes": 31875,
+          "sha256": "e4f1797877e1f265c02315c71d1076c576d7a218bca44de71d23b16baeae4bb1"
+        },
+        "jinja2/filters.py": {
+          "bytes": 55212,
+          "sha256": "3d0fc481df67f634a0b671906321782b98f69d8c21508ba584f9f28a691dafe9"
+        },
+        "jinja2/idtracking.py": {
+          "bytes": 10555,
+          "sha256": "fa5979948a7bde930bdc4ad46222098fbb5d996c5c1ff2250efdf203f862658a"
+        },
+        "jinja2/lexer.py": {
+          "bytes": 29786,
+          "sha256": "2d88988a8e9bafe4dea7d9cf72ea565ec3c4b6396ec37a75994fa534155151f9"
+        },
+        "jinja2/loaders.py": {
+          "bytes": 24055,
+          "sha256": "c08ae7c63bdc6ea8795705b6f0d4a47e8b620eaf2a342c4839215b1948922c1e"
+        },
+        "jinja2/meta.py": {
+          "bytes": 4397,
+          "sha256": "3930cf91a16f5361e0bf1fba6a4cfbd79e05f012166919af25c045bf0a291f0c"
+        },
+        "jinja2/nativetypes.py": {
+          "bytes": 4210,
+          "sha256": "ec620600b54981dc8bf34a1925d4146947f04ade6ada549265b5edd1d35ffcce"
+        },
+        "jinja2/nodes.py": {
+          "bytes": 34579,
+          "sha256": "9b50eecdcafaaa1648f0943a57226050d8a78c07f96d0ce28d29839ccb2f531f"
+        },
+        "jinja2/optimizer.py": {
+          "bytes": 1651,
+          "sha256": "ac99c246543ba59b04126321b100e00bfa4ac831f13f94cf4bacd53c6b2072ef"
+        },
+        "jinja2/parser.py": {
+          "bytes": 40383,
+          "sha256": "94b385cb7b0498773921a1074621f5b1056721dda6a14433872789653b5d637d"
+        },
+        "jinja2/runtime.py": {
+          "bytes": 34249,
+          "sha256": "80393e1af76b8895ea82c19b1e0adc2933f4629eb33d7ce1ceb2290851f78c05"
+        },
+        "jinja2/sandbox.py": {
+          "bytes": 15009,
+          "sha256": "330d9a8ad958d88f256bb15885c5f6606f41b5461c2e70f41a1ddddbd7035ab6"
+        },
+        "jinja2/tests.py": {
+          "bytes": 5926,
+          "sha256": "54bb018551675a0f8fc52073d4c8519cd5a03f5a2f5e4de778ed452d031e0bd4"
+        },
+        "jinja2/utils.py": {
+          "bytes": 24129,
+          "sha256": "ad1a77a3d7bb64a4b87f2ad645b10bc8b729b8655315c9e8a1a39ad6ac7f1489"
+        },
+        "jinja2/visitor.py": {
+          "bytes": 3557,
+          "sha256": "11c9cbd4f2307ffe1154238cc6c44db91f005c76d2d6a7c074c384da780a273e"
+        }
+      }
+    },
+    {
+      "wheel": "markupsafe-3.0.3-cp311-cp311-win_amd64.whl",
+      "sha256": "de8a88e63464af587c950061a5e6a67d3632e36df62b986892331d4620a35c01",
+      "platform": "common",
+      "files": {
+        "markupsafe-3.0.3.dist-info/METADATA": {
+          "bytes": 2764,
+          "sha256": "f0ae5dbb09d50fb5f7632c3d53f0220995ef76019e5892e0a545740136a4e3cb"
+        },
+        "markupsafe-3.0.3.dist-info/licenses/LICENSE.txt": {
+          "bytes": 1503,
+          "sha256": "4631ec0db5fd90a547e336817264c6798214338146f8ac94b4a57f96ee8c9ec4"
+        },
+        "markupsafe-3.0.3.dist-info/top_level.txt": {
+          "bytes": 11,
+          "sha256": "ab2d0f9637b9209bafb020637a32728430a310075c0cb2bfd9a81571ec7c67a5"
+        },
+        "markupsafe/__init__.py": {
+          "bytes": 13644,
+          "sha256": "badd8b5e3fbab2a908554752031f9d6e807972b01a446e72ec43b8e3b8666aba"
+        },
+        "markupsafe/_native.py": {
+          "bytes": 218,
+          "sha256": "da9b64278d3209ca7d92adcbd4daa98237e9641fa86e789828514a50e9078784"
+        }
+      }
+    }
+  ],
+  "offline_api": "Tokenizer.from_file, Jinja2 sandbox; no Hub, Torch or Transformers"
+}

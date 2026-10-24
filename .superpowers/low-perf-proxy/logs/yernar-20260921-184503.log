@@ -1,0 +1,2292 @@
+WorkerThreadPool: 4 threads, 1 max low-priority.
+Godot Engine v4.7.1.stable.official.a13da4feb - https://godotengine.org
+TextServer: Added interface "Dummy"
+TextServer: Added interface "ICU / HarfBuzz / Graphite (Built-in)"
+SDL: Init OK!
+Accessibility: AccessKit driver loaded.
+Xshape 1.1 detected.
+Xinerama 1.1 detected.
+Xrandr 1.6 detected.
+Xrender 0.11 detected.
+Xinput 2.2 detected.
+XInput: Refreshing devices.
+XInput: Absolute pointing device: xwayland-pointer:19
+XInput: No touch devices found.
+Input method started.
+Optional Vulkan instance extension VK_EXT_swapchain_colorspace not found.
+Accessibility: window 0 adapter created.
+Devices:
+  #0: Unknown llvmpipe (LLVM 17.0.6, 256 bits) - Supported, CPU
+Optional Vulkan device extension VK_KHR_fragment_shading_rate not found
+Optional Vulkan device extension VK_EXT_fragment_density_map not found
+Optional Vulkan device extension VK_EXT_fragment_density_map2 not found
+Optional Vulkan device extension VK_QCOM_fragment_density_map_offset not found
+Optional Vulkan device extension VK_EXT_astc_decode_mode not found
+Optional Vulkan device extension VK_EXT_texture_compression_astc_hdr not found
+Optional Vulkan device extension VK_KHR_acceleration_structure not found
+Optional Vulkan device extension VK_KHR_deferred_host_operations not found
+Optional Vulkan device extension VK_KHR_ray_tracing_pipeline not found
+Optional Vulkan device extension VK_NV_ray_tracing_validation not found
+Optional Vulkan device extension VK_EXT_device_fault not found
+Optional Vulkan device extension VK_EXT_debug_marker not found
+- Vulkan Variable Rate Shading not supported
+- Vulkan Fragment Density Map not supported
+- Vulkan multiview supported:
+  max view count: 6
+  max instances: 2147483647
+- Vulkan subgroup:
+  size: 8
+  min size: 8
+  max size: 8
+  stages: STAGE_FRAGMENT, STAGE_COMPUTE, STAGE_TASK_NV, STAGE_MESH_NV
+  supported ops: FEATURE_BASIC, FEATURE_VOTE, FEATURE_ARITHMETIC, FEATURE_BALLOT, FEATURE_SHUFFLE, FEATURE_SHUFFLE_RELATIVE, FEATURE_QUAD
+- Vulkan Acceleration Structure not supported
+- Vulkan Raytracing not supported
+Vulkan 1.3.274 - Forward Mobile - Using Device #0: Unknown - llvmpipe (LLVM 17.0.6, 256 bits)
+Startup PSO cache (0.0 MiB)
+XcursorGetTheme could not get cursor theme
+Failed loading custom cursor: crossed_circle
+DBus 1.14.10 detected.
+Using "default" pen tablet driver...
+Creating VMA small objects pool for memory type index 0
+Shader 'CanvasSdfShaderRD' (group 0) SHA256: 54b47da3ce58bfeb483acea9e9e45b5de11793d45b2a38279aa17b08296ef514
+Loading cache for shader CanvasSdfShaderRD, variant 0
+Loading cache for shader CanvasSdfShaderRD, variant 1
+Loading cache for shader CanvasSdfShaderRD, variant 2
+Loading cache for shader CanvasSdfShaderRD, variant 3
+Loading cache for shader CanvasSdfShaderRD, variant 4
+Loading cache for shader CanvasSdfShaderRD, variant 5
+Shader 'SkeletonShaderRD' (group 0) SHA256: 08b4464d16133f4db97a8df4663b95b2b956ecd3e7addf44a16e644f488157c2
+Loading cache for shader SkeletonShaderRD, variant 0
+Loading cache for shader SkeletonShaderRD, variant 1
+Shader 'SortShaderRD' (group 0) SHA256: 8e4ebbbb19fcd734c6f15656afbe1bcd5eb3acdfdae9cab023ebd6f54c901ef8
+Loading cache for shader SortShaderRD, variant 0
+Loading cache for shader SortShaderRD, variant 1
+Loading cache for shader SortShaderRD, variant 2
+Shader 'ParticlesShaderRD' (group 0) SHA256: 8f4c25caa97a2f74d5fa5f299aabdd514f57d9737b8642ed65c20e846dad5db0
+Loading cache for shader ParticlesShaderRD, variant 0
+Shader 'ParticlesCopyShaderRD' (group 0) SHA256: 688d10aec3c2e17e8c578ba3e2db1ea2f054eedd511b1e1647952c0acaeeab72
+Loading cache for shader ParticlesCopyShaderRD, variant 0
+Loading cache for shader ParticlesCopyShaderRD, variant 1
+Loading cache for shader ParticlesCopyShaderRD, variant 2
+Loading cache for shader ParticlesCopyShaderRD, variant 3
+Loading cache for shader ParticlesCopyShaderRD, variant 4
+Loading cache for shader ParticlesCopyShaderRD, variant 5
+Loading cache for shader ParticlesCopyShaderRD, variant 6
+Loading cache for shader ParticlesCopyShaderRD, variant 7
+Loading cache for shader ParticlesCopyShaderRD, variant 8
+Loading cache for shader ParticlesCopyShaderRD, variant 9
+Loading cache for shader ParticlesCopyShaderRD, variant 10
+Loading cache for shader ParticlesCopyShaderRD, variant 11
+Loading cache for shader ParticlesCopyShaderRD, variant 12
+Loading cache for shader ParticlesCopyShaderRD, variant 13
+Loading cache for shader ParticlesCopyShaderRD, variant 14
+Loading cache for shader ParticlesCopyShaderRD, variant 15
+Loading cache for shader ParticlesCopyShaderRD, variant 16
+Loading cache for shader ParticlesCopyShaderRD, variant 17
+Loading cache for shader ParticlesCopyShaderRD, variant 18
+Loading cache for shader ParticlesCopyShaderRD, variant 19
+Loading cache for shader ParticlesCopyShaderRD, variant 20
+Shader 'CanvasShaderRD' (group 0) SHA256: 1ac5f6c8d534ebab572b3f886e38134784245fbd5fa01c7cbb6cc452e5400080
+Loading cache for shader CanvasShaderRD, variant 0
+Loading cache for shader CanvasShaderRD, variant 1
+Loading cache for shader CanvasShaderRD, variant 2
+Loading cache for shader CanvasShaderRD, variant 3
+Loading cache for shader CanvasShaderRD, variant 4
+Loading cache for shader CanvasShaderRD, variant 5
+Shader 'CanvasOcclusionShaderRD' (group 0) SHA256: 3b765d5624135f9fbf3199b6660b8387d5b904f48be0914a622e5da9b906b504
+Loading cache for shader CanvasOcclusionShaderRD, variant 0
+Loading cache for shader CanvasOcclusionShaderRD, variant 1
+Loading cache for shader CanvasOcclusionShaderRD, variant 2
+Loading cache for shader CanvasShaderRD, variant 0
+Loading cache for shader CanvasShaderRD, variant 1
+Loading cache for shader CanvasShaderRD, variant 2
+Loading cache for shader CanvasShaderRD, variant 3
+Loading cache for shader CanvasShaderRD, variant 4
+Loading cache for shader CanvasShaderRD, variant 5
+Loading cache for shader CanvasShaderRD, variant 0
+Loading cache for shader CanvasShaderRD, variant 1
+Loading cache for shader CanvasShaderRD, variant 2
+Loading cache for shader CanvasShaderRD, variant 3
+Loading cache for shader CanvasShaderRD, variant 4
+Loading cache for shader CanvasShaderRD, variant 5
+Shader 'TexBlitShaderRD' (group 0) SHA256: ce377a6d54cd54d45abdd915ec4cf3877fef3cbace94de3df4ed73ec0124ea0c
+Loading cache for shader TexBlitShaderRD, variant 0
+Loading cache for shader TexBlitShaderRD, variant 1
+Loading cache for shader TexBlitShaderRD, variant 2
+Loading cache for shader TexBlitShaderRD, variant 3
+Ubershaders: Enabled
+Shader 'SceneForwardMobileShaderRD' (group 0) SHA256: 34688661501bf8d3456dc67ebb9a159ba4fcc2484c5a0d80ef3a1a49064c0832
+Shader 'SceneForwardMobileShaderRD' (group 1) SHA256: 9455ad1d446fef51eb0552c7e523782169cfd1ef48749d60a394233a2747ee26
+Shader 'SceneForwardMobileShaderRD' (group 2) SHA256: 93c7c9e19baed68ba13cb6b3b6c803f036efbd994347ef022b44e0acfb385c82
+Shader 'SceneForwardMobileShaderRD' (group 3) SHA256: ee1de0deb960a58fd4a1e40a2c1ee60a420293303d391ac820a8b11576a9c40a
+Loading cache for shader SceneForwardMobileShaderRD, variant 0
+Loading cache for shader SceneForwardMobileShaderRD, variant 1
+Loading cache for shader SceneForwardMobileShaderRD, variant 2
+Loading cache for shader SceneForwardMobileShaderRD, variant 3
+Loading cache for shader SceneForwardMobileShaderRD, variant 4
+Loading cache for shader SceneForwardMobileShaderRD, variant 5
+Loading cache for shader SceneForwardMobileShaderRD, variant 6
+Loading cache for shader SceneForwardMobileShaderRD, variant 7
+Loading cache for shader SceneForwardMobileShaderRD, variant 8
+Loading cache for shader SceneForwardMobileShaderRD, variant 9
+Loading cache for shader SceneForwardMobileShaderRD, variant 0
+Loading cache for shader SceneForwardMobileShaderRD, variant 1
+Loading cache for shader SceneForwardMobileShaderRD, variant 2
+Loading cache for shader SceneForwardMobileShaderRD, variant 3
+Loading cache for shader SceneForwardMobileShaderRD, variant 4
+Loading cache for shader SceneForwardMobileShaderRD, variant 5
+Loading cache for shader SceneForwardMobileShaderRD, variant 6
+Loading cache for shader SceneForwardMobileShaderRD, variant 7
+Loading cache for shader SceneForwardMobileShaderRD, variant 8
+Loading cache for shader SceneForwardMobileShaderRD, variant 9
+Loading cache for shader SceneForwardMobileShaderRD, variant 0
+Loading cache for shader SceneForwardMobileShaderRD, variant 1
+Loading cache for shader SceneForwardMobileShaderRD, variant 2
+Loading cache for shader SceneForwardMobileShaderRD, variant 3
+Loading cache for shader SceneForwardMobileShaderRD, variant 4
+Loading cache for shader SceneForwardMobileShaderRD, variant 5
+Loading cache for shader SceneForwardMobileShaderRD, variant 6
+Loading cache for shader SceneForwardMobileShaderRD, variant 7
+Loading cache for shader SceneForwardMobileShaderRD, variant 8
+Loading cache for shader SceneForwardMobileShaderRD, variant 9
+Shader 'SkyShaderRD' (group 0) SHA256: 9be8c23dcd20154e4a1ab0bef919421f8c51853d47c2fe6dc91221f8cfc74997
+Loading cache for shader SkyShaderRD, variant 0
+Loading cache for shader SkyShaderRD, variant 1
+Loading cache for shader SkyShaderRD, variant 2
+Loading cache for shader SkyShaderRD, variant 3
+Loading cache for shader SkyShaderRD, variant 4
+Loading cache for shader SkyShaderRD, variant 5
+Loading cache for shader SkyShaderRD, variant 0
+Loading cache for shader SkyShaderRD, variant 1
+Loading cache for shader SkyShaderRD, variant 2
+Loading cache for shader SkyShaderRD, variant 3
+Loading cache for shader SkyShaderRD, variant 4
+Loading cache for shader SkyShaderRD, variant 5
+Shader 'BokehDofRasterShaderRD' (group 0) SHA256: 1f380e57658651c8d60ef77451714d9b94193105ebddfbdf453e7e81e0542a44
+Loading cache for shader BokehDofRasterShaderRD, variant 0
+Loading cache for shader BokehDofRasterShaderRD, variant 1
+Loading cache for shader BokehDofRasterShaderRD, variant 2
+Loading cache for shader BokehDofRasterShaderRD, variant 3
+Loading cache for shader BokehDofRasterShaderRD, variant 4
+Loading cache for shader BokehDofRasterShaderRD, variant 5
+Loading cache for shader BokehDofRasterShaderRD, variant 6
+Shader 'BlurRasterShaderRD' (group 0) SHA256: bf2535c6ce146bb6ed9a8594798f1e933ab97b1ad787d88c265e8409f6fee565
+Loading cache for shader BlurRasterShaderRD, variant 0
+Loading cache for shader BlurRasterShaderRD, variant 1
+Loading cache for shader BlurRasterShaderRD, variant 2
+Loading cache for shader BlurRasterShaderRD, variant 3
+Loading cache for shader BlurRasterShaderRD, variant 4
+Loading cache for shader BlurRasterShaderRD, variant 5
+Loading cache for shader BlurRasterShaderRD, variant 6
+Shader 'CopyShaderRD' (group 0) SHA256: 23f6cf7986b46c68792dfd3f087267f14eebc49382f0c0fd265b45462b58afcf
+Loading cache for shader CopyShaderRD, variant 0
+Loading cache for shader CopyShaderRD, variant 1
+Loading cache for shader CopyShaderRD, variant 2
+Loading cache for shader CopyShaderRD, variant 3
+Loading cache for shader CopyShaderRD, variant 4
+Loading cache for shader CopyShaderRD, variant 5
+Loading cache for shader CopyShaderRD, variant 6
+Loading cache for shader CopyShaderRD, variant 7
+Loading cache for shader CopyShaderRD, variant 8
+Loading cache for shader CopyShaderRD, variant 9
+Loading cache for shader CopyShaderRD, variant 10
+Loading cache for shader CopyShaderRD, variant 11
+Loading cache for shader CopyShaderRD, variant 12
+Shader 'CopyToFbShaderRD' (group 0) SHA256: d00e29e632391ed3791124b988da290d922da3d9e2083273523bd8173b24ff97
+Loading cache for shader CopyToFbShaderRD, variant 0
+Loading cache for shader CopyToFbShaderRD, variant 1
+Loading cache for shader CopyToFbShaderRD, variant 2
+Loading cache for shader CopyToFbShaderRD, variant 3
+Shader 'CubeToDpShaderRD' (group 0) SHA256: 9825f5ee942047b6912a1b6fe49935a8c928598f40d2cdfc64a0f61134deed27
+Loading cache for shader CubeToDpShaderRD, variant 0
+Shader 'CubeToOctmapShaderRD' (group 0) SHA256: 8bf32929c5b41445f085dd302ccba233028481a94d43ce1b531bc8e2e66677a4
+Loading cache for shader CubeToOctmapShaderRD, variant 0
+Shader 'OctmapDownsamplerShaderRD' (group 0) SHA256: c79c7ea0ebc9a0833c5f465f1c555216a15727d2c4e3a227e9d5cd1e80f0669e
+Loading cache for shader OctmapDownsamplerShaderRD, variant 0
+Loading cache for shader OctmapDownsamplerShaderRD, variant 1
+Shader 'OctmapFilterShaderRD' (group 0) SHA256: a511f5ad922f5d701a26f801b4f9c96406071103345fa83fd394f8954c1dd7ac
+Loading cache for shader OctmapFilterShaderRD, variant 0
+Loading cache for shader OctmapFilterShaderRD, variant 1
+Loading cache for shader OctmapFilterShaderRD, variant 2
+Loading cache for shader OctmapFilterShaderRD, variant 3
+Loading cache for shader OctmapFilterShaderRD, variant 4
+Loading cache for shader OctmapFilterShaderRD, variant 5
+Loading cache for shader OctmapFilterShaderRD, variant 6
+Loading cache for shader OctmapFilterShaderRD, variant 7
+Shader 'OctmapRoughnessShaderRD' (group 0) SHA256: 9f66b38742366834aef44d557fed0d0753432ffb2cf24eebb14792092fc26b83
+Loading cache for shader OctmapRoughnessShaderRD, variant 0
+Loading cache for shader OctmapRoughnessShaderRD, variant 1
+Shader 'SpecularMergeShaderRD' (group 0) SHA256: 38d1cf8969e8f223baa218cbcd7ad415e6e945247fdb8cefddabba66acaab0e4
+Loading cache for shader SpecularMergeShaderRD, variant 0
+Loading cache for shader SpecularMergeShaderRD, variant 1
+Loading cache for shader SpecularMergeShaderRD, variant 2
+Loading cache for shader SpecularMergeShaderRD, variant 3
+Shader 'ShadowFrustumShaderRD' (group 0) SHA256: 7aba7a73f7499f30591bb36c54f106926052cdc0048232d9054de723408b1ea2
+Loading cache for shader ShadowFrustumShaderRD, variant 0
+Shader 'MotionVectorsShaderRD' (group 0) SHA256: 21fe2ffffa991405f5c0b4bb35dd8789b4049f8e56d80a5aa61aa8233992e3c1
+Loading cache for shader MotionVectorsShaderRD, variant 0
+Shader 'LuminanceReduceRasterShaderRD' (group 0) SHA256: c30b2789782a74a245eb2c403712b700e22f0a331dbd7f20cdeaff4331481520
+Loading cache for shader LuminanceReduceRasterShaderRD, variant 0
+Loading cache for shader LuminanceReduceRasterShaderRD, variant 1
+Loading cache for shader LuminanceReduceRasterShaderRD, variant 2
+Shader 'SmaaEdgeDetectionShaderRD' (group 0) SHA256: 749ffc0281a6ab411cf5a66f2560a2f33f9a258f57c513c67047f363e5e7ab33
+Loading cache for shader SmaaEdgeDetectionShaderRD, variant 0
+Shader 'SmaaWeightCalculationShaderRD' (group 0) SHA256: 510ed0d4e978b1a21f4e459da4ee2516c38f4460931e2a5714dae17c8b5547c2
+Loading cache for shader SmaaWeightCalculationShaderRD, variant 0
+Shader 'SmaaBlendingShaderRD' (group 0) SHA256: daa696d3938d7aadbc85111a68936e774199a2ded78d364782d43ef580b5296d
+Loading cache for shader SmaaBlendingShaderRD, variant 0
+Shader 'TonemapMobileShaderRD' (group 0) SHA256: 2ec4e4112fe9380f41247c1f7000cbb8b341b42bd3843e4410e96b245445ed8c
+Loading cache for shader TonemapMobileShaderRD, variant 0
+Loading cache for shader TonemapMobileShaderRD, variant 1
+Loading cache for shader TonemapMobileShaderRD, variant 2
+Loading cache for shader TonemapMobileShaderRD, variant 3
+Shader 'ResolveRasterShaderRD' (group 0) SHA256: 919d2b60f5aa1b0320eec81a5e401ee189ede55df21d4174ce5f7c6e0b1a40e1
+Loading cache for shader ResolveRasterShaderRD, variant 0
+Shader 'BlitShaderRD' (group 0) SHA256: 29b32016e1c23e0db5906fbe9b87108e39e7f5965c0016eb53fc5e1c03293243
+WARNING: Started the engine as `root`/superuser. This is a security risk, and subsystems like audio may not work correctly.
+Set the environment variable `GODOT_SILENCE_ROOT_WARNING` to 1 to silence this warning.
+     at: setup2 (main/main.cpp:3577)
+libasound.so.2: cannot open shared object file: No such file or directory
+libpulse.so.0: cannot open shared object file: No such file or directory
+libpulse.so.0: cannot open shared object file: No such file or directory
+libasound.so.2: cannot open shared object file: No such file or directory
+WARNING: All audio drivers failed, falling back to the dummy driver.
+     at: initialize (servers/audio/audio_server.cpp:258)
+
+Loading cache for shader BlitShaderRD, variant 0
+Loading cache for shader BlitShaderRD, variant 1
+Loading cache for shader BlitShaderRD, variant 2
+Loading cache for shader BlitShaderRD, variant 3
+TextServer: Primary interface set to: "ICU / HarfBuzz / Graphite (Built-in)".
+Loading cache for shader CanvasShaderRD, variant 0
+Loading cache for shader CanvasShaderRD, variant 1
+Loading cache for shader CanvasShaderRD, variant 2
+Loading cache for shader CanvasShaderRD, variant 3
+Loading cache for shader CanvasShaderRD, variant 4
+Loading cache for shader CanvasShaderRD, variant 5
+Loading resource: res://default_bus_layout.tres remapped: res://default_bus_layout.tres
+Completed load for: 'res://default_bus_layout.tres' remapped 'res://default_bus_layout.tres' at thread -1
+CORE API HASH: 3769296884
+EDITOR API HASH: 3146738256
+SceneTreeFTI: traversal method DEFAULT
+Loading resource: res://scripts/event_bus.gd remapped: res://scripts/event_bus.gd
+Completed load for: 'res://scripts/event_bus.gd' remapped 'res://scripts/event_bus.gd' at thread -1
+Loading resource: res://scripts/cookie_manager.gd remapped: res://scripts/cookie_manager.gd
+Unicode parsing error, some characters were replaced with � (U+FFFD): Unexpected NUL character
+Loading resource: res://scenes/default_spline.tscn remapped: res://scenes/default_spline.tscn
+Loading resource: res://scripts/spline.gd remapped: res://scripts/spline.gd
+Loading resource: res://scenes/graph_shadow.tscn remapped: res://scenes/graph_shadow.tscn
+Loading resource: res://shaders/graph_shadow.gdshader remapped: res://shaders/graph_shadow.gdshader
+Completed load for: 'res://shaders/graph_shadow.gdshader' remapped 'res://shaders/graph_shadow.gdshader' at thread -1
+Loading resource: res://scripts/graph_shadow.gd remapped: res://scripts/graph_shadow.gd
+Completed load for: 'res://scripts/graph_shadow.gd' remapped 'res://scripts/graph_shadow.gd' at thread -1
+Loading cache for shader CanvasShaderRD, variant 0
+Loading cache for shader CanvasShaderRD, variant 1
+Loading cache for shader CanvasShaderRD, variant 2
+Loading cache for shader CanvasShaderRD, variant 3
+Loading cache for shader CanvasShaderRD, variant 4
+Loading cache for shader CanvasShaderRD, variant 5
+Completed load for: 'res://scenes/graph_shadow.tscn' remapped 'res://scenes/graph_shadow.tscn' at thread -1
+Loading resource: res://scenes/inference_animation_settings.tscn remapped: res://scenes/inference_animation_settings.tscn
+Loading resource: res://scripts/inference_animation_settings.gd remapped: res://scripts/inference_animation_settings.gd
+Completed load for: 'res://scripts/inference_animation_settings.gd' remapped 'res://scripts/inference_animation_settings.gd' at thread -1
+Completed load for: 'res://scenes/inference_animation_settings.tscn' remapped 'res://scenes/inference_animation_settings.tscn' at thread -1
+Loading resource: res://scenes/blur.tscn remapped: res://scenes/blur.tscn
+Loading resource: res://scenes/splash.tres remapped: res://scenes/splash.tres
+Loading resource: res://shaders/block_screen.gdshader remapped: res://shaders/block_screen.gdshader
+Loading resource: res://shaders/std.gdshaderinc remapped: res://shaders/std.gdshaderinc
+Completed load for: 'res://shaders/std.gdshaderinc' remapped 'res://shaders/std.gdshaderinc' at thread -1
+Loading resource: res://shaders/block_body.gdshaderinc remapped: res://shaders/block_body.gdshaderinc
+Loading resource: res://shaders/smooth_extents.gdshaderinc remapped: res://shaders/smooth_extents.gdshaderinc
+Completed load for: 'res://shaders/smooth_extents.gdshaderinc' remapped 'res://shaders/smooth_extents.gdshaderinc' at thread -1
+Completed load for: 'res://shaders/block_body.gdshaderinc' remapped 'res://shaders/block_body.gdshaderinc' at thread -1
+Completed load for: 'res://shaders/block_screen.gdshader' remapped 'res://shaders/block_screen.gdshader' at thread -1
+Shader cache miss for CanvasShaderRD/1ac5f6c8d534ebab572b3f886e38134784245fbd5fa01c7cbb6cc452e5400080/d48e09da8219c114293c6170bdb547039e2118cb
+Completed load for: 'res://scenes/splash.tres' remapped 'res://scenes/splash.tres' at thread -1
+Loading resource: res://scripts/blur.gd remapped: res://scripts/blur.gd
+Completed load for: 'res://scripts/blur.gd' remapped 'res://scripts/blur.gd' at thread -1
+Completed load for: 'res://scenes/blur.tscn' remapped 'res://scenes/blur.tscn' at thread -1
+Loading resource: res://scenes/multipurpose_dialog.tscn remapped: res://scenes/multipurpose_dialog.tscn
+Loading resource: res://scripts/multipurpose_dialog.gd remapped: res://scripts/multipurpose_dialog.gd
+Loading resource: res://scenes/BaseBComponent.tscn remapped: res://scenes/BaseBComponent.tscn
+Loading resource: res://resources/add_button.tres remapped: res://resources/add_button.tres
+Loading resource: res://shaders/block.gdshader remapped: res://shaders/block.gdshader
+Completed load for: 'res://shaders/block.gdshader' remapped 'res://shaders/block.gdshader' at thread -1
+Shader cache miss for CanvasShaderRD/1ac5f6c8d534ebab572b3f886e38134784245fbd5fa01c7cbb6cc452e5400080/ced17f2b9c15b62f6fa590819d0bbe46e70763bd
+Completed load for: 'res://resources/add_button.tres' remapped 'res://resources/add_button.tres' at thread -1
+Loading resource: res://scripts/block_component.gd remapped: res://scripts/block_component.gd
+Loading resource: res://scenes/vbox.tscn remapped: res://scenes/vbox.tscn
+Loading resource: res://resources/theme.tres remapped: res://resources/theme.tres
+Loading resource: res://game_assets/fonts/JetBrainsMono-VariableFont_wght.ttf remapped: res://game_assets/fonts/JetBrainsMono-VariableFont_wght.ttf
+Loading resource: res://.godot/imported/JetBrainsMono-VariableFont_wght.ttf-05ecb3d8380bd97aab0b096f24986bac.fontdata remapped: res://.godot/imported/JetBrainsMono-VariableFont_wght.ttf-05ecb3d8380bd97aab0b096f24986bac.fontdata
+Completed load for: 'res://game_assets/fonts/JetBrainsMono-VariableFont_wght.ttf' remapped 'res://game_assets/fonts/JetBrainsMono-VariableFont_wght.ttf' at thread -1
+Loading resource: res://game_assets/icons/check_on.png remapped: res://game_assets/icons/check_on.png
+Loading resource: res://.godot/imported/check_on.png-063130e3f394e2e4a79f9c9f07b49151.ctex remapped: res://.godot/imported/check_on.png-063130e3f394e2e4a79f9c9f07b49151.ctex
+Completed load for: 'res://game_assets/icons/check_on.png' remapped 'res://game_assets/icons/check_on.png' at thread -1
+Loading resource: res://game_assets/icons/radio_on.png remapped: res://game_assets/icons/radio_on.png
+Loading resource: res://.godot/imported/radio_on.png-af9c67f73f2df28f37f891fd040f862b.ctex remapped: res://.godot/imported/radio_on.png-af9c67f73f2df28f37f891fd040f862b.ctex
+Completed load for: 'res://game_assets/icons/radio_on.png' remapped 'res://game_assets/icons/radio_on.png' at thread -1
+Loading resource: res://game_assets/icons/radio_off.png remapped: res://game_assets/icons/radio_off.png
+Loading resource: res://.godot/imported/radio_off.png-39d9de61d695b67cadb7241259edc6c6.ctex remapped: res://.godot/imported/radio_off.png-39d9de61d695b67cadb7241259edc6c6.ctex
+Completed load for: 'res://game_assets/icons/radio_off.png' remapped 'res://game_assets/icons/radio_off.png' at thread -1
+Loading resource: res://game_assets/icons/ch.png remapped: res://game_assets/icons/ch.png
+Loading resource: res://.godot/imported/ch.png-78bd4bcd94c03a8ccb83d11f9a3d9598.ctex remapped: res://.godot/imported/ch.png-78bd4bcd94c03a8ccb83d11f9a3d9598.ctex
+Completed load for: 'res://game_assets/icons/ch.png' remapped 'res://game_assets/icons/ch.png' at thread -1
+Completed load for: 'res://resources/theme.tres' remapped 'res://resources/theme.tres' at thread -1
+Loading resource: res://scripts/scrollcont.gd remapped: res://scripts/scrollcont.gd
+Completed load for: 'res://scripts/scrollcont.gd' remapped 'res://scripts/scrollcont.gd' at thread -1
+Completed load for: 'res://scenes/vbox.tscn' remapped 'res://scenes/vbox.tscn' at thread -1
+Loading resource: res://game_assets/icons/check_wrong.png remapped: res://game_assets/icons/check_wrong.png
+Loading resource: res://.godot/imported/check_wrong.png-1a2d3538d191c699d30ea53407b1c54e.ctex remapped: res://.godot/imported/check_wrong.png-1a2d3538d191c699d30ea53407b1c54e.ctex
+Completed load for: 'res://game_assets/icons/check_wrong.png' remapped 'res://game_assets/icons/check_wrong.png' at thread -1
+Completed load for: 'res://scripts/block_component.gd' remapped 'res://scripts/block_component.gd' at thread -1
+Loading resource: res://resources/default_config.tres remapped: res://resources/default_config.tres
+Completed load for: 'res://resources/default_config.tres' remapped 'res://resources/default_config.tres' at thread -1
+Loading resource: res://resources/font_alphamult.tres remapped: res://resources/font_alphamult.tres
+Loading resource: res://shaders/simple_alphamult.gdshader remapped: res://shaders/simple_alphamult.gdshader
+Completed load for: 'res://shaders/simple_alphamult.gdshader' remapped 'res://shaders/simple_alphamult.gdshader' at thread -1
+Loading cache for shader CanvasShaderRD, variant 0
+Loading cache for shader CanvasShaderRD, variant 1
+Loading cache for shader CanvasShaderRD, variant 2
+Loading cache for shader CanvasShaderRD, variant 3
+Loading cache for shader CanvasShaderRD, variant 4
+Loading cache for shader CanvasShaderRD, variant 5
+Completed load for: 'res://resources/font_alphamult.tres' remapped 'res://resources/font_alphamult.tres' at thread -1
+Completed load for: 'res://scenes/BaseBComponent.tscn' remapped 'res://scenes/BaseBComponent.tscn' at thread -1
+Completed load for: 'res://scripts/multipurpose_dialog.gd' remapped 'res://scripts/multipurpose_dialog.gd' at thread -1
+Loading resource: res://resources/theme_base.tres remapped: res://resources/theme_base.tres
+Completed load for: 'res://resources/theme_base.tres' remapped 'res://resources/theme_base.tres' at thread -1
+Loading resource: res://resources/theme_headers.tres remapped: res://resources/theme_headers.tres
+Loading resource: res://game_assets/fonts/JetBrainsSans[wght]-VF.ttf remapped: res://game_assets/fonts/JetBrainsSans[wght]-VF.ttf
+Loading resource: res://.godot/imported/JetBrainsSans[wght]-VF.ttf-120e3d528e9c60fc3c1d53e4232c53a0.fontdata remapped: res://.godot/imported/JetBrainsSans[wght]-VF.ttf-120e3d528e9c60fc3c1d53e4232c53a0.fontdata
+Completed load for: 'res://game_assets/fonts/JetBrainsSans[wght]-VF.ttf' remapped 'res://game_assets/fonts/JetBrainsSans[wght]-VF.ttf' at thread -1
+Completed load for: 'res://resources/theme_headers.tres' remapped 'res://resources/theme_headers.tres' at thread -1
+Loading resource: res://game_assets/icons/warn.png remapped: res://game_assets/icons/warn.png
+Loading resource: res://.godot/imported/warn.png-cf79ff83b8bacd4d414631240ffeeb21.ctex remapped: res://.godot/imported/warn.png-cf79ff83b8bacd4d414631240ffeeb21.ctex
+Completed load for: 'res://game_assets/icons/warn.png' remapped 'res://game_assets/icons/warn.png' at thread -1
+Loading resource: res://scripts/validate_line.gd remapped: res://scripts/validate_line.gd
+Completed load for: 'res://scripts/validate_line.gd' remapped 'res://scripts/validate_line.gd' at thread -1
+Completed load for: 'res://scenes/multipurpose_dialog.tscn' remapped 'res://scenes/multipurpose_dialog.tscn' at thread -1
+Loading resource: res://scenes/splash.tscn remapped: res://scenes/splash.tscn
+Loading resource: res://game_assets/icons/user.png remapped: res://game_assets/icons/user.png
+Loading resource: res://.godot/imported/user.png-fe6f524430af4aa0cdf09ffe1463a043.ctex remapped: res://.godot/imported/user.png-fe6f524430af4aa0cdf09ffe1463a043.ctex
+Completed load for: 'res://game_assets/icons/user.png' remapped 'res://game_assets/icons/user.png' at thread -1
+Loading resource: res://scripts/loc.gd remapped: res://scripts/loc.gd
+Completed load for: 'res://scripts/loc.gd' remapped 'res://scripts/loc.gd' at thread -1
+Loading resource: res://scripts/end.gd remapped: res://scripts/end.gd
+Completed load for: 'res://scripts/end.gd' remapped 'res://scripts/end.gd' at thread -1
+Completed load for: 'res://scenes/splash.tscn' remapped 'res://scenes/splash.tscn' at thread -1
+Loading resource: res://scenes/signup.tscn remapped: res://scenes/signup.tscn
+Loading resource: res://scripts/signup.gd remapped: res://scripts/signup.gd
+Completed load for: 'res://scripts/signup.gd' remapped 'res://scripts/signup.gd' at thread -1
+Completed load for: 'res://scenes/signup.tscn' remapped 'res://scenes/signup.tscn' at thread -1
+Loading resource: res://scenes/scene_create.tscn remapped: res://scenes/scene_create.tscn
+Loading resource: res://scripts/scene_create.gd remapped: res://scripts/scene_create.gd
+Completed load for: 'res://scripts/scene_create.gd' remapped 'res://scripts/scene_create.gd' at thread -1
+Loading resource: res://game_assets/icons/box.png remapped: res://game_assets/icons/box.png
+Loading resource: res://.godot/imported/box.png-ea358f761f2514e86bc5367daba69a3d.ctex remapped: res://.godot/imported/box.png-ea358f761f2514e86bc5367daba69a3d.ctex
+Completed load for: 'res://game_assets/icons/box.png' remapped 'res://game_assets/icons/box.png' at thread -1
+Completed load for: 'res://scenes/scene_create.tscn' remapped 'res://scenes/scene_create.tscn' at thread -1
+Loading resource: res://scenes/dataset_create.tscn remapped: res://scenes/dataset_create.tscn
+Loading resource: res://scripts/dataset_create.gd remapped: res://scripts/dataset_create.gd
+Completed load for: 'res://scripts/dataset_create.gd' remapped 'res://scripts/dataset_create.gd' at thread -1
+Completed load for: 'res://scenes/dataset_create.tscn' remapped 'res://scenes/dataset_create.tscn' at thread -1
+Loading resource: res://scenes/works.tscn remapped: res://scenes/works.tscn
+Loading resource: res://scripts/works.gd remapped: res://scripts/works.gd
+Completed load for: 'res://scripts/works.gd' remapped 'res://scripts/works.gd' at thread -1
+Loading resource: res://resources/context_menu.tres remapped: res://resources/context_menu.tres
+Completed load for: 'res://resources/context_menu.tres' remapped 'res://resources/context_menu.tres' at thread -1
+Loading resource: res://scripts/works_list.gd remapped: res://scripts/works_list.gd
+Completed load for: 'res://scripts/works_list.gd' remapped 'res://scripts/works_list.gd' at thread -1
+Loading resource: res://game_assets/icons/splines.png remapped: res://game_assets/icons/splines.png
+Loading resource: res://.godot/imported/splines.png-eabdb2eeef60b44361f499a00d60bc1e.ctex remapped: res://.godot/imported/splines.png-eabdb2eeef60b44361f499a00d60bc1e.ctex
+Completed load for: 'res://game_assets/icons/splines.png' remapped 'res://game_assets/icons/splines.png' at thread -1
+Loading resource: res://scripts/works_unroll.gd remapped: res://scripts/works_unroll.gd
+Completed load for: 'res://scripts/works_unroll.gd' remapped 'res://scripts/works_unroll.gd' at thread -1
+Loading resource: res://scripts/edit_graph.gd remapped: res://scripts/edit_graph.gd
+Completed load for: 'res://scripts/edit_graph.gd' remapped 'res://scripts/edit_graph.gd' at thread -1
+Loading resource: res://scenes/loca.gd remapped: res://scenes/loca.gd
+Completed load for: 'res://scenes/loca.gd' remapped 'res://scenes/loca.gd' at thread -1
+Completed load for: 'res://scenes/works.tscn' remapped 'res://scenes/works.tscn' at thread -1
+Loading resource: res://scenes/workslist.tscn remapped: res://scenes/workslist.tscn
+Loading resource: res://scripts/workslist.gd remapped: res://scripts/workslist.gd
+Loading resource: res://scenes/project_card.tscn remapped: res://scenes/project_card.tscn
+Loading resource: res://scripts/project_card.gd remapped: res://scripts/project_card.gd
+Loading resource: res://neuralese.png remapped: res://neuralese.png
+Loading resource: res://.godot/imported/neuralese.png-3b2548f0382ab0074167322854b6768e.ctex remapped: res://.godot/imported/neuralese.png-3b2548f0382ab0074167322854b6768e.ctex
+Completed load for: 'res://neuralese.png' remapped 'res://neuralese.png' at thread -1
+Completed load for: 'res://scripts/project_card.gd' remapped 'res://scripts/project_card.gd' at thread -1
+Completed load for: 'res://scenes/project_card.tscn' remapped 'res://scenes/project_card.tscn' at thread -1
+Completed load for: 'res://scripts/workslist.gd' remapped 'res://scripts/workslist.gd' at thread -1
+Loading resource: res://scenes/project_gallery.tscn remapped: res://scenes/project_gallery.tscn
+Completed load for: 'res://scenes/project_gallery.tscn' remapped 'res://scenes/project_gallery.tscn' at thread -1
+Completed load for: 'res://scenes/workslist.tscn' remapped 'res://scenes/workslist.tscn' at thread -1
+Loading resource: res://scenes/builtin_projects_window.tscn remapped: res://scenes/builtin_projects_window.tscn
+Loading resource: res://scripts/builtin_projects_window.gd remapped: res://scripts/builtin_projects_window.gd
+Loading resource: res://scenes/builtin_project_card.tscn remapped: res://scenes/builtin_project_card.tscn
+Loading resource: res://scripts/builtin_project_card.gd remapped: res://scripts/builtin_project_card.gd
+Completed load for: 'res://scripts/builtin_project_card.gd' remapped 'res://scripts/builtin_project_card.gd' at thread -1
+Completed load for: 'res://scenes/builtin_project_card.tscn' remapped 'res://scenes/builtin_project_card.tscn' at thread -1
+Completed load for: 'res://scripts/builtin_projects_window.gd' remapped 'res://scripts/builtin_projects_window.gd' at thread -1
+Completed load for: 'res://scenes/builtin_projects_window.tscn' remapped 'res://scenes/builtin_projects_window.tscn' at thread -1
+Loading resource: res://scenes/lessonlist.tscn remapped: res://scenes/lessonlist.tscn
+Loading resource: res://scripts/lessonlist.gd remapped: res://scripts/lessonlist.gd
+Completed load for: 'res://scripts/lessonlist.gd' remapped 'res://scripts/lessonlist.gd' at thread -1
+Completed load for: 'res://scenes/lessonlist.tscn' remapped 'res://scenes/lessonlist.tscn' at thread -1
+Loading resource: res://scenes/settings.tscn remapped: res://scenes/settings.tscn
+Loading resource: res://scripts/settings.gd remapped: res://scripts/settings.gd
+Loading resource: res://game_assets/icons/lock_open.png remapped: res://game_assets/icons/lock_open.png
+Loading resource: res://.godot/imported/lock_open.png-28c74400ed0e424dfc73e37c07265d9e.ctex remapped: res://.godot/imported/lock_open.png-28c74400ed0e424dfc73e37c07265d9e.ctex
+Completed load for: 'res://game_assets/icons/lock_open.png' remapped 'res://game_assets/icons/lock_open.png' at thread -1
+Loading resource: res://game_assets/icons/good.png remapped: res://game_assets/icons/good.png
+Loading resource: res://.godot/imported/good.png-7ca31941757d42c50bf227d388482236.ctex remapped: res://.godot/imported/good.png-7ca31941757d42c50bf227d388482236.ctex
+Completed load for: 'res://game_assets/icons/good.png' remapped 'res://game_assets/icons/good.png' at thread -1
+Completed load for: 'res://scripts/settings.gd' remapped 'res://scripts/settings.gd' at thread -1
+Loading resource: res://game_assets/icons/account.png remapped: res://game_assets/icons/account.png
+Loading resource: res://.godot/imported/account.png-9f2e91db95eacb632de072244c6275d2.ctex remapped: res://.godot/imported/account.png-9f2e91db95eacb632de072244c6275d2.ctex
+Completed load for: 'res://game_assets/icons/account.png' remapped 'res://game_assets/icons/account.png' at thread -1
+Loading resource: res://scripts/confirm.gd remapped: res://scripts/confirm.gd
+Completed load for: 'res://scripts/confirm.gd' remapped 'res://scripts/confirm.gd' at thread -1
+Loading resource: res://scenes/validate.tscn remapped: res://scenes/validate.tscn
+Completed load for: 'res://scenes/validate.tscn' remapped 'res://scenes/validate.tscn' at thread -1
+Loading resource: res://game_assets/icons/bigre.png remapped: res://game_assets/icons/bigre.png
+Loading resource: res://.godot/imported/bigre.png-a2bbe6a8d93ca773150fb619b436179a.ctex remapped: res://.godot/imported/bigre.png-a2bbe6a8d93ca773150fb619b436179a.ctex
+Completed load for: 'res://game_assets/icons/bigre.png' remapped 'res://game_assets/icons/bigre.png' at thread -1
+Loading resource: res://game_assets/icons/upload.png remapped: res://game_assets/icons/upload.png
+Loading resource: res://.godot/imported/upload.png-295680045233a2eeb63e3a25005829a5.ctex remapped: res://.godot/imported/upload.png-295680045233a2eeb63e3a25005829a5.ctex
+Completed load for: 'res://game_assets/icons/upload.png' remapped 'res://game_assets/icons/upload.png' at thread -1
+Loading resource: res://game_assets/icons/lock.png remapped: res://game_assets/icons/lock.png
+Loading resource: res://.godot/imported/lock.png-94830e8e3935908f6bebf699ad364c31.ctex remapped: res://.godot/imported/lock.png-94830e8e3935908f6bebf699ad364c31.ctex
+Completed load for: 'res://game_assets/icons/lock.png' remapped 'res://game_assets/icons/lock.png' at thread -1
+Completed load for: 'res://scenes/settings.tscn' remapped 'res://scenes/settings.tscn' at thread -1
+Loading resource: res://scenes/project_create.tscn remapped: res://scenes/project_create.tscn
+Loading resource: res://scripts/project_create.gd remapped: res://scripts/project_create.gd
+Completed load for: 'res://scripts/project_create.gd' remapped 'res://scripts/project_create.gd' at thread -1
+Completed load for: 'res://scenes/project_create.tscn' remapped 'res://scenes/project_create.tscn' at thread -1
+Loading resource: res://scenes/ai_help.tscn remapped: res://scenes/ai_help.tscn
+Loading resource: res://scripts/ai_help.gd remapped: res://scripts/ai_help.gd
+Loading resource: res://game_assets/icons/stop.png remapped: res://game_assets/icons/stop.png
+Loading resource: res://.godot/imported/stop.png-220f2dbaac553bb4b8f6ae7234788222.ctex remapped: res://.godot/imported/stop.png-220f2dbaac553bb4b8f6ae7234788222.ctex
+Completed load for: 'res://game_assets/icons/stop.png' remapped 'res://game_assets/icons/stop.png' at thread -1
+Loading resource: res://game_assets/icons/send.png remapped: res://game_assets/icons/send.png
+Loading resource: res://.godot/imported/send.png-9b2599bf0ed5b584646e507a73cfab8e.ctex remapped: res://.godot/imported/send.png-9b2599bf0ed5b584646e507a73cfab8e.ctex
+Completed load for: 'res://game_assets/icons/send.png' remapped 'res://game_assets/icons/send.png' at thread -1
+Completed load for: 'res://scripts/ai_help.gd' remapped 'res://scripts/ai_help.gd' at thread -1
+Loading resource: res://scripts/ai_text.gd remapped: res://scripts/ai_text.gd
+Completed load for: 'res://scripts/ai_text.gd' remapped 'res://scripts/ai_text.gd' at thread -1
+Loading resource: res://game_assets/icons/chat.png remapped: res://game_assets/icons/chat.png
+Loading resource: res://.godot/imported/chat.png-1d9f25524de708b017b550e9532bd6a3.ctex remapped: res://.godot/imported/chat.png-1d9f25524de708b017b550e9532bd6a3.ctex
+Completed load for: 'res://game_assets/icons/chat.png' remapped 'res://game_assets/icons/chat.png' at thread -1
+Loading resource: res://scripts/text.gd remapped: res://scripts/text.gd
+Completed load for: 'res://scripts/text.gd' remapped 'res://scripts/text.gd' at thread -1
+Loading resource: res://game_assets/icons/mic.png remapped: res://game_assets/icons/mic.png
+Loading resource: res://.godot/imported/mic.png-efa83851c7dddd30d8a552d61ebd20c5.ctex remapped: res://.godot/imported/mic.png-efa83851c7dddd30d8a552d61ebd20c5.ctex
+Completed load for: 'res://game_assets/icons/mic.png' remapped 'res://game_assets/icons/mic.png' at thread -1
+Completed load for: 'res://scenes/ai_help.tscn' remapped 'res://scenes/ai_help.tscn' at thread -1
+Loading resource: res://scenes/select_dataset.tscn remapped: res://scenes/select_dataset.tscn
+Loading resource: res://scripts/dataset.gd remapped: res://scripts/dataset.gd
+Completed load for: 'res://scripts/dataset.gd' remapped 'res://scripts/dataset.gd' at thread -1
+Loading resource: res://scripts/list_datasets.gd remapped: res://scripts/list_datasets.gd
+Completed load for: 'res://scripts/list_datasets.gd' remapped 'res://scripts/list_datasets.gd' at thread -1
+Loading resource: res://scripts/listds.gd remapped: res://scripts/listds.gd
+Completed load for: 'res://scripts/listds.gd' remapped 'res://scripts/listds.gd' at thread -1
+Completed load for: 'res://scenes/select_dataset.tscn' remapped 'res://scenes/select_dataset.tscn' at thread -1
+Loading resource: res://scenes/model_export.tscn remapped: res://scenes/model_export.tscn
+Loading resource: res://scripts/model_export.gd remapped: res://scripts/model_export.gd
+Completed load for: 'res://scripts/model_export.gd' remapped 'res://scripts/model_export.gd' at thread -1
+Loading resource: res://game_assets/icons/download.png remapped: res://game_assets/icons/download.png
+Loading resource: res://.godot/imported/download.png-addcb5ca628370fa613a8f6cc3fc9d3d.ctex remapped: res://.godot/imported/download.png-addcb5ca628370fa613a8f6cc3fc9d3d.ctex
+Completed load for: 'res://game_assets/icons/download.png' remapped 'res://game_assets/icons/download.png' at thread -1
+Loading resource: res://scripts/loc4.gd remapped: res://scripts/loc4.gd
+Completed load for: 'res://scripts/loc4.gd' remapped 'res://scripts/loc4.gd' at thread -1
+Completed load for: 'res://scenes/model_export.tscn' remapped 'res://scenes/model_export.tscn' at thread -1
+Loading resource: res://scenes/path_open.tscn remapped: res://scenes/path_open.tscn
+Loading resource: res://scripts/path_open.gd remapped: res://scripts/path_open.gd
+Completed load for: 'res://scripts/path_open.gd' remapped 'res://scripts/path_open.gd' at thread -1
+Loading resource: res://game_assets/icons/tree.png remapped: res://game_assets/icons/tree.png
+Loading resource: res://.godot/imported/tree.png-9d85d9895b667b48dd69b74a8026018b.ctex remapped: res://.godot/imported/tree.png-9d85d9895b667b48dd69b74a8026018b.ctex
+Completed load for: 'res://game_assets/icons/tree.png' remapped 'res://game_assets/icons/tree.png' at thread -1
+Loading resource: res://scripts/filegrid.gd remapped: res://scripts/filegrid.gd
+Completed load for: 'res://scripts/filegrid.gd' remapped 'res://scripts/filegrid.gd' at thread -1
+Loading resource: res://game_assets/icons/file.png remapped: res://game_assets/icons/file.png
+Loading resource: res://.godot/imported/file.png-f3ae3f020d4ed434def28ff99c771c14.ctex remapped: res://.godot/imported/file.png-f3ae3f020d4ed434def28ff99c771c14.ctex
+Completed load for: 'res://game_assets/icons/file.png' remapped 'res://game_assets/icons/file.png' at thread -1
+Loading resource: res://game_assets/icons/dir.png remapped: res://game_assets/icons/dir.png
+Loading resource: res://.godot/imported/dir.png-a482a05fe735f5432a65e7e8508fb782.ctex remapped: res://.godot/imported/dir.png-a482a05fe735f5432a65e7e8508fb782.ctex
+Completed load for: 'res://game_assets/icons/dir.png' remapped 'res://game_assets/icons/dir.png' at thread -1
+Loading resource: res://scripts/unr.gd remapped: res://scripts/unr.gd
+Completed load for: 'res://scripts/unr.gd' remapped 'res://scripts/unr.gd' at thread -1
+Loading resource: res://scenes/other_procnodes.gd remapped: res://scenes/other_procnodes.gd
+Completed load for: 'res://scenes/other_procnodes.gd' remapped 'res://scenes/other_procnodes.gd' at thread -1
+Loading resource: res://resources/fg_block.tres remapped: res://resources/fg_block.tres
+Completed load for: 'res://resources/fg_block.tres' remapped 'res://resources/fg_block.tres' at thread -1
+Loading resource: res://game_assets/icons/undo.png remapped: res://game_assets/icons/undo.png
+Loading resource: res://.godot/imported/undo.png-85f8edcd3bd3d1fbf8600b2cd243cbc6.ctex remapped: res://.godot/imported/undo.png-85f8edcd3bd3d1fbf8600b2cd243cbc6.ctex
+Completed load for: 'res://game_assets/icons/undo.png' remapped 'res://game_assets/icons/undo.png' at thread -1
+Loading resource: res://game_assets/icons/refresh.png remapped: res://game_assets/icons/refresh.png
+Loading resource: res://.godot/imported/refresh.png-8304bf05ee5df16bd5b886db556b4e9b.ctex remapped: res://.godot/imported/refresh.png-8304bf05ee5df16bd5b886db556b4e9b.ctex
+Completed load for: 'res://game_assets/icons/refresh.png' remapped 'res://game_assets/icons/refresh.png' at thread -1
+Completed load for: 'res://scenes/path_open.tscn' remapped 'res://scenes/path_open.tscn' at thread -1
+Loading resource: res://scenes/classroom_create.tscn remapped: res://scenes/classroom_create.tscn
+Loading resource: res://scripts/classroom_create.gd remapped: res://scripts/classroom_create.gd
+Completed load for: 'res://scripts/classroom_create.gd' remapped 'res://scripts/classroom_create.gd' at thread -1
+Completed load for: 'res://scenes/classroom_create.tscn' remapped 'res://scenes/classroom_create.tscn' at thread -1
+Loading resource: res://resources/confetti.tres remapped: res://resources/confetti.tres
+Completed load for: 'res://resources/confetti.tres' remapped 'res://resources/confetti.tres' at thread -1
+Loading resource: res://scenes/quest.tscn remapped: res://scenes/quest.tscn
+Loading resource: res://scripts/layout.gd remapped: res://scripts/layout.gd
+Completed load for: 'res://scripts/layout.gd' remapped 'res://scripts/layout.gd' at thread -1
+Loading resource: res://game_assets/icons/arr.png remapped: res://game_assets/icons/arr.png
+Loading resource: res://.godot/imported/arr.png-6482c28b28ca95a5af112bd5044b93c0.ctex remapped: res://.godot/imported/arr.png-6482c28b28ca95a5af112bd5044b93c0.ctex
+Completed load for: 'res://game_assets/icons/arr.png' remapped 'res://game_assets/icons/arr.png' at thread -1
+Completed load for: 'res://scenes/quest.tscn' remapped 'res://scenes/quest.tscn' at thread -1
+Loading resource: res://scenes/hourglass.tscn remapped: res://scenes/hourglass.tscn
+Loading resource: res://game_assets/icons/hourglass.png remapped: res://game_assets/icons/hourglass.png
+Loading resource: res://.godot/imported/hourglass.png-87a6c8a88624a8aa0cc68bb8a8e80537.ctex remapped: res://.godot/imported/hourglass.png-87a6c8a88624a8aa0cc68bb8a8e80537.ctex
+Completed load for: 'res://game_assets/icons/hourglass.png' remapped 'res://game_assets/icons/hourglass.png' at thread -1
+Loading resource: res://scripts/hourglass.gd remapped: res://scripts/hourglass.gd
+Completed load for: 'res://scripts/hourglass.gd' remapped 'res://scripts/hourglass.gd' at thread -1
+Completed load for: 'res://scenes/hourglass.tscn' remapped 'res://scenes/hourglass.tscn' at thread -1
+Loading resource: res://game_assets/icons/game.png remapped: res://game_assets/icons/game.png
+Loading resource: res://.godot/imported/game.png-fea07c0185ed962b908edb6e369042b7.ctex remapped: res://.godot/imported/game.png-fea07c0185ed962b908edb6e369042b7.ctex
+Completed load for: 'res://game_assets/icons/game.png' remapped 'res://game_assets/icons/game.png' at thread -1
+Completed load for: 'res://scripts/spline.gd' remapped 'res://scripts/spline.gd' at thread -1
+Completed load for: 'res://scenes/default_spline.tscn' remapped 'res://scenes/default_spline.tscn' at thread -1
+Loading resource: res://scenes/cbox.tscn remapped: res://scenes/cbox.tscn
+Loading resource: res://game_assets/icons/yesg.png remapped: res://game_assets/icons/yesg.png
+Loading resource: res://.godot/imported/yesg.png-32b18d63166dc17c4ebe47599f61c061.ctex remapped: res://.godot/imported/yesg.png-32b18d63166dc17c4ebe47599f61c061.ctex
+Completed load for: 'res://game_assets/icons/yesg.png' remapped 'res://game_assets/icons/yesg.png' at thread -1
+Loading resource: res://game_assets/icons/nong.png remapped: res://game_assets/icons/nong.png
+Loading resource: res://.godot/imported/nong.png-c44a39d823aa4d9350bb0e42b23a8c49.ctex remapped: res://.godot/imported/nong.png-c44a39d823aa4d9350bb0e42b23a8c49.ctex
+Completed load for: 'res://game_assets/icons/nong.png' remapped 'res://game_assets/icons/nong.png' at thread -1
+Completed load for: 'res://scenes/cbox.tscn' remapped 'res://scenes/cbox.tscn' at thread -1
+Unicode parsing error, some characters were replaced with � (U+FFFD): Unexpected NUL character
+Unicode parsing error, some characters were replaced with � (U+FFFD): Unexpected NUL character
+Loading resource: res://shaders/fork.gdshader remapped: res://shaders/fork.gdshader
+Completed load for: 'res://shaders/fork.gdshader' remapped 'res://shaders/fork.gdshader' at thread -1
+Loading resource: res://scenes/cell.tscn remapped: res://scenes/cell.tscn
+Loading resource: res://scripts/text_cell.gd remapped: res://scripts/text_cell.gd
+Completed load for: 'res://scripts/text_cell.gd' remapped 'res://scripts/text_cell.gd' at thread -1
+Completed load for: 'res://scenes/cell.tscn' remapped 'res://scenes/cell.tscn' at thread -1
+Loading resource: res://scenes/num.tscn remapped: res://scenes/num.tscn
+Loading resource: res://scripts/num.gd remapped: res://scripts/num.gd
+Completed load for: 'res://scripts/num.gd' remapped 'res://scripts/num.gd' at thread -1
+Completed load for: 'res://scenes/num.tscn' remapped 'res://scenes/num.tscn' at thread -1
+Loading resource: res://scenes/img.tscn remapped: res://scenes/img.tscn
+Loading resource: res://scripts/img.gd remapped: res://scripts/img.gd
+Loading resource: res://game_assets/icons/none.png remapped: res://game_assets/icons/none.png
+Loading resource: res://.godot/imported/none.png-9f0a433a844eeb921376ec4e6dfb8be8.ctex remapped: res://.godot/imported/none.png-9f0a433a844eeb921376ec4e6dfb8be8.ctex
+Completed load for: 'res://game_assets/icons/none.png' remapped 'res://game_assets/icons/none.png' at thread -1
+Completed load for: 'res://scripts/img.gd' remapped 'res://scripts/img.gd' at thread -1
+Completed load for: 'res://scenes/img.tscn' remapped 'res://scenes/img.tscn' at thread -1
+Loading resource: res://scenes/float.tscn remapped: res://scenes/float.tscn
+Loading resource: res://scripts/floatcell.gd remapped: res://scripts/floatcell.gd
+Completed load for: 'res://scripts/floatcell.gd' remapped 'res://scripts/floatcell.gd' at thread -1
+Loading resource: res://scripts/h_slider.gd remapped: res://scripts/h_slider.gd
+Completed load for: 'res://scripts/h_slider.gd' remapped 'res://scripts/h_slider.gd' at thread -1
+Completed load for: 'res://scenes/float.tscn' remapped 'res://scenes/float.tscn' at thread -1
+Completed load for: 'res://scripts/cookie_manager.gd' remapped 'res://scripts/cookie_manager.gd' at thread -1
+Loading resource: res://resources/fork.tscn remapped: res://resources/fork.tscn
+Loading resource: res://resources/fork.tres remapped: res://resources/fork.tres
+Shader cache miss for CanvasShaderRD/1ac5f6c8d534ebab572b3f886e38134784245fbd5fa01c7cbb6cc452e5400080/4d8ada3f0337c4e37ac5db7bbb7488946579f507
+Completed load for: 'res://resources/fork.tres' remapped 'res://resources/fork.tres' at thread -1
+Loading resource: res://ports.tres remapped: res://ports.tres
+Loading resource: res://shaders/abs_runded.gdshader remapped: res://shaders/abs_runded.gdshader
+Completed load for: 'res://shaders/abs_runded.gdshader' remapped 'res://shaders/abs_runded.gdshader' at thread -1
+Loading cache for shader CanvasShaderRD, variant 0
+Loading cache for shader CanvasShaderRD, variant 1
+Loading cache for shader CanvasShaderRD, variant 2
+Loading cache for shader CanvasShaderRD, variant 3
+Loading cache for shader CanvasShaderRD, variant 4
+Loading cache for shader CanvasShaderRD, variant 5
+Completed load for: 'res://ports.tres' remapped 'res://ports.tres' at thread -1
+Completed load for: 'res://resources/fork.tscn' remapped 'res://resources/fork.tscn' at thread -1
+Loading resource: res://scripts/lua_envs.gd remapped: res://scripts/lua_envs.gd
+Completed load for: 'res://scripts/lua_envs.gd' remapped 'res://scripts/lua_envs.gd' at thread -1
+Loading resource: res://addons/godot_mcp/game_bridge/mcp_game_bridge.gd remapped: res://addons/godot_mcp/game_bridge/mcp_game_bridge.gd
+Completed load for: 'res://addons/godot_mcp/game_bridge/mcp_game_bridge.gd' remapped 'res://addons/godot_mcp/game_bridge/mcp_game_bridge.gd' at thread -1
+Loaded system CA certificates
+Loading resource: res://scenes/project.tscn remapped: res://scenes/project.tscn
+Loading resource: res://scripts/generated/node_sources.gd remapped: res://scripts/generated/node_sources.gd
+Loading resource: res://scenes/netname.tscn remapped: res://scenes/netname.tscn
+Loading resource: res://scripts/netname.gd remapped: res://scripts/netname.gd
+Completed load for: 'res://scripts/netname.gd' remapped 'res://scripts/netname.gd' at thread -1
+Loading resource: res://resources/graph.tres remapped: res://resources/graph.tres
+Completed load for: 'res://resources/graph.tres' remapped 'res://resources/graph.tres' at thread -1
+Loading resource: res://scenes/Connection.tscn remapped: res://scenes/Connection.tscn
+Loading resource: res://resources/connection.tres remapped: res://resources/connection.tres
+Completed load for: 'res://resources/connection.tres' remapped 'res://resources/connection.tres' at thread -1
+Completed load for: 'res://scenes/Connection.tscn' remapped 'res://scenes/Connection.tscn' at thread -1
+Completed load for: 'res://scenes/netname.tscn' remapped 'res://scenes/netname.tscn' at thread -1
+Loading resource: res://scenes/input_graph.tscn remapped: res://scenes/input_graph.tscn
+Loading resource: res://scenes/base_graph.tscn remapped: res://scenes/base_graph.tscn
+Completed load for: 'res://scenes/base_graph.tscn' remapped 'res://scenes/base_graph.tscn' at thread -1
+Loading resource: res://scripts/input_graph.gd remapped: res://scripts/input_graph.gd
+Completed load for: 'res://scripts/input_graph.gd' remapped 'res://scripts/input_graph.gd' at thread -1
+Loading resource: res://scripts/image_draw.gd remapped: res://scripts/image_draw.gd
+Completed load for: 'res://scripts/image_draw.gd' remapped 'res://scripts/image_draw.gd' at thread -1
+Loading resource: res://shaders/rounded.gdshader remapped: res://shaders/rounded.gdshader
+Completed load for: 'res://shaders/rounded.gdshader' remapped 'res://shaders/rounded.gdshader' at thread -1
+Loading resource: res://scripts/loc2a.gd remapped: res://scripts/loc2a.gd
+Completed load for: 'res://scripts/loc2a.gd' remapped 'res://scripts/loc2a.gd' at thread -1
+Loading cache for shader CanvasShaderRD, variant 0
+Loading cache for shader CanvasShaderRD, variant 1
+Loading cache for shader CanvasShaderRD, variant 2
+Loading cache for shader CanvasShaderRD, variant 3
+Loading cache for shader CanvasShaderRD, variant 4
+Loading cache for shader CanvasShaderRD, variant 5
+Completed load for: 'res://scenes/input_graph.tscn' remapped 'res://scenes/input_graph.tscn' at thread -1
+Loading resource: res://scenes/input_1d.tscn remapped: res://scenes/input_1d.tscn
+Loading resource: res://scripts/input_1d.gd remapped: res://scripts/input_1d.gd
+Completed load for: 'res://scripts/input_1d.gd' remapped 'res://scripts/input_1d.gd' at thread -1
+Loading resource: res://scripts/conn_slider.gd remapped: res://scripts/conn_slider.gd
+Completed load for: 'res://scripts/conn_slider.gd' remapped 'res://scripts/conn_slider.gd' at thread -1
+Loading resource: res://resources/panel.tres remapped: res://resources/panel.tres
+Completed load for: 'res://resources/panel.tres' remapped 'res://resources/panel.tres' at thread -1
+Loading resource: res://resources/theme_no_aa.tres remapped: res://resources/theme_no_aa.tres
+Completed load for: 'res://resources/theme_no_aa.tres' remapped 'res://resources/theme_no_aa.tres' at thread -1
+Loading resource: res://resources/button_mat.tres remapped: res://resources/button_mat.tres
+Completed load for: 'res://resources/button_mat.tres' remapped 'res://resources/button_mat.tres' at thread -1
+Loading resource: res://resources/activ.tres remapped: res://resources/activ.tres
+Completed load for: 'res://resources/activ.tres' remapped 'res://resources/activ.tres' at thread -1
+Loading resource: res://scenes/tags.tscn remapped: res://scenes/tags.tscn
+Loading resource: res://scripts/h_flow_container.gd remapped: res://scripts/h_flow_container.gd
+Completed load for: 'res://scripts/h_flow_container.gd' remapped 'res://scripts/h_flow_container.gd' at thread -1
+Completed load for: 'res://scenes/tags.tscn' remapped 'res://scenes/tags.tscn' at thread -1
+Completed load for: 'res://scenes/input_1d.tscn' remapped 'res://scenes/input_1d.tscn' at thread -1
+Loading resource: res://scenes/dataset.tscn remapped: res://scenes/dataset.tscn
+Loading resource: res://scripts/dataset_node.gd remapped: res://scripts/dataset_node.gd
+Completed load for: 'res://scripts/dataset_node.gd' remapped 'res://scripts/dataset_node.gd' at thread -1
+Completed load for: 'res://scenes/dataset.tscn' remapped 'res://scenes/dataset.tscn' at thread -1
+Loading resource: res://scenes/train_begin.tscn remapped: res://scenes/train_begin.tscn
+Loading resource: res://scripts/train_begin.gd remapped: res://scripts/train_begin.gd
+Completed load for: 'res://scripts/train_begin.gd' remapped 'res://scripts/train_begin.gd' at thread -1
+Loading resource: res://scripts/sakuta.gd remapped: res://scripts/sakuta.gd
+Completed load for: 'res://scripts/sakuta.gd' remapped 'res://scripts/sakuta.gd' at thread -1
+Loading resource: res://scripts/loc3.gd remapped: res://scripts/loc3.gd
+Completed load for: 'res://scripts/loc3.gd' remapped 'res://scripts/loc3.gd' at thread -1
+Completed load for: 'res://scenes/train_begin.tscn' remapped 'res://scenes/train_begin.tscn' at thread -1
+Loading resource: res://scenes/env_tag.tscn remapped: res://scenes/env_tag.tscn
+Loading resource: res://scripts/env_tag.gd remapped: res://scripts/env_tag.gd
+Completed load for: 'res://scripts/env_tag.gd' remapped 'res://scripts/env_tag.gd' at thread -1
+Completed load for: 'res://scenes/env_tag.tscn' remapped 'res://scenes/env_tag.tscn' at thread -1
+Loading resource: res://scenes/neuron.tscn remapped: res://scenes/neuron.tscn
+Loading resource: res://scripts/neuron_config.gd remapped: res://scripts/neuron_config.gd
+Completed load for: 'res://scripts/neuron_config.gd' remapped 'res://scripts/neuron_config.gd' at thread -1
+Loading resource: res://resources/rounded_crs_abs.tres remapped: res://resources/rounded_crs_abs.tres
+Completed load for: 'res://resources/rounded_crs_abs.tres' remapped 'res://resources/rounded_crs_abs.tres' at thread -1
+Loading resource: res://scripts/plot_draw.gd remapped: res://scripts/plot_draw.gd
+Completed load for: 'res://scripts/plot_draw.gd' remapped 'res://scripts/plot_draw.gd' at thread -1
+Completed load for: 'res://scenes/neuron.tscn' remapped 'res://scenes/neuron.tscn' at thread -1
+Loading resource: res://scenes/augment_tune.tscn remapped: res://scenes/augment_tune.tscn
+Loading resource: res://scripts/image_tune.gd remapped: res://scripts/image_tune.gd
+Completed load for: 'res://scripts/image_tune.gd' remapped 'res://scripts/image_tune.gd' at thread -1
+Loading resource: res://resources/rounded_corners.tres remapped: res://resources/rounded_corners.tres
+Completed load for: 'res://resources/rounded_corners.tres' remapped 'res://resources/rounded_corners.tres' at thread -1
+Loading resource: res://shaders/augment_tune.gdshader remapped: res://shaders/augment_tune.gdshader
+Completed load for: 'res://shaders/augment_tune.gdshader' remapped 'res://shaders/augment_tune.gdshader' at thread -1
+Loading cache for shader CanvasShaderRD, variant 0
+Loading cache for shader CanvasShaderRD, variant 1
+Loading cache for shader CanvasShaderRD, variant 2
+Loading cache for shader CanvasShaderRD, variant 3
+Loading cache for shader CanvasShaderRD, variant 4
+Loading cache for shader CanvasShaderRD, variant 5
+Completed load for: 'res://scenes/augment_tune.tscn' remapped 'res://scenes/augment_tune.tscn' at thread -1
+Loading resource: res://scenes/flatten.tscn remapped: res://scenes/flatten.tscn
+Loading resource: res://scripts/flatten.gd remapped: res://scripts/flatten.gd
+Completed load for: 'res://scripts/flatten.gd' remapped 'res://scripts/flatten.gd' at thread -1
+Completed load for: 'res://scenes/flatten.tscn' remapped 'res://scenes/flatten.tscn' at thread -1
+Loading resource: res://scenes/layer.tscn remapped: res://scenes/layer.tscn
+Loading resource: res://scripts/neuron_layer.gd remapped: res://scripts/neuron_layer.gd
+Completed load for: 'res://scripts/neuron_layer.gd' remapped 'res://scripts/neuron_layer.gd' at thread -1
+Loading resource: res://scripts/neuron_unit.gd remapped: res://scripts/neuron_unit.gd
+Completed load for: 'res://scripts/neuron_unit.gd' remapped 'res://scripts/neuron_unit.gd' at thread -1
+Loading resource: res://resources/neuron_graph.tres remapped: res://resources/neuron_graph.tres
+Completed load for: 'res://resources/neuron_graph.tres' remapped 'res://resources/neuron_graph.tres' at thread -1
+Completed load for: 'res://scenes/layer.tscn' remapped 'res://scenes/layer.tscn' at thread -1
+Loading resource: res://scenes/conv2d.tscn remapped: res://scenes/conv2d.tscn
+Loading resource: res://scripts/conv_2d.gd remapped: res://scripts/conv_2d.gd
+Completed load for: 'res://scripts/conv_2d.gd' remapped 'res://scripts/conv_2d.gd' at thread -1
+Completed load for: 'res://scenes/conv2d.tscn' remapped 'res://scenes/conv2d.tscn' at thread -1
+Loading resource: res://scenes/maxpool.tscn remapped: res://scenes/maxpool.tscn
+Loading resource: res://scripts/maxpool.gd remapped: res://scripts/maxpool.gd
+Completed load for: 'res://scripts/maxpool.gd' remapped 'res://scripts/maxpool.gd' at thread -1
+Loading resource: res://scripts/adraw.gd remapped: res://scripts/adraw.gd
+Completed load for: 'res://scripts/adraw.gd' remapped 'res://scripts/adraw.gd' at thread -1
+Completed load for: 'res://scenes/maxpool.tscn' remapped 'res://scenes/maxpool.tscn' at thread -1
+Loading resource: res://scenes/softmax.tscn remapped: res://scenes/softmax.tscn
+Loading resource: res://scripts/softmax_node.gd remapped: res://scripts/softmax_node.gd
+Completed load for: 'res://scripts/softmax_node.gd' remapped 'res://scripts/softmax_node.gd' at thread -1
+Completed load for: 'res://scenes/softmax.tscn' remapped 'res://scenes/softmax.tscn' at thread -1
+Loading resource: res://scenes/classifier_graph.tscn remapped: res://scenes/classifier_graph.tscn
+Loading resource: res://scripts/classifier.gd remapped: res://scripts/classifier.gd
+Completed load for: 'res://scripts/classifier.gd' remapped 'res://scripts/classifier.gd' at thread -1
+Loading resource: res://scripts/unit.gd remapped: res://scripts/unit.gd
+Completed load for: 'res://scripts/unit.gd' remapped 'res://scripts/unit.gd' at thread -1
+Completed load for: 'res://scenes/classifier_graph.tscn' remapped 'res://scenes/classifier_graph.tscn' at thread -1
+Loading resource: res://scenes/run_model.tscn remapped: res://scenes/run_model.tscn
+Loading resource: res://scripts/run_m.gd remapped: res://scripts/run_m.gd
+Completed load for: 'res://scripts/run_m.gd' remapped 'res://scripts/run_m.gd' at thread -1
+Loading resource: res://scripts/conn.gd remapped: res://scripts/conn.gd
+Completed load for: 'res://scripts/conn.gd' remapped 'res://scripts/conn.gd' at thread -1
+Completed load for: 'res://scenes/run_model.tscn' remapped 'res://scenes/run_model.tscn' at thread -1
+Loading resource: res://scenes/train_input.tscn remapped: res://scenes/train_input.tscn
+Loading resource: res://scripts/train_input.gd remapped: res://scripts/train_input.gd
+Completed load for: 'res://scripts/train_input.gd' remapped 'res://scripts/train_input.gd' at thread -1
+Loading resource: res://scenes/moving_analytics.tscn remapped: res://scenes/moving_analytics.tscn
+Loading resource: res://scripts/moving_analytics.gd remapped: res://scripts/moving_analytics.gd
+Completed load for: 'res://scripts/moving_analytics.gd' remapped 'res://scripts/moving_analytics.gd' at thread -1
+Completed load for: 'res://scenes/moving_analytics.tscn' remapped 'res://scenes/moving_analytics.tscn' at thread -1
+Completed load for: 'res://scenes/train_input.tscn' remapped 'res://scenes/train_input.tscn' at thread -1
+Loading resource: res://scenes/reshape.tscn remapped: res://scenes/reshape.tscn
+Loading resource: res://scripts/reshape.gd remapped: res://scripts/reshape.gd
+Completed load for: 'res://scripts/reshape.gd' remapped 'res://scripts/reshape.gd' at thread -1
+Completed load for: 'res://scenes/reshape.tscn' remapped 'res://scenes/reshape.tscn' at thread -1
+Loading resource: res://scenes/layer_concat.tscn remapped: res://scenes/layer_concat.tscn
+Loading resource: res://scripts/layer_concat.gd remapped: res://scripts/layer_concat.gd
+Completed load for: 'res://scripts/layer_concat.gd' remapped 'res://scripts/layer_concat.gd' at thread -1
+Completed load for: 'res://scenes/layer_concat.tscn' remapped 'res://scenes/layer_concat.tscn' at thread -1
+Loading resource: res://scenes/dropout.tscn remapped: res://scenes/dropout.tscn
+Loading resource: res://scripts/dropout.gd remapped: res://scripts/dropout.gd
+Completed load for: 'res://scripts/dropout.gd' remapped 'res://scripts/dropout.gd' at thread -1
+Loading resource: res://scripts/img_pusher.gd remapped: res://scripts/img_pusher.gd
+Completed load for: 'res://scripts/img_pusher.gd' remapped 'res://scripts/img_pusher.gd' at thread -1
+Completed load for: 'res://scenes/dropout.tscn' remapped 'res://scenes/dropout.tscn' at thread -1
+Loading resource: res://scenes/train_rl.tscn remapped: res://scenes/train_rl.tscn
+Loading resource: res://scripts/train_rl.gd remapped: res://scripts/train_rl.gd
+Completed load for: 'res://scripts/train_rl.gd' remapped 'res://scripts/train_rl.gd' at thread -1
+Completed load for: 'res://scenes/train_rl.tscn' remapped 'res://scenes/train_rl.tscn' at thread -1
+Loading resource: res://scenes/gru_cell.tscn remapped: res://scenes/gru_cell.tscn
+Loading resource: res://scripts/gru_cell.gd remapped: res://scripts/gru_cell.gd
+Completed load for: 'res://scripts/gru_cell.gd' remapped 'res://scripts/gru_cell.gd' at thread -1
+Completed load for: 'res://scenes/gru_cell.tscn' remapped 'res://scenes/gru_cell.tscn' at thread -1
+Completed load for: 'res://scripts/generated/node_sources.gd' remapped 'res://scripts/generated/node_sources.gd' at thread -1
+Loading resource: res://scenes/fg.tscn remapped: res://scenes/fg.tscn
+Loading resource: res://scripts/lesson_header.gd remapped: res://scripts/lesson_header.gd
+Completed load for: 'res://scripts/lesson_header.gd' remapped 'res://scripts/lesson_header.gd' at thread -1
+Loading resource: res://scripts/submenu_neuron.gd remapped: res://scripts/submenu_neuron.gd
+Completed load for: 'res://scripts/submenu_neuron.gd' remapped 'res://scripts/submenu_neuron.gd' at thread -1
+Loading resource: res://scripts/graphic.gd remapped: res://scripts/graphic.gd
+Completed load for: 'res://scripts/graphic.gd' remapped 'res://scripts/graphic.gd' at thread -1
+Loading resource: res://scripts/loc2.gd remapped: res://scripts/loc2.gd
+Completed load for: 'res://scripts/loc2.gd' remapped 'res://scripts/loc2.gd' at thread -1
+Loading resource: res://scenes/topr.tscn remapped: res://scenes/topr.tscn
+Loading resource: res://scripts/aibox.gd remapped: res://scripts/aibox.gd
+Completed load for: 'res://scripts/aibox.gd' remapped 'res://scripts/aibox.gd' at thread -1
+Completed load for: 'res://scenes/topr.tscn' remapped 'res://scenes/topr.tscn' at thread -1
+Loading resource: res://scripts/selector_box.gd remapped: res://scripts/selector_box.gd
+Completed load for: 'res://scripts/selector_box.gd' remapped 'res://scripts/selector_box.gd' at thread -1
+Loading resource: res://scripts/bokeh.gdshader remapped: res://scripts/bokeh.gdshader
+Completed load for: 'res://scripts/bokeh.gdshader' remapped 'res://scripts/bokeh.gdshader' at thread -1
+Loading resource: res://scripts/mist.gd remapped: res://scripts/mist.gd
+Completed load for: 'res://scripts/mist.gd' remapped 'res://scripts/mist.gd' at thread -1
+Loading resource: res://scripts/lua_procedure.gd remapped: res://scripts/lua_procedure.gd
+Completed load for: 'res://scripts/lua_procedure.gd' remapped 'res://scripts/lua_procedure.gd' at thread -1
+Loading resource: res://scripts/scalefg.gd remapped: res://scripts/scalefg.gd
+Completed load for: 'res://scripts/scalefg.gd' remapped 'res://scripts/scalefg.gd' at thread -1
+Loading resource: res://game_assets/icons/history_undo.svg remapped: res://game_assets/icons/history_undo.svg
+Loading resource: res://.godot/imported/history_undo.svg-17a7bf3a4be56de31f1337d51dfb9d18.ctex remapped: res://.godot/imported/history_undo.svg-17a7bf3a4be56de31f1337d51dfb9d18.ctex
+Completed load for: 'res://game_assets/icons/history_undo.svg' remapped 'res://game_assets/icons/history_undo.svg' at thread -1
+Loading cache for shader CanvasShaderRD, variant 0
+Loading cache for shader CanvasShaderRD, variant 1
+Loading cache for shader CanvasShaderRD, variant 2
+Loading cache for shader CanvasShaderRD, variant 3
+Loading cache for shader CanvasShaderRD, variant 4
+Loading cache for shader CanvasShaderRD, variant 5
+Completed load for: 'res://scenes/fg.tscn' remapped 'res://scenes/fg.tscn' at thread -1
+Loading resource: res://scripts/gview.gd remapped: res://scripts/gview.gd
+Completed load for: 'res://scripts/gview.gd' remapped 'res://scripts/gview.gd' at thread -1
+Loading resource: res://scenes/test_debug.tscn remapped: res://scenes/test_debug.tscn
+Loading resource: res://scripts/test_debug.gd remapped: res://scripts/test_debug.gd
+Completed load for: 'res://scripts/test_debug.gd' remapped 'res://scripts/test_debug.gd' at thread -1
+Completed load for: 'res://scenes/test_debug.tscn' remapped 'res://scenes/test_debug.tscn' at thread -1
+Loading resource: res://scenes/menus.tscn remapped: res://scenes/menus.tscn
+Loading resource: res://scripts/menus.gd remapped: res://scripts/menus.gd
+Completed load for: 'res://scripts/menus.gd' remapped 'res://scripts/menus.gd' at thread -1
+Loading resource: res://scripts/cmenu.gd remapped: res://scripts/cmenu.gd
+Completed load for: 'res://scripts/cmenu.gd' remapped 'res://scripts/cmenu.gd' at thread -1
+Loading resource: res://resources/lite_config.tres remapped: res://resources/lite_config.tres
+Completed load for: 'res://resources/lite_config.tres' remapped 'res://resources/lite_config.tres' at thread -1
+Loading resource: res://scripts/detatch_menu.gd remapped: res://scripts/detatch_menu.gd
+Completed load for: 'res://scripts/detatch_menu.gd' remapped 'res://scripts/detatch_menu.gd' at thread -1
+Loading resource: res://scripts/detatch.gd remapped: res://scripts/detatch.gd
+Completed load for: 'res://scripts/detatch.gd' remapped 'res://scripts/detatch.gd' at thread -1
+Loading resource: res://scripts/subctx_menu.gd remapped: res://scripts/subctx_menu.gd
+Completed load for: 'res://scripts/subctx_menu.gd' remapped 'res://scripts/subctx_menu.gd' at thread -1
+Loading resource: res://scripts/subctx.gd remapped: res://scripts/subctx.gd
+Completed load for: 'res://scripts/subctx.gd' remapped 'res://scripts/subctx.gd' at thread -1
+Loading resource: res://resources/button_disabled_config.tres remapped: res://resources/button_disabled_config.tres
+Completed load for: 'res://resources/button_disabled_config.tres' remapped 'res://resources/button_disabled_config.tres' at thread -1
+Loading resource: res://scripts/select_nodes.gd remapped: res://scripts/select_nodes.gd
+Completed load for: 'res://scripts/select_nodes.gd' remapped 'res://scripts/select_nodes.gd' at thread -1
+Loading resource: res://scripts/block_auto_fit_content.gd remapped: res://scripts/block_auto_fit_content.gd
+Completed load for: 'res://scripts/block_auto_fit_content.gd' remapped 'res://scripts/block_auto_fit_content.gd' at thread -1
+Loading resource: res://scripts/node_info_menu.gd remapped: res://scripts/node_info_menu.gd
+Completed load for: 'res://scripts/node_info_menu.gd' remapped 'res://scripts/node_info_menu.gd' at thread -1
+Loading resource: res://scripts/edit_sim_obj.gd remapped: res://scripts/edit_sim_obj.gd
+Completed load for: 'res://scripts/edit_sim_obj.gd' remapped 'res://scripts/edit_sim_obj.gd' at thread -1
+Completed load for: 'res://scenes/menus.tscn' remapped 'res://scenes/menus.tscn' at thread -1
+Loading resource: res://scenes/bg.tscn remapped: res://scenes/bg.tscn
+Loading resource: res://shaders/bg.gdshader remapped: res://shaders/bg.gdshader
+Completed load for: 'res://shaders/bg.gdshader' remapped 'res://shaders/bg.gdshader' at thread -1
+Loading resource: res://scripts/bg.gd remapped: res://scripts/bg.gd
+Loading resource: res://shaders/bg_blur.gdshader remapped: res://shaders/bg_blur.gdshader
+Completed load for: 'res://shaders/bg_blur.gdshader' remapped 'res://shaders/bg_blur.gdshader' at thread -1
+Completed load for: 'res://scripts/bg.gd' remapped 'res://scripts/bg.gd' at thread -1
+Loading resource: res://shaders/cells.gdshader remapped: res://shaders/cells.gdshader
+Completed load for: 'res://shaders/cells.gdshader' remapped 'res://shaders/cells.gdshader' at thread -1
+Loading resource: res://scripts/texture_rect.gd remapped: res://scripts/texture_rect.gd
+Completed load for: 'res://scripts/texture_rect.gd' remapped 'res://scripts/texture_rect.gd' at thread -1
+Loading resource: res://scripts/color_rect.gd remapped: res://scripts/color_rect.gd
+Completed load for: 'res://scripts/color_rect.gd' remapped 'res://scripts/color_rect.gd' at thread -1
+Loading resource: res://scripts/sub_viewport.gd remapped: res://scripts/sub_viewport.gd
+Completed load for: 'res://scripts/sub_viewport.gd' remapped 'res://scripts/sub_viewport.gd' at thread -1
+Loading resource: res://game_assets/backgrounds/sakura-fuji-pixeloe-natural-mild-1920x1080.png remapped: res://game_assets/backgrounds/sakura-fuji-pixeloe-natural-mild-1920x1080.png
+Loading resource: res://.godot/imported/sakura-fuji-pixeloe-natural-mild-1920x1080.png-25f278736b44dca8a3faeee8559145b5.ctex remapped: res://.godot/imported/sakura-fuji-pixeloe-natural-mild-1920x1080.png-25f278736b44dca8a3faeee8559145b5.ctex
+WARNING: Image format RGB8 not supported by hardware, converting to RGBA8.
+     at: _validate_texture_format (servers/rendering/renderer_rd/storage_rd/texture_storage.cpp:2855)
+Completed load for: 'res://game_assets/backgrounds/sakura-fuji-pixeloe-natural-mild-1920x1080.png' remapped 'res://game_assets/backgrounds/sakura-fuji-pixeloe-natural-mild-1920x1080.png' at thread -1
+Loading resource: res://scripts/bg_loop.gd remapped: res://scripts/bg_loop.gd
+Completed load for: 'res://scripts/bg_loop.gd' remapped 'res://scripts/bg_loop.gd' at thread -1
+Loading cache for shader CanvasShaderRD, variant 0
+Loading cache for shader CanvasShaderRD, variant 1
+Loading cache for shader CanvasShaderRD, variant 2
+Loading cache for shader CanvasShaderRD, variant 3
+Loading cache for shader CanvasShaderRD, variant 4
+Loading cache for shader CanvasShaderRD, variant 5
+Loading cache for shader CanvasShaderRD, variant 0
+Loading cache for shader CanvasShaderRD, variant 1
+Loading cache for shader CanvasShaderRD, variant 2
+Loading cache for shader CanvasShaderRD, variant 3
+Loading cache for shader CanvasShaderRD, variant 4
+Loading cache for shader CanvasShaderRD, variant 5
+Completed load for: 'res://scenes/bg.tscn' remapped 'res://scenes/bg.tscn' at thread -1
+Loading resource: res://scripts/follow_menus.gd remapped: res://scripts/follow_menus.gd
+Completed load for: 'res://scripts/follow_menus.gd' remapped 'res://scripts/follow_menus.gd' at thread -1
+Loading resource: res://scenes/cta.tscn remapped: res://scenes/cta.tscn
+Loading resource: res://scripts/cta.gd remapped: res://scripts/cta.gd
+Completed load for: 'res://scripts/cta.gd' remapped 'res://scripts/cta.gd' at thread -1
+Completed load for: 'res://scenes/cta.tscn' remapped 'res://scenes/cta.tscn' at thread -1
+Loading resource: res://scenes/aiload.tscn remapped: res://scenes/aiload.tscn
+Loading resource: res://scripts/aiload.gdshader remapped: res://scripts/aiload.gdshader
+Completed load for: 'res://scripts/aiload.gdshader' remapped 'res://scripts/aiload.gdshader' at thread -1
+Loading resource: res://scripts/ccc.gd remapped: res://scripts/ccc.gd
+Completed load for: 'res://scripts/ccc.gd' remapped 'res://scripts/ccc.gd' at thread -1
+Loading cache for shader CanvasShaderRD, variant 0
+Loading cache for shader CanvasShaderRD, variant 1
+Loading cache for shader CanvasShaderRD, variant 2
+Loading cache for shader CanvasShaderRD, variant 3
+Loading cache for shader CanvasShaderRD, variant 4
+Loading cache for shader CanvasShaderRD, variant 5
+Completed load for: 'res://scenes/aiload.tscn' remapped 'res://scenes/aiload.tscn' at thread -1
+Loading resource: res://scenes/node_palette.tscn remapped: res://scenes/node_palette.tscn
+Loading resource: res://scripts/node_palette.gd remapped: res://scripts/node_palette.gd
+Loading resource: res://scenes/node_palette_item.tscn remapped: res://scenes/node_palette_item.tscn
+Loading resource: res://scripts/node_palette_item.gd remapped: res://scripts/node_palette_item.gd
+Completed load for: 'res://scripts/node_palette_item.gd' remapped 'res://scripts/node_palette_item.gd' at thread -1
+Completed load for: 'res://scenes/node_palette_item.tscn' remapped 'res://scenes/node_palette_item.tscn' at thread -1
+Completed load for: 'res://scripts/node_palette.gd' remapped 'res://scripts/node_palette.gd' at thread -1
+Loading resource: res://scripts/node_palette_drop_surface.gd remapped: res://scripts/node_palette_drop_surface.gd
+Completed load for: 'res://scripts/node_palette_drop_surface.gd' remapped 'res://scripts/node_palette_drop_surface.gd' at thread -1
+Completed load for: 'res://scenes/node_palette.tscn' remapped 'res://scenes/node_palette.tscn' at thread -1
+Completed load for: 'res://scenes/project.tscn' remapped 'res://scenes/project.tscn' at thread -1
+ERROR: Cannot assign contents of "Array[PackedStringArray]" to "Array[String]".
+   at: assign (core/variant/array.cpp:276)
+ERROR: Condition "len < 4" is true. Returning: ERR_INVALID_DATA
+   at: decode_variant (core/io/marshalls.cpp:191)
+   GDScript backtrace (most recent call first):
+       [0] get_stored (res://scripts/glob.gd:386)
+       [1] get_var (res://scripts/glob.gd:381)
+       [2] _enter_tree (res://scripts/glob.gd:1529)
+ERROR: Error when trying to encode Variant.
+   at: get_var (core/io/file_access.cpp:372)
+   GDScript backtrace (most recent call first):
+       [0] get_stored (res://scripts/glob.gd:386)
+       [1] get_var (res://scripts/glob.gd:381)
+       [2] _enter_tree (res://scripts/glob.gd:1529)
+ERROR: Condition "len < 4" is true. Returning: ERR_INVALID_DATA
+   at: decode_variant (core/io/marshalls.cpp:191)
+   GDScript backtrace (most recent call first):
+       [0] get_stored (res://scripts/glob.gd:386)
+       [1] get_var (res://scripts/glob.gd:381)
+       [2] cache (res://scripts/learner.gd:19)
+       [3] _enter_tree (res://scripts/learner.gd:33)
+ERROR: Error when trying to encode Variant.
+   at: get_var (core/io/file_access.cpp:372)
+   GDScript backtrace (most recent call first):
+       [0] get_stored (res://scripts/glob.gd:386)
+       [1] get_var (res://scripts/glob.gd:381)
+       [2] cache (res://scripts/learner.gd:19)
+       [3] _enter_tree (res://scripts/learner.gd:33)
+ERROR: Condition "len < 4" is true. Returning: ERR_INVALID_DATA
+   at: decode_variant (core/io/marshalls.cpp:191)
+   GDScript backtrace (most recent call first):
+       [0] get_stored (res://scripts/glob.gd:386)
+       [1] set_var (res://scripts/glob.gd:375)
+       [2] cache (res://scripts/learner.gd:25)
+       [3] _enter_tree (res://scripts/learner.gd:33)
+ERROR: Error when trying to encode Variant.
+   at: get_var (core/io/file_access.cpp:372)
+   GDScript backtrace (most recent call first):
+       [0] get_stored (res://scripts/glob.gd:386)
+       [1] set_var (res://scripts/glob.gd:375)
+       [2] cache (res://scripts/learner.gd:25)
+       [3] _enter_tree (res://scripts/learner.gd:33)
+Test Debug Scene Running...
+Shader cache miss for CanvasShaderRD/1ac5f6c8d534ebab572b3f886e38134784245fbd5fa01c7cbb6cc452e5400080/ced17f2b9c15b62f6fa590819d0bbe46e70763bd
+Frame 0 - res://scripts/node_palette.gd:234 in function '_apply_toggle_endpoint'
+Frame 1 - res://scripts/node_palette.gd:214 in function 'set_collapsed'
+Frame 2 - res://scripts/node_palette.gd:33 in function '_ready'
+Loading resource: res://node_icons/ru/IconInput.png remapped: res://node_icons/ru/IconInput.png
+Loading resource: res://.godot/imported/IconInput.png-2032d27af335e7176806dfa71f133877.ctex remapped: res://.godot/imported/IconInput.png-2032d27af335e7176806dfa71f133877.ctex
+Completed load for: 'res://node_icons/ru/IconInput.png' remapped 'res://node_icons/ru/IconInput.png' at thread -1
+Loading resource: res://node_icons/ru/IconInput1d.png remapped: res://node_icons/ru/IconInput1d.png
+Loading resource: res://.godot/imported/IconInput1d.png-94c20c8d6cc89c13ab58a5dc7fd131b1.ctex remapped: res://.godot/imported/IconInput1d.png-94c20c8d6cc89c13ab58a5dc7fd131b1.ctex
+Completed load for: 'res://node_icons/ru/IconInput1d.png' remapped 'res://node_icons/ru/IconInput1d.png' at thread -1
+Loading resource: res://node_icons/ru/IconClassifier.png remapped: res://node_icons/ru/IconClassifier.png
+Loading resource: res://.godot/imported/IconClassifier.png-50c6a1a54607f84b9c651f6cb3cbe73f.ctex remapped: res://.godot/imported/IconClassifier.png-50c6a1a54607f84b9c651f6cb3cbe73f.ctex
+Completed load for: 'res://node_icons/ru/IconClassifier.png' remapped 'res://node_icons/ru/IconClassifier.png' at thread -1
+Loading resource: res://node_icons/ru/IconFlatten.png remapped: res://node_icons/ru/IconFlatten.png
+Loading resource: res://.godot/imported/IconFlatten.png-4d8095f1fcd1cfc94dc3815ab3fa1f6e.ctex remapped: res://.godot/imported/IconFlatten.png-4d8095f1fcd1cfc94dc3815ab3fa1f6e.ctex
+Completed load for: 'res://node_icons/ru/IconFlatten.png' remapped 'res://node_icons/ru/IconFlatten.png' at thread -1
+Loading resource: res://node_icons/ru/IconReshape2d.png remapped: res://node_icons/ru/IconReshape2d.png
+Loading resource: res://.godot/imported/IconReshape2d.png-d463e349db7ecf69001fca1d5305c721.ctex remapped: res://.godot/imported/IconReshape2d.png-d463e349db7ecf69001fca1d5305c721.ctex
+Completed load for: 'res://node_icons/ru/IconReshape2d.png' remapped 'res://node_icons/ru/IconReshape2d.png' at thread -1
+Loading resource: res://node_icons/ru/IconSoftmax.png remapped: res://node_icons/ru/IconSoftmax.png
+Loading resource: res://.godot/imported/IconSoftmax.png-1111e58b05e1e2093e11d0f09940ffbc.ctex remapped: res://.godot/imported/IconSoftmax.png-1111e58b05e1e2093e11d0f09940ffbc.ctex
+Completed load for: 'res://node_icons/ru/IconSoftmax.png' remapped 'res://node_icons/ru/IconSoftmax.png' at thread -1
+Loading resource: res://node_icons/ru/IconLayer.png remapped: res://node_icons/ru/IconLayer.png
+Loading resource: res://.godot/imported/IconLayer.png-adafc8497967c6fd13706c9b13f373ad.ctex remapped: res://.godot/imported/IconLayer.png-adafc8497967c6fd13706c9b13f373ad.ctex
+Completed load for: 'res://node_icons/ru/IconLayer.png' remapped 'res://node_icons/ru/IconLayer.png' at thread -1
+Loading resource: res://node_icons/ru/IconConv2d.png remapped: res://node_icons/ru/IconConv2d.png
+Loading resource: res://.godot/imported/IconConv2d.png-0e8649bdadda5b898732ca2de244a384.ctex remapped: res://.godot/imported/IconConv2d.png-0e8649bdadda5b898732ca2de244a384.ctex
+Completed load for: 'res://node_icons/ru/IconConv2d.png' remapped 'res://node_icons/ru/IconConv2d.png' at thread -1
+Loading resource: res://node_icons/ru/IconMaxpool.png remapped: res://node_icons/ru/IconMaxpool.png
+Loading resource: res://.godot/imported/IconMaxpool.png-7f8f3c77587d434831178b166af15973.ctex remapped: res://.godot/imported/IconMaxpool.png-7f8f3c77587d434831178b166af15973.ctex
+Completed load for: 'res://node_icons/ru/IconMaxpool.png' remapped 'res://node_icons/ru/IconMaxpool.png' at thread -1
+Loading resource: res://node_icons/ru/IconDropout.png remapped: res://node_icons/ru/IconDropout.png
+Loading resource: res://.godot/imported/IconDropout.png-4ad39cec387cbda46fddf1a1058b4a56.ctex remapped: res://.godot/imported/IconDropout.png-4ad39cec387cbda46fddf1a1058b4a56.ctex
+Completed load for: 'res://node_icons/ru/IconDropout.png' remapped 'res://node_icons/ru/IconDropout.png' at thread -1
+Loading resource: res://node_icons/ru/IconNeuron.png remapped: res://node_icons/ru/IconNeuron.png
+Loading resource: res://.godot/imported/IconNeuron.png-ad1b24e4d98342691fe6535859e0997b.ctex remapped: res://.godot/imported/IconNeuron.png-ad1b24e4d98342691fe6535859e0997b.ctex
+Completed load for: 'res://node_icons/ru/IconNeuron.png' remapped 'res://node_icons/ru/IconNeuron.png' at thread -1
+Loading resource: res://node_icons/ru/IconGruCell.png remapped: res://node_icons/ru/IconGruCell.png
+Loading resource: res://.godot/imported/IconGruCell.png-dfe71a9b9c99dec24240ebe1a163b8f9.ctex remapped: res://.godot/imported/IconGruCell.png-dfe71a9b9c99dec24240ebe1a163b8f9.ctex
+Completed load for: 'res://node_icons/ru/IconGruCell.png' remapped 'res://node_icons/ru/IconGruCell.png' at thread -1
+Loading resource: res://node_icons/ru/IconDataset.png remapped: res://node_icons/ru/IconDataset.png
+Loading resource: res://.godot/imported/IconDataset.png-a3d98083d31ba29ba4cc2361a3a5dadd.ctex remapped: res://.godot/imported/IconDataset.png-a3d98083d31ba29ba4cc2361a3a5dadd.ctex
+Completed load for: 'res://node_icons/ru/IconDataset.png' remapped 'res://node_icons/ru/IconDataset.png' at thread -1
+Loading resource: res://node_icons/ru/IconTrainBegin.png remapped: res://node_icons/ru/IconTrainBegin.png
+Loading resource: res://.godot/imported/IconTrainBegin.png-78328ab870502049ecab5fa3e45bed34.ctex remapped: res://.godot/imported/IconTrainBegin.png-78328ab870502049ecab5fa3e45bed34.ctex
+Completed load for: 'res://node_icons/ru/IconTrainBegin.png' remapped 'res://node_icons/ru/IconTrainBegin.png' at thread -1
+Loading resource: res://node_icons/ru/IconRunModel.png remapped: res://node_icons/ru/IconRunModel.png
+Loading resource: res://.godot/imported/IconRunModel.png-7481a5e7619e82e8871f7d925abedd00.ctex remapped: res://.godot/imported/IconRunModel.png-7481a5e7619e82e8871f7d925abedd00.ctex
+Completed load for: 'res://node_icons/ru/IconRunModel.png' remapped 'res://node_icons/ru/IconRunModel.png' at thread -1
+Loading resource: res://node_icons/ru/IconTrainInput.png remapped: res://node_icons/ru/IconTrainInput.png
+Loading resource: res://.godot/imported/IconTrainInput.png-6859247a7c61bb6e743a693ae3e2117e.ctex remapped: res://.godot/imported/IconTrainInput.png-6859247a7c61bb6e743a693ae3e2117e.ctex
+Completed load for: 'res://node_icons/ru/IconTrainInput.png' remapped 'res://node_icons/ru/IconTrainInput.png' at thread -1
+Loading resource: res://node_icons/ru/IconConcat.png remapped: res://node_icons/ru/IconConcat.png
+Loading resource: res://.godot/imported/IconConcat.png-9e3a5c37e1dd35cd874d536344ea0d46.ctex remapped: res://.godot/imported/IconConcat.png-9e3a5c37e1dd35cd874d536344ea0d46.ctex
+Completed load for: 'res://node_icons/ru/IconConcat.png' remapped 'res://node_icons/ru/IconConcat.png' at thread -1
+XInput: Refreshing devices.
+XInput: Absolute pointing device: xwayland-pointer:19
+XInput: No touch devices found.
+Loading resource: res://scenes/simulations/simulation_tab.tscn remapped: res://scenes/simulations/simulation_tab.tscn
+Loading resource: res://scripts/simulations/simulation_tab.gd remapped: res://scripts/simulations/simulation_tab.gd
+python.exe: can't open file 'D:\\mnt\\d\\NRLSE\\nnets\\teachneurons\\local_runtime\\neuralese_local\\train_worker.py': [Errno 2] No such file or directory
+Completed load for: 'res://scripts/simulations/simulation_tab.gd' remapped 'res://scripts/simulations/simulation_tab.gd' at thread -1
+Loading resource: res://scenes/simulations/simulation_editor.tscn remapped: res://scenes/simulations/simulation_editor.tscn
+Loading resource: res://scripts/simulations/simulation_editor.gd remapped: res://scripts/simulations/simulation_editor.gd
+Loading resource: res://scripts/simulations/water.gdshader remapped: res://scripts/simulations/water.gdshader
+Completed load for: 'res://scripts/simulations/water.gdshader' remapped 'res://scripts/simulations/water.gdshader' at thread -1
+Completed load for: 'res://scripts/simulations/simulation_editor.gd' remapped 'res://scripts/simulations/simulation_editor.gd' at thread -1
+Loading resource: res://scripts/simulations/simulation_grid.gd remapped: res://scripts/simulations/simulation_grid.gd
+Completed load for: 'res://scripts/simulations/simulation_grid.gd' remapped 'res://scripts/simulations/simulation_grid.gd' at thread -1
+Loading resource: res://scripts/simulations/simulation_palette.gd remapped: res://scripts/simulations/simulation_palette.gd
+Completed load for: 'res://scripts/simulations/simulation_palette.gd' remapped 'res://scripts/simulations/simulation_palette.gd' at thread -1
+Loading resource: res://scripts/simulations/simulation_inspector.gd remapped: res://scripts/simulations/simulation_inspector.gd
+Completed load for: 'res://scripts/simulations/simulation_inspector.gd' remapped 'res://scripts/simulations/simulation_inspector.gd' at thread -1
+Loading resource: res://scripts/simulations/simulation_drop_surface.gd remapped: res://scripts/simulations/simulation_drop_surface.gd
+Completed load for: 'res://scripts/simulations/simulation_drop_surface.gd' remapped 'res://scripts/simulations/simulation_drop_surface.gd' at thread -1
+Loading resource: res://scripts/simulations/simulation_brain_mapping_panel.gd remapped: res://scripts/simulations/simulation_brain_mapping_panel.gd
+Completed load for: 'res://scripts/simulations/simulation_brain_mapping_panel.gd' remapped 'res://scripts/simulations/simulation_brain_mapping_panel.gd' at thread -1
+Loading resource: res://scripts/simulations/simulation_dataset_view.gd remapped: res://scripts/simulations/simulation_dataset_view.gd
+Completed load for: 'res://scripts/simulations/simulation_dataset_view.gd' remapped 'res://scripts/simulations/simulation_dataset_view.gd' at thread -1
+Loading resource: res://scripts/simulations/simulation_dataset_dashboard.gd remapped: res://scripts/simulations/simulation_dataset_dashboard.gd
+Completed load for: 'res://scripts/simulations/simulation_dataset_dashboard.gd' remapped 'res://scripts/simulations/simulation_dataset_dashboard.gd' at thread -1
+Loading resource: res://scripts/simulations/simulation_training_bridge.gd remapped: res://scripts/simulations/simulation_training_bridge.gd
+Completed load for: 'res://scripts/simulations/simulation_training_bridge.gd' remapped 'res://scripts/simulations/simulation_training_bridge.gd' at thread -1
+Completed load for: 'res://scenes/simulations/simulation_editor.tscn' remapped 'res://scenes/simulations/simulation_editor.tscn' at thread -1
+Loading resource: res://scenes/bg.tscn remapped: res://scenes/bg.tscn
+Completed load for: 'res://scenes/bg.tscn' remapped 'res://scenes/bg.tscn' at thread -1
+Completed load for: 'res://scenes/simulations/simulation_tab.tscn' remapped 'res://scenes/simulations/simulation_tab.tscn' at thread -1
+[SIM PERF] Ready. Space=start/stop report; F1-F10 toggle A/B subsystems.
+Loading resource: res://scripts/simulations/navigation/simulation_nav_debug_overlay.gd remapped: res://scripts/simulations/navigation/simulation_nav_debug_overlay.gd
+Completed load for: 'res://scripts/simulations/navigation/simulation_nav_debug_overlay.gd' remapped 'res://scripts/simulations/navigation/simulation_nav_debug_overlay.gd' at thread -1
+Simulation Navigator successfully loaded!
+[DEBUG-PERSPECTIVE] Inferred perspective from loaded world: side_view
+Loading resource: res://scenes/net_tab.tscn remapped: res://scenes/net_tab.tscn
+Loading resource: res://scripts/net_tab.gd remapped: res://scripts/net_tab.gd
+Loading resource: res://game_assets/icons/icon.svg remapped: res://game_assets/icons/icon.svg
+Loading resource: res://.godot/imported/icon.svg-2964d286a68a3d6d1e461f8f123fe51c.ctex remapped: res://.godot/imported/icon.svg-2964d286a68a3d6d1e461f8f123fe51c.ctex
+Completed load for: 'res://game_assets/icons/icon.svg' remapped 'res://game_assets/icons/icon.svg' at thread -1
+Completed load for: 'res://scripts/net_tab.gd' remapped 'res://scripts/net_tab.gd' at thread -1
+Completed load for: 'res://scenes/net_tab.tscn' remapped 'res://scenes/net_tab.tscn' at thread -1
+Loading resource: res://scenes/dataset_tab.tscn remapped: res://scenes/dataset_tab.tscn
+Loading resource: res://scripts/dataset_tab.gd remapped: res://scripts/dataset_tab.gd
+Completed load for: 'res://scripts/dataset_tab.gd' remapped 'res://scripts/dataset_tab.gd' at thread -1
+Loading resource: res://scripts/loader.gd remapped: res://scripts/loader.gd
+Completed load for: 'res://scripts/loader.gd' remapped 'res://scripts/loader.gd' at thread -1
+Loading resource: res://scripts/procedural_nodes22.gd remapped: res://scripts/procedural_nodes22.gd
+Completed load for: 'res://scripts/procedural_nodes22.gd' remapped 'res://scripts/procedural_nodes22.gd' at thread -1
+Loading resource: res://scripts/value.gd remapped: res://scripts/value.gd
+Completed load for: 'res://scripts/value.gd' remapped 'res://scripts/value.gd' at thread -1
+Loading resource: res://game_assets/icons/hide.png remapped: res://game_assets/icons/hide.png
+Loading resource: res://.godot/imported/hide.png-c27d22d16dbc033b2f9224410755a1f3.ctex remapped: res://.godot/imported/hide.png-c27d22d16dbc033b2f9224410755a1f3.ctex
+Completed load for: 'res://game_assets/icons/hide.png' remapped 'res://game_assets/icons/hide.png' at thread -1
+Loading resource: res://scripts/console.gd remapped: res://scripts/console.gd
+Completed load for: 'res://scripts/console.gd' remapped 'res://scripts/console.gd' at thread -1
+Loading resource: res://resources/dscli.tres remapped: res://resources/dscli.tres
+Loading resource: res://scripts/ds_highliter.gd remapped: res://scripts/ds_highliter.gd
+Completed load for: 'res://scripts/ds_highliter.gd' remapped 'res://scripts/ds_highliter.gd' at thread -1
+Completed load for: 'res://resources/dscli.tres' remapped 'res://resources/dscli.tres' at thread -1
+Loading resource: res://scripts/cli.gd remapped: res://scripts/cli.gd
+Completed load for: 'res://scripts/cli.gd' remapped 'res://scripts/cli.gd' at thread -1
+Completed load for: 'res://scenes/dataset_tab.tscn' remapped 'res://scenes/dataset_tab.tscn' at thread -1
+WARNING: Nodes with non-equal opposite anchors will have their size overridden after _ready(). 
+If you want to set size, change the anchors or consider using set_deferred().
+     at: _set_size (scene/gui/control.cpp:1519)
+     GDScript backtrace (most recent call first):
+         [0] _ready (res://scripts/virtualt.gd:197)
+         [1] loaded (res://scripts/glob.gd:160)
+         [2] _window_scenes (res://scripts/glob.gd:3128)
+         [3] _ready (res://scripts/glob.gd:3381)
+ERROR: Node not found: "Control/view/Label/run" (relative to "/root/@Node@211/Control").
+   at: get_node (scene/main/node.cpp:1975)
+   GDScript backtrace (most recent call first):
+       [0] @implicit_ready (res://scripts/dataset_tab.gd:543)
+       [1] loaded (res://scripts/glob.gd:160)
+       [2] _window_scenes (res://scripts/glob.gd:3128)
+       [3] _ready (res://scripts/glob.gd:3381)
+aa
+graph
+ERROR: Condition "!enabled || !is_inside_tree()" is true.
+   at: make_current (scene/2d/camera_2d.cpp:588)
+   GDScript backtrace (most recent call first):
+       [0] window_show (res://scripts/win_graph.gd:79)
+       [1] go_window (res://scripts/glob.gd:179)
+       [2] _ready (res://scripts/glob.gd:3382)
+Shader cache miss for CanvasShaderRD/1ac5f6c8d534ebab572b3f886e38134784245fbd5fa01c7cbb6cc452e5400080/7ccedee8a3f7aca048e3d93b0a7d8127093cc57f
+28.0
+0.0
+thirdparty/mbedtls/library/ssl_tls13_generic.c:1591: 0x7627840035b8: Perform PSA-based ECDH/FFDH computation.
+thirdparty/mbedtls/library/ssl_tls13_client.c:1954: 0x7627840035b8: Switch to handshake keys for inbound traffic
+thirdparty/mbedtls/library/ssl_tls13_generic.c:0442: 0x7627840035b8: mbedtls_ssl_tls13_process_certificate_verify() returned 0 (-0x0000)
+thirdparty/mbedtls/library/ssl_tls13_client.c:2659: 0x7627840035b8: Switch to handshake traffic keys for outbound traffic
+thirdparty/mbedtls/library/ssl_tls13_generic.c:1274: 0x7627840035b8: Switch to application keys for inbound traffic
+thirdparty/mbedtls/library/ssl_tls13_generic.c:1277: 0x7627840035b8: Switch to application keys for outbound traffic
+ERROR: Condition "len < 4" is true. Returning: ERR_INVALID_DATA
+   at: decode_variant (core/io/marshalls.cpp:191)
+   GDScript backtrace (most recent call first):
+       [0] get_stored (res://scripts/glob.gd:386)
+       [1] set_var (res://scripts/glob.gd:375)
+       [2] _apply_auth_session (res://scripts/cookie_manager.gd:744)
+       [3] apply_pilot_session (res://scripts/cookie_manager.gd:289)
+       [4] register (res://scripts/auth/pilot_onboarding_client.gd:52)
+       [5] JPOST (res://scripts/web.gd:55)
+       [6] _emit_http_done (res://scripts/web.gd:464)
+ERROR: Error when trying to encode Variant.
+   at: get_var (core/io/file_access.cpp:372)
+   GDScript backtrace (most recent call first):
+       [0] get_stored (res://scripts/glob.gd:386)
+       [1] set_var (res://scripts/glob.gd:375)
+       [2] _apply_auth_session (res://scripts/cookie_manager.gd:744)
+       [3] apply_pilot_session (res://scripts/cookie_manager.gd:289)
+       [4] register (res://scripts/auth/pilot_onboarding_client.gd:52)
+       [5] JPOST (res://scripts/web.gd:55)
+       [6] _emit_http_done (res://scripts/web.gd:464)
+WARNING: 50 RIDs of type "CanvasItem" were leaked.
+   at: _free_rids (servers/rendering/renderer_canvas_cull.cpp:2735)
+ERROR: 3 shaders of type CanvasShaderRD were never freed
+   at: ~ShaderRD (servers/rendering/renderer_rd/shader_rd.cpp:1236)
+WARNING: 8 RIDs of type "UniformBuffer" were leaked.
+   at: _free_rids (servers/rendering/rendering_device.cpp:8686)
+WARNING: 35 RIDs of type "Texture" were leaked.
+   at: finalize (servers/rendering/rendering_device.cpp:8900)
+WARNING: 351 ObjectDB instances were leaked at exit (run with `--verbose` for details).
+   at: cleanup (core/object/object.cpp:2536)
+XR: Clearing primary interface
+XR: Removed interface "Native mobile"
+XR: Removed interface "OpenXR"
+Freeing Default Tex_Blit Shader
+MultiUmaBuffer 'SceneState::uniform_buffers' used a total of 0 buffers. A large number may indicate a waste of VRAM and can be brought down by tweaking MAX_EXTRA_BUFFERS for this buffer.
+MultiUmaBuffer 'RENDER_LIST_OPAQUE' used a total of 0 buffers. A large number may indicate a waste of VRAM and can be brought down by tweaking MAX_EXTRA_BUFFERS for this buffer.
+MultiUmaBuffer 'RENDER_LIST_ALPHA' used a total of 0 buffers. A large number may indicate a waste of VRAM and can be brought down by tweaking MAX_EXTRA_BUFFERS for this buffer.
+MultiUmaBuffer 'RENDER_LIST_SECONDARY' used a total of 0 buffers. A large number may indicate a waste of VRAM and can be brought down by tweaking MAX_EXTRA_BUFFERS for this buffer.
+MultiUmaBuffer 'CANVAS_INSTANCE_DATA' used a total of 5 buffers. A large number may indicate a waste of VRAM and can be brought down by tweaking MAX_EXTRA_BUFFERS for this buffer.
+ERROR: 4 RID allocations of type 'N10RendererRD15MaterialStorage8MaterialE' were leaked at exit.
+ERROR: 3 RID allocations of type 'N10RendererRD15MaterialStorage6ShaderE' were leaked at exit.
+ERROR: 21 RID allocations of type 'N10RendererRD14TextureStorage7TextureE' were leaked at exit.
+Accessibility: window 0 adapter destroyed.
+ERROR: 135 RID allocations of type 'PN18TextServerAdvanced22ShapedTextDataAdvancedE' were leaked at exit.
+ERROR: 4 RID allocations of type 'PN18TextServerAdvanced12FontAdvancedE' were leaked at exit.
+Leaked instance: GDScriptNativeClass:9223372049873895869 - Reference count: 1
+Leaked instance: GDScriptNativeClass:9223372050125554124 - Reference count: 6
+Leaked instance: GDScriptNativeClass:9223372052994458231 - Reference count: 1
+Leaked instance: GDScriptNativeClass:9223372053950759600 - Reference count: 2
+Leaked instance: GDScriptNativeClass:9223372054168863421 - Reference count: 2
+Leaked instance: GDScriptNativeClass:9223372055326491394 - Reference count: 1
+Leaked instance: GDScriptNativeClass:9223372055477486347 - Reference count: 1
+Leaked instance: FontFile:9223372064872727423 - Reference count: 26
+Leaked instance: GDScriptNativeClass:9223372058799375313 - Reference count: 1
+Leaked instance: DPITexture:9223372065241826278 - Reference count: 4
+Leaked instance: DPITexture:9223372065090831641 - Reference count: 4
+Leaked instance: DPITexture:9223372065510262074 - Reference count: 2
+Leaked instance: DPITexture:9223372065577370942 - Reference count: 6
+Leaked instance: DPITexture:9223372065778697546 - Reference count: 4
+Leaked instance: DPITexture:9223372065812251980 - Reference count: 4
+Leaked instance: DPITexture:9223372066063910235 - Reference count: 2
+Leaked instance: DPITexture:9223372066080687452 - Reference count: 2
+Leaked instance: DPITexture:9223372066097464669 - Reference count: 2
+Leaked instance: DPITexture:9223372066399454575 - Reference count: 4
+Leaked instance: StyleBoxFlat:9223372066667890047 - Reference count: 44
+Leaked instance: StyleBoxEmpty:9223372066818885000 - Reference count: 22
+Leaked instance: StyleBoxEmpty:9223372066885993868 - Reference count: 28
+Leaked instance: StyleBoxFlat:9223372066902771085 - Reference count: 6
+Leaked instance: StyleBoxFlat:9223372066919548302 - Reference count: 6
+Leaked instance: StyleBoxFlat:9223372066936325519 - Reference count: 6
+Leaked instance: StyleBoxFlat:9223372066953102736 - Reference count: 6
+Leaked instance: ImageTexture:9223372066986657170 - Reference count: 36
+Leaked instance: StyleBoxFlat:9223372067020211604 - Reference count: 6
+Leaked instance: StyleBoxFlat:9223372067036988821 - Reference count: 6
+Leaked instance: StyleBoxFlat:9223372067053766038 - Reference count: 6
+Leaked instance: StyleBoxFlat:9223372067070543255 - Reference count: 6
+Leaked instance: StyleBoxFlat:9223372067087320472 - Reference count: 2
+Leaked instance: StyleBoxFlat:9223372067104097689 - Reference count: 2
+Leaked instance: StyleBoxFlat:9223372067120874906 - Reference count: 2
+Leaked instance: ImageTexture:9223372068161062359 - Reference count: 6
+Leaked instance: StyleBoxFlat:9223372068446275047 - Reference count: 20
+Leaked instance: GDScript:9223372072506361348 - Reference count: 1
+Leaked instance: UndoRedo:204514264610
+Leaked instance: GDScript:9223372081498949178 - Reference count: 20
+Leaked instance: Shader:9223372088981587538 - Reference count: 2
+Leaked instance: ShaderInclude:9223372089099028052 - Reference count: 2
+Leaked instance: ShaderInclude:9223372089250022997 - Reference count: 2
+Leaked instance: ShaderInclude:9223372089367463511 - Reference count: 4
+Leaked instance: Shader:9223372090910967391 - Reference count: 1
+Leaked instance: ShaderMaterial:9223372091011630688 - Reference count: 8
+Leaked instance: GDScript:9223372096044795490 - Reference count: 5
+Leaked instance: CompressedTexture2D:9223372092269921895 - Reference count: 10
+Leaked instance: FontFile:9223372092102149736 - Reference count: 23
+Leaked instance: StyleBoxFlat:9223372093192668777 - Reference count: 1
+Leaked instance: CompressedTexture2D:9223372092521580138 - Reference count: 10
+Leaked instance: CompressedTexture2D:9223372092773238380 - Reference count: 5
+Leaked instance: CompressedTexture2D:9223372093024896622 - Reference count: 5
+Leaked instance: StyleBoxFlat:9223372093175891568 - Reference count: 1
+Leaked instance: StyleBoxFlat:9223372093159114353 - Reference count: 1
+Leaked instance: StyleBoxFlat:9223372093209446002 - Reference count: 1
+Leaked instance: StyleBoxFlat:9223372093226223219 - Reference count: 1
+Leaked instance: ImageTexture:9223372093243000436 - Reference count: 6
+Leaked instance: Theme:9223372093259777653 - Reference count: 15
+Leaked instance: GDScript:9223372108443158158 - Reference count: 4
+Leaked instance: Shader:9223372127753733775 - Reference count: 1
+Leaked instance: CompressedTexture2D:9223372108912920208 - Reference count: 5
+Leaked instance: StyleBoxFlat:9223372134045189777 - Reference count: 1
+Leaked instance: ShaderMaterial:9223372127820842643 - Reference count: 10
+Leaked instance: StyleBoxFlat:9223372134061966996 - Reference count: 1
+Leaked instance: StyleBoxFlat:9223372134078744213 - Reference count: 1
+Leaked instance: StyleBoxFlat:9223372134095521430 - Reference count: 1
+Leaked instance: StyleBoxFlat:9223372134112298647 - Reference count: 1
+Leaked instance: ImageTexture:9223372134129075864 - Reference count: 6
+Leaked instance: Theme:9223372134145853081 - Reference count: 4
+Leaked instance: StyleBoxFlat:9223372134464620187 - Reference count: 1
+Leaked instance: StyleBoxFlat:9223372134481397404 - Reference count: 1
+Leaked instance: FontFile:9223372134414288541 - Reference count: 13
+Leaked instance: StyleBoxFlat:9223372134498174622 - Reference count: 1
+Leaked instance: Image:9223372434424465055 - Reference count: 1
+Leaked instance: StyleBoxFlat:9223372134531729056 - Reference count: 1
+Leaked instance: StyleBoxFlat:9223372134548506273 - Reference count: 3
+Leaked instance: StyleBoxFlat:9223372134565283490 - Reference count: 1
+Leaked instance: Theme:9223372134582060707 - Reference count: 3
+Leaked instance: GDScript:9223372134984713892 - Reference count: 3
+Leaked instance: GDScript:9223372136108787369 - Reference count: 1
+Leaked instance: GDScript:9223372136628881068 - Reference count: 2
+Leaked instance: GDScript:9223372165838014202 - Reference count: 2
+Leaked instance: CompressedTexture2D:9223372199878985549 - Reference count: 1
+Leaked instance: StyleBoxEmpty:9223372200063534933 - Reference count: 6
+Leaked instance: StyleBoxEmpty:9223372200080312150 - Reference count: 6
+Leaked instance: ShaderMaterial:9223372200097089367 - Reference count: 2
+Leaked instance: Resource:9223372200113866584 - Reference count: 1
+Leaked instance: GDScript:9223372228014376806 - Reference count: 1
+Leaked instance: GDScript:9223372228937123688 - Reference count: 1
+Leaked instance: GDScript:9223372228349921130 - Reference count: 8
+Leaked instance: GDScript:9223372229641766764 - Reference count: 1
+Leaked instance: StyleBoxEmpty:9223372228618356590 - Reference count: 1
+Leaked instance: StyleBoxEmpty:9223372228635133808 - Reference count: 1
+Leaked instance: StyleBoxEmpty:9223372228651911025 - RefereERROR: Cannot get path of node as it is not in a scene tree.
+   at: get_path (scene/main/node.cpp:2431)
+ERROR: Cannot get path of node as it is not in a scene tree.
+   at: get_path (scene/main/node.cpp:2431)
+ERROR: Cannot get path of node as it is not in a scene tree.
+   at: get_path (scene/main/node.cpp:2431)
+ERROR: Cannot get path of node as it is not in a scene tree.
+   at: get_path (scene/main/node.cpp:2431)
+ERROR: Cannot get path of node as it is not in a scene tree.
+   at: get_path (scene/main/node.cpp:2431)
+ERROR: Cannot get path of node as it is not in a scene tree.
+   at: get_path (scene/main/node.cpp:2431)
+ERROR: Cannot get path of node as it is not in a scene tree.
+   at: get_path (scene/main/node.cpp:2431)
+ERROR: Cannot get path of node as it is not in a scene tree.
+   at: get_path (scene/main/node.cpp:2431)
+ERROR: Cannot get path of node as it is not in a scene tree.
+   at: get_path (scene/main/node.cpp:2431)
+ERROR: Cannot get path of node as it is not in a scene tree.
+   at: get_path (scene/main/node.cpp:2431)
+ERROR: Cannot get path of node as it is not in a scene tree.
+   at: get_path (scene/main/node.cpp:2431)
+ERROR: Cannot get path of node as it is not in a scene tree.
+   at: get_path (scene/main/node.cpp:2431)
+ERROR: Cannot get path of node as it is not in a scene tree.
+   at: get_path (scene/main/node.cpp:2431)
+ERROR: Cannot get path of node as it is not in a scene tree.
+   at: get_path (scene/main/node.cpp:2431)
+ERROR: Cannot get path of node as it is not in a scene tree.
+   at: get_path (scene/main/node.cpp:2431)
+ERROR: Cannot get path of node as it is not in a scene tree.
+   at: get_path (scene/main/node.cpp:2431)
+ERROR: Cannot get path of node as it is not in a scene tree.
+   at: get_path (scene/main/node.cpp:2431)
+ERROR: Cannot get path of node as it is not in a scene tree.
+   at: get_path (scene/main/node.cpp:2431)
+ERROR: Cannot get path of node as it is not in a scene tree.
+   at: get_path (scene/main/node.cpp:2431)
+ERROR: Cannot get path of node as it is not in a scene tree.
+   at: get_path (scene/main/node.cpp:2431)
+ERROR: Cannot get path of node as it is not in a scene tree.
+   at: get_path (scene/main/node.cpp:2431)
+nce count: 1
+Leaked instance: StyleBoxEmpty:9223372229322999669 - Reference count: 1
+Leaked instance: StyleBoxEmpty:9223372229339776886 - Reference count: 1
+Leaked instance: StyleBoxEmpty:9223372229356554103 - Reference count: 1
+Leaked instance: GDScript:9223372230883280762 - Reference count: 1
+Leaked instance: CompressedTexture2D:9223372230128306043 - Reference count: 3
+Leaked instance: GDScript:9223372231285933948 - Reference count: 1
+Leaked instance: Resource:9223372230598068096 - Reference count: 1
+Leaked instance: StyleBoxEmpty:9223372231537592195 - Reference count: 1
+Leaked instance: StyleBoxEmpty:9223372231554369412 - Reference count: 1
+Leaked instance: StyleBoxEmpty:9223372231571146629 - Reference count: 1
+Leaked instance: Resource:9223372313779505234 - Reference count: 2
+Leaked instance: Image:9223372345069013116 - Reference count: 1
+Leaked instance: ShaderMaterial:9223372319248877707 - Reference count: 2
+Leaked instance: Resource:9223372319315986575 - Reference count: 4
+Leaked instance: FontVariation:9223372345337448593 - Reference count: 7
+Leaked instance: Image:9223372345085790358 - Reference count: 1
+Leaked instance: Image:9223372345203230872 - Reference count: 1
+Leaked instance: Image:9223372345102567580 - Reference count: 1
+Leaked instance: Image:9223372345152899229 - Reference count: 1
+Leaked instance: FontVariation:9223372345303894189 - Reference count: 7
+Leaked instance: FontVariation:9223372345320671406 - Reference count: 7
+Leaked instance: Image:9223372331244587183 - Reference count: 1
+Leaked instance: Object:392989509827
+Leaked instance: TextLine:9223372430095943884 - Reference count: 1
+Leaked instance: Control:296637958451 - Node path: 
+Leaked instance: Object:296654735668
+Leaked instance: RichTextLabel:296671512885 - Node path: 
+Leaked instance: Object:296688290102
+Leaked instance: TextParagraph:9223372333610174775 - Reference count: 1
+Leaked instance: VScrollBar:296721844536 - Node path: 
+Leaked instance: Object:296738621753
+Leaked instance: Timer:296772176186 - Node path: 
+Leaked instance: Control:296788953403 - Node path: 
+Leaked instance: Object:296805730620
+Leaked instance: ColorRect:296822507837 - Node path: 
+Leaked instance: Object:296839285054
+Leaked instance: CheckBox:296856062271 - Node path: 
+Leaked instance: Object:296872839488
+Leaked instance: TextParagraph:9223372333744392513 - Reference count: 1
+Leaked instance: RichTextLabel:297174829378 - Node path: 
+Leaked instance: Object:297191606595
+Leaked instance: TextParagraph:9223372346276972868 - Reference count: 1
+Leaked instance: VScrollBar:297225161029 - Node path: 
+Leaked instance: Object:297241938246
+Leaked instance: Timer:297275492679 - Node path: 
+Leaked instance: Control:297325824328 - Node path: 
+Leaked instance: Object:297342601545
+Leaked instance: ColorRect:297359378762 - Node path: 
+Leaked instance: Object:297376155979
+Leaked instance: Label:297392933196 - Node path: 
+Leaked instance: Object:297409710413
+Leaked instance: Node:297443264847 - Node path: 
+Leaked instance: TextureRect:297460042064 - Node path: 
+Leaked instance: Object:297476819281
+Leaked instance: Control:297493596498 - Node path: 
+Leaked instance: Object:297510373715
+Leaked instance: ColorRect:297527150932 - Node path: 
+Leaked instance: Object:297543928149
+Leaked instance: CheckBox:297560705366 - Node path: 
+Leaked instance: Object:297577482583
+Leaked instance: TextParagraph:9223372334449035608 - Reference count: 1
+Leaked instance: ButtonGroup:9223372334465812825 - Reference count: 1
+Leaked instance: RichTextLabel:297627814234 - Node path: 
+Leaked instance: Object:297644591451
+Leaked instance: TextParagraph:9223372346293750108 - Reference count: 1
+Leaked instance: VScrollBar:297678145885 - Node path: 
+Leaked instance: Object:297694923102
+Leaked instance: Timer:297728477535 - Node path: 
+Leaked instance: TextLine:9223372349850519936 - Reference count: 1
+Leaked instance: TextLine:9223372349665970564 - Reference count: 1
+Leaked instance: TextLine:9223372433501718918 - Reference count: 1
+Leaked instance: TextLine:9223372349481421192 - Reference count: 1
+Leaked instancERROR: Cannot get path of node as it is not in a scene tree.
+   at: get_path (scene/main/node.cpp:2431)
+ERROR: Cannot get path of node as it is not in a scene tree.
+   at: get_path (scene/main/node.cpp:2431)
+ERROR: Cannot get path of node as it is not in a scene tree.
+   at: get_path (scene/main/node.cpp:2431)
+ERROR: Cannot get path of node as it is not in a scene tree.
+   at: get_path (scene/main/node.cpp:2431)
+ERROR: Cannot get path of node as it is not in a scene tree.
+   at: get_path (scene/main/node.cpp:2431)
+ERROR: Cannot get path of node as it is not in a scene tree.
+   at: get_path (scene/main/node.cpp:2431)
+ERROR: Cannot get path of node as it is not in a scene tree.
+   at: get_path (scene/main/node.cpp:2431)
+e: TextLine:9223372433518496139 - Reference count: 1
+Leaked instance: TextLine:9223372349296871820 - Reference count: 1
+Leaked instance: TextLine:9223372433535273360 - Reference count: 1
+Leaked instance: TextLine:9223372433552050581 - Reference count: 1
+Leaked instance: TextLine:9223372349112322457 - Reference count: 1
+Leaked instance: TextLine:9223372433568827802 - Reference count: 1
+Leaked instance: TextLine:9223372348927773085 - Reference count: 1
+Leaked instance: TextLine:9223372433585605023 - Reference count: 1
+Leaked instance: TextLine:9223372348743223713 - Reference count: 1
+Leaked instance: TextLine:9223372433602382244 - Reference count: 1
+Leaked instance: TextLine:9223372348558674341 - Reference count: 1
+Leaked instance: TextLine:9223372433619159465 - Reference count: 1
+Leaked instance: TextLine:9223372433635936686 - Reference count: 1
+Leaked instance: TextLine:9223372433652713907 - Reference count: 1
+Leaked instance: TextLine:9223372439105309110 - Reference count: 1
+Leaked instance: TextLine:9223372433669491128 - Reference count: 1
+Leaked instance: TextLine:9223372439088531898 - Reference count: 1
+Leaked instance: TextLine:9223372433686268349 - Reference count: 1
+Leaked instance: TextParagraph:9223372439054977470 - Reference count: 1
+Leaked instance: TextLine:9223372433703045570 - Reference count: 1
+Leaked instance: TextLine:9223372433719822791 - Reference count: 1
+Leaked instance: TextParagraph:9223372439021423051 - Reference count: 1
+Leaked instance: TextLine:9223372433736600012 - Reference count: 1
+Leaked instance: TextParagraph:9223372438987868623 - Reference count: 1
+Leaked instance: TextLine:9223372433753377233 - Reference count: 1
+Leaked instance: TextParagraph:9223372438954314195 - Reference count: 1
+Leaked instance: TextLine:9223372434407688667 - Reference count: 1
+Leaked instance: GDScriptFunctionState:9223372353407289833 - Reference count: 1
+Leaked instance: Object:316535736810
+Leaked instance: Label:316518959595 - Node path: 
+Leaked instance: Object:316502182380
+Leaked instance: TextLine:9223372353306626555 - Reference count: 1
+Leaked instance: TextLine:9223372353289849359 - Reference count: 1
+Leaked instance: TextLine:9223372353507953169 - Reference count: 1
+Leaked instance: GDScriptFunctionState:9223372353457621525 - Reference count: 1
+Leaked instance: GDScriptFunctionState:9223372353440844310 - Reference count: 1
+Leaked instance: GDScriptFunctionState:9223372353424067095 - Reference count: 1
+Leaked instance: Image:9223372354665581100 - Reference count: 1
+Leaked instance: GDScriptFunctionState:9223372350420945472 - Reference count: 1
+Leaked instance: GDScriptFunctionState:9223372350404168261 - Reference count: 1
+Leaked instance: GDScriptFunctionState:9223372350387391050 - Reference count: 1
+Leaked instance: GDScriptFunctionState:9223372350370613839 - Reference count: 1
+Leaked instance: Object:313499060820
+Leaked instance: Label:313482283609 - Node path: 
+Leaked instance: Object:313465506398
+Leaked instance: ColorRect:313448729187 - Node path: 
+Leaked instance: TextLine:9223372353692502646 - Reference count: 1
+Leaked instance: TextLine:9223372353658948215 - Reference count: 1
+Leaked instance: TextLine:9223372353625393784 - Reference count: 1
+Leaked instance: TextLine:9223372353591839353 - Reference count: 1
+Leaked instance: TextLine:9223372353541507720 - Reference count: 1
+Leaked instance: ColorRect:302996523671 - Node path: 
+Leaked instance: Object:303013300888
+Leaked instance: Label:303030078105 - Node path: 
+Leaked instance: Object:303046855322
+Leaked instance: ColorRect:316485405339 - Node path: 
+Leaked instance: Image:9223372354179041956 - Reference count: 1
+Leaked instance: TextLine:9223372353709279924 - Reference count: 1
+Leaked instance: GDScriptFunctionState:9223372354028047074 - Reference count: 1
+Leaked instance: GDScriptFunctionState:9223372354011269859 - Reference count: 1
+Leaked instance: TextLine:9223372353860274949 - Reference count: 1
+Leaked instance: GDScriptFunctionState:9223372353977715480 - Reference count: 1
+Leaked instance: Object:317106162457
+Leaked instance: Label:317089385ERROR: Cannot get path of node as it is not in a scene tree.
+   at: get_path (scene/main/node.cpp:2431)
+ERROR: Cannot get path of node as it is not in a scene tree.
+   at: get_path (scene/main/node.cpp:2431)
+ERROR: Cannot get path of node as it is not in a scene tree.
+   at: get_path (scene/main/node.cpp:2431)
+ERROR: Cannot get path of node as it is not in a scene tree.
+   at: get_path (scene/main/node.cpp:2431)
+ERROR: Cannot get path of node as it is not in a scene tree.
+   at: get_path (scene/main/node.cpp:2431)
+ERROR: Cannot get path of node as it is not in a scene tree.
+   at: get_path (scene/main/node.cpp:2431)
+ERROR: Cannot get path of node as it is not in a scene tree.
+   at: get_path (scene/main/node.cpp:2431)
+ERROR: Cannot get path of node as it is not in a scene tree.
+   at: get_path (scene/main/node.cpp:2431)
+ERROR: Cannot get path of node as it is not in a scene tree.
+   at: get_path (scene/main/node.cpp:2431)
+ERROR: Cannot get path of node as it is not in a scene tree.
+   at: get_path (scene/main/node.cpp:2431)
+ERROR: Cannot get path of node as it is not in a scene tree.
+   at: get_path (scene/main/node.cpp:2431)
+ERROR: Cannot get path of node as it is not in a scene tree.
+   at: get_path (scene/main/node.cpp:2431)
+ERROR: Cannot get path of node as it is not in a scene tree.
+   at: get_path (scene/main/node.cpp:2431)
+ERROR: Cannot get path of node as it is not in a scene tree.
+   at: get_path (scene/main/node.cpp:2431)
+ERROR: Cannot get path of node as it is not in a scene tree.
+   at: get_path (scene/main/node.cpp:2431)
+242 - Node path: 
+Leaked instance: Object:317072608027
+Leaked instance: GDScriptFunctionState:9223372353994492732 - Reference count: 1
+Leaked instance: Image:9223372354111933251 - Reference count: 1
+Leaked instance: Image:9223372354078378821 - Reference count: 1
+Leaked instance: ColorRect:306268080980 - Node path: 
+Leaked instance: Object:306284858197
+Leaked instance: Label:306301635414 - Node path: 
+Leaked instance: Object:306318412631
+Leaked instance: ColorRect:317055830872 - Node path: 
+Leaked instance: ImageTexture:9223372362651536284 - Reference count: 1
+Leaked instance: TextLine:9223372362299214749 - Reference count: 1
+Leaked instance: Object:325461216166
+Leaked instance: TextParagraph:9223372414509910965 - Reference count: 1
+Leaked instance: TextLine:9223372345740102582 - Reference count: 1
+Leaked instance: Object:392788183992
+Leaked instance: ColorRect:309841628099 - Node path: 
+Leaked instance: Object:309858405316
+Leaked instance: Label:309875182533 - Node path: 
+Leaked instance: Object:309891959750
+Leaked instance: GDScriptFunctionState:9223372347065502663 - Reference count: 1
+Leaked instance: GDScriptFunctionState:9223372347031948232 - Reference count: 1
+Leaked instance: GDScriptFunctionState:9223372347048725449 - Reference count: 1
+Leaked instance: GDScriptFunctionState:9223372347082279882 - Reference count: 1
+Leaked instance: TextLine:9223372350035069903 - Reference count: 1
+Leaked instance: TextLine:9223372350219619284 - Reference count: 1
+Leaked instance: TextLine:9223372362265660539 - Reference count: 1
+Leaked instance: ImageTexture:9223372362701868158 - Reference count: 1
+Leaked instance: ImageTexture:9223372363389734015 - Reference count: 1
+Leaked instance: ImageTexture:9223372363641392256 - Reference count: 1
+Leaked instance: Image:9223372367214939461 - Reference count: 1
+Leaked instance: Image:9223372367231716678 - Reference count: 1
+Leaked instance: Image:9223372413520055774 - Reference count: 1
+Leaked instance: Image:9223372413503278559 - Reference count: 1
+Leaked instance: Image:9223372413486501344 - Reference count: 1
+Leaked instance: Image:9223372413469724129 - Reference count: 1
+Leaked instance: Image:9223372399745961492 - Reference count: 1
+Leaked instance: Image:9223372399880179226 - Reference count: 1
+Leaked instance: Image:9223372402514202295 - Reference count: 1
+Leaked instance: TextLine:9223372413402616117 - Reference count: 1
+Leaked instance: Image:9223372413419393334 - Reference count: 1
+Leaked instance: Image:9223372413536833847 - Reference count: 1
+Leaked instance: Image:9223372413553611064 - Reference count: 1
+Leaked instance: TextLine:9223372413822046532 - Reference count: 1
+Leaked instance: TextParagraph:9223372413838823749 - Reference count: 1
+Leaked instance: TextLine:9223372414040150350 - Reference count: 1
+Leaked instance: TextParagraph:9223372414056927567 - Reference count: 1
+Leaked instance: TextLine:9223372414258254168 - Reference count: 1
+Leaked instance: TextParagraph:9223372414291808602 - Reference count: 1
+Leaked instance: TextLine:9223372414493135203 - Reference count: 1
+Leaked instance: Image:9223372418083459464 - Reference count: 1
+Leaked instance: GDScript:9223372422848188893 - Reference count: 1
+Leaked instance: Node2D:393073398238 - Node path: 
+Leaked instance: Object:393056621023
+Leaked instance: Label:393039843808 - Node path: 
+Leaked instance: Resource:9223372425515766263 - Reference count: 2
+Leaked instance: Image:9223372429072536063 - Reference count: 1
+Leaked instance: Control:392234537472 - Node path: 
+Leaked instance: Object:393023066627
+Leaked instance: Label:393006289412 - Node path: 
+Leaked instance: ColorRect:389684400659 - Node path: 
+Leaked instance: Object:389701177876
+Leaked instance: Label:389717955093 - Node path: 
+Leaked instance: Object:389734732310
+Leaked instance: ColorRect:392771408407 - Node path: 
+Leaked instance: Label:392972735005 - Node path: 
+Leaked instance: Object:392955957790
+Leaked instance: Control:392939180575 - Node path: 
+Leaked instance: TextLine:9223372430364381863 - Reference count: 1
+Leaked instance: Object:392251314857
+LeakeERROR: Cannot get path of node as it is not in a scene tree.
+   at: get_path (scene/main/node.cpp:2431)
+ERROR: Cannot get path of node as it is not in a scene tree.
+   at: get_path (scene/main/node.cpp:2431)
+ERROR: Cannot get path of node as it is not in a scene tree.
+   at: get_path (scene/main/node.cpp:2431)
+ERROR: Cannot get path of node as it is not in a scene tree.
+   at: get_path (scene/main/node.cpp:2431)
+ERROR: Cannot get path of node as it is not in a scene tree.
+   at: get_path (scene/main/node.cpp:2431)
+ERROR: Cannot get path of node as it is not in a scene tree.
+   at: get_path (scene/main/node.cpp:2431)
+ERROR: Cannot get path of node as it is not in a scene tree.
+   at: get_path (scene/main/node.cpp:2431)
+ERROR: Cannot get path of node as it is not in a scene tree.
+   at: get_path (scene/main/node.cpp:2431)
+ERROR: Cannot get path of node as it is not in a scene tree.
+   at: get_path (scene/main/node.cpp:2431)
+ERROR: Cannot get path of node as it is not in a scene tree.
+   at: get_path (scene/main/node.cpp:2431)
+ERROR: Cannot get path of node as it is not in a scene tree.
+   at: get_path (scene/main/node.cpp:2431)
+ERROR: 70 resources still in use at exit.
+   at: clear (core/io/resource.cpp:817)
+d instance: LineEdit:392268092074 - Node path: 
+Leaked instance: Object:392284869291
+Leaked instance: Control:392301646508 - Node path: 
+Leaked instance: Object:392318423725
+Leaked instance: LineEdit:392335200942 - Node path: 
+Leaked instance: Object:392351978159
+Leaked instance: Control:392368755376 - Node path: 
+Leaked instance: Object:392385532593
+Leaked instance: TextureRect:392402309810 - Node path: 
+Leaked instance: Object:392419087027
+Leaked instance: Label:392435864244 - Node path: 
+Leaked instance: Object:392452641461
+Leaked instance: ColorRect:392469418678 - Node path: 
+Leaked instance: Object:392486195895
+Leaked instance: Label:392502973112 - Node path: 
+Leaked instance: Object:392519750329
+Leaked instance: GDScriptFunctionState:9223372429391303354 - Reference count: 1
+Leaked instance: GDScriptFunctionState:9223372429408080571 - Reference count: 1
+Leaked instance: GDScriptFunctionState:9223372429424857788 - Reference count: 1
+Leaked instance: Control:392586859197 - Node path: 
+Leaked instance: Object:392603636414
+Leaked instance: HSlider:392620413631 - Node path: 
+Leaked instance: Object:392637190848
+Leaked instance: LineEdit:392687522497 - Node path: 
+Leaked instance: Object:392704299714
+Leaked instance: TextLine:9223372429592629956 - Reference count: 1
+Leaked instance: Label:392804963013 - Node path: 
+Leaked instance: Object:392821740230
+Leaked instance: GDScriptFunctionState:9223372429693293255 - Reference count: 1
+Leaked instance: GDScriptFunctionState:9223372429710070472 - Reference count: 1
+Leaked instance: GDScriptFunctionState:9223372429726847689 - Reference count: 1
+Leaked instance: GDScriptFunctionState:9223372429743624906 - Reference count: 1
+Leaked instance: TextLine:9223372429777179339 - Reference count: 1
+Leaked instance: TextLine:9223372430079169234 - Reference count: 1
+Leaked instance: TextLine:9223372430347604700 - Reference count: 1
+Leaked instance: Image:9223372432092435231 - Reference count: 1
+Leaked instance: TextLine:9223372432964850494 - Reference count: 1
+Leaked instance: TextLine:9223372432981627716 - Reference count: 1
+Leaked instance: TextLine:9223372432948073294 - Reference count: 1
+Leaked instance: TextLine:9223372433367503708 - Reference count: 1
+Leaked instance: TextLine:9223372433484944224 - Reference count: 1
+Leaked instance: TextLine:9223372434290250596 - Reference count: 1
+Leaked instance: Image:9223372434307027813 - Reference count: 1
+Leaked instance: TextLine:9223372434390913898 - Reference count: 1
+Leaked instance: TextLine:9223372438971093883 - Reference count: 1
+Leaked instance: TextLine:9223372438937539452 - Reference count: 1
+Leaked instance: TextLine:9223372439004648317 - Reference count: 1
+Leaked instance: TextLine:9223372439038202750 - Reference count: 1
+Leaked instance: TextLine:9223372439071757183 - Reference count: 1
+Leaked instance: ImageTexture:9223372434978116487 - Reference count: 1
+Leaked instance: ImageTexture:9223372435548541832 - Reference count: 1
+Leaked instance: ImageTexture:9223372435665982346 - Reference count: 1
+Hint: Leaked instances typically happen when nodes are removed from the scene tree (with `remove_child()`) but not freed (with `free()` or `queue_free()`).
+Resource still in use: res://shaders/std.gdshaderinc (ShaderInclude)
+Resource still in use: res://shaders/smooth_extents.gdshaderinc (ShaderInclude)
+Resource still in use: res://shaders/block_body.gdshaderinc (ShaderInclude)
+Resource still in use: res://shaders/block_screen.gdshader (Shader)
+Resource still in use: res://shaders/block.gdshader (Shader)
+Resource still in use: res://resources/add_button.tres (ShaderMaterial)
+Resource still in use: res://game_assets/fonts/JetBrainsMono-VariableFont_wght.ttf (FontFile)
+Resource still in use: res://game_assets/icons/check_on.png (CompressedTexture2D)
+Resource still in use: res://game_assets/icons/radio_on.png (CompressedTexture2D)
+Resource still in use: res://game_assets/icons/radio_off.png (CompressedTexture2D)
+Resource still in use: res://game_assets/icons/ch.png (CompressedTexture2D)
+Resource still in use: res://resources/theme.tres::StyleBoxFlat_vj6dk (StyleBoxFlat)
+Resource still in use: res://resources/theme.tres::StyleBoxFlat_mihib (StyleBoxFlat)
+Resource still in use: res://resources/theme.tres::StyleBoxFlat_d4nwg (StyleBoxFlat)
+Resource still in use: res://resources/theme.tres::StyleBoxFlat_7ct1h (StyleBoxFlat)
+Resource still in use: res://resources/theme.tres::StyleBoxFlat_886mr (StyleBoxFlat)
+Resource still in use: res://resources/theme.tres::ImageTexture_e1x85 (ImageTexture)
+Resource still in use: res://resources/theme.tres (Theme)
+Resource still in use: res://scripts/button_config.gd (GDScript)
+Resource still in use: res://game_assets/icons/check_wrong.png (CompressedTexture2D)
+Resource still in use: res://scripts/container.gd (GDScript)
+Resource still in use: res://scripts/block_component.gd (GDScript)
+Resource still in use: res://shaders/simple_alphamult.gdshader (Shader)
+Resource still in use: res://resources/font_alphamult.tres (ShaderMaterial)
+Resource still in use: res://resources/theme_base.tres::StyleBoxFlat_67ehd (StyleBoxFlat)
+Resource still in use: res://resources/theme_base.tres::StyleBoxFlat_vkeru (StyleBoxFlat)
+Resource still in use: res://resources/theme_base.tres::StyleBoxFlat_vj6dk (StyleBoxFlat)
+Resource still in use: res://resources/theme_base.tres::StyleBoxFlat_mihib (StyleBoxFlat)
+Resource still in use: res://resources/theme_base.tres::StyleBoxFlat_d4nwg (StyleBoxFlat)
+Resource still in use: res://resources/theme_base.tres::ImageTexture_e1x85 (ImageTexture)
+Resource still in use: res://resources/theme_base.tres (Theme)
+Resource still in use: res://game_assets/fonts/JetBrainsSans[wght]-VF.ttf (FontFile)
+Resource still in use: res://resources/theme_headers.tres::StyleBoxFlat_j2foe (StyleBoxFlat)
+Resource still in use: res://resources/theme_headers.tres::StyleBoxFlat_ivxl0 (StyleBoxFlat)
+Resource still in use: res://resources/theme_headers.tres::StyleBoxFlat_7mp7q (StyleBoxFlat)
+Resource still in use: res://resources/theme_headers.tres::StyleBoxFlat_ik8i5 (StyleBoxFlat)
+Resource still in use: res://resources/theme_headers.tres::StyleBoxFlat_iaosw (StyleBoxFlat)
+Resource still in use: res://resources/theme_headers.tres::StyleBoxFlat_qe0r0 (StyleBoxFlat)
+Resource still in use: res://resources/theme_headers.tres (Theme)
+Resource still in use: res://scripts/validate_line.gd (GDScript)
+Resource still in use: res://scripts/label_auto_resize.gd (GDScript)
+Resource still in use: res://scripts/loc.gd (GDScript)
+Resource still in use: res://scripts/validate_number.gd (GDScript)
+Resource still in use: res://game_assets/icons/arr.png (CompressedTexture2D)
+Resource still in use: res://scenes/quest.tscn::StyleBoxEmpty_ih3n3 (StyleBoxEmpty)
+Resource still in use: res://scenes/quest.tscn::StyleBoxEmpty_3ccl1 (StyleBoxEmpty)
+Resource still in use: res://scenes/quest.tscn::ShaderMaterial_qqhq5 (ShaderMaterial)
+Resource still in use: res://scenes/quest.tscn::Resource_k76xp (Resource)
+Resource still in use: res://scripts/cell.gd (GDScript)
+Resource still in use: res://scripts/text_cell.gd (GDScript)
+Resource still in use: res://scenes/cell.tscn::StyleBoxEmpty_ecwuj (StyleBoxEmpty)
+Resource still in use: res://scenes/cell.tscn::StyleBoxEmpty_k6tqi (StyleBoxEmpty)
+Resource still in use: res://scenes/cell.tscn::StyleBoxEmpty_4kve2 (StyleBoxEmpty)
+Resource still in use: res://scripts/num.gd (GDScript)
+Resource still in use: res://scenes/num.tscn::StyleBoxEmpty_ecwuj (StyleBoxEmpty)
+Resource still in use: res://scenes/num.tscn::StyleBoxEmpty_k6tqi (StyleBoxEmpty)
+Resource still in use: res://scenes/num.tscn::StyleBoxEmpty_4kve2 (StyleBoxEmpty)
+Resource still in use: res://game_assets/icons/none.png (CompressedTexture2D)
+Resource still in use: res://scripts/img.gd (GDScript)
+Resource still in use: res://scenes/img.tscn::Resource_1m8me (Resource)
+Resource still in use: res://scripts/floatcell.gd (GDScript)
+Resource still in use: res://scripts/h_slider.gd (GDScript)
+Resource still in use: res://scenes/float.tscn::StyleBoxEmpty_gliwu (StyleBoxEmpty)
+Resource still in use: res://scenes/float.tscn::StyleBoxEmpty_sefui (StyleBoxEmpty)
+Resource still in use: res://scenes/float.tscn::StyleBoxEmpty_ynaxs (StyleBoxEmpty)
+Resource still in use: res://resources/lite_config.tres (Resource)
+Resource still in use: res://scenes/menus.tscn::ShaderMaterial_w6445 (ShaderMaterial)
+Resource still in use: res://scenes/menus.tscn::Resource_77dp3 (Resource)
+Resource still in use: res://scripts/value.gd (GDScript)
+Resource still in use: res://scenes/dataset_tab.tscn::Resource_5x1c3 (Resource)
+Orphan StringName: hover_mirrored (static: 0, total: 2)
+Orphan StringName: extents (static: 0, total: 33)
+Orphan StringName: child_button_pressing (static: 0, total: 2)
+Orphan StringName: _last_has_shrink (static: 0, total: 13)
+Orphan StringName: simple (static: 0, total: 6)
+Orphan StringName: mono_font_size (static: 0, total: 3)
+Orphan StringName: bold_font_size (static: 0, total: 3)
+Orphan StringName: released (static: 0, total: 5)
+Orphan StringName: CheckBox (static: 0, total: 5)
+Orphan StringName: Loc (static: 0, total: 5)
+Orphan StringName: pos_clamp (static: 0, total: 1)
+Orphan StringName: _process_block_button (static: 0, total: 1)
+Orphan StringName: TEXT_FIT_WIDTH (static: 0, total: 1)
+Orphan StringName: _enter_tree (static: 1, total: 3)
+Orphan StringName: is_in_bar (static: 0, total: 13)
+Orphan StringName: _resized (static: 0, total: 5)
+Orphan StringName: text_fit_min_size (static: 0, total: 14)
+Orphan StringName: _instance_uniforms (static: 0, total: 12)
+Orphan StringName: ins_request (static: 0, total: 13)
+Orphan StringName: Vector2 (static: 0, total: 1)
+Orphan StringName: Vector3 (static: 0, total: 1)
+Orphan StringName: Vector4 (static: 0, total: 1)
+Orphan StringName: graph (static: 0, total: 13)
+Orphan StringName: shadow_offset_x (static: 0, total: 17)
+Orphan StringName: shadow_offset_y (static: 0, total: 17)
+Orphan StringName: outline_width (static: 0, total: 8)
+Orphan StringName: line_separation (static: 0, total: 3)
+Orphan StringName: prev_input (static: 0, total: 6)
+Orphan StringName: unchecked_disabled (static: 0, total: 2)
+Orphan StringName: name (static: 0, total: 4)
+Orphan StringName: get_dims (static: 0, total: 1)
+Orphan StringName: _process_context_menu (static: 0, total: 1)
+Orphan StringName: persistent (static: 0, total: 7)
+Orphan StringName: _ready (static: 1, total: 8)
+Orphan StringName: radio_checked (static: 0, total: 3)
+Orphan StringName: metadata/block_component_scale_anim (static: 0, total: 5)
+Orphan StringName: _menu_handle_release (static: 0, total: 1)
+Orphan StringName: text_fit_padding (static: 0, total: 14)
+Orphan StringName: backspace_attempt (static: 0, total: 2)
+Orphan StringName: inside (static: 0, total: 13)
+Orphan StringName: submit (static: 0, total: 1)
+Orphan StringName: _format_number (static: 0, total: 1)
+Orphan StringName: @text_color_setter (static: 0, total: 5)
+Orphan StringName: dynamic_child_enter (static: 0, total: 1)
+Orphan StringName: press_mult (static: 0, total: 9)
+Orphan StringName: LineEdit (static: 0, total: 10)
+Orphan StringName: center_grabber (static: 0, total: 1)
+Orphan StringName: _defaults (static: 0, total: 5)
+Orphan StringName: grabber_area (static: 0, total: 1)
+Orphan StringName: decrement_highlight (static: 0, total: 5)
+Orphan StringName: auto_wrap (static: 0, total: 13)
+Orphan StringName: child_button_hover (static: 0, total: 2)
+Orphan StringName: left_activate (static: 0, total: 14)
+Orphan StringName: background (static: 0, total: 4)
+Orphan StringName: update_valid (static: 0, total: 1)
+Orphan StringName: PackedVector4Array (static: 0, total: 1)
+Orphan StringName: resize_after (static: 0, total: 21)
+Orphan StringName: RID (static: 0, total: 1)
+Orphan StringName: metadata (static: 0, total: 13)
+Orphan StringName: grabber_disabled (static: 0, total: 1)
+Orphan StringName: color_mult (static: 0, total: 8)
+Orphan StringName: pivoting (static: 0, total: 6)
+Orphan StringName: _original_position (static: 0, total: 12)
+Orphan StringName: is_frozen (static: 0, total: 13)
+Orphan StringName: min_scale (static: 0, total: 6)
+Orphan StringName: _has_applied_reveal_extents (static: 0, total: 13)
+Orphan StringName: shader_parameter/mult (static: 0, total: 3)
+Orphan StringName: next (static: 0, total: 9)
+Orphan StringName: area_padding (static: 0, total: 14)
+Orphan StringName: scroll_checking (static: 0, total: 13)
+Orphan StringName: set_text_color (static: 0, total: 1)
+Orphan StringName: change_cache (static: 0, total: 1)
+Orphan StringName: increment (static: 0, total: 5)
+Orphan StringName: instance_shader_parameters/corner_radius_width_add (static: 0, total: 9)
+Orphan StringName: shader_parameter/color_mult (static: 0, total: 3)
+Orphan StringName: _scroll_index (static: 0, total: 13)
+Orphan StringName: animation_decay (static: 0, total: 9)
+Orphan StringName: _get_value (static: 0, total: 2)
+Orphan StringName: @Timer@11 (static: 0, total: 2)
+Orphan StringName: metadata/block_component_hint (static: 0, total: 6)
+Orphan StringName: _menu_handle_press (static: 0, total: 1)
+Orphan StringName: Color (static: 0, total: 1)
+Orphan StringName: bold_italics_font_size (static: 0, total: 3)
+Orphan StringName: Label (static: 0, total: 35)
+Orphan StringName: _editor_refresh (static: 0, total: 13)
+Orphan StringName: indexed_children (static: 0, total: 12)
+Orphan StringName: _hover_scale (static: 0, total: 9)
+Orphan StringName: mouse_open (static: 0, total: 14)
+Orphan StringName: is_valid_input (static: 0, total: 1)
+Orphan StringName: scroll (static: 0, total: 15)
+Orphan StringName: metadata/_custom_type_script (static: 0, total: 10)
+Orphan StringName: checkbox (static: 0, total: 1)
+Orphan StringName: icon_hover_color (static: 0, total: 2)
+Orphan StringName: TextureRect (static: 0, total: 4)
+Orphan StringName: set_menu_size (static: 0, total: 1)
+Orphan StringName: shadow_outline_size (static: 0, total: 17)
+Orphan StringName: hover_pressed (static: 0, total: 2)
+Orphan StringName: instance_shader_parameters/tuning (static: 0, total: 17)
+Orphan StringName: frames (static: 0, total: 3)
+Orphan StringName: shader_parameter/corner_radius (static: 0, total: 3)
+Orphan StringName: font_shadow_color (static: 0, total: 17)
+Orphan StringName: _normalized_value (static: 0, total: 1)
+Orphan StringName: _source_text (static: 0, total: 4)
+Orphan StringName: base_tuning (static: 0, total: 12)
+Orphan StringName: base_in_splash (static: 0, total: 12)
+Orphan StringName: "scripts/h_slider.gd" (static: 0, total: 1)
+Orphan StringName: accept_button (static: 0, total: 6)
+Orphan StringName: marquee_enabled (static: 0, total: 14)
+Orphan StringName: text_changed (static: 0, total: 2)
+Orphan StringName: _child_needs_reveal_extents (static: 0, total: 1)
+Orphan StringName: rect_change (static: 0, total: 1)
+Orphan StringName: ButtonType (static: 0, total: 1)
+Orphan StringName: closed_by_rm (static: 0, total: 14)
+Orphan StringName: _resize_label (static: 0, total: 1)
+Orphan StringName: checkbox_unchecked_color (static: 0, total: 2)
+Orphan StringName: metadata/block_component_expand_anim (static: 0, total: 8)
+Orphan StringName: progress (static: 0, total: 3)
+Orphan StringName: menu_expand (static: 0, total: 1)
+Orphan StringName: base_scale_x (static: 0, total: 14)
+Orphan StringName: @group_7_Reveal (static: 0, total: 11)
+Orphan StringName: label (static: 0, total: 12)
+Orphan StringName: _translate_to (static: 0, total: 1)
+Orphan StringName: max_value (static: 0, total: 6)
+Orphan StringName: shader_parameter/shape (static: 0, total: 3)
+Orphan StringName: shader_parameter/blurred_background (static: 0, total: 3)
+Orphan StringName: Control (static: 0, total: 2)
+Orphan StringName: imm_unpress (static: 0, total: 13)
+Orphan StringName: _string_width_px (static: 0, total: 1)
+Orphan StringName: shader_parameter/gaussian_mix (static: 0, total: 3)
+Orphan StringName: child_button_press (static: 0, total: 2)
+Orphan StringName: italics_font_size (static: 0, total: 3)
+Orphan StringName: PackedByteArray (static: 0, total: 1)
+Orphan StringName: check_dtypes (static: 0, total: 6)
+Orphan StringName: set_valid (static: 0, total: 2)
+Orphan StringName: menu_hide (static: 0, total: 1)
+Orphan StringName: reinit (static: 0, total: 1)
+Orphan StringName: paragraph_spacing (static: 0, total: 14)
+Orphan StringName: _input_submit (static: 0, total: 1)
+Orphan StringName: predelete (static: 0, total: 2)
+Orphan StringName: coord (static: 0, total: 8)
+Orphan StringName: smoothness (static: 0, total: 11)
+Orphan StringName: dtype (static: 0, total: 2)
+Orphan StringName: _bind_signals (static: 0, total: 1)
+Orphan StringName: corr (static: 0, total: 7)
+Orphan StringName: BubbleUnit.UnitType (static: 0, total: 1)
+Orphan StringName: scale_anim (static: 0, total: 13)
+Orphan StringName: auto (static: 0, total: 5)
+Orphan StringName: menu_show (static: 0, total: 1)
+Orphan StringName: icon_disabled_color (static: 0, total: 2)
+Orphan StringName: _disarm_menu_hit_tests (static: 0, total: 1)
+Orphan StringName: gaussian_step (static: 0, total: 8)
+Orphan StringName: blur_level (static: 0, total: 8)
+Orphan StringName: expand_upwards (static: 0, total: 14)
+Orphan StringName: default_scroll (static: 0, total: 1)
+Orphan StringName: radio_unchecked (static: 0, total: 3)
+Orphan StringName: font_selected_color (static: 0, total: 6)
+Orphan StringName: ValidInput (static: 0, total: 3)
+Orphan StringName: shader_parameter/smoothness (static: 0, total: 4)
+Orphan StringName: ColorRect (static: 0, total: 15)
+Orphan StringName: before_text (static: 0, total: 5)
+Orphan StringName: get_tb (static: 0, total: 1)
+Orphan StringName: none (static: 0, total: 4)
+Orphan StringName: _text_changed (static: 0, total: 2)
+Orphan StringName: BlockComponent (static: 0, total: 8)
+Orphan StringName: shader_parameter/blur_level (static: 0, total: 3)
+Orphan StringName: increment_highlight (static: 0, total: 5)
+Orphan StringName: _on_label_changed (static: 0, total: 13)
+Orphan StringName: scroll_focus (static: 0, total: 3)
+Orphan StringName: state (static: 0, total: 12)
+Orphan StringName: _resize_monospace (static: 0, total: 1)
+Orphan StringName: input (static: 0, total: 2)
+Orphan StringName: _wrap_text (static: 0, total: 1)
+Orphan StringName: blurred_background (static: 0, total: 8)
+Orphan StringName: scale_fix (static: 0, total: 7)
+Orphan StringName: is_valid (static: 0, total: 6)
+Orphan StringName: _A0 (static: 0, total: 1)
+Orphan StringName: _A1 (static: 0, total: 1)
+Orphan StringName: freeze_input (static: 0, total: 1)
+Orphan StringName: bounce_scale (static: 0, total: 13)
+Orphan StringName: map_data (static: 0, total: 1)
+Orphan StringName: dynamic_size (static: 0, total: 14)
+Orphan StringName: scroll_value_anchor (static: 0, total: 13)
+Orphan StringName: parent (static: 0, total: 12)
+Orphan StringName: train2 (static: 0, total: 2)
+Orphan StringName: "scripts/text_cell.gd" (static: 0, total: 1)
+Orphan StringName: press_request (static: 0, total: 13)
+Orphan StringName: monospaced (static: 0, total: 7)
+Orphan StringName: focus (static: 0, total: 31)
+Orphan StringName: still_hover_in_block (static: 0, total: 14)
+Orphan StringName: last_moda (static: 0, total: 13)
+Orphan StringName: icon (static: 2, total: 4)
+Orphan StringName: _apply_child_reveal_extents (static: 0, total: 1)
+Orphan StringName: value (static: 0, total: 2)
+Orphan StringName: _handle_custom (static: 0, total: 1)
+Orphan StringName: font_size (static: 0, total: 29)
+Orphan StringName: Font (static: 0, total: 6)
+Orphan StringName: auto_ready (static: 0, total: 14)
+Orphan StringName: default_color (static: 0, total: 3)
+Orphan StringName: grabber_area_highlight (static: 0, total: 1)
+Orphan StringName: base_text_color (static: 0, total: 5)
+Orphan StringName: margin_y (static: 0, total: 14)
+Orphan StringName: auto_enter (static: 0, total: 6)
+Orphan StringName: _request_reveal_update (static: 0, total: 1)
+Orphan StringName: _on_child_entered_tree (static: 0, total: 12)
+Orphan StringName: cache (static: 0, total: 12)
+Orphan StringName: @group_87_Text Auto Fit (static: 0, total: 11)
+Orphan StringName: @VScrollBar@10 (static: 0, total: 2)
+Orphan StringName: paragraph_separation (static: 0, total: 3)
+Orphan StringName: _convert (static: 0, total: 5)
+Orphan StringName: set_persistent (static: 0, total: 1)
+Orphan StringName: reset_tuning (static: 0, total: 1)
+Orphan StringName: Vector2i (static: 0, total: 1)
+Orphan StringName: Callable (static: 0, total: 1)
+Orphan StringName: _on_parent_text_changed (static: 0, total: 1)
+Orphan StringName: Vector3i (static: 0, total: 1)
+Orphan StringName: Vector4i (static: 0, total: 1)
+Orphan StringName: pressing (static: 0, total: 2)
+Orphan StringName: bar (static: 0, total: 12)
+Orphan StringName: scroll_anchor (static: 0, total: 13)
+Orphan StringName: bef (static: 0, total: 4)
+Orphan StringName: ButtonConfig (static: 0, total: 3)
+Orphan StringName: text_dtypes (static: 0, total: 6)
+Orphan StringName: set_tuning (static: 0, total: 1)
+Orphan StringName: defer_translate (static: 0, total: 5)
+Orphan StringName: _input (static: 2, total: 4)
+Orphan StringName: can_align (static: 0, total: 13)
+Orphan StringName: horizontal_rule (static: 0, total: 3)
+Orphan StringName: add_to_size (static: 0, total: 13)
+Orphan StringName: menu_name (static: 0, total: 14)
+Orphan StringName: increment_pressed (static: 0, total: 5)
+Orphan StringName: checked (static: 0, total: 3)
+Orphan StringName: PackedStringArray (static: 0, total: 1)
+Orphan StringName: _field_convert (static: 0, total: 5)
+Orphan StringName: pressed_mirrored (static: 0, total: 2)
+Orphan StringName: ValidNumber (static: 0, total: 3)
+Orphan StringName: text (static: 0, total: 22)
+Orphan StringName: LabelAutoResize (static: 0, total: 3)
+Orphan StringName: strikethrough_alpha (static: 0, total: 3)
+Orphan StringName: _base_text (static: 0, total: 4)
+Orphan StringName: table_h_separation (static: 0, total: 3)
+Orphan StringName: set_line (static: 0, total: 1)
+Orphan StringName: maximum_size_changed (static: 0, total: 51)
+Orphan StringName: text_offset (static: 0, total: 14)
+Orphan StringName: prev (static: 0, total: 4)
+Orphan StringName: _parse_number (static: 0, total: 1)
+Orphan StringName: config (static: 0, total: 13)
+Orphan StringName: upload (static: 0, total: 3)
+Orphan StringName: Resource (static: 2, total: 3)
+Orphan StringName: clear (static: 0, total: 3)
+Orphan StringName: set_is_valid_call (static: 0, total: 1)
+Orphan StringName: decrement (static: 0, total: 5)
+Orphan StringName: shader_parameter/use_bg (static: 0, total: 3)
+Orphan StringName: CodeEdit (static: 0, total: 2)
+Orphan StringName: reparent_hide (static: 0, total: 1)
+Orphan StringName: .. (static: 1, total: 4)
+Orphan StringName: secondary (static: 0, total: 14)
+Orphan StringName: _menu_hiding (static: 0, total: 1)
+Orphan StringName: animation_scale (static: 0, total: 9)
+Orphan StringName: unchecked (static: 0, total: 3)
+Orphan StringName: text_auto_fit (static: 0, total: 14)
+Orphan StringName: @group_10_Meta (static: 0, total: 11)
+Orphan StringName: _create_scaler_wrapper (static: 0, total: 1)
+Orphan StringName: child_button_hovering (static: 0, total: 2)
+Orphan StringName: let_kz_last (static: 0, total: 4)
+Orphan StringName: vbox (static: 0, total: 12)
+Orphan StringName: change_always_accepted (static: 0, total: 7)
+Orphan StringName: _original_parent (static: 0, total: 12)
+Orphan StringName: _menu_handle_pressing (static: 0, total: 1)
+Orphan StringName: _quality_use_baked_blur (static: 0, total: 2)
+Orphan StringName: _scroll_container (static: 0, total: 14)
+Orphan StringName: bg (static: 0, total: 7)
+Orphan StringName: tick (static: 0, total: 1)
+Orphan StringName: radio_unchecked_disabled (static: 0, total: 2)
+Orphan StringName: _parent (static: 0, total: 3)
+Orphan StringName: alignment (static: 0, total: 14)
+Orphan StringName: resize_dep (static: 0, total: 1)
+Orphan StringName: caret_width (static: 0, total: 3)
+Orphan StringName: table_even_row_bg (static: 0, total: 3)
+Orphan StringName: _custom_type_script (static: 0, total: 10)
+Orphan StringName: Basis (static: 0, total: 1)
+Orphan StringName: tb (static: 0, total: 13)
+Orphan StringName: root (static: 0, total: 8)
+Orphan StringName: normal (static: 0, total: 31)
+Orphan StringName: block_input (static: 0, total: 2)
+Orphan StringName: placeholder (static: 0, total: 14)
+Orphan StringName: press_color (static: 0, total: 9)
+Orphan StringName: disabled (static: 0, total: 2)
+Orphan StringName: grab (static: 0, total: 1)
+Orphan StringName: image (static: 0, total: 1)
+Orphan StringName: _on_h_slider_value_changed (static: 0, total: 4)
+Orphan StringName: @group_67_Scrollbar (static: 0, total: 11)
+Orphan StringName: min_value (static: 0, total: 6)
+Orphan StringName: "scripts/floatcell.gd" (static: 0, total: 1)
+Orphan StringName: _is_valid (static: 0, total: 1)
+Orphan StringName: TEXT_FIT_HEIGHT (static: 0, total: 1)
+Orphan StringName: unblock_input (static: 0, total: 2)
+Orphan StringName: anchor_position (static: 0, total: 13)
+Orphan StringName: inc (static: 0, total: 7)
+Orphan StringName: int (static: 0, total: 1)
+Orphan StringName: block_component_hint (static: 0, total: 6)
+Orphan StringName: shader_parameter/mult_tuning (static: 0, total: 3)
+Orphan StringName: instance_shader_parameters/outline_color (static: 0, total: 17)
+Orphan StringName: HSlider (static: 0, total: 3)
+Orphan StringName: _signal_callback (static: 0, total: 46)
+Orphan StringName: checked_disabled (static: 0, total: 2)
+Orphan StringName: font_uneditable_color (static: 0, total: 5)
+Orphan StringName: block_component_scale_anim (static: 0, total: 5)
+Orphan StringName: hover_scale (static: 0, total: 12)
+Orphan StringName: _map_data (static: 0, total: 5)
+Orphan StringName: corner_radius (static: 0, total: 8)
+Orphan StringName: font_pressed_color (static: 0, total: 2)
+Orphan StringName: delete (static: 0, total: 4)
+Orphan StringName: table_v_separation (static: 0, total: 3)
+Orphan StringName: PackedFloat32Array (static: 0, total: 1)
+Orphan StringName: text_alignment (static: 0, total: 14)
+Orphan StringName: inte (static: 0, total: 1)
+Orphan StringName: dynamic_child_exit (static: 0, total: 1)
+Orphan StringName: @group_52_Button (static: 0, total: 11)
+Orphan StringName: viewport_rect (static: 0, total: 12)
+Orphan StringName: unroll (static: 0, total: 1)
+Orphan StringName: timeout (static: 1, total: 13)
+Orphan StringName: contain (static: 0, total: 1)
+Orphan StringName: bold_font (static: 0, total: 4)
+Orphan StringName: font_outline_color (static: 0, total: 22)
+Orphan StringName: height (static: 0, total: 8)
+Orphan StringName: icon_max_width (static: 0, total: 2)
+Orphan StringName: hovered (static: 0, total: 2)
+Orphan StringName: gaussian_mix (static: 0, total: 8)
+Orphan StringName: text_highlight_h_padding (static: 0, total: 3)
+Orphan StringName: timer (static: 0, total: 13)
+Orphan StringName: auto_get_base_size (static: 0, total: 6)
+Orphan StringName: Plane (static: 0, total: 1)
+Orphan StringName: outline_color (static: 0, total: 31)
+Orphan StringName: normal_mirrored (static: 0, total: 2)
+Orphan StringName: PackedFloat64Array (static: 0, total: 1)
+Orphan StringName: _init (static: 0, total: 3)
+Orphan StringName: _view_scale (static: 0, total: 2)
+Orphan StringName: update_children_reveal (static: 0, total: 1)
+Orphan StringName: setval (static: 0, total: 1)
+Orphan StringName: _unclamped_expanded_size (static: 0, total: 13)
+Orphan StringName: wrapped (static: 0, total: 13)
+Orphan StringName: Node2D (static: 0, total: 4)
+Orphan StringName: expand_anim (static: 0, total: 13)
+Orphan StringName: wait_time (static: 0, total: 3)
+Orphan StringName: _update_scroll_text (static: 0, total: 1)
+Orphan StringName: hover_pressed_mirrored (static: 0, total: 2)
+Orphan StringName: NodePath (static: 0, total: 1)
+Orphan StringName: child_entered_tree (static: 1, total: 13)
+Orphan StringName: _last_size_x (static: 0, total: 7)
+Orphan StringName: _Timer (static: 0, total: 1)
+Orphan StringName: auto_trim_text (static: 0, total: 14)
+Orphan StringName: normal_font_size (static: 0, total: 3)
+Orphan StringName: _creating (static: 0, total: 2)
+Orphan StringName: _input_changed (static: 0, total: 1)
+Orphan StringName: align_to_largest_stylebox (static: 0, total: 2)
+Orphan StringName: read_only (static: 0, total: 10)
+Orphan StringName: _scroll_timer (static: 0, total: 13)
+Orphan StringName: num (static: 0, total: 1)
+Orphan StringName: check_v_offset (static: 0, total: 2)
+Orphan StringName: show_request (static: 0, total: 13)
+Orphan StringName: Signal (static: 0, total: 1)
+Orphan StringName: cell_data (static: 0, total: 6)
+Orphan StringName: font_focus_color (static: 0, total: 2)
+Orphan StringName: StringName (static: 0, total: 1)
+Orphan StringName: is_contained (static: 0, total: 13)
+Orphan StringName: mono_font (static: 0, total: 4)
+Orphan StringName: use_bg (static: 0, total: 8)
+Orphan StringName: String (static: 0, total: 1)
+Orphan StringName: _process (static: 3, total: 6)
+Orphan StringName: font_hover_pressed_color (static: 0, total: 2)
+Orphan StringName: _revalidate_limits (static: 0, total: 1)
+Orphan StringName: _fit_size_to_text (static: 0, total: 1)
+Orphan StringName: icon_normal_color (static: 1, total: 3)
+Orphan StringName: "scripts/img.gd" (static: 0, total: 1)
+Orphan StringName: set_txt_no_emit (static: 0, total: 1)
+Orphan StringName: @group_1_Hover (static: 0, total: 6)
+Orphan StringName: size_add (static: 0, total: 14)
+Orphan StringName: child_button_release (static: 0, total: 2)
+Orphan StringName: Transform2D (static: 0, total: 1)
+Orphan StringName: Transform3D (static: 0, total: 1)
+Orphan StringName: animation_speed (static: 0, total: 9)
+Orphan StringName: _arm_menu_hit_tests (static: 0, total: 1)
+Orphan StringName: static_mode (static: 0, total: 14)
+Orphan StringName: AnsType (static: 0, total: 1)
+Orphan StringName: normal_font (static: 0, total: 4)
+Orphan StringName: _is_valid_float_string (static: 0, total: 1)
+Orphan StringName: debug (static: 0, total: 6)
+Orphan StringName: resize (static: 0, total: 2)
+Orphan StringName: _on_label_line_enter (static: 0, total: 9)
+Orphan StringName: "scripts/num.gd" (static: 0, total: 1)
+Orphan StringName: BlockComponent.ButtonType (static: 0, total: 1)
+Orphan StringName: is_mouse_inside (static: 0, total: 1)
+Orphan StringName: decrement_pressed (static: 0, total: 5)
+Orphan StringName: decimal_places (static: 0, total: 6)
+Orphan StringName: expanded_size (static: 0, total: 14)
+Orphan StringName: scrolling (static: 0, total: 13)
+Orphan StringName: font_disabled_color (static: 0, total: 2)
+Orphan StringName: parent_indep (static: 0, total: 6)
+Orphan StringName: animation_duration (static: 0, total: 9)
+Orphan StringName: no_emit (static: 0, total: 13)
+Orphan StringName: Array (static: 1, total: 2)
+Orphan StringName: top (static: 0, total: 18)
+Orphan StringName: freedom (static: 0, total: 13)
+Orphan StringName: h_separation (static: 0, total: 2)
+Orphan StringName: "scripts/value.gd" (static: 0, total: 1)
+Orphan StringName: button_by_hint (static: 0, total: 12)
+Orphan StringName: expand_to_text_length (static: 0, total: 14)
+Orphan StringName: Quaternion (static: 0, total: 1)
+Orphan StringName: mult_tuning (static: 0, total: 8)
+Orphan StringName: scrollbar_padding (static: 0, total: 14)
+Orphan StringName: grabber_pressed (static: 0, total: 3)
+Orphan StringName: _applied_reveal_extents (static: 0, total: 13)
+Orphan StringName: _can_change_to (static: 0, total: 2)
+Orphan StringName: bool (static: 0, total: 1)
+Orphan StringName: shader_parameter/outline_width (static: 0, total: 3)
+Orphan StringName: shape (static: 0, total: 8)
+Orphan StringName: _clamp_text_fit_size (static: 0, total: 1)
+Orphan StringName: @group_5_Press (static: 0, total: 6)
+Orphan StringName: 5 (static: 0, total: 2)
+Orphan StringName: _dense_data (static: 0, total: 1)
+Orphan StringName: arrange (static: 0, total: 1)
+Orphan StringName: g (static: 0, total: 2)
+Orphan StringName: k (static: 0, total: 5)
+Orphan StringName: n (static: 0, total: 2)
+Orphan StringName: @group_35_Context Menu (static: 0, total: 11)
+Orphan StringName: base_olx (static: 0, total: 5)
+Orphan StringName: _is_not_menu (static: 0, total: 1)
+Orphan StringName: _align_label (static: 0, total: 1)
+Orphan StringName: bar_scale_x (static: 0, total: 14)
+Orphan StringName: _modify (static: 0, total: 1)
+Orphan StringName: base_orx (static: 0, total: 5)
+Orphan StringName: _last_extents (static: 0, total: 13)
+Orphan StringName: text_highlight_v_padding (static: 0, total: 3)
+Orphan StringName: grabber_highlight (static: 0, total: 4)
+Orphan StringName: _on_train_2_released (static: 0, total: 4)
+Orphan StringName: text_fit_max_size (static: 0, total: 14)
+Orphan StringName: PackedColorArray (static: 0, total: 1)
+Orphan StringName: Node (static: 8, total: 9)
+Orphan StringName: button_type (static: 0, total: 14)
+Orphan StringName: base_pos (static: 0, total: 17)
+Orphan StringName: bold_italics_font (static: 0, total: 4)
+Orphan StringName: simple_letters (static: 0, total: 6)
+Orphan StringName: abstract (static: 0, total: 8)
+Orphan StringName: corr_radio (static: 0, total: 7)
+Orphan StringName: hover_color (static: 0, total: 9)
+Orphan StringName: base_size (static: 0, total: 18)
+Orphan StringName: tuning (static: 0, total: 31)
+Orphan StringName: scroll_padding_spaces (static: 0, total: 14)
+Orphan StringName: as_mult (static: 0, total: 9)
+Orphan StringName: _sub_process (static: 0, total: 1)
+Orphan StringName: empty_on_min (static: 0, total: 6)
+Orphan StringName: base_font_size (static: 0, total: 9)
+Orphan StringName: _resize_simple (static: 0, total: 1)
+Orphan StringName: unit_type (static: 0, total: 8)
+Orphan StringName: count_size (static: 0, total: 1)
+Orphan StringName: @group_13_Text (static: 0, total: 11)
+Orphan StringName: _showing (static: 0, total: 1)
+Orphan StringName: _estimate_height (static: 0, total: 1)
+Orphan StringName: press_dtypes (static: 0, total: 6)
+Orphan StringName: cell_type (static: 0, total: 7)
+Orphan StringName: in_splash (static: 0, total: 14)
+Orphan StringName: _gui_input (static: 1, total: 4)
+Orphan StringName: unscaled_size (static: 0, total: 6)
+Orphan StringName: initialize (static: 0, total: 1)
+Orphan StringName: _HINT_META_KEY (static: 0, total: 1)
+Orphan StringName: PackedVector2Array (static: 0, total: 1)
+Orphan StringName: @group_9_Release (static: 0, total: 6)
+Orphan StringName: scaler (static: 0, total: 12)
+Orphan StringName: has_mouse (static: 0, total: 13)
+Orphan StringName: @base_scale_x_setter (static: 0, total: 6)
+Orphan StringName: children_revealed (static: 0, total: 2)
+Orphan StringName: table_odd_row_bg (static: 0, total: 3)
+Orphan StringName: auto_red (static: 0, total: 7)
+Orphan StringName: Object (static: 1, total: 3)
+Orphan StringName: prev_z_index (static: 0, total: 13)
+Orphan StringName: submitted (static: 0, total: 2)
+Orphan StringName: fill (static: 0, total: 4)
+Orphan StringName: padding (static: 0, total: 6)
+Orphan StringName: @VScrollBar@6 (static: 0, total: 2)
+Orphan StringName: @VScrollBar@8 (static: 0, total: 2)
+Orphan StringName: menu_hiding (static: 0, total: 2)
+Orphan StringName: text_color (static: 0, total: 14)
+Orphan StringName: get_desired_size (static: 0, total: 1)
+Orphan StringName: _mouse_enter (static: 0, total: 2)
+Orphan StringName: TextEdit (static: 0, total: 2)
+Orphan StringName: reset_text_color (static: 0, total: 1)
+Orphan StringName: _quality_disable_blur (static: 0, total: 2)
+Orphan StringName: prev_pos (static: 0, total: 6)
+Orphan StringName: radio_checked_disabled (static: 0, total: 2)
+Orphan StringName: ask_and_wait (static: 0, total: 1)
+Orphan StringName: AABB (static: 0, total: 1)
+Orphan StringName: radio (static: 0, total: 1)
+Orphan StringName: _deleting (static: 0, total: 2)
+Orphan StringName: TableCell (static: 0, total: 3)
+Orphan StringName: _proceed_show (static: 0, total: 1)
+Orphan StringName: hovering (static: 0, total: 2)
+Orphan StringName: clear_button_color (static: 0, total: 3)
+Orphan StringName: _aux (static: 0, total: 1)
+Orphan StringName: _scroll_original (static: 0, total: 13)
+Orphan StringName: _notification (static: 0, total: 1)
+Orphan StringName: RichTextLabel (static: 0, total: 2)
+Orphan StringName: mult (static: 0, total: 21)
+Orphan StringName: @group_23_Marquee (static: 0, total: 11)
+Orphan StringName: _translation_fn (static: 0, total: 3)
+Orphan StringName: static_size (static: 0, total: 8)
+Orphan StringName: hover (static: 0, total: 2)
+Orphan StringName: _contained_child_height (static: 0, total: 1)
+Orphan StringName: _SCALE_ANIM_META_KEY (static: 0, total: 1)
+Orphan StringName: value_changed (static: 0, total: 12)
+Orphan StringName: graph_root (static: 0, total: 13)
+Orphan StringName: _scroll_delay (static: 0, total: 14)
+Orphan StringName: override (static: 0, total: 11)
+Orphan StringName: mouse_pressed (static: 0, total: 13)
+Orphan StringName: italics_font (static: 0, total: 4)
+Orphan StringName: _scrolling (static: 0, total: 13)
+Orphan StringName: @Timer@7 (static: 0, total: 2)
+Orphan StringName: @Timer@9 (static: 0, total: 2)
+Orphan StringName: grabber (static: 0, total: 4)
+Orphan StringName: legacy_dropout_anchor (static: 0, total: 14)
+Orphan StringName: target_scroll (static: 0, total: 13)
+Orphan StringName: lerp_size_offset (static: 0, total: 14)
+Orphan StringName: allow_float (static: 0, total: 6)
+Orphan StringName: font_hover_color (static: 0, total: 2)
+Orphan StringName: sanitize (static: 0, total: 1)
+Orphan StringName: _height_key (static: 0, total: 5)
+Orphan StringName: _EXPAND_ANIM_META_KEY (static: 0, total: 1)
+Orphan StringName: disabled_mirrored (static: 0, total: 2)
+Orphan StringName: hover_mult (static: 0, total: 9)
+Orphan StringName: float (static: 0, total: 2)
+Orphan StringName: auto_click (static: 0, total: 7)
+Orphan StringName: base_scale (static: 0, total: 21)
+Orphan StringName: prev_txt (static: 0, total: 4)
+Orphan StringName: line_spacing (static: 0, total: 16)
+Orphan StringName: set_albedo_indexed (static: 0, total: 1)
+Orphan StringName: prev_size_x (static: 0, total: 3)
+Orphan StringName: completed (static: 2, total: 25)
+Orphan StringName: localizations_kz (static: 0, total: 4)
+Orphan StringName: _press_scale (static: 0, total: 9)
+Orphan StringName: hint (static: 0, total: 13)
+Orphan StringName: localizations_ru (static: 0, total: 4)
+Orphan StringName: font (static: 0, total: 24)
+Orphan StringName: clear_button_color_pressed (static: 0, total: 3)
+Orphan StringName: custom_is_valid (static: 0, total: 5)
+Orphan StringName: icon_pressed_color (static: 0, total: 2)
+Orphan StringName: slider (static: 0, total: 1)
+Orphan StringName: glob._Timer (static: 0, total: 1)
+Orphan StringName: font_placeholder_color (static: 0, total: 6)
+Orphan StringName: passed_data (static: 0, total: 6)
+Orphan StringName: icon_focus_color (static: 0, total: 2)
+Orphan StringName: _menu_handle_hovering (static: 0, total: 1)
+Orphan StringName: underline_alpha (static: 0, total: 3)
+Orphan StringName: Dictionary (static: 1, total: 2)
+Orphan StringName: _reveal_dirty (static: 0, total: 13)
+Orphan StringName: checkbox_checked_color (static: 0, total: 2)
+Orphan StringName: arrangement_padding (static: 0, total: 14)
+Orphan StringName: base_modulate (static: 0, total: 12)
+Orphan StringName: expensive (static: 0, total: 8)
+Orphan StringName: shader_parameter/gaussian_step (static: 0, total: 3)
+Orphan StringName: get_data (static: 0, total: 1)
+Orphan StringName: minimum_character_width (static: 0, total: 5)
+Orphan StringName: trimmed (static: 0, total: 13)
+Orphan StringName: grabber_offset (static: 0, total: 1)
+Orphan StringName: Projection (static: 0, total: 1)
+Orphan StringName: translate (static: 0, total: 1)
+Orphan StringName: table_border (static: 0, total: 3)
+Orphan StringName: _font (static: 0, total: 9)
+Orphan StringName: _set_text (static: 0, total: 1)
+Orphan StringName: line_enter (static: 0, total: 8)
+Orphan StringName: tick_offset (static: 0, total: 1)
+Orphan StringName: corner_radius_width_add (static: 0, total: 15)
+Orphan StringName: _translate_now (static: 0, total: 1)
+Orphan StringName: Rect2 (static: 0, total: 1)
+Orphan StringName: last_mouse_pos (static: 0, total: 13)
+Orphan StringName: PackedVector3Array (static: 0, total: 1)
+Orphan StringName: arrange_offset (static: 0, total: 14)
+Orphan StringName: outline_size (static: 0, total: 22)
+Orphan StringName: PackedInt32Array (static: 0, total: 1)
+Orphan StringName: current_type (static: 0, total: 13)
+Orphan StringName: Rect2i (static: 0, total: 1)
+Orphan StringName: get_value (static: 0, total: 1)
+Orphan StringName: default_modulate (static: 0, total: 12)
+Orphan StringName: _base_modulate (static: 0, total: 12)
+Orphan StringName: is_blocking (static: 0, total: 13)
+Orphan StringName: frame (static: 0, total: 1)
+Orphan StringName: padding_left (static: 0, total: 3)
+Orphan StringName: toggled (static: 0, total: 2)
+Orphan StringName: unfreeze_input (static: 0, total: 1)
+Orphan StringName: _process_dropout_menu (static: 0, total: 1)
+Orphan StringName: _get_text (static: 0, total: 1)
+Orphan StringName: lang (static: 0, total: 4)
+Orphan StringName: _value_range (static: 0, total: 1)
+Orphan StringName: block_component_expand_anim (static: 0, total: 8)
+Orphan StringName: max_size (static: 0, total: 14)
+Orphan StringName: _scroll_pause (static: 0, total: 14)
+Orphan StringName: ready (static: 0, total: 75)
+Orphan StringName: padding_right (static: 0, total: 3)
+Orphan StringName: instance_shader_parameters/extents (static: 0, total: 20)
+Orphan StringName: EPSILON (static: 0, total: 1)
+Orphan StringName: VScrollBar (static: 0, total: 2)
+Orphan StringName: font_color (static: 0, total: 24)
+Orphan StringName: PackedInt64Array (static: 0, total: 1)
+Orphan StringName: press (static: 0, total: 1)
+Orphan StringName: login (static: 0, total: 1)
+Orphan StringName: @group_32_Rect (static: 0, total: 11)
+Orphan StringName: _mouse_exit (static: 0, total: 2)
+Orphan StringName: selection_color (static: 0, total: 7)
+Orphan StringName: reveal_extents_targets (static: 0, total: 13)
+Orphan StringName: UnitType (static: 0, total: 1)
+Orphan StringName: caret_color (static: 0, total: 3)
+Orphan StringName: scroll_changed (static: 0, total: 2)
+Orphan StringName: table (static: 0, total: 7)
+Orphan StringName: pressed (static: 0, total: 4)
+Orphan StringName: _wrapped_in (static: 0, total: 12)
+Orphan StringName: icon_hover_pressed_color (static: 0, total: 2)
+Orphan StringName: changed (static: 0, total: 217)
+Orphan StringName: BubbleUnit (static: 0, total: 3)
+Orphan StringName: @text_setter (static: 0, total: 12)
+Orphan StringName: readied_once (static: 0, total: 4)
+Orphan StringName: _contained (static: 0, total: 12)
+Orphan StringName: indexed (static: 0, total: 6)
+Orphan StringName: _last_display (static: 0, total: 4)
+Orphan StringName: fin_trigger (static: 0, total: 2)
+Orphan StringName: base_field (static: 0, total: 8)
+Orphan StringName: _menu_handle_hover (static: 0, total: 1)
+Orphan StringName: ProgressBar (static: 0, total: 4)
+StringName: 625 unclaimed string names at exit.
+ERROR: 2 RID allocations of type 'PN13RichTextLabel4ItemE' were leaked at exit.

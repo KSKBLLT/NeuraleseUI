@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "id": "dropout",
+  "source": {
+    "kind": "scene",
+    "path": "res://scenes/dropout.tscn"
+  },
+  "load_order": 180,
+  "menu": {
+    "visible": true,
+    "section": "layers",
+    "order": 23
+  },
+  "roles": [],
+  "llm": {
+    "type": "dropout"
+  },
+  "runtime": {
+    "handler": "neuron_layer",
+    "default_input_port": "layer_in",
+    "default_output_port": "layer_out"
+  },
+  "display": {
+    "category": "ops"
+  }
+}

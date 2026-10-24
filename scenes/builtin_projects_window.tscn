@@ -1,0 +1,150 @@
+[gd_scene format=3 uid="uid://cn83f215gw7s5"]
+
+[ext_resource type="Script" uid="uid://ig8c3e5dgmg8" path="res://scripts/builtin_projects_window.gd" id="1_script"]
+[ext_resource type="Theme" uid="uid://cx365ld2mgjne" path="res://resources/theme_base.tres" id="2_theme"]
+
+[node name="BuiltinProjectsWindow" type="Control" unique_id=997338118]
+process_mode = 3
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_script")
+typename = "builtin_projects"
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=365934941]
+z_index = 8
+layout_mode = 0
+offset_right = 860.0
+offset_bottom = 620.0
+color = Color(0, 0, 0, 0)
+
+[node name="Margin" type="MarginContainer" parent="ColorRect" unique_id=1858586106]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 24
+theme_override_constants/margin_top = 16
+theme_override_constants/margin_right = 24
+theme_override_constants/margin_bottom = 14
+
+[node name="Content" type="VBoxContainer" parent="ColorRect/Margin" unique_id=1547799418]
+layout_mode = 2
+theme = ExtResource("2_theme")
+theme_override_constants/separation = 10
+
+[node name="Header" type="HBoxContainer" parent="ColorRect/Margin/Content" unique_id=138142117]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="Title" type="Label" parent="ColorRect/Margin/Content/Header" unique_id=503595215]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0.85, 0.85, 0.85, 1)
+theme_override_font_sizes/font_size = 22
+text = "Готовые ИИ-проекты"
+vertical_alignment = 1
+
+[node name="Actions" type="HBoxContainer" parent="ColorRect/Margin/Content/Header" unique_id=1443492549]
+layout_mode = 2
+theme_override_constants/separation = 8
+alignment = 2
+
+[node name="Divider" type="ColorRect" parent="ColorRect/Margin/Content" unique_id=750079463]
+custom_minimum_size = Vector2(0, 1)
+layout_mode = 2
+mouse_filter = 2
+color = Color(0.65, 0.68, 0.75, 0.22)
+
+[node name="Intro" type="HBoxContainer" parent="ColorRect/Margin/Content" unique_id=19627340]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/separation = 9
+
+[node name="Spark" type="Label" parent="ColorRect/Margin/Content/Intro" unique_id=1726491559]
+custom_minimum_size = Vector2(32, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.98, 0.78, 0.34, 1)
+theme_override_font_sizes/font_size = 21
+text = "✨"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Text" type="Label" parent="ColorRect/Margin/Content/Intro" unique_id=2091661378]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0.72, 0.74, 0.79, 1)
+theme_override_font_sizes/font_size = 14
+text = "Выбери проект и посмотри, чему уже научился ИИ"
+vertical_alignment = 1
+
+[node name="GalleryArea" type="Control" parent="ColorRect/Margin/Content" unique_id=1494027263]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Scroll" type="ScrollContainer" parent="ColorRect/Margin/Content/GalleryArea" unique_id=1269306533]
+clip_contents = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 15.0
+offset_right = -7.0
+grow_horizontal = 2
+grow_vertical = 2
+horizontal_scroll_mode = 0
+
+[node name="Center" type="CenterContainer" parent="ColorRect/Margin/Content/GalleryArea/Scroll" unique_id=337214111]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Cards" type="VBoxContainer" parent="ColorRect/Margin/Content/GalleryArea/Scroll/Center" unique_id=1773847299]
+custom_minimum_size = Vector2(700, 0)
+layout_mode = 2
+theme_override_constants/separation = 14
+
+[node name="LoadingState" type="CenterContainer" parent="ColorRect/Margin/Content/GalleryArea" unique_id=502842239]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="Copy" type="Label" parent="ColorRect/Margin/Content/GalleryArea/LoadingState" unique_id=244844334]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.72, 0.74, 0.78, 1)
+theme_override_font_sizes/font_size = 15
+text = "Готовим проекты..."
+
+[node name="EmptyState" type="CenterContainer" parent="ColorRect/Margin/Content/GalleryArea" unique_id=1096373420]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="Copy" type="Label" parent="ColorRect/Margin/Content/GalleryArea/EmptyState" unique_id=1859779442]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.72, 0.74, 0.78, 1)
+theme_override_font_sizes/font_size = 15
+text = "Готовые проекты пока не установлены."
+
+[node name="Footer" type="HBoxContainer" parent="ColorRect/Margin/Content" unique_id=1039952098]
+custom_minimum_size = Vector2(0, 36)
+layout_mode = 2
+
+[node name="Spacer" type="Control" parent="ColorRect/Margin/Content/Footer" unique_id=5155121]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Actions" type="HBoxContainer" parent="ColorRect/Margin/Content/Footer" unique_id=1109841021]
+layout_mode = 2
+alignment = 2

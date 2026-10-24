@@ -1,0 +1,232 @@
+Godot Engine v4.7.1.stable.steam.a13da4feb - https://godotengine.org
+
+RUN test_auth_runtime_config.gd
+RUN test_oidc_client.gd
+RUN test_oauth_loopback_receiver.gd
+RUN test_auth_session.gd
+RUN test_auth_ui_identity.gd
+RUN test_pilot_auth_session.gd
+RUN test_pilot_onboarding_client.gd
+RUN test_account_type_onboarding.gd
+RUN test_profile_onboarding.gd
+RUN test_startup_onboarding_state.gd
+RUN test_startup_main_menu.gd
+RUN test_startup_tutorial_prompt.gd
+RUN test_startup_flow_coordinator.gd
+RUN test_interface_tour_bundle.gd
+RUN test_interface_tour_launch.tscn
+RUN test_ui_tutorial_arrow.gd
+RUN test_auth_migration.gd
+RUN test_axon_context.gd
+RUN test_node_info_catalog.gd
+RUN test_node_info_menu.gd
+RUN test_button_property_persistence.gd
+RUN test_ui_adapter_auto_fit.gd
+RUN test_dataset_search.gd
+RUN test_generated_node_catalog.gd
+RUN test_node_palette_catalog.gd
+RUN test_node_palette_scene.gd
+RUN test_node_palette_window_visibility.gd
+RUN test_simulation_object_catalog.gd
+RUN test_simulation_world_state.gd
+RUN test_simulation_example_worlds.gd
+RUN test_simulation_randomization_profile.gd
+RUN test_simulation_sample_estimator.gd
+RUN test_simulation_editor.gd
+RUN test_simulation_transform_gizmo.gd
+RUN test_simulation_selection_marquee.gd
+RUN test_simulation_runtime.gd
+RUN test_simulation_definition_registry.gd
+RUN test_simulation_model_binding.gd
+RUN test_simulation_episode_record.gd
+RUN test_simulation_signal_codec.gd
+RUN test_simulation_io_schema.gd
+RUN test_simulation_agent.gd
+RUN test_simulation_expert_policy.gd
+RUN test_simulation_model_runner.gd
+RUN test_simulation_training_bridge.gd
+RUN test_simulation_dataset_contracts.gd
+SKIP test_simulation_dataset_generator.gd
+RUN test_simulation_dataset_save_policy.gd
+RUN test_simulation_dataset_ui.gd
+RUN test_simulation_tab.gd
+RUN test_network_mode.gd
+RUN test_dialog_spec.gd
+RUN test_markdown_to_bbcode.gd
+RUN test_multipurpose_dialog.gd
+RUN test_ui_manager_dialog.gd
+RUN test_platform_input.gd
+RUN test_update_policy.gd
+RUN test_update_version.gd
+RUN test_update_manifest.gd
+RUN test_update_download.gd
+RUN test_update_dialog_spec.gd
+RUN test_update_health.gd
+RUN test_update_flow.gd
+
+============== TEST FAILURES ==============
+
+FAILED: test_interface_tour_launch.tscn
+--- OUTPUT ---
+Godot Engine v4.7.1.stable.steam.a13da4feb - https://godotengine.org
+
+Unicode parsing error, some characters were replaced with пїЅ (U+FFFD): Unexpected NUL character
+Unicode parsing error, some characters were replaced with пїЅ (U+FFFD): Unexpected NUL character
+Unicode parsing error, some characters were replaced with пїЅ (U+FFFD): Unexpected NUL character
+ERROR: Cannot assign contents of "Array[PackedStringArray]" to "Array[String]".
+   at: assign (core/variant/array.cpp:276)
+Test Debug Scene Running...
+Frame 0 - res://scripts/node_palette.gd:234 in function '_apply_toggle_endpoint'
+Frame 1 - res://scripts/node_palette.gd:214 in function 'set_collapsed'
+Frame 2 - res://scripts/node_palette.gd:33 in function '_ready'
+[SIM PERF] Ready. Space=start/stop report; F1-F10 toggle A/B subsystems.
+Simulation Navigator successfully loaded!
+WARNING: Nodes with non-equal opposite anchors will have their size overridden after _ready(). 
+If you want to set size, change the anchors or consider using set_deferred().
+   at: _set_size (scene/gui/control.cpp:1519)
+   GDScript backtrace (most recent call first):
+	   [0] _ready (res://scripts/virtualt.gd:197)
+	   [1] loaded (res://scripts/glob.gd:152)
+	   [2] _window_scenes (res://scripts/glob.gd:2907)
+	   [3] _ready (res://scripts/glob.gd:3079)
+ERROR: Node not found: "Control/view/Label/run" (relative to "/root/@Node@208/Control").
+   at: get_node (scene/main/node.cpp:1975)
+   GDScript backtrace (most recent call first):
+	   [0] @implicit_ready (res://scripts/dataset_tab.gd:542)
+	   [1] loaded (res://scripts/glob.gd:152)
+	   [2] _window_scenes (res://scripts/glob.gd:2907)
+	   [3] _ready (res://scripts/glob.gd:3079)
+aa
+graph
+ERROR: Condition "!enabled || !is_inside_tree()" is true.
+   at: make_current (scene/2d/camera_2d.cpp:588)
+   GDScript backtrace (most recent call first):
+	   [0] window_show (res://scripts/win_graph.gd:63)
+	   [1] go_window (res://scripts/glob.gd:169)
+	   [2] _ready (res://scripts/glob.gd:3080)
+28.0
+0.0
+28.0
+0.0
+Frame 0 - res://scripts/node_palette.gd:234 in function '_apply_toggle_endpoint'
+Frame 1 - res://scripts/node_palette.gd:214 in function 'set_collapsed'
+Frame 2 - res://scripts/startup/startup_flow_coordinator.gd:273 in function '_set_palette_visible'
+Frame 3 - res://scripts/startup/startup_flow_coordinator.gd:228 in function '_run_interface_tour'
+Frame 4 - res://scripts/startup/startup_flow_coordinator.gd:191 in function 'start_interface_tour'
+Frame 5 - res://tests/godot/test_interface_tour_launch.gd:65 in function '_verify_real_tour_launch'
+Frame 6 - res://tests/godot/test_interface_tour_launch.gd:29 in function '_run'
+[LESSON][flow] ADVANCE from index=-1 steps=15
+[LESSON][flow]  ENTER STEP 0 title='{ "en": "Welcome", "ru": "Р”РѕР±СЂРѕ РїРѕР¶Р°Р»РѕРІР°С‚СЊ", "kz": "ТљРѕС€ РєРµР»РґС–ТЈС–Р·" }'
+STEP START:Welcome 0
+{ "type": "hide_arrows" }
+{ "type": "hide_ui_highlights" }
+{ "type": "explain", "text": { "en": ["Hello! Welcome to Neuralese.", "Here you can build artificial intelligence (AI) from ordinary blocks вЂ” just like in Scratch!", "LetвЂ™s learn how to use Neuralese."], "ru": ["РџСЂРёРІРµС‚! Р”РѕР±СЂРѕ РїРѕР¶Р°Р»РѕРІР°С‚СЊ РІ Neuralese.", "Р’ СЌС‚РѕРј РїСЂРёР»РѕР¶РµРЅРёРё РјРѕР¶РЅРѕ СЃРѕР±РёСЂР°С‚СЊ РёСЃРєСѓСЃСЃС‚РІРµРЅРЅС‹Р№ РёРЅС‚РµР»Р»РµРєС‚ (РР) РёР· РѕР±С‹С‡РЅС‹С… Р±Р»РѕРєРѕРІ вЂ” РєР°Рє РІ Scratch!", "Р”Р°РІР°Р№ РЅР°СѓС‡РёРјСЃСЏ РїРѕР»СЊР·РѕРІР°С‚СЊСЃСЏ Neuralese."], "kz": ["РЎУ™Р»РµРј! Neuralese-РєРµ Т›РѕС€ РєРµР»РґС–ТЈ!", "РњТ±РЅРґР° Р¶Р°СЃР°РЅРґС‹ РёРЅС‚РµР»Р»РµРєС‚С–РЅС– (Р–Р) Scratch-С‚Р°Т“С‹РґР°Р№ Т›Р°СЂР°РїР°Р№С‹Рј Р±Р»РѕРєС‚Р°СЂРґР°РЅ Т›Т±СЂР°СЃС‚С‹СЂСѓТ“Р° Р±РѕР»Р°РґС‹.", "Р•РЅРґС– Neuralese-РїРµРЅ Р¶Т±РјС‹СЃ С–СЃС‚РµСѓРґС– ТЇР№СЂРµРЅРµР№С–Рє."] }, "wait": "next", "time": 1.0 }
+ERROR: tutorial bubble returns to its authored position when the palette is hidden
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+	   [0] _run (res://tests/godot/test_interface_tour_launch.gd:35)
+	   [1] _verify_real_tour_launch (res://tests/godot/test_interface_tour_launch.gd:76)
+	   [2] start_interface_tour (res://scripts/startup/startup_flow_coordinator.gd:199)
+	   [3] _run_interface_tour (res://scripts/startup/startup_flow_coordinator.gd:239)
+	   [4] _finish_interface_tour (res://scripts/startup/startup_flow_coordinator.gd:259)
+	   [5] stop_lesson (res://scripts/learner.gd:88)
+	   [6] lesson_re_reg (res://scripts/learner.gd:71)
+
+--------------
+
+FAILED: test_node_palette_scene.gd
+--- OUTPUT ---
+Godot Engine v4.7.1.stable.steam.a13da4feb - https://godotengine.org
+
+Unicode parsing error, some characters were replaced with пїЅ (U+FFFD): Unexpected NUL character
+Unicode parsing error, some characters were replaced with пїЅ (U+FFFD): Unexpected NUL character
+Unicode parsing error, some characters were replaced with пїЅ (U+FFFD): Unexpected NUL character
+(0.0, 0.0)
+(-90.0, -58.0)
+ERROR: existing icons must use an unframed image drag preview
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+	   [0] _initialize (res://tests/godot/test_node_palette_scene.gd:26)
+ERROR: Node not found: "base/WIN_GRAPH" (relative to "/root").
+   at: get_node (scene/main/node.cpp:1975)
+   GDScript backtrace (most recent call first):
+	   [0] _ready (res://scripts/glob.gd:3075)
+SCRIPT ERROR: Cannot call method 'add_child' on a null value.
+   at: _ready (res://scripts/glob.gd:3075)
+   GDScript backtrace (most recent call first):
+	   [0] _ready (res://scripts/glob.gd:3075)
+WARNING: 2 RIDs of type "Canvas" were leaked.
+   at: _free_rids (servers/rendering/renderer_canvas_cull.cpp:2735)
+WARNING: 6 ObjectDB instances were leaked at exit (run with `--verbose` for details).
+   at: cleanup (core/object/object.cpp:2536)
+
+--------------
+
+FAILED: test_dialog_spec.gd
+--- OUTPUT ---
+Godot Engine v4.7.1.stable.steam.a13da4feb - https://godotengine.org
+
+Unicode parsing error, some characters were replaced with пїЅ (U+FFFD): Unexpected NUL character
+Unicode parsing error, some characters were replaced with пїЅ (U+FFFD): Unexpected NUL character
+Unicode parsing error, some characters were replaced with пїЅ (U+FFFD): Unexpected NUL character
+ERROR: Node not found: "base/WIN_GRAPH" (relative to "/root").
+   at: get_node (scene/main/node.cpp:1975)
+   GDScript backtrace (most recent call first):
+	   [0] _ready (res://scripts/glob.gd:3075)
+SCRIPT ERROR: Cannot call method 'add_child' on a null value.
+   at: _ready (res://scripts/glob.gd:3075)
+   GDScript backtrace (most recent call first):
+	   [0] _ready (res://scripts/glob.gd:3075)
+ERROR: public button normalization: expected [{ "id": "retry", "text": "РџРѕРІС‚РѕСЂРёС‚СЊ", "style": "primary" }], got [{ "id": "retry", "text": "РџРѕРІС‚РѕСЂРёС‚СЊ", "style": "primary", "can_go": true }]
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+	   [0] _run (res://tests/godot/test_dialog_spec.gd:26)
+WARNING: 2 RIDs of type "Canvas" were leaked.
+   at: _free_rids (servers/rendering/renderer_canvas_cull.cpp:2735)
+WARNING: 6 ObjectDB instances were leaked at exit (run with `--verbose` for details).
+   at: cleanup (core/object/object.cpp:2536)
+
+--------------
+
+FAILED: test_multipurpose_dialog.gd
+--- OUTPUT ---
+Godot Engine v4.7.1.stable.steam.a13da4feb - https://godotengine.org
+
+Unicode parsing error, some characters were replaced with пїЅ (U+FFFD): Unexpected NUL character
+Unicode parsing error, some characters were replaced with пїЅ (U+FFFD): Unexpected NUL character
+Unicode parsing error, some characters were replaced with пїЅ (U+FFFD): Unexpected NUL character
+ERROR: Node not found: "base/WIN_GRAPH" (relative to "/root").
+   at: get_node (scene/main/node.cpp:1975)
+   GDScript backtrace (most recent call first):
+	   [0] _ready (res://scripts/glob.gd:3075)
+SCRIPT ERROR: Cannot call method 'add_child' on a null value.
+   at: _ready (res://scripts/glob.gd:3075)
+   GDScript backtrace (most recent call first):
+	   [0] _ready (res://scripts/glob.gd:3075)
+ERROR: dialog can hide the graph node palette while open: expected false, got true
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+	   [0] _run (res://tests/godot/test_multipurpose_dialog.gd:271)
+WARNING: 2 RIDs of type "Canvas" were leaked.
+   at: _free_rids (servers/rendering/renderer_canvas_cull.cpp:2735)
+WARNING: 3 ObjectDB instances were leaked at exit (run with `--verbose` for details).
+   at: cleanup (core/object/object.cpp:2536)
+
+--------------
+TESTS FAILED! Total failed: 4
+
+Unicode parsing error, some characters were replaced with � (U+FFFD): Unexpected NUL character
+Unicode parsing error, some characters were replaced with � (U+FFFD): Unexpected NUL character
+Unicode parsing error, some characters were replaced with � (U+FFFD): Unexpected NUL character
+ERROR: Node not found: "base/WIN_GRAPH" (relative to "/root").
+   at: get_node (scene/main/node.cpp:1975)
+   GDScript backtrace (most recent call first):
+	   [0] _ready (res://scripts/glob.gd:3075)
+SCRIPT ERROR: Cannot call method 'add_child' on a null value.
+   at: _ready (res://scripts/glob.gd:3075)
+   GDScript backtrace (most recent call first):
+	   [0] _ready (res://scripts/glob.gd:3075)
+WARNING: 2 RIDs of type "Canvas" were leaked.
+   at: _free_rids (servers/rendering/renderer_canvas_cull.cpp:2735)
+WARNING: 6 ObjectDB instances were leaked at exit (run with `--verbose` for details).
+   at: cleanup (core/object/object.cpp:2536)

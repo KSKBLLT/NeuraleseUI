@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "id": "train_rl",
+  "source": {
+    "kind": "scene",
+    "path": "res://scenes/train_rl.tscn"
+  },
+  "load_order": 190,
+  "menu": {
+    "visible": false,
+    "section": "training",
+    "order": 40
+  },
+  "roles": [],
+  "llm": {
+    "type": "train_rl"
+  },
+  "runtime": {},
+  "display": {
+    "category": "train",
+    "title": {
+      "en": "RL Step",
+      "ru": "Шаг обучения с подкреплением",
+      "kz": "RL қадамы"
+    }
+  }
+}

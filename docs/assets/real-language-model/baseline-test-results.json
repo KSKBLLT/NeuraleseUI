@@ -1,0 +1,113 @@
+{
+  "commit": "4f590d8a9d2547e49f05844177d22a36d803578e",
+  "results": [
+    {
+      "test": "test_remote_transport_guards.gd",
+      "passed": false,
+      "exit_code": 0,
+      "diagnostics": [
+        "SCRIPT ERROR: Parse Error: Cannot infer the type of \"before\" variable because the value doesn't have a set type.",
+        "ERROR: Failed to load script \"res://tests/godot/test_remote_transport_guards.gd\" with error \"Parse error\"."
+      ]
+    },
+    {
+      "test": "test_remote_action_behavior.gd",
+      "passed": false,
+      "exit_code": 0,
+      "diagnostics": [
+        "SCRIPT ERROR: Compile Error: Identifier not found: glob",
+        "SCRIPT ERROR: Compile Error: Identifier not found: glob",
+        "ERROR: Failed to load script \"res://scripts/blur.gd\" with error \"Compilation failed\".",
+        "SCRIPT ERROR: Compile Error: Identifier not found: glob",
+        "SCRIPT ERROR: Compile Error: Identifier not found: glob",
+        "SCRIPT ERROR: Compile Error: Failed to compile depended scripts.",
+        "ERROR: Failed to load script \"res://tests/godot/test_remote_action_behavior.gd\" with error \"Compilation failed\".",
+        "ERROR: Node not found: \"base/WIN_GRAPH\" (relative to \"/root\").",
+        "SCRIPT ERROR: Cannot call method 'add_child' on a null value.",
+        "SCRIPT ERROR: Invalid call. Nonexistent function 'workslist_route' in base 'GDScript'."
+      ]
+    },
+    {
+      "test": "test_input_rgb.tscn",
+      "passed": false,
+      "exit_code": 1,
+      "diagnostics": [
+        "ERROR: Cannot assign contents of \"Array[PackedStringArray]\" to \"Array[String]\".",
+        "ERROR: Node not found: \"Control/view/Label/run\" (relative to \"/root/@Node@267/Control\").",
+        "ERROR: Condition \"!enabled || !is_inside_tree()\" is true.",
+        "ERROR: Input RGB is replaced only by the other inputs: [&\"input\", &\"input_1d\", &\"text_input\"]",
+        "ERROR: the missing input names every input: Сначала создайте узел ввода: Ввод2D, Ввод RGB, Ввод1D или ВводТекста."
+      ]
+    },
+    {
+      "test": "test_local_training_worker.tscn",
+      "passed": false,
+      "exit_code": 0,
+      "diagnostics": [
+        "ERROR: Node not found: \"base/WIN_GRAPH\" (relative to \"/root\").",
+        "SCRIPT ERROR: Cannot call method 'add_child' on a null value.",
+        "SCRIPT ERROR: Assertion failed."
+      ]
+    },
+    {
+      "test": "test_project_gallery.gd",
+      "passed": false,
+      "exit_code": 0,
+      "diagnostics": [
+        "SCRIPT ERROR: Compile Error: Identifier not found: glob",
+        "ERROR: Failed to load script \"res://scripts/project_card.gd\" with error \"Compilation failed\".",
+        "ERROR: Required object \"rp_child\" is null.",
+        "SCRIPT ERROR: Invalid access to property or key 'open_requested' on a base object of type 'Nil'.",
+        "SCRIPT ERROR: Invalid call. Nonexistent function 'configure' in base 'Nil'.",
+        "SCRIPT ERROR: Invalid access to property or key 'custom_minimum_size' on a base object of type 'Nil'."
+      ]
+    },
+    {
+      "test": "test_builtin_projects_blur_release.tscn",
+      "passed": false,
+      "exit_code": 1,
+      "diagnostics": [
+        "ERROR: Cannot assign contents of \"Array[PackedStringArray]\" to \"Array[String]\".",
+        "ERROR: Node not found: \"Control/view/Label/run\" (relative to \"/root/@Node@267/Control\").",
+        "ERROR: Condition \"!enabled || !is_inside_tree()\" is true.",
+        "ERROR: nested built-in transition must preserve blur for the next menu"
+      ]
+    },
+    {
+      "test": "test_settings_quality_carousel.tscn",
+      "passed": false,
+      "exit_code": 1,
+      "diagnostics": [
+        "ERROR: Node not found: \"base/WIN_GRAPH\" (relative to \"/root\").",
+        "SCRIPT ERROR: Cannot call method 'add_child' on a null value.",
+        "ERROR: medium must update the carousel label"
+      ]
+    },
+    {
+      "test": "test_generated_node_catalog.gd",
+      "passed": false,
+      "exit_code": 1,
+      "diagnostics": [
+        "ERROR: all registered node definitions: expected 22, got 29",
+        "ERROR: all current definitions use existing scenes: expected 22, got 29",
+        "ERROR: compiled public menu order: expected [&\"input\", &\"input_rgb\", &\"input_1d\", &\"classifier\", &\"flatten\", &\"reshape2d\", &\"softmax\", &\"layer\", &\"conv2d\", &\"maxpool\", &\"dropout\", &\"neuron\", &\"gru_cell\", &\"dataset\", &\"train_begin\", &\"run_model\", &\"train_input\", &\"concat\"], got [&\"input\", &\"input_rgb\", &\"input_1d\", &\"classifier\", &\"flatten\", &\"reshape2d\", &\"softmax\", &\"layer\", &\"conv2d\", &\"maxpool\", &\"dropout\", &\"neuron\", &\"gru_cell\", &\"dataset\", &\"train_begin\", &\"run_model\", &\"train_input\", &\"concat\", &\"text_input\", &\"tokenizer\", &\"embedding\", &\"attention_head\", &\"token_labels\", &\"text_output\", &\"autoregression\"]",
+        "ERROR: input role catalog: expected [&\"input\", &\"input_rgb\", &\"input_1d\"], got [&\"input\", &\"input_rgb\", &\"input_1d\", &\"text_input\"]",
+        "ERROR: Node not found: \"base/WIN_GRAPH\" (relative to \"/root\").",
+        "SCRIPT ERROR: Cannot call method 'add_child' on a null value."
+      ]
+    },
+    {
+      "test": "test_simulation_tab.gd",
+      "passed": false,
+      "exit_code": 1,
+      "diagnostics": [
+        "ERROR: Node not found: \"base/WIN_GRAPH\" (relative to \"/root\").",
+        "SCRIPT ERROR: Cannot call method 'add_child' on a null value.",
+        "ERROR: top navigation must say Simulations",
+        "ERROR: Russian navigation label must be localized",
+        "ERROR: Kazakh navigation label must be localized",
+        "ERROR: FAIL test_simulation_tab: 3 failure(s)"
+      ]
+    }
+  ]
+}

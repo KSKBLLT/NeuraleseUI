@@ -1,0 +1,109 @@
+{
+  "schema_version": 1,
+  "rest": {
+    "aliases": {
+      "save": "api/projects/save",
+      "project": "api/projects/get",
+      "delete_project": "api/projects/delete",
+      "project_list": "api/projects/list",
+      "get_chat": "api/projects/get-chat",
+      "clear_chat": "api/projects/clear-chat",
+      "reg_dataset": "api/projects/register-dataset",
+      "datasets": "api/datasets",
+      "ask_once": "api/axon/ask-once",
+      "classroom/create": "api/classrooms/create",
+      "classroom/join": "api/classrooms/join",
+      "classroom_join": "api/classrooms/join",
+      "classroom/meta": "api/classrooms/meta",
+      "classroom/leave": "api/classrooms/leave",
+      "classroom/update_meta": "api/classrooms/update-meta",
+      "classroom/update_lessons": "api/classrooms/update-lessons",
+      "classroom/lesson_auto_project": "api/classrooms/lesson-auto-project",
+      "classroom/update_state": "api/classrooms/update-state",
+      "classroom/mark_explanation_made": "api/classrooms/mark-explanation-made",
+      "classroom/get_state": "api/classrooms/get-state",
+      "classroom/events": "api/classrooms/events"
+    },
+    "public": [
+      "health",
+      "login",
+      "create_user",
+      "api/pilot/onboarding/register"
+    ],
+    "auth_required": [
+      "api/projects/save",
+      "api/projects/get",
+      "api/projects/delete",
+      "api/projects/list",
+      "api/projects/get-chat",
+      "api/projects/clear-chat",
+      "api/projects/register-dataset",
+      "api/datasets",
+      "api/axon/ask-once",
+      "api/classrooms/create",
+      "api/classrooms/join",
+      "api/classrooms/meta",
+      "api/classrooms/leave",
+      "api/classrooms/update-meta",
+      "api/classrooms/update-lessons",
+      "api/classrooms/lesson-auto-project",
+      "api/classrooms/update-state",
+      "api/classrooms/mark-explanation-made",
+      "api/classrooms/get-state",
+      "api/classrooms/events",
+      "api/users/me",
+      "api/users/account-type",
+      "api/users/onboarding",
+      "api/users/username-available",
+      "api/users/claim-username",
+      "export",
+      "delete_ctx",
+      "cache_ds",
+      "transcribe_file"
+    ]
+  },
+  "websocket": {
+    "aliases": {
+      "ws/talk": "ws/axon/talk"
+    },
+    "public": [],
+    "auth_required": [
+      "ws/axon/talk",
+      "ws/train",
+      "ws/infer",
+      "ws/ds_load"
+    ]
+  },
+  "raw_transport_allowlist": {
+    "HTTPClient.new": [
+      "scripts/web.gd"
+    ],
+    "HTTPRequest.new": [
+      "scripts/auth/auth_session.gd",
+      "scripts/transcriber.gd"
+    ],
+    "WebSocketPeer.new": [
+      "scripts/socket_connection.gd"
+    ],
+    "TCPServer.new": [
+      "scripts/auth/oauth_loopback_receiver.gd"
+    ],
+    "web._request": [
+      "scripts/cookie_manager.gd"
+    ]
+  },
+  "dynamic_high_level_calls": [
+    {
+      "path": "scripts/glob.gd",
+      "function": "download_update",
+      "api": "web.GET",
+      "access": "external_public"
+    },
+    {
+      "path": "scripts/lanpop.gd",
+      "function": "_on_button_pressed",
+      "api": "web.HEALTH",
+      "access": "external_public"
+    }
+  ]
+}

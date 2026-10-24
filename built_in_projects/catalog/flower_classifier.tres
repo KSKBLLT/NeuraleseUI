@@ -1,0 +1,23 @@
+[gd_resource type="Resource" script_class="BuiltinProjectDefinition" load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://scripts/builtin_project_definition.gd" id="1_definition"]
+[ext_resource type="Texture2D" path="res://built_in_projects/previews/flower_classifier.png" id="2_preview"]
+
+[resource]
+script = ExtResource("1_definition")
+id = &"flower_classifier"
+source_scene = "res://built_in_projects/Flower Classifier.scn"
+version = 1
+sort_order = 10
+preview = ExtResource("2_preview")
+emoji = "🌸"
+accent_color = Color(0.96, 0.55, 0.76, 1)
+title_ru = "Цветочный помощник"
+description_ru = "Смотрит на лепестки и угадывает, к какому виду относится цветок."
+tags_ru = PackedStringArray("Цветы", "3 ответа", "Классификация")
+title_en = "Flower helper"
+description_en = "Looks at petals and guesses which kind of flower it is."
+tags_en = PackedStringArray("Flowers", "3 answers", "Classification")
+title_kz = "Гүл көмекшісі"
+description_kz = "Күлтелерге қарап, гүлдің қай түрге жататынын табады."
+tags_kz = PackedStringArray("Гүлдер", "3 жауап", "Жіктеу")

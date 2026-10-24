@@ -1,0 +1,188 @@
+{
+  "variant": "c7bc3b7",
+  "preview": false,
+  "repeats": 5,
+  "epochs": 3,
+  "seconds_median": 1.2366198329254985,
+  "seconds_p95": 1.2438730841968209,
+  "peak_rss_bytes": 729006080,
+  "runs": [
+    [
+      {
+        "seconds": 1.2309507080353796,
+        "cpu_seconds": 2.222596000000001,
+        "forward_calls": 108,
+        "preview_messages": 0,
+        "preview_bytes": 0,
+        "max_preview_bytes": 0,
+        "terminal_bytes": 17194239,
+        "final_accuracy": 0.03614457831325301,
+        "final_loss": 9.268975578585993
+      },
+      {
+        "seconds": 1.231067624874413,
+        "cpu_seconds": 2.2226269999999992,
+        "forward_calls": 108,
+        "preview_messages": 0,
+        "preview_bytes": 0,
+        "max_preview_bytes": 0,
+        "terminal_bytes": 17192073,
+        "final_accuracy": 0.10843373493975904,
+        "final_loss": 7.229886463901151
+      },
+      {
+        "seconds": 1.2351613747887313,
+        "cpu_seconds": 2.214141999999999,
+        "forward_calls": 108,
+        "preview_messages": 0,
+        "preview_bytes": 0,
+        "max_preview_bytes": 0,
+        "terminal_bytes": 17198540,
+        "final_accuracy": 0.1686746987951807,
+        "final_loss": 7.036189476208397
+      }
+    ],
+    [
+      {
+        "seconds": 1.232969457982108,
+        "cpu_seconds": 2.217319,
+        "forward_calls": 108,
+        "preview_messages": 0,
+        "preview_bytes": 0,
+        "max_preview_bytes": 0,
+        "terminal_bytes": 17194239,
+        "final_accuracy": 0.03614457831325301,
+        "final_loss": 9.268975578585993
+      },
+      {
+        "seconds": 1.2307092500850558,
+        "cpu_seconds": 2.2142300000000006,
+        "forward_calls": 108,
+        "preview_messages": 0,
+        "preview_bytes": 0,
+        "max_preview_bytes": 0,
+        "terminal_bytes": 17192078,
+        "final_accuracy": 0.10843373493975904,
+        "final_loss": 7.229886463901151
+      },
+      {
+        "seconds": 1.2367754159495234,
+        "cpu_seconds": 2.219285000000003,
+        "forward_calls": 108,
+        "preview_messages": 0,
+        "preview_bytes": 0,
+        "max_preview_bytes": 0,
+        "terminal_bytes": 17198552,
+        "final_accuracy": 0.1686746987951807,
+        "final_loss": 7.036189476208397
+      }
+    ],
+    [
+      {
+        "seconds": 1.2398898748215288,
+        "cpu_seconds": 2.2196859999999994,
+        "forward_calls": 108,
+        "preview_messages": 0,
+        "preview_bytes": 0,
+        "max_preview_bytes": 0,
+        "terminal_bytes": 17194251,
+        "final_accuracy": 0.03614457831325301,
+        "final_loss": 9.268975578585993
+      },
+      {
+        "seconds": 1.2351622909773141,
+        "cpu_seconds": 2.2211019999999984,
+        "forward_calls": 108,
+        "preview_messages": 0,
+        "preview_bytes": 0,
+        "max_preview_bytes": 0,
+        "terminal_bytes": 17192085,
+        "final_accuracy": 0.10843373493975904,
+        "final_loss": 7.229886463901151
+      },
+      {
+        "seconds": 1.2371967500075698,
+        "cpu_seconds": 2.219607,
+        "forward_calls": 108,
+        "preview_messages": 0,
+        "preview_bytes": 0,
+        "max_preview_bytes": 0,
+        "terminal_bytes": 17198552,
+        "final_accuracy": 0.1686746987951807,
+        "final_loss": 7.036189476208397
+      }
+    ],
+    [
+      {
+        "seconds": 1.2361555830575526,
+        "cpu_seconds": 2.2219049999999996,
+        "forward_calls": 108,
+        "preview_messages": 0,
+        "preview_bytes": 0,
+        "max_preview_bytes": 0,
+        "terminal_bytes": 17194251,
+        "final_accuracy": 0.03614457831325301,
+        "final_loss": 9.268975578585993
+      },
+      {
+        "seconds": 1.2366198329254985,
+        "cpu_seconds": 2.228081999999997,
+        "forward_calls": 108,
+        "preview_messages": 0,
+        "preview_bytes": 0,
+        "max_preview_bytes": 0,
+        "terminal_bytes": 17192085,
+        "final_accuracy": 0.10843373493975904,
+        "final_loss": 7.229886463901151
+      },
+      {
+        "seconds": 1.2376277910079807,
+        "cpu_seconds": 2.226988999999996,
+        "forward_calls": 108,
+        "preview_messages": 0,
+        "preview_bytes": 0,
+        "max_preview_bytes": 0,
+        "terminal_bytes": 17198552,
+        "final_accuracy": 0.1686746987951807,
+        "final_loss": 7.036189476208397
+      }
+    ],
+    [
+      {
+        "seconds": 1.2438730841968209,
+        "cpu_seconds": 2.2389379999999974,
+        "forward_calls": 108,
+        "preview_messages": 0,
+        "preview_bytes": 0,
+        "max_preview_bytes": 0,
+        "terminal_bytes": 17194251,
+        "final_accuracy": 0.03614457831325301,
+        "final_loss": 9.268975578585993
+      },
+      {
+        "seconds": 1.2381788338534534,
+        "cpu_seconds": 2.2296209999999945,
+        "forward_calls": 108,
+        "preview_messages": 0,
+        "preview_bytes": 0,
+        "max_preview_bytes": 0,
+        "terminal_bytes": 17192085,
+        "final_accuracy": 0.10843373493975904,
+        "final_loss": 7.229886463901151
+      },
+      {
+        "seconds": 1.2391345829237252,
+        "cpu_seconds": 2.2287779999999984,
+        "forward_calls": 108,
+        "preview_messages": 0,
+        "preview_bytes": 0,
+        "max_preview_bytes": 0,
+        "terminal_bytes": 17198552,
+        "final_accuracy": 0.1686746987951807,
+        "final_loss": 7.036189476208397
+      }
+    ]
+  ],
+  "python": "3.11.15 (main, May 10 2026, 19:23:07) [Clang 22.1.3 ]",
+  "source_package": "/Users/alim/.codex/worktrees/real-language-model-plan/neuralese/local_runtime"
+}

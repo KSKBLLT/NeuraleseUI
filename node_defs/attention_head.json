@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "id": "attention_head",
+  "source": {
+    "kind": "scene",
+    "path": "res://scenes/language_models/attention_head.tscn"
+  },
+  "load_order": 213,
+  "menu": {
+    "visible": true,
+    "section": "language",
+    "order": 63
+  },
+  "roles": [
+    "language"
+  ],
+  "llm": {
+    "type": "attention_head"
+  },
+  "runtime": {},
+  "display": {
+    "category": "learn"
+  }
+}

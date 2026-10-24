@@ -1,0 +1,314 @@
+{
+  "schema_version": 1,
+  "node_id": "flatten",
+  "status": "stable",
+  "generated": {
+    "node_id": "flatten",
+    "created_with": "flatten",
+    "scene_path": "res://scenes/flatten.tscn",
+    "scene_uid": "uid://bdifkrhjy3tt3",
+    "root_instance_path": null,
+    "script_path": "res://scripts/flatten.gd",
+    "inheritance_chain": [
+      "res://scripts/flatten.gd",
+      "res://scripts/base_graph.gd"
+    ],
+    "inherits_graph": true,
+    "server_typename": "Flatten",
+    "layer_name": null,
+    "title_candidates": {
+      "en": "Flatten",
+      "ru": "Плоск1D",
+      "kz": "Жазық1D"
+    },
+    "localized_properties": {
+      "ports": {},
+      "settings": {},
+      "controls": {
+        "ColorRect/root/Label": {
+          "property": "text",
+          "values": {
+            "en": "Flatten",
+            "ru": "Плоск1D",
+            "kz": "Жазық1D"
+          }
+        }
+      },
+      "title": {
+        "source_path": "ColorRect/root/Label",
+        "property": "text",
+        "values": {
+          "en": "Flatten",
+          "ru": "Плоск1D",
+          "kz": "Жазық1D"
+        }
+      }
+    },
+    "base_config": {},
+    "ports": [
+      {
+        "id": "input_o2_layer_in",
+        "scene_node": "o2",
+        "scene_path": ".",
+        "hint": 0,
+        "server_name": "layer_in",
+        "direction": "input",
+        "datatypes": [
+          "layer2d",
+          "input2d"
+        ],
+        "multiple": false,
+        "config_conn": false,
+        "keyword": null,
+        "conn_count_keyword": null,
+        "visual": {
+          "color": "#ffb8f4ff",
+          "gradient_color": "#ffb8f4ff",
+          "dir_vector": {
+            "x": -1.0,
+            "y": 0.0
+          },
+          "side": "left",
+          "relative_to": {
+            "role": "graph_rect",
+            "scene_path": "ColorRect"
+          },
+          "absolute_scene_rect": {
+            "x": -54.0,
+            "y": -7.0,
+            "w": 16.0,
+            "h": 17.0
+          },
+          "reference_rect": {
+            "x": -47.0,
+            "y": -18.0,
+            "w": 87.0,
+            "h": 39.0
+          },
+          "relative_rect": {
+            "x": -0.08045977011494253,
+            "y": 0.28205128205128205,
+            "w": 0.1839080459770115,
+            "h": 0.4358974358974359
+          },
+          "relative_origin": {
+            "x": -0.08045977011494253,
+            "y": 0.5
+          },
+          "color_family": "pink",
+          "color_label": {
+            "en": "Pink",
+            "ru": "Розовый",
+            "kz": "Қызғылт"
+          },
+          "side_label": {
+            "en": "on the left",
+            "ru": "слева",
+            "kz": "сол жақта"
+          },
+          "verbal_label": {
+            "en": "Pink port on the left",
+            "ru": "Розовый порт слева",
+            "kz": "Қызғылт порт сол жақта"
+          },
+          "text_color": "#d700b5"
+        }
+      },
+      {
+        "id": "output_o_layer_out",
+        "scene_node": "o",
+        "scene_path": ".",
+        "hint": 0,
+        "server_name": "layer_out",
+        "direction": "output",
+        "datatypes": [
+          "layer1d"
+        ],
+        "multiple": false,
+        "config_conn": false,
+        "keyword": null,
+        "conn_count_keyword": null,
+        "visual": {
+          "color": "#ffb8f4ff",
+          "gradient_color": "#ffb8f4ff",
+          "dir_vector": {
+            "x": 1.0,
+            "y": 0.0
+          },
+          "side": "right",
+          "relative_to": {
+            "role": "graph_rect",
+            "scene_path": "ColorRect"
+          },
+          "absolute_scene_rect": {
+            "x": 31.0,
+            "y": -7.0,
+            "w": 16.0,
+            "h": 17.0
+          },
+          "reference_rect": {
+            "x": -47.0,
+            "y": -18.0,
+            "w": 87.0,
+            "h": 39.0
+          },
+          "relative_rect": {
+            "x": 0.896551724137931,
+            "y": 0.28205128205128205,
+            "w": 0.1839080459770115,
+            "h": 0.4358974358974359
+          },
+          "relative_origin": {
+            "x": 1.0804597701149425,
+            "y": 0.5
+          },
+          "color_family": "pink",
+          "color_label": {
+            "en": "Pink",
+            "ru": "Розовый",
+            "kz": "Қызғылт"
+          },
+          "side_label": {
+            "en": "on the right",
+            "ru": "справа",
+            "kz": "оң жақта"
+          },
+          "verbal_label": {
+            "en": "Pink port on the right",
+            "ru": "Розовый порт справа",
+            "kz": "Қызғылт порт оң жақта"
+          },
+          "text_color": "#d700b5"
+        }
+      }
+    ],
+    "settings": [],
+    "icon_source": "res://node_icons/en/IconFlatten.png",
+    "static_compatible_nodes": [
+      {
+        "from_port": "output_o_layer_out",
+        "to_node": "classifier",
+        "to_port": "input_ni_layer_in",
+        "datatypes": [
+          "layer1d"
+        ],
+        "confidence": "static_datatype_intersection"
+      },
+      {
+        "from_port": "output_o_layer_out",
+        "to_node": "reshape2d",
+        "to_port": "input_o2_layer_in",
+        "datatypes": [
+          "layer1d"
+        ],
+        "confidence": "static_datatype_intersection"
+      },
+      {
+        "from_port": "output_o_layer_out",
+        "to_node": "softmax",
+        "to_port": "input_o2_layer_in",
+        "datatypes": [
+          "layer1d"
+        ],
+        "confidence": "static_datatype_intersection"
+      },
+      {
+        "from_port": "output_o_layer_out",
+        "to_node": "layer",
+        "to_port": "input_ni_layer_in",
+        "datatypes": [
+          "layer1d"
+        ],
+        "confidence": "static_datatype_intersection"
+      },
+      {
+        "from_port": "output_o_layer_out",
+        "to_node": "dropout",
+        "to_port": "input_o2_layer_in",
+        "datatypes": [
+          "layer1d"
+        ],
+        "confidence": "static_datatype_intersection"
+      },
+      {
+        "from_port": "output_o_layer_out",
+        "to_node": "gru_cell",
+        "to_port": "input_ni_layer_in",
+        "datatypes": [
+          "layer1d"
+        ],
+        "confidence": "static_datatype_intersection"
+      },
+      {
+        "from_port": "output_o_layer_out",
+        "to_node": "concat",
+        "to_port": "input_connection_o_layer_in",
+        "datatypes": [
+          "layer1d"
+        ],
+        "confidence": "static_datatype_intersection"
+      }
+    ]
+  },
+  "docs": {
+    "title": {
+      "en": "Flatten",
+      "ru": "Flatten",
+      "kz": "Жазықтау"
+    },
+    "summary": {
+      "en": "Converts a two-dimensional feature map into a one-dimensional vector.",
+      "ru": "«Сплющивает» сетку чисел в одну длинную цепочку.",
+      "kz": "Екі өлшемді белгілер картасын бір өлшемді векторға түрлендіреді."
+    },
+    "operation": {
+      "en": "Preserves every value while removing spatial dimensions. Use it when a Conv2D or image input must feed a Dense layer.",
+      "ru": "На вход Flatten получает прямоугольную сетку чисел — например, изображение или результат свёрточного слоя. Нода записывает все числа из этой сетки подряд в одну длинную цепочку. Сами числа не меняются и не пропадают: меняется только их расположение. Такая форма нужна полносвязному слою.",
+      "kz": "Барлық мәндерді сақтап, кеңістік өлшемдерін алып тастайды. Conv2D немесе кескін кірісін Dense қабатына қосу үшін қолданылады."
+    },
+    "compact": {
+      "body": {
+        "en": "Converts a two-dimensional feature map into a one-dimensional vector.",
+        "ru": "«Сплющивает» сетку чисел в одну цепочку.",
+        "kz": "Екі өлшемді белгілер картасын бір өлшемді векторға түрлендіреді."
+      }
+    },
+    "ports": {
+      "input_o2_layer_in": {
+        "label": {
+          "en": "layer_in",
+          "ru": "Сетка чисел",
+          "kz": "layer_in"
+        },
+        "description": {
+          "en": "Receives layer2d, input2d data through the layer_in input.",
+          "ru": "Розовый порт слева принимает изображение или сетку с ответами свёрточного слоя.",
+          "kz": "layer_in кірісі арқылы layer2d, input2d түріндегі деректерді қабылдайды."
+        }
+      },
+      "output_o_layer_out": {
+        "label": {
+          "en": "layer_out",
+          "ru": "Цепочка чисел",
+          "kz": "layer_out"
+        },
+        "description": {
+          "en": "Sends layer1d data to compatible downstream nodes.",
+          "ru": "Розовый порт справа передаёт все числа одной длинной цепочкой в полносвязный слой.",
+          "kz": "layer1d түріндегі деректерді үйлесімді келесі түйіндерге береді."
+        }
+      }
+    },
+    "settings": {},
+    "connects_to": [],
+    "examples": [
+      {
+        "body": {
+          "ru": "Изображение размером 28 × 28 после Flatten становится цепочкой из 784 чисел. Ни один пиксель при этом не исчезает.",
+          "en": "A 28 × 28 image becomes a list of 784 numbers after Flatten.",
+          "kz": "28 × 28 кескіні Flatten нодынан кейін 784 саннан тұратын тізімге айналады."
+        }
+      }
+    ]
+  }
+}

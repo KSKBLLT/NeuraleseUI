@@ -1,0 +1,236 @@
+{
+  "schema_version": 1,
+  "node_id": "neuron",
+  "status": "stable",
+  "generated": {
+    "node_id": "neuron",
+    "created_with": "neuron",
+    "scene_path": "res://scenes/neuron.tscn",
+    "scene_uid": "uid://cbtf5jh2s8v3j",
+    "root_instance_path": "res://scenes/base_graph.tscn",
+    "script_path": "res://scripts/neuron_config.gd",
+    "inheritance_chain": [
+      "res://scripts/neuron_config.gd",
+      "res://scripts/base_graph.gd"
+    ],
+    "inherits_graph": true,
+    "server_typename": "LayerConfig",
+    "layer_name": null,
+    "title_candidates": {
+      "en": "Activation",
+      "ru": "Активация",
+      "kz": "Активация"
+    },
+    "localized_properties": {
+      "ports": {},
+      "settings": {},
+      "controls": {
+        "ColorRect/root/Label": {
+          "property": "text",
+          "values": {
+            "en": "Activation",
+            "ru": "Активация",
+            "kz": "Активация"
+          }
+        },
+        "ColorRect2/ColorRect2": {
+          "property": "text",
+          "values": {
+            "en": "None",
+            "ru": "Прямая",
+            "kz": "Линия"
+          }
+        },
+        "ColorRect2": {
+          "property": "text",
+          "values": {
+            "en": "None",
+            "ru": "Прямая",
+            "kz": "Линия"
+          }
+        }
+      },
+      "title": {
+        "source_path": "ColorRect/root/Label",
+        "property": "text",
+        "values": {
+          "en": "Activation",
+          "ru": "Активация",
+          "kz": "Активация"
+        }
+      }
+    },
+    "base_config": {
+      "activ": "none"
+    },
+    "ports": [
+      {
+        "id": "output_o_activ_out",
+        "scene_node": "o",
+        "scene_path": ".",
+        "hint": 0,
+        "server_name": "activ_out",
+        "direction": "output",
+        "datatypes": [
+          "activation"
+        ],
+        "multiple": true,
+        "config_conn": false,
+        "keyword": null,
+        "conn_count_keyword": null,
+        "visual": {
+          "color": "#4cabe6ff",
+          "gradient_color": "#4cabe6ff",
+          "dir_vector": {
+            "x": 0.0,
+            "y": 1.0
+          },
+          "side": "bottom",
+          "relative_to": {
+            "role": "graph_rect",
+            "scene_path": "ColorRect"
+          },
+          "absolute_scene_rect": {
+            "x": -9.0,
+            "y": -5.0,
+            "w": 18.0,
+            "h": 28.0
+          },
+          "reference_rect": {
+            "x": -43.0,
+            "y": -92.0,
+            "w": 87.0,
+            "h": 107.0
+          },
+          "relative_rect": {
+            "x": 0.39080459770114945,
+            "y": 0.8130841121495327,
+            "w": 0.20689655172413793,
+            "h": 0.2616822429906542
+          },
+          "relative_origin": {
+            "x": 0.4942528735632184,
+            "y": 1.074766355140187
+          },
+          "color_family": "blue",
+          "color_label": {
+            "en": "Blue",
+            "ru": "Синий",
+            "kz": "Көк"
+          },
+          "side_label": {
+            "en": "at the bottom",
+            "ru": "снизу",
+            "kz": "төменде"
+          },
+          "verbal_label": {
+            "en": "Blue port at the bottom",
+            "ru": "Синий порт снизу",
+            "kz": "Көк порт төменде"
+          },
+          "text_color": "#1a7bb7"
+        }
+      }
+    ],
+    "settings": [
+      {
+        "id": "activ",
+        "source": "base_config",
+        "default": "none",
+        "ui_kind": null,
+        "ui_path": null,
+        "options": []
+      }
+    ],
+    "icon_source": "res://node_icons/en/IconNeuron.png",
+    "static_compatible_nodes": [
+      {
+        "from_port": "output_o_activ_out",
+        "to_node": "layer",
+        "to_port": "input_activ_activ_in",
+        "datatypes": [
+          "activation"
+        ],
+        "confidence": "static_datatype_intersection"
+      },
+      {
+        "from_port": "output_o_activ_out",
+        "to_node": "conv2d",
+        "to_port": "input_activ_activ_in",
+        "datatypes": [
+          "activation"
+        ],
+        "confidence": "static_datatype_intersection"
+      }
+    ]
+  },
+  "docs": {
+    "title": {
+      "en": "Activation",
+      "ru": "Функция активации",
+      "kz": "Активация"
+    },
+    "summary": {
+      "en": "Chooses the activation function applied by a connected layer.",
+      "ru": "Выбирает, как нейроны слоя обработают свои ответы.",
+      "kz": "Қосылған қабат қолданатын белсендіру функциясын таңдайды."
+    },
+    "operation": {
+      "en": "Sends an activation setting to a Dense or Conv2D node. The activation changes how each layer output is transformed without changing the connection shape.",
+      "ru": "Слой сначала вычисляет ответы своих нейронов, а функция активации решает, как изменить эти ответы перед отправкой дальше. ReLU заменяет отрицательные числа нулями, Sigmoid помещает ответы между 0 и 1, а Tanh — между −1 и 1. Эта нода подключается к слою сверху и не встраивается в основную цепочку данных.",
+      "kz": "Белсендіру баптауын Dense немесе Conv2D түйініне береді. Белсендіру қосылым пішінін өзгертпей, қабат шығысының түрленуін өзгертеді."
+    },
+    "compact": {
+      "body": {
+        "en": "Chooses the activation function applied by a connected layer.",
+        "ru": "Задаёт правило обработки ответов нейронов.",
+        "kz": "Қосылған қабат қолданатын белсендіру функциясын таңдайды."
+      }
+    },
+    "ports": {
+      "output_o_activ_out": {
+        "label": {
+          "en": "activ_out",
+          "ru": "Функция активации",
+          "kz": "activ_out"
+        },
+        "description": {
+          "en": "Sends activation data to compatible downstream nodes.",
+          "ru": "Синий порт снизу передаёт выбранное правило в синий порт сверху полносвязного или свёрточного слоя.",
+          "kz": "activation түріндегі деректерді үйлесімді келесі түйіндерге береді."
+        }
+      }
+    },
+    "settings": {
+      "activ": {
+        "label": {
+          "en": "activ",
+          "ru": "Функция",
+          "kz": "activ"
+        },
+        "description": {
+          "en": "Selects the activation function.",
+          "ru": "Выбирает правило обработки ответов: ReLU, Sigmoid, Tanh или вариант без дополнительного изменения.",
+          "kz": "Белсендіру функциясын таңдайды."
+        }
+      }
+    },
+    "connects_to": [],
+    "examples": [
+      {
+        "body": {
+          "ru": "Для внутренних слоёв часто выбирают ReLU: она оставляет положительные ответы нейронов и заменяет отрицательные нулями.",
+          "en": "ReLU is a common choice for hidden layers.",
+          "kz": "Жасырын қабаттар үшін ReLU жиі таңдалады."
+        }
+      },
+      {
+        "body": {
+          "ru": "Подключите синий порт этой ноды к синему порту сверху нужного слоя.",
+          "en": "Connect Activation to the top of a layer; do not place it in the main data chain.",
+          "kz": "Активацияны қабаттың үстіне қосыңыз; оны негізгі деректер тізбегіне қоймаңыз."
+        }
+      }
+    ]
+  }
+}

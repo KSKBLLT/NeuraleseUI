@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "id": "text_input",
+  "source": {
+    "kind": "scene",
+    "path": "res://scenes/language_models/text_input.tscn"
+  },
+  "load_order": 210,
+  "menu": {
+    "visible": true,
+    "section": "language",
+    "order": 60
+  },
+  "roles": [
+    "input",
+    "language"
+  ],
+  "llm": {
+    "type": "text_input"
+  },
+  "runtime": {},
+  "display": {
+    "category": "data"
+  }
+}

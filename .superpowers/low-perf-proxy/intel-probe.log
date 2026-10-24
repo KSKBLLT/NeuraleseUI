@@ -1,0 +1,659 @@
+Godot Engine v4.7.1.stable.steam.a13da4feb - https://godotengine.org
+TextServer: Added interface "Dummy"
+TextServer: Added interface "ICU / HarfBuzz / Graphite (Built-in)"
+Accessibility: AccessKit driver loaded.
+WARNING: GENERAL - Message Id Number: 0 | Message Id Name: Loader Message
+	windows_read_data_files_in_registry: Registry lookup failed to get layer manifest files.
+	Objects - 1
+		Object[0] - VK_OBJECT_TYPE_INSTANCE, Handle 2615468480240
+   at: _debug_messenger_callback (drivers/vulkan/rendering_context_driver_vulkan.cpp:654)
+Accessibility: window 0 adapter created.
+Devices:
+  #0: NVIDIA NVIDIA GeForce RTX 3050 Ti Laptop GPU - Supported, Discrete
+  #1: Intel Intel(R) Iris(R) Xe Graphics - Supported, Integrated
+Optional Vulkan device extension VK_EXT_fragment_density_map not found
+Optional Vulkan device extension VK_EXT_fragment_density_map2 not found
+Optional Vulkan device extension VK_QCOM_fragment_density_map_offset not found
+Optional Vulkan device extension VK_EXT_astc_decode_mode not found
+Optional Vulkan device extension VK_EXT_texture_compression_astc_hdr not found
+Optional Vulkan device extension VK_KHR_acceleration_structure not found
+Optional Vulkan device extension VK_KHR_deferred_host_operations not found
+Optional Vulkan device extension VK_KHR_ray_tracing_pipeline not found
+Optional Vulkan device extension VK_NV_ray_tracing_validation not found
+Optional Vulkan device extension VK_KHR_external_memory_fd not found
+Optional Vulkan device extension VK_EXT_device_fault not found
+Optional Vulkan device extension VK_EXT_debug_marker not found
+- Vulkan Variable Rate Shading not supported
+- Vulkan Fragment Density Map not supported
+- Vulkan multiview supported:
+  max view count: 16
+  max instances: 268435454
+- Vulkan subgroup:
+  size: 32
+  min size: 8
+  max size: 32
+  stages: STAGE_VERTEX, STAGE_TESSELLATION_CONTROL, STAGE_TESSELLATION_EVALUATION, STAGE_GEOMETRY, STAGE_FRAGMENT, STAGE_COMPUTE
+  supported ops: FEATURE_BASIC, FEATURE_VOTE, FEATURE_ARITHMETIC, FEATURE_BALLOT, FEATURE_SHUFFLE, FEATURE_SHUFFLE_RELATIVE, FEATURE_CLUSTERED, FEATURE_QUAD
+  quad operations in all stages
+- Vulkan Acceleration Structure not supported
+- Vulkan Raytracing not supported
+Vulkan 1.3.250 - Forward Mobile - Using Device #1: Intel - Intel(R) Iris(R) Xe Graphics
+Startup PSO cache (0.0 MiB)
+SDL: Init OK!
+Using "winink" pen tablet driver...
+Creating VMA small objects pool for memory type index 0
+Shader 'CanvasSdfShaderRD' (group 0) SHA256: 54b47da3ce58bfeb483acea9e9e45b5de11793d45b2a38279aa17b08296ef514
+Loading cache for shader CanvasSdfShaderRD, variant 0
+Loading cache for shader CanvasSdfShaderRD, variant 1
+Loading cache for shader CanvasSdfShaderRD, variant 2
+Loading cache for shader CanvasSdfShaderRD, variant 3
+Loading cache for shader CanvasSdfShaderRD, variant 4
+Loading cache for shader CanvasSdfShaderRD, variant 5
+Shader 'SkeletonShaderRD' (group 0) SHA256: 08b4464d16133f4db97a8df4663b95b2b956ecd3e7addf44a16e644f488157c2
+Loading cache for shader SkeletonShaderRD, variant 0
+Loading cache for shader SkeletonShaderRD, variant 1
+Shader 'SortShaderRD' (group 0) SHA256: 8e4ebbbb19fcd734c6f15656afbe1bcd5eb3acdfdae9cab023ebd6f54c901ef8
+Loading cache for shader SortShaderRD, variant 0
+Loading cache for shader SortShaderRD, variant 1
+Loading cache for shader SortShaderRD, variant 2
+Shader 'ParticlesShaderRD' (group 0) SHA256: 8f4c25caa97a2f74d5fa5f299aabdd514f57d9737b8642ed65c20e846dad5db0
+Loading cache for shader ParticlesShaderRD, variant 0
+Shader 'ParticlesCopyShaderRD' (group 0) SHA256: 688d10aec3c2e17e8c578ba3e2db1ea2f054eedd511b1e1647952c0acaeeab72
+Loading cache for shader ParticlesCopyShaderRD, variant 0
+Loading cache for shader ParticlesCopyShaderRD, variant 1
+Loading cache for shader ParticlesCopyShaderRD, variant 2
+Loading cache for shader ParticlesCopyShaderRD, variant 3
+Loading cache for shader ParticlesCopyShaderRD, variant 4
+Loading cache for shader ParticlesCopyShaderRD, variant 5
+Loading cache for shader ParticlesCopyShaderRD, variant 6
+Loading cache for shader ParticlesCopyShaderRD, variant 7
+Loading cache for shader ParticlesCopyShaderRD, variant 8
+Loading cache for shader ParticlesCopyShaderRD, variant 9
+Loading cache for shader ParticlesCopyShaderRD, variant 10
+Loading cache for shader ParticlesCopyShaderRD, variant 11
+Loading cache for shader ParticlesCopyShaderRD, variant 12
+Loading cache for shader ParticlesCopyShaderRD, variant 13
+Loading cache for shader ParticlesCopyShaderRD, variant 14
+Loading cache for shader ParticlesCopyShaderRD, variant 15
+Loading cache for shader ParticlesCopyShaderRD, variant 16
+Loading cache for shader ParticlesCopyShaderRD, variant 17
+Loading cache for shader ParticlesCopyShaderRD, variant 18
+Loading cache for shader ParticlesCopyShaderRD, variant 19
+Loading cache for shader ParticlesCopyShaderRD, variant 20
+Shader 'CanvasShaderRD' (group 0) SHA256: 1ac5f6c8d534ebab572b3f886e38134784245fbd5fa01c7cbb6cc452e5400080
+Loading cache for shader CanvasShaderRD, variant 0
+Loading cache for shader CanvasShaderRD, variant 1
+Loading cache for shader CanvasShaderRD, variant 2
+Loading cache for shader CanvasShaderRD, variant 3
+Loading cache for shader CanvasShaderRD, variant 4
+Loading cache for shader CanvasShaderRD, variant 5
+Shader 'CanvasOcclusionShaderRD' (group 0) SHA256: 3b765d5624135f9fbf3199b6660b8387d5b904f48be0914a622e5da9b906b504
+Loading cache for shader CanvasOcclusionShaderRD, variant 0
+Loading cache for shader CanvasOcclusionShaderRD, variant 1
+Loading cache for shader CanvasOcclusionShaderRD, variant 2
+Loading cache for shader CanvasShaderRD, variant 0
+Loading cache for shader CanvasShaderRD, variant 1
+Loading cache for shader CanvasShaderRD, variant 2
+Loading cache for shader CanvasShaderRD, variant 3
+Loading cache for shader CanvasShaderRD, variant 4
+Loading cache for shader CanvasShaderRD, variant 5
+Loading cache for shader CanvasShaderRD, variant 0
+Loading cache for shader CanvasShaderRD, variant 1
+Loading cache for shader CanvasShaderRD, variant 2
+Loading cache for shader CanvasShaderRD, variant 3
+Loading cache for shader CanvasShaderRD, variant 4
+Loading cache for shader CanvasShaderRD, variant 5
+Shader 'TexBlitShaderRD' (group 0) SHA256: ce377a6d54cd54d45abdd915ec4cf3877fef3cbace94de3df4ed73ec0124ea0c
+Loading cache for shader TexBlitShaderRD, variant 0
+Loading cache for shader TexBlitShaderRD, variant 1
+Loading cache for shader TexBlitShaderRD, variant 2
+Loading cache for shader TexBlitShaderRD, variant 3
+Ubershaders: Enabled
+Shader 'SceneForwardMobileShaderRD' (group 0) SHA256: 34688661501bf8d3456dc67ebb9a159ba4fcc2484c5a0d80ef3a1a49064c0832
+Shader 'SceneForwardMobileShaderRD' (group 1) SHA256: 9455ad1d446fef51eb0552c7e523782169cfd1ef48749d60a394233a2747ee26
+Shader 'SceneForwardMobileShaderRD' (group 2) SHA256: 93c7c9e19baed68ba13cb6b3b6c803f036efbd994347ef022b44e0acfb385c82
+Shader 'SceneForwardMobileShaderRD' (group 3) SHA256: ee1de0deb960a58fd4a1e40a2c1ee60a420293303d391ac820a8b11576a9c40a
+Loading cache for shader SceneForwardMobileShaderRD, variant 0
+Loading cache for shader SceneForwardMobileShaderRD, variant 1
+Loading cache for shader SceneForwardMobileShaderRD, variant 2
+Loading cache for shader SceneForwardMobileShaderRD, variant 3
+Loading cache for shader SceneForwardMobileShaderRD, variant 4
+Loading cache for shader SceneForwardMobileShaderRD, variant 5
+Loading cache for shader SceneForwardMobileShaderRD, variant 6
+Loading cache for shader SceneForwardMobileShaderRD, variant 7
+Loading cache for shader SceneForwardMobileShaderRD, variant 8
+Loading cache for shader SceneForwardMobileShaderRD, variant 9
+Loading cache for shader SceneForwardMobileShaderRD, variant 0
+Loading cache for shader SceneForwardMobileShaderRD, variant 1
+Loading cache for shader SceneForwardMobileShaderRD, variant 2
+Loading cache for shader SceneForwardMobileShaderRD, variant 3
+Loading cache for shader SceneForwardMobileShaderRD, variant 4
+Loading cache for shader SceneForwardMobileShaderRD, variant 5
+Loading cache for shader SceneForwardMobileShaderRD, variant 6
+Loading cache for shader SceneForwardMobileShaderRD, variant 7
+Loading cache for shader SceneForwardMobileShaderRD, variant 8
+Loading cache for shader SceneForwardMobileShaderRD, variant 9
+Loading cache for shader SceneForwardMobileShaderRD, variant 0
+Loading cache for shader SceneForwardMobileShaderRD, variant 1
+Loading cache for shader SceneForwardMobileShaderRD, variant 2
+Loading cache for shader SceneForwardMobileShaderRD, variant 3
+Loading cache for shader SceneForwardMobileShaderRD, variant 4
+Loading cache for shader SceneForwardMobileShaderRD, variant 5
+Loading cache for shader SceneForwardMobileShaderRD, variant 6
+Loading cache for shader SceneForwardMobileShaderRD, variant 7
+Loading cache for shader SceneForwardMobileShaderRD, variant 8
+Loading cache for shader SceneForwardMobileShaderRD, variant 9
+Shader 'SkyShaderRD' (group 0) SHA256: 9be8c23dcd20154e4a1ab0bef919421f8c51853d47c2fe6dc91221f8cfc74997
+Loading cache for shader SkyShaderRD, variant 0
+Loading cache for shader SkyShaderRD, variant 1
+Loading cache for shader SkyShaderRD, variant 2
+Loading cache for shader SkyShaderRD, variant 3
+Loading cache for shader SkyShaderRD, variant 4
+Loading cache for shader SkyShaderRD, variant 5
+Loading cache for shader SkyShaderRD, variant 0
+Loading cache for shader SkyShaderRD, variant 1
+Loading cache for shader SkyShaderRD, variant 2
+Loading cache for shader SkyShaderRD, variant 3
+Loading cache for shader SkyShaderRD, variant 4
+Loading cache for shader SkyShaderRD, variant 5
+Shader 'BokehDofRasterShaderRD' (group 0) SHA256: 1f380e57658651c8d60ef77451714d9b94193105ebddfbdf453e7e81e0542a44
+Loading cache for shader BokehDofRasterShaderRD, variant 0
+Loading cache for shader BokehDofRasterShaderRD, variant 1
+Loading cache for shader BokehDofRasterShaderRD, variant 2
+Loading cache for shader BokehDofRasterShaderRD, variant 3
+Loading cache for shader BokehDofRasterShaderRD, variant 4
+Loading cache for shader BokehDofRasterShaderRD, variant 5
+Loading cache for shader BokehDofRasterShaderRD, variant 6
+Shader 'BlurRasterShaderRD' (group 0) SHA256: bf2535c6ce146bb6ed9a8594798f1e933ab97b1ad787d88c265e8409f6fee565
+Loading cache for shader BlurRasterShaderRD, variant 0
+Loading cache for shader BlurRasterShaderRD, variant 1
+Loading cache for shader BlurRasterShaderRD, variant 2
+Loading cache for shader BlurRasterShaderRD, variant 3
+Loading cache for shader BlurRasterShaderRD, variant 4
+Loading cache for shader BlurRasterShaderRD, variant 5
+Loading cache for shader BlurRasterShaderRD, variant 6
+Shader 'CopyShaderRD' (group 0) SHA256: 23f6cf7986b46c68792dfd3f087267f14eebc49382f0c0fd265b45462b58afcf
+Loading cache for shader CopyShaderRD, variant 0
+Loading cache for shader CopyShaderRD, variant 1
+Loading cache for shader CopyShaderRD, variant 2
+Loading cache for shader CopyShaderRD, variant 3
+Loading cache for shader CopyShaderRD, variant 4
+Loading cache for shader CopyShaderRD, variant 5
+Loading cache for shader CopyShaderRD, variant 6
+Loading cache for shader CopyShaderRD, variant 7
+Loading cache for shader CopyShaderRD, variant 8
+Loading cache for shader CopyShaderRD, variant 9
+Loading cache for shader CopyShaderRD, variant 10
+Loading cache for shader CopyShaderRD, variant 11
+Loading cache for shader CopyShaderRD, variant 12
+Shader 'CopyToFbShaderRD' (group 0) SHA256: d00e29e632391ed3791124b988da290d922da3d9e2083273523bd8173b24ff97
+Loading cache for shader CopyToFbShaderRD, variant 0
+Loading cache for shader CopyToFbShaderRD, variant 1
+Loading cache for shader CopyToFbShaderRD, variant 2
+Loading cache for shader CopyToFbShaderRD, variant 3
+Shader 'CubeToDpShaderRD' (group 0) SHA256: 9825f5ee942047b6912a1b6fe49935a8c928598f40d2cdfc64a0f61134deed27
+Loading cache for shader CubeToDpShaderRD, variant 0
+Shader 'CubeToOctmapShaderRD' (group 0) SHA256: 8bf32929c5b41445f085dd302ccba233028481a94d43ce1b531bc8e2e66677a4
+Loading cache for shader CubeToOctmapShaderRD, variant 0
+Shader 'OctmapDownsamplerShaderRD' (group 0) SHA256: c79c7ea0ebc9a0833c5f465f1c555216a15727d2c4e3a227e9d5cd1e80f0669e
+Loading cache for shader OctmapDownsamplerShaderRD, variant 0
+Loading cache for shader OctmapDownsamplerShaderRD, variant 1
+Shader 'OctmapFilterShaderRD' (group 0) SHA256: a511f5ad922f5d701a26f801b4f9c96406071103345fa83fd394f8954c1dd7ac
+Loading cache for shader OctmapFilterShaderRD, variant 0
+Loading cache for shader OctmapFilterShaderRD, variant 1
+Loading cache for shader OctmapFilterShaderRD, variant 2
+Loading cache for shader OctmapFilterShaderRD, variant 3
+Loading cache for shader OctmapFilterShaderRD, variant 4
+Loading cache for shader OctmapFilterShaderRD, variant 5
+Loading cache for shader OctmapFilterShaderRD, variant 6
+Loading cache for shader OctmapFilterShaderRD, variant 7
+Shader 'OctmapRoughnessShaderRD' (group 0) SHA256: 9f66b38742366834aef44d557fed0d0753432ffb2cf24eebb14792092fc26b83
+Loading cache for shader OctmapRoughnessShaderRD, variant 0
+Loading cache for shader OctmapRoughnessShaderRD, variant 1
+Shader 'SpecularMergeShaderRD' (group 0) SHA256: 38d1cf8969e8f223baa218cbcd7ad415e6e945247fdb8cefddabba66acaab0e4
+Loading cache for shader SpecularMergeShaderRD, variant 0
+Loading cache for shader SpecularMergeShaderRD, variant 1
+Loading cache for shader SpecularMergeShaderRD, variant 2
+Loading cache for shader SpecularMergeShaderRD, variant 3
+Shader 'ShadowFrustumShaderRD' (group 0) SHA256: 7aba7a73f7499f30591bb36c54f106926052cdc0048232d9054de723408b1ea2
+Loading cache for shader ShadowFrustumShaderRD, variant 0
+Shader 'MotionVectorsShaderRD' (group 0) SHA256: 21fe2ffffa991405f5c0b4bb35dd8789b4049f8e56d80a5aa61aa8233992e3c1
+Loading cache for shader MotionVectorsShaderRD, variant 0
+Shader 'LuminanceReduceRasterShaderRD' (group 0) SHA256: c30b2789782a74a245eb2c403712b700e22f0a331dbd7f20cdeaff4331481520
+Loading cache for shader LuminanceReduceRasterShaderRD, variant 0
+Loading cache for shader LuminanceReduceRasterShaderRD, variant 1
+Loading cache for shader LuminanceReduceRasterShaderRD, variant 2
+Shader 'SmaaEdgeDetectionShaderRD' (group 0) SHA256: 749ffc0281a6ab411cf5a66f2560a2f33f9a258f57c513c67047f363e5e7ab33
+Loading cache for shader SmaaEdgeDetectionShaderRD, variant 0
+Shader 'SmaaWeightCalculationShaderRD' (group 0) SHA256: 510ed0d4e978b1a21f4e459da4ee2516c38f4460931e2a5714dae17c8b5547c2
+Loading cache for shader SmaaWeightCalculationShaderRD, variant 0
+Shader 'SmaaBlendingShaderRD' (group 0) SHA256: daa696d3938d7aadbc85111a68936e774199a2ded78d364782d43ef580b5296d
+Loading cache for shader SmaaBlendingShaderRD, variant 0
+Shader 'TonemapMobileShaderRD' (group 0) SHA256: 2ec4e4112fe9380f41247c1f7000cbb8b341b42bd3843e4410e96b245445ed8c
+Loading cache for shader TonemapMobileShaderRD, variant 0
+Loading cache for shader TonemapMobileShaderRD, variant 1
+Loading cache for shader TonemapMobileShaderRD, variant 2
+Loading cache for shader TonemapMobileShaderRD, variant 3
+Shader 'ResolveRasterShaderRD' (group 0) SHA256: 919d2b60f5aa1b0320eec81a5e401ee189ede55df21d4174ce5f7c6e0b1a40e1
+Loading cache for shader ResolveRasterShaderRD, variant 0
+Shader 'BlitShaderRD' (group 0) SHA256: 29b32016e1c23e0db5906fbe9b87108e39e7f5965c0016eb53fc5e1c03293243
+WASAPI: Activated output_device using IAudioClient3 interface
+WASAPI: wFormatTag = 65534
+WASAPI: nChannels = 2
+WASAPI: nSamplesPerSec = 48000
+WASAPI: nAvgBytesPerSec = 384000
+WASAPI: nBlockAlign = 8
+WASAPI: wBitsPerSample = 32
+WASAPI: cbSize = 22
+WASAPI: mix_rate = 48000
+WASAPI: fundamental_period_frames = 480
+WASAPI: min_period_frames = 480
+WASAPI: max_period_frames = 480
+WASAPI: selected a period frame size of 480
+WASAPI: detected 2 channels
+WASAPI: audio buffer frames: 480 calculated latency: 10ms
+
+WARNING: The requested V-Sync mode Adaptive is not available. Falling back to V-Sync mode Enabled.
+   at: swap_chain_resize (drivers/vulkan/rendering_device_driver_vulkan.cpp:3767)
+Loading cache for shader BlitShaderRD, variant 0
+Loading cache for shader BlitShaderRD, variant 1
+Loading cache for shader BlitShaderRD, variant 2
+Loading cache for shader BlitShaderRD, variant 3
+TextServer: Primary interface set to: "ICU / HarfBuzz / Graphite (Built-in)".
+Loading cache for shader CanvasShaderRD, variant 0
+Loading cache for shader CanvasShaderRD, variant 1
+Loading cache for shader CanvasShaderRD, variant 2
+Loading cache for shader CanvasShaderRD, variant 3
+Loading cache for shader CanvasShaderRD, variant 4
+Loading cache for shader CanvasShaderRD, variant 5
+Loading resource: res://default_bus_layout.tres remapped: res://default_bus_layout.tres
+Completed load for: 'res://default_bus_layout.tres' remapped 'res://default_bus_layout.tres' at thread -1
+CORE API HASH: 3769296884
+EDITOR API HASH: 3146738256
+Loading resource: res://tests/godot/render_blur_quality_reference.gd remapped: res://tests/godot/render_blur_quality_reference.gd
+Completed load for: 'res://tests/godot/render_blur_quality_reference.gd' remapped 'res://tests/godot/render_blur_quality_reference.gd' at thread -1
+SceneTreeFTI: traversal method DEFAULT
+Loading resource: res://scripts/event_bus.gd remapped: res://scripts/event_bus.gd
+Completed load for: 'res://scripts/event_bus.gd' remapped 'res://scripts/event_bus.gd' at thread -1
+Loading resource: res://scripts/cookie_manager.gd remapped: res://scripts/cookie_manager.gd
+Unicode parsing error, some characters were replaced with � (U+FFFD): Unexpected NUL character
+Loading resource: res://scenes/default_spline.tscn remapped: res://scenes/default_spline.tscn
+Loading resource: res://scripts/spline.gd remapped: res://scripts/spline.gd
+Loading resource: res://scenes/graph_shadow.tscn remapped: res://scenes/graph_shadow.tscn
+Loading resource: res://shaders/graph_shadow.gdshader remapped: res://shaders/graph_shadow.gdshader
+Completed load for: 'res://shaders/graph_shadow.gdshader' remapped 'res://shaders/graph_shadow.gdshader' at thread -1
+Loading resource: res://scripts/graph_shadow.gd remapped: res://scripts/graph_shadow.gd
+Completed load for: 'res://scripts/graph_shadow.gd' remapped 'res://scripts/graph_shadow.gd' at thread -1
+Loading cache for shader CanvasShaderRD, variant 0
+Loading cache for shader CanvasShaderRD, variant 1
+Loading cache for shader CanvasShaderRD, variant 2
+Loading cache for shader CanvasShaderRD, variant 3
+Loading cache for shader CanvasShaderRD, variant 4
+Loading cache for shader CanvasShaderRD, variant 5
+Completed load for: 'res://scenes/graph_shadow.tscn' remapped 'res://scenes/graph_shadow.tscn' at thread -1
+Loading resource: res://scenes/inference_animation_settings.tscn remapped: res://scenes/inference_animation_settings.tscn
+Loading resource: res://scripts/inference_animation_settings.gd remapped: res://scripts/inference_animation_settings.gd
+Completed load for: 'res://scripts/inference_animation_settings.gd' remapped 'res://scripts/inference_animation_settings.gd' at thread -1
+Completed load for: 'res://scenes/inference_animation_settings.tscn' remapped 'res://scenes/inference_animation_settings.tscn' at thread -1
+Loading resource: res://scenes/blur.tscn remapped: res://scenes/blur.tscn
+Loading resource: res://scenes/splash.tres remapped: res://scenes/splash.tres
+Loading resource: res://shaders/block_screen.gdshader remapped: res://shaders/block_screen.gdshader
+Loading resource: res://shaders/std.gdshaderinc remapped: res://shaders/std.gdshaderinc
+Completed load for: 'res://shaders/std.gdshaderinc' remapped 'res://shaders/std.gdshaderinc' at thread -1
+Loading resource: res://shaders/block_body.gdshaderinc remapped: res://shaders/block_body.gdshaderinc
+Loading resource: res://shaders/smooth_extents.gdshaderinc remapped: res://shaders/smooth_extents.gdshaderinc
+Completed load for: 'res://shaders/smooth_extents.gdshaderinc' remapped 'res://shaders/smooth_extents.gdshaderinc' at thread -1
+Completed load for: 'res://shaders/block_body.gdshaderinc' remapped 'res://shaders/block_body.gdshaderinc' at thread -1
+Completed load for: 'res://shaders/block_screen.gdshader' remapped 'res://shaders/block_screen.gdshader' at thread -1
+Shader cache miss for CanvasShaderRD/1ac5f6c8d534ebab572b3f886e38134784245fbd5fa01c7cbb6cc452e5400080/d48e09da8219c114293c6170bdb547039e2118cb
+Completed load for: 'res://scenes/splash.tres' remapped 'res://scenes/splash.tres' at thread -1
+Loading resource: res://scripts/blur.gd remapped: res://scripts/blur.gd
+Completed load for: 'res://scripts/blur.gd' remapped 'res://scripts/blur.gd' at thread -1
+Completed load for: 'res://scenes/blur.tscn' remapped 'res://scenes/blur.tscn' at thread -1
+Loading resource: res://scenes/multipurpose_dialog.tscn remapped: res://scenes/multipurpose_dialog.tscn
+Loading resource: res://scripts/multipurpose_dialog.gd remapped: res://scripts/multipurpose_dialog.gd
+Loading resource: res://scenes/BaseBComponent.tscn remapped: res://scenes/BaseBComponent.tscn
+Loading resource: res://resources/add_button.tres remapped: res://resources/add_button.tres
+Loading resource: res://shaders/block.gdshader remapped: res://shaders/block.gdshader
+Completed load for: 'res://shaders/block.gdshader' remapped 'res://shaders/block.gdshader' at thread -1
+Shader cache miss for CanvasShaderRD/1ac5f6c8d534ebab572b3f886e38134784245fbd5fa01c7cbb6cc452e5400080/ced17f2b9c15b62f6fa590819d0bbe46e70763bd
+Completed load for: 'res://resources/add_button.tres' remapped 'res://resources/add_button.tres' at thread -1
+Loading resource: res://scripts/block_component.gd remapped: res://scripts/block_component.gd
+Loading resource: res://scenes/vbox.tscn remapped: res://scenes/vbox.tscn
+Loading resource: res://resources/theme.tres remapped: res://resources/theme.tres
+Loading resource: res://game_assets/fonts/JetBrainsMono-VariableFont_wght.ttf remapped: res://game_assets/fonts/JetBrainsMono-VariableFont_wght.ttf
+Loading resource: res://.godot/imported/JetBrainsMono-VariableFont_wght.ttf-05ecb3d8380bd97aab0b096f24986bac.fontdata remapped: res://.godot/imported/JetBrainsMono-VariableFont_wght.ttf-05ecb3d8380bd97aab0b096f24986bac.fontdata
+Completed load for: 'res://game_assets/fonts/JetBrainsMono-VariableFont_wght.ttf' remapped 'res://game_assets/fonts/JetBrainsMono-VariableFont_wght.ttf' at thread -1
+Loading resource: res://game_assets/icons/check_on.png remapped: res://game_assets/icons/check_on.png
+Loading resource: res://.godot/imported/check_on.png-063130e3f394e2e4a79f9c9f07b49151.ctex remapped: res://.godot/imported/check_on.png-063130e3f394e2e4a79f9c9f07b49151.ctex
+Completed load for: 'res://game_assets/icons/check_on.png' remapped 'res://game_assets/icons/check_on.png' at thread -1
+Loading resource: res://game_assets/icons/radio_on.png remapped: res://game_assets/icons/radio_on.png
+Loading resource: res://.godot/imported/radio_on.png-af9c67f73f2df28f37f891fd040f862b.ctex remapped: res://.godot/imported/radio_on.png-af9c67f73f2df28f37f891fd040f862b.ctex
+Completed load for: 'res://game_assets/icons/radio_on.png' remapped 'res://game_assets/icons/radio_on.png' at thread -1
+Loading resource: res://game_assets/icons/radio_off.png remapped: res://game_assets/icons/radio_off.png
+Loading resource: res://.godot/imported/radio_off.png-39d9de61d695b67cadb7241259edc6c6.ctex remapped: res://.godot/imported/radio_off.png-39d9de61d695b67cadb7241259edc6c6.ctex
+Completed load for: 'res://game_assets/icons/radio_off.png' remapped 'res://game_assets/icons/radio_off.png' at thread -1
+Loading resource: res://game_assets/icons/ch.png remapped: res://game_assets/icons/ch.png
+Loading resource: res://.godot/imported/ch.png-78bd4bcd94c03a8ccb83d11f9a3d9598.ctex remapped: res://.godot/imported/ch.png-78bd4bcd94c03a8ccb83d11f9a3d9598.ctex
+Completed load for: 'res://game_assets/icons/ch.png' remapped 'res://game_assets/icons/ch.png' at thread -1
+Completed load for: 'res://resources/theme.tres' remapped 'res://resources/theme.tres' at thread -1
+Loading resource: res://scripts/scrollcont.gd remapped: res://scripts/scrollcont.gd
+Completed load for: 'res://scripts/scrollcont.gd' remapped 'res://scripts/scrollcont.gd' at thread -1
+Completed load for: 'res://scenes/vbox.tscn' remapped 'res://scenes/vbox.tscn' at thread -1
+Loading resource: res://game_assets/icons/check_wrong.png remapped: res://game_assets/icons/check_wrong.png
+Loading resource: res://.godot/imported/check_wrong.png-1a2d3538d191c699d30ea53407b1c54e.ctex remapped: res://.godot/imported/check_wrong.png-1a2d3538d191c699d30ea53407b1c54e.ctex
+Completed load for: 'res://game_assets/icons/check_wrong.png' remapped 'res://game_assets/icons/check_wrong.png' at thread -1
+Completed load for: 'res://scripts/block_component.gd' remapped 'res://scripts/block_component.gd' at thread -1
+Loading resource: res://resources/default_config.tres remapped: res://resources/default_config.tres
+Completed load for: 'res://resources/default_config.tres' remapped 'res://resources/default_config.tres' at thread -1
+Loading resource: res://resources/font_alphamult.tres remapped: res://resources/font_alphamult.tres
+Loading resource: res://shaders/simple_alphamult.gdshader remapped: res://shaders/simple_alphamult.gdshader
+Completed load for: 'res://shaders/simple_alphamult.gdshader' remapped 'res://shaders/simple_alphamult.gdshader' at thread -1
+Loading cache for shader CanvasShaderRD, variant 0
+Loading cache for shader CanvasShaderRD, variant 1
+Loading cache for shader CanvasShaderRD, variant 2
+Loading cache for shader CanvasShaderRD, variant 3
+Loading cache for shader CanvasShaderRD, variant 4
+Loading cache for shader CanvasShaderRD, variant 5
+Completed load for: 'res://resources/font_alphamult.tres' remapped 'res://resources/font_alphamult.tres' at thread -1
+Completed load for: 'res://scenes/BaseBComponent.tscn' remapped 'res://scenes/BaseBComponent.tscn' at thread -1
+Completed load for: 'res://scripts/multipurpose_dialog.gd' remapped 'res://scripts/multipurpose_dialog.gd' at thread -1
+Loading resource: res://resources/theme_base.tres remapped: res://resources/theme_base.tres
+Completed load for: 'res://resources/theme_base.tres' remapped 'res://resources/theme_base.tres' at thread -1
+Loading resource: res://resources/theme_headers.tres remapped: res://resources/theme_headers.tres
+Loading resource: res://game_assets/fonts/JetBrainsSans[wght]-VF.ttf remapped: res://game_assets/fonts/JetBrainsSans[wght]-VF.ttf
+Loading resource: res://.godot/imported/JetBrainsSans[wght]-VF.ttf-120e3d528e9c60fc3c1d53e4232c53a0.fontdata remapped: res://.godot/imported/JetBrainsSans[wght]-VF.ttf-120e3d528e9c60fc3c1d53e4232c53a0.fontdata
+Completed load for: 'res://game_assets/fonts/JetBrainsSans[wght]-VF.ttf' remapped 'res://game_assets/fonts/JetBrainsSans[wght]-VF.ttf' at thread -1
+Completed load for: 'res://resources/theme_headers.tres' remapped 'res://resources/theme_headers.tres' at thread -1
+Loading resource: res://game_assets/icons/warn.png remapped: res://game_assets/icons/warn.png
+Loading resource: res://.godot/imported/warn.png-cf79ff83b8bacd4d414631240ffeeb21.ctex remapped: res://.godot/imported/warn.png-cf79ff83b8bacd4d414631240ffeeb21.ctex
+Completed load for: 'res://game_assets/icons/warn.png' remapped 'res://game_assets/icons/warn.png' at thread -1
+Loading resource: res://scripts/validate_line.gd remapped: res://scripts/validate_line.gd
+Completed load for: 'res://scripts/validate_line.gd' remapped 'res://scripts/validate_line.gd' at thread -1
+Completed load for: 'res://scenes/multipurpose_dialog.tscn' remapped 'res://scenes/multipurpose_dialog.tscn' at thread -1
+Loading resource: res://scenes/splash.tscn remapped: res://scenes/splash.tscn
+Loading resource: res://game_assets/icons/user.png remapped: res://game_assets/icons/user.png
+Loading resource: res://.godot/imported/user.png-fe6f524430af4aa0cdf09ffe1463a043.ctex remapped: res://.godot/imported/user.png-fe6f524430af4aa0cdf09ffe1463a043.ctex
+Completed load for: 'res://game_assets/icons/user.png' remapped 'res://game_assets/icons/user.png' at thread -1
+Loading resource: res://scripts/loc.gd remapped: res://scripts/loc.gd
+Completed load for: 'res://scripts/loc.gd' remapped 'res://scripts/loc.gd' at thread -1
+Loading resource: res://scripts/end.gd remapped: res://scripts/end.gd
+Completed load for: 'res://scripts/end.gd' remapped 'res://scripts/end.gd' at thread -1
+Completed load for: 'res://scenes/splash.tscn' remapped 'res://scenes/splash.tscn' at thread -1
+Loading resource: res://scenes/signup.tscn remapped: res://scenes/signup.tscn
+Loading resource: res://scripts/signup.gd remapped: res://scripts/signup.gd
+Completed load for: 'res://scripts/signup.gd' remapped 'res://scripts/signup.gd' at thread -1
+Completed load for: 'res://scenes/signup.tscn' remapped 'res://scenes/signup.tscn' at thread -1
+Loading resource: res://scenes/scene_create.tscn remapped: res://scenes/scene_create.tscn
+Loading resource: res://scripts/scene_create.gd remapped: res://scripts/scene_create.gd
+Completed load for: 'res://scripts/scene_create.gd' remapped 'res://scripts/scene_create.gd' at thread -1
+Loading resource: res://game_assets/icons/box.png remapped: res://game_assets/icons/box.png
+Loading resource: res://.godot/imported/box.png-ea358f761f2514e86bc5367daba69a3d.ctex remapped: res://.godot/imported/box.png-ea358f761f2514e86bc5367daba69a3d.ctex
+Completed load for: 'res://game_assets/icons/box.png' remapped 'res://game_assets/icons/box.png' at thread -1
+Completed load for: 'res://scenes/scene_create.tscn' remapped 'res://scenes/scene_create.tscn' at thread -1
+Loading resource: res://scenes/dataset_create.tscn remapped: res://scenes/dataset_create.tscn
+Loading resource: res://scripts/dataset_create.gd remapped: res://scripts/dataset_create.gd
+Completed load for: 'res://scripts/dataset_create.gd' remapped 'res://scripts/dataset_create.gd' at thread -1
+Completed load for: 'res://scenes/dataset_create.tscn' remapped 'res://scenes/dataset_create.tscn' at thread -1
+Loading resource: res://scenes/works.tscn remapped: res://scenes/works.tscn
+Loading resource: res://scripts/works.gd remapped: res://scripts/works.gd
+Completed load for: 'res://scripts/works.gd' remapped 'res://scripts/works.gd' at thread -1
+Loading resource: res://resources/context_menu.tres remapped: res://resources/context_menu.tres
+Completed load for: 'res://resources/context_menu.tres' remapped 'res://resources/context_menu.tres' at thread -1
+Loading resource: res://scripts/works_list.gd remapped: res://scripts/works_list.gd
+Completed load for: 'res://scripts/works_list.gd' remapped 'res://scripts/works_list.gd' at thread -1
+Loading resource: res://game_assets/icons/splines.png remapped: res://game_assets/icons/splines.png
+Loading resource: res://.godot/imported/splines.png-eabdb2eeef60b44361f499a00d60bc1e.ctex remapped: res://.godot/imported/splines.png-eabdb2eeef60b44361f499a00d60bc1e.ctex
+Completed load for: 'res://game_assets/icons/splines.png' remapped 'res://game_assets/icons/splines.png' at thread -1
+Loading resource: res://scripts/works_unroll.gd remapped: res://scripts/works_unroll.gd
+Completed load for: 'res://scripts/works_unroll.gd' remapped 'res://scripts/works_unroll.gd' at thread -1
+Loading resource: res://scripts/edit_graph.gd remapped: res://scripts/edit_graph.gd
+Completed load for: 'res://scripts/edit_graph.gd' remapped 'res://scripts/edit_graph.gd' at thread -1
+Loading resource: res://scenes/loca.gd remapped: res://scenes/loca.gd
+Completed load for: 'res://scenes/loca.gd' remapped 'res://scenes/loca.gd' at thread -1
+Completed load for: 'res://scenes/works.tscn' remapped 'res://scenes/works.tscn' at thread -1
+Loading resource: res://scenes/workslist.tscn remapped: res://scenes/workslist.tscn
+Loading resource: res://scripts/workslist.gd remapped: res://scripts/workslist.gd
+Loading resource: res://scenes/project_card.tscn remapped: res://scenes/project_card.tscn
+Loading resource: res://scripts/project_card.gd remapped: res://scripts/project_card.gd
+Loading resource: res://neuralese.png remapped: res://neuralese.png
+Loading resource: res://.godot/imported/neuralese.png-3b2548f0382ab0074167322854b6768e.ctex remapped: res://.godot/imported/neuralese.png-3b2548f0382ab0074167322854b6768e.ctex
+Completed load for: 'res://neuralese.png' remapped 'res://neuralese.png' at thread -1
+Completed load for: 'res://scripts/project_card.gd' remapped 'res://scripts/project_card.gd' at thread -1
+Completed load for: 'res://scenes/project_card.tscn' remapped 'res://scenes/project_card.tscn' at thread -1
+Completed load for: 'res://scripts/workslist.gd' remapped 'res://scripts/workslist.gd' at thread -1
+Loading resource: res://scenes/project_gallery.tscn remapped: res://scenes/project_gallery.tscn
+Completed load for: 'res://scenes/project_gallery.tscn' remapped 'res://scenes/project_gallery.tscn' at thread -1
+Completed load for: 'res://scenes/workslist.tscn' remapped 'res://scenes/workslist.tscn' at thread -1
+Loading resource: res://scenes/builtin_projects_window.tscn remapped: res://scenes/builtin_projects_window.tscn
+Loading resource: res://scripts/builtin_projects_window.gd remapped: res://scripts/builtin_projects_window.gd
+Loading resource: res://scenes/builtin_project_card.tscn remapped: res://scenes/builtin_project_card.tscn
+Loading resource: res://scripts/builtin_project_card.gd remapped: res://scripts/builtin_project_card.gd
+Completed load for: 'res://scripts/builtin_project_card.gd' remapped 'res://scripts/builtin_project_card.gd' at thread -1
+Completed load for: 'res://scenes/builtin_project_card.tscn' remapped 'res://scenes/builtin_project_card.tscn' at thread -1
+Completed load for: 'res://scripts/builtin_projects_window.gd' remapped 'res://scripts/builtin_projects_window.gd' at thread -1
+Completed load for: 'res://scenes/builtin_projects_window.tscn' remapped 'res://scenes/builtin_projects_window.tscn' at thread -1
+Loading resource: res://scenes/lessonlist.tscn remapped: res://scenes/lessonlist.tscn
+Loading resource: res://scripts/lessonlist.gd remapped: res://scripts/lessonlist.gd
+Completed load for: 'res://scripts/lessonlist.gd' remapped 'res://scripts/lessonlist.gd' at thread -1
+Completed load for: 'res://scenes/lessonlist.tscn' remapped 'res://scenes/lessonlist.tscn' at thread -1
+Loading resource: res://scenes/settings.tscn remapped: res://scenes/settings.tscn
+Loading resource: res://scripts/settings.gd remapped: res://scripts/settings.gd
+Loading resource: res://game_assets/icons/lock_open.png remapped: res://game_assets/icons/lock_open.png
+Loading resource: res://.godot/imported/lock_open.png-28c74400ed0e424dfc73e37c07265d9e.ctex remapped: res://.godot/imported/lock_open.png-28c74400ed0e424dfc73e37c07265d9e.ctex
+Completed load for: 'res://game_assets/icons/lock_open.png' remapped 'res://game_assets/icons/lock_open.png' at thread -1
+Loading resource: res://game_assets/icons/good.png remapped: res://game_assets/icons/good.png
+Loading resource: res://.godot/imported/good.png-7ca31941757d42c50bf227d388482236.ctex remapped: res://.godot/imported/good.png-7ca31941757d42c50bf227d388482236.ctex
+Completed load for: 'res://game_assets/icons/good.png' remapped 'res://game_assets/icons/good.png' at thread -1
+Completed load for: 'res://scripts/settings.gd' remapped 'res://scripts/settings.gd' at thread -1
+Loading resource: res://game_assets/icons/account.png remapped: res://game_assets/icons/account.png
+Loading resource: res://.godot/imported/account.png-9f2e91db95eacb632de072244c6275d2.ctex remapped: res://.godot/imported/account.png-9f2e91db95eacb632de072244c6275d2.ctex
+Completed load for: 'res://game_assets/icons/account.png' remapped 'res://game_assets/icons/account.png' at thread -1
+Loading resource: res://scripts/confirm.gd remapped: res://scripts/confirm.gd
+Completed load for: 'res://scripts/confirm.gd' remapped 'res://scripts/confirm.gd' at thread -1
+Loading resource: res://scenes/validate.tscn remapped: res://scenes/validate.tscn
+Completed load for: 'res://scenes/validate.tscn' remapped 'res://scenes/validate.tscn' at thread -1
+Loading resource: res://game_assets/icons/bigre.png remapped: res://game_assets/icons/bigre.png
+Loading resource: res://.godot/imported/bigre.png-a2bbe6a8d93ca773150fb619b436179a.ctex remapped: res://.godot/imported/bigre.png-a2bbe6a8d93ca773150fb619b436179a.ctex
+Completed load for: 'res://game_assets/icons/bigre.png' remapped 'res://game_assets/icons/bigre.png' at thread -1
+Loading resource: res://game_assets/icons/upload.png remapped: res://game_assets/icons/upload.png
+Loading resource: res://.godot/imported/upload.png-295680045233a2eeb63e3a25005829a5.ctex remapped: res://.godot/imported/upload.png-295680045233a2eeb63e3a25005829a5.ctex
+Completed load for: 'res://game_assets/icons/upload.png' remapped 'res://game_assets/icons/upload.png' at thread -1
+Loading resource: res://game_assets/icons/lock.png remapped: res://game_assets/icons/lock.png
+Loading resource: res://.godot/imported/lock.png-94830e8e3935908f6bebf699ad364c31.ctex remapped: res://.godot/imported/lock.png-94830e8e3935908f6bebf699ad364c31.ctex
+Completed load for: 'res://game_assets/icons/lock.png' remapped 'res://game_assets/icons/lock.png' at thread -1
+Completed load for: 'res://scenes/settings.tscn' remapped 'res://scenes/settings.tscn' at thread -1
+Loading resource: res://scenes/project_create.tscn remapped: res://scenes/project_create.tscn
+Loading resource: res://scripts/project_create.gd remapped: res://scripts/project_create.gd
+Completed load for: 'res://scripts/project_create.gd' remapped 'res://scripts/project_create.gd' at thread -1
+Completed load for: 'res://scenes/project_create.tscn' remapped 'res://scenes/project_create.tscn' at thread -1
+Loading resource: res://scenes/ai_help.tscn remapped: res://scenes/ai_help.tscn
+Loading resource: res://scripts/ai_help.gd remapped: res://scripts/ai_help.gd
+Loading resource: res://game_assets/icons/stop.png remapped: res://game_assets/icons/stop.png
+Loading resource: res://.godot/imported/stop.png-220f2dbaac553bb4b8f6ae7234788222.ctex remapped: res://.godot/imported/stop.png-220f2dbaac553bb4b8f6ae7234788222.ctex
+Completed load for: 'res://game_assets/icons/stop.png' remapped 'res://game_assets/icons/stop.png' at thread -1
+Loading resource: res://game_assets/icons/send.png remapped: res://game_assets/icons/send.png
+Loading resource: res://.godot/imported/send.png-9b2599bf0ed5b584646e507a73cfab8e.ctex remapped: res://.godot/imported/send.png-9b2599bf0ed5b584646e507a73cfab8e.ctex
+Completed load for: 'res://game_assets/icons/send.png' remapped 'res://game_assets/icons/send.png' at thread -1
+Completed load for: 'res://scripts/ai_help.gd' remapped 'res://scripts/ai_help.gd' at thread -1
+Loading resource: res://scripts/ai_text.gd remapped: res://scripts/ai_text.gd
+Completed load for: 'res://scripts/ai_text.gd' remapped 'res://scripts/ai_text.gd' at thread -1
+Loading resource: res://game_assets/icons/chat.png remapped: res://game_assets/icons/chat.png
+Loading resource: res://.godot/imported/chat.png-1d9f25524de708b017b550e9532bd6a3.ctex remapped: res://.godot/imported/chat.png-1d9f25524de708b017b550e9532bd6a3.ctex
+Completed load for: 'res://game_assets/icons/chat.png' remapped 'res://game_assets/icons/chat.png' at thread -1
+Loading resource: res://scripts/text.gd remapped: res://scripts/text.gd
+Completed load for: 'res://scripts/text.gd' remapped 'res://scripts/text.gd' at thread -1
+Loading resource: res://game_assets/icons/mic.png remapped: res://game_assets/icons/mic.png
+Loading resource: res://.godot/imported/mic.png-efa83851c7dddd30d8a552d61ebd20c5.ctex remapped: res://.godot/imported/mic.png-efa83851c7dddd30d8a552d61ebd20c5.ctex
+Completed load for: 'res://game_assets/icons/mic.png' remapped 'res://game_assets/icons/mic.png' at thread -1
+Completed load for: 'res://scenes/ai_help.tscn' remapped 'res://scenes/ai_help.tscn' at thread -1
+Loading resource: res://scenes/select_dataset.tscn remapped: res://scenes/select_dataset.tscn
+Loading resource: res://scripts/dataset.gd remapped: res://scripts/dataset.gd
+Completed load for: 'res://scripts/dataset.gd' remapped 'res://scripts/dataset.gd' at thread -1
+Loading resource: res://scripts/list_datasets.gd remapped: res://scripts/list_datasets.gd
+Completed load for: 'res://scripts/list_datasets.gd' remapped 'res://scripts/list_datasets.gd' at thread -1
+Loading resource: res://scripts/listds.gd remapped: res://scripts/listds.gd
+Completed load for: 'res://scripts/listds.gd' remapped 'res://scripts/listds.gd' at thread -1
+Completed load for: 'res://scenes/select_dataset.tscn' remapped 'res://scenes/select_dataset.tscn' at thread -1
+Loading resource: res://scenes/model_export.tscn remapped: res://scenes/model_export.tscn
+Loading resource: res://scripts/model_export.gd remapped: res://scripts/model_export.gd
+Completed load for: 'res://scripts/model_export.gd' remapped 'res://scripts/model_export.gd' at thread -1
+Loading resource: res://game_assets/icons/download.png remapped: res://game_assets/icons/download.png
+Loading resource: res://.godot/imported/download.png-addcb5ca628370fa613a8f6cc3fc9d3d.ctex remapped: res://.godot/imported/download.png-addcb5ca628370fa613a8f6cc3fc9d3d.ctex
+Completed load for: 'res://game_assets/icons/download.png' remapped 'res://game_assets/icons/download.png' at thread -1
+Loading resource: res://scripts/loc4.gd remapped: res://scripts/loc4.gd
+Completed load for: 'res://scripts/loc4.gd' remapped 'res://scripts/loc4.gd' at thread -1
+Completed load for: 'res://scenes/model_export.tscn' remapped 'res://scenes/model_export.tscn' at thread -1
+Loading resource: res://scenes/path_open.tscn remapped: res://scenes/path_open.tscn
+Loading resource: res://scripts/path_open.gd remapped: res://scripts/path_open.gd
+Completed load for: 'res://scripts/path_open.gd' remapped 'res://scripts/path_open.gd' at thread -1
+Loading resource: res://game_assets/icons/tree.png remapped: res://game_assets/icons/tree.png
+Loading resource: res://.godot/imported/tree.png-9d85d9895b667b48dd69b74a8026018b.ctex remapped: res://.godot/imported/tree.png-9d85d9895b667b48dd69b74a8026018b.ctex
+Completed load for: 'res://game_assets/icons/tree.png' remapped 'res://game_assets/icons/tree.png' at thread -1
+Loading resource: res://scripts/filegrid.gd remapped: res://scripts/filegrid.gd
+Completed load for: 'res://scripts/filegrid.gd' remapped 'res://scripts/filegrid.gd' at thread -1
+Loading resource: res://game_assets/icons/file.png remapped: res://game_assets/icons/file.png
+Loading resource: res://.godot/imported/file.png-f3ae3f020d4ed434def28ff99c771c14.ctex remapped: res://.godot/imported/file.png-f3ae3f020d4ed434def28ff99c771c14.ctex
+Completed load for: 'res://game_assets/icons/file.png' remapped 'res://game_assets/icons/file.png' at thread -1
+Loading resource: res://game_assets/icons/dir.png remapped: res://game_assets/icons/dir.png
+Loading resource: res://.godot/imported/dir.png-a482a05fe735f5432a65e7e8508fb782.ctex remapped: res://.godot/imported/dir.png-a482a05fe735f5432a65e7e8508fb782.ctex
+Completed load for: 'res://game_assets/icons/dir.png' remapped 'res://game_assets/icons/dir.png' at thread -1
+Loading resource: res://scripts/unr.gd remapped: res://scripts/unr.gd
+Completed load for: 'res://scripts/unr.gd' remapped 'res://scripts/unr.gd' at thread -1
+Loading resource: res://scenes/other_procnodes.gd remapped: res://scenes/other_procnodes.gd
+Completed load for: 'res://scenes/other_procnodes.gd' remapped 'res://scenes/other_procnodes.gd' at thread -1
+Loading resource: res://resources/fg_block.tres remapped: res://resources/fg_block.tres
+Completed load for: 'res://resources/fg_block.tres' remapped 'res://resources/fg_block.tres' at thread -1
+Loading resource: res://game_assets/icons/undo.png remapped: res://game_assets/icons/undo.png
+Loading resource: res://.godot/imported/undo.png-85f8edcd3bd3d1fbf8600b2cd243cbc6.ctex remapped: res://.godot/imported/undo.png-85f8edcd3bd3d1fbf8600b2cd243cbc6.ctex
+Completed load for: 'res://game_assets/icons/undo.png' remapped 'res://game_assets/icons/undo.png' at thread -1
+Loading resource: res://game_assets/icons/refresh.png remapped: res://game_assets/icons/refresh.png
+Loading resource: res://.godot/imported/refresh.png-8304bf05ee5df16bd5b886db556b4e9b.ctex remapped: res://.godot/imported/refresh.png-8304bf05ee5df16bd5b886db556b4e9b.ctex
+Completed load for: 'res://game_assets/icons/refresh.png' remapped 'res://game_assets/icons/refresh.png' at thread -1
+Completed load for: 'res://scenes/path_open.tscn' remapped 'res://scenes/path_open.tscn' at thread -1
+Loading resource: res://scenes/classroom_create.tscn remapped: res://scenes/classroom_create.tscn
+Loading resource: res://scripts/classroom_create.gd remapped: res://scripts/classroom_create.gd
+Completed load for: 'res://scripts/classroom_create.gd' remapped 'res://scripts/classroom_create.gd' at thread -1
+Completed load for: 'res://scenes/classroom_create.tscn' remapped 'res://scenes/classroom_create.tscn' at thread -1
+Loading resource: res://resources/confetti.tres remapped: res://resources/confetti.tres
+Completed load for: 'res://resources/confetti.tres' remapped 'res://resources/confetti.tres' at thread -1
+Loading resource: res://scenes/quest.tscn remapped: res://scenes/quest.tscn
+Loading resource: res://scripts/layout.gd remapped: res://scripts/layout.gd
+Completed load for: 'res://scripts/layout.gd' remapped 'res://scripts/layout.gd' at thread -1
+Loading resource: res://game_assets/icons/arr.png remapped: res://game_assets/icons/arr.png
+Loading resource: res://.godot/imported/arr.png-6482c28b28ca95a5af112bd5044b93c0.ctex remapped: res://.godot/imported/arr.png-6482c28b28ca95a5af112bd5044b93c0.ctex
+Completed load for: 'res://game_assets/icons/arr.png' remapped 'res://game_assets/icons/arr.png' at thread -1
+Completed load for: 'res://scenes/quest.tscn' remapped 'res://scenes/quest.tscn' at thread -1
+Loading resource: res://scenes/hourglass.tscn remapped: res://scenes/hourglass.tscn
+Loading resource: res://game_assets/icons/hourglass.png remapped: res://game_assets/icons/hourglass.png
+Loading resource: res://.godot/imported/hourglass.png-87a6c8a88624a8aa0cc68bb8a8e80537.ctex remapped: res://.godot/imported/hourglass.png-87a6c8a88624a8aa0cc68bb8a8e80537.ctex
+Completed load for: 'res://game_assets/icons/hourglass.png' remapped 'res://game_assets/icons/hourglass.png' at thread -1
+Loading resource: res://scripts/hourglass.gd remapped: res://scripts/hourglass.gd
+Completed load for: 'res://scripts/hourglass.gd' remapped 'res://scripts/hourglass.gd' at thread -1
+Completed load for: 'res://scenes/hourglass.tscn' remapped 'res://scenes/hourglass.tscn' at thread -1
+Loading resource: res://game_assets/icons/game.png remapped: res://game_assets/icons/game.png
+Loading resource: res://.godot/imported/game.png-fea07c0185ed962b908edb6e369042b7.ctex remapped: res://.godot/imported/game.png-fea07c0185ed962b908edb6e369042b7.ctex
+Completed load for: 'res://game_assets/icons/game.png' remapped 'res://game_assets/icons/game.png' at thread -1
+Completed load for: 'res://scripts/spline.gd' remapped 'res://scripts/spline.gd' at thread -1
+Completed load for: 'res://scenes/default_spline.tscn' remapped 'res://scenes/default_spline.tscn' at thread -1
+Loading resource: res://scenes/cbox.tscn remapped: res://scenes/cbox.tscn
+Loading resource: res://game_assets/icons/yesg.png remapped: res://game_assets/icons/yesg.png
+Loading resource: res://.godot/imported/yesg.png-32b18d63166dc17c4ebe47599f61c061.ctex remapped: res://.godot/imported/yesg.png-32b18d63166dc17c4ebe47599f61c061.ctex
+Completed load for: 'res://game_assets/icons/yesg.png' remapped 'res://game_assets/icons/yesg.png' at thread -1
+Loading resource: res://game_assets/icons/nong.png remapped: res://game_assets/icons/nong.png
+Loading resource: res://.godot/imported/nong.png-c44a39d823aa4d9350bb0e42b23a8c49.ctex remapped: res://.godot/imported/nong.png-c44a39d823aa4d9350bb0e42b23a8c49.ctex
+Completed load for: 'res://game_assets/icons/nong.png' remapped 'res://game_assets/icons/nong.png' at thread -1
+Completed load for: 'res://scenes/cbox.tscn' remapped 'res://scenes/cbox.tscn' at thread -1
+Unicode parsing error, some characters were replaced with � (U+FFFD): Unexpected NUL character
+Unicode parsing error, some characters were replaced with � (U+FFFD): Unexpected NUL character
+Loading resource: res://shaders/fork.gdshader remapped: res://shaders/fork.gdshader
+Completed load for: 'res://shaders/fork.gdshader' remapped 'res://shaders/fork.gdshader' at thread -1
+Loading resource: res://scenes/cell.tscn remapped: res://scenes/cell.tscn
+Loading resource: res://scripts/text_cell.gd remapped: res://scripts/text_cell.gd
+Completed load for: 'res://scripts/text_cell.gd' remapped 'res://scripts/text_cell.gd' at thread -1
+Completed load for: 'res://scenes/cell.tscn' remapped 'res://scenes/cell.tscn' at thread -1
+Loading resource: res://scenes/num.tscn remapped: res://scenes/num.tscn
+Loading resource: res://scripts/num.gd remapped: res://scripts/num.gd
+Completed load for: 'res://scripts/num.gd' remapped 'res://scripts/num.gd' at thread -1
+Completed load for: 'res://scenes/num.tscn' remapped 'res://scenes/num.tscn' at thread -1
+Loading resource: res://scenes/img.tscn remapped: res://scenes/img.tscn
+Loading resource: res://scripts/img.gd remapped: res://scripts/img.gd
+Loading resource: res://game_assets/icons/none.png remapped: res://game_assets/icons/none.png
+Loading resource: res://.godot/imported/none.png-9f0a433a844eeb921376ec4e6dfb8be8.ctex remapped: res://.godot/imported/none.png-9f0a433a844eeb921376ec4e6dfb8be8.ctex
+Completed load for: 'res://game_assets/icons/none.png' remapped 'res://game_assets/icons/none.png' at thread -1
+Completed load for: 'res://scripts/img.gd' remapped 'res://scripts/img.gd' at thread -1
+Completed load for: 'res://scenes/img.tscn' remapped 'res://scenes/img.tscn' at thread -1
+Loading resource: res://scenes/float.tscn remapped: res://scenes/float.tscn
+Loading resource: res://scripts/floatcell.gd remapped: res://scripts/floatcell.gd
+Completed load for: 'res://scripts/floatcell.gd' remapped 'res://scripts/floatcell.gd' at thread -1
+Loading resource: res://scripts/h_slider.gd remapped: res://scripts/h_slider.gd
+Completed load for: 'res://scripts/h_slider.gd' remapped 'res://scripts/h_slider.gd' at thread -1
+Completed load for: 'res://scenes/float.tscn' remapped 'res://scenes/float.tscn' at thread -1
+Completed load for: 'res://scripts/cookie_manager.gd' remapped 'res://scripts/cookie_manager.gd' at thread -1
+Loading resource: res://resources/fork.tscn remapped: res://resources/fork.tscn
+Loading resource: res://resources/fork.tres remapped: res://resources/fork.tres
+Shader cache miss for CanvasShaderRD/1ac5f6c8d534ebab572b3f886e38134784245fbd5fa01c7cbb6cc452e5400080/4d8ada3f0337c4e37ac5db7bbb7488946579f507
+Completed load for: 'res://resources/fork.tres' remapped 'res://resources/fork.tres' at thread -1
+Loading resource: res://ports.tres remapped: res://ports.tres
+Loading resource: res://shaders/abs_runded.gdshader remapped: res://shaders/abs_runded.gdshader
+Completed load for: 'res://shaders/abs_runded.gdshader' remapped 'res://shaders/abs_runded.gdshader' at thread -1
+Loading cache for shader CanvasShaderRD, variant 0
+Loading cache for shader CanvasShaderRD, variant 1
+Loading cache for shader CanvasShaderRD, variant 2
+Loading cache for shader CanvasShaderRD, variant 3
+Loading cache for shader CanvasShaderRD, variant 4
+Loading cache for shader CanvasShaderRD, variant 5
+Completed load for: 'res://ports.tres' remapped 'res://ports.tres' at thread -1
+Completed load for: 'res://resources/fork.tscn' remapped 'res://resources/fork.tscn' at thread -1
+Loading resource: res://scripts/lua_envs.gd remapped: res://scripts/lua_envs.gd
+Completed load for: 'res://scripts/lua_envs.gd' remapped 'res://scripts/lua_envs.gd' at thread -1
+Loading resource: res://addons/godot_mcp/game_bridge/mcp_game_bridge.gd remapped: res://addons/godot_mcp/game_bridge/mcp_game_bridge.gd
+Completed load for: 'res://addons/godot_mcp/game_bridge/mcp_game_bridge.gd' remapped 'res://addons/godot_mcp/game_bridge/mcp_game_bridge.gd' at thread -1
+Loaded system CA certificates
+ERROR: Condition "len < 4" is true. Returning: ERR_INVALID_DATA
+   at: decode_variant (core/io/marshalls.cpp:191)
+   GDScript backtrace (most recent call first):
+       [0] get_stored (res://scripts/glob.gd:386)
+       [1] get_var (res://scripts/glob.gd:381)
+       [2] _enter_tree (res://scripts/glob.gd:1529)
+ERROR: Error when trying to encode Variant.
+   at: get_var (core/io/file_access.cpp:372)
+   GDScript backtrace (most recent call first):
+       [0] get_stored (res://scripts/glob.gd:386)
+       [1] get_var (res://scripts/glob.gd:381)
+       [2] _enter_tree (res://scripts/glob.gd:1529)
+ERROR: Condition "len < 4" is true. Returning: ERR_INVALID_DATA
+   at: decode_variant (core/io/marshalls.cpp:191)
+   GDScript backtrace (most recent call first):
+       [0] get_stored (res://scripts/glob.gd:386)
+       [1] get_var (res://scripts/glob.gd:381)
+       [2] cache (res://scripts/learner.gd:19)
+       [3] _enter_tree (res://scripts/learner.gd:33)
+ERROR: Error when trying to encode Variant.
+   at: get_var (core/io/file_access.cpp:372)
+   GDScript backtrace (most recent call first):
+       [0] get_stored (res://scripts/glob.gd:386)
+       [1] get_var (res://scripts/glob.gd:381)
+       [2] cache (res://scripts/learner.gd:19)
+       [3] _enter_tree (res://scripts/learner.gd:33)
+ERROR: Condition "len < 4" is true. Returning: ERR_INVALID_DATA
+   at: decode_variant (core/io/marshalls.cpp:191)
+   GDScript backtrace (most recent call first):
+       [0] get_stored (res://scripts/glob.gd:386)
+       [1] set_var (res://scripts/glob.gd:375)
+       [2] cache (res://scripts/learner.gd:25)
+       [3] _enter_tree (res://scripts/learner.gd:33)
+ERROR: Error when trying to encode Variant.
+   at: get_var (core/io/file_access.cpp:372)
+   GDScript backtrace (most recent call first):
+       [0] get_stored (res://scripts/glob.gd:386)
+       [1] set_var (res://scripts/glob.gd:375)
+       [2] cache (res://scripts/learner.gd:25)
+       [3] _enter_tree (res://scripts/learner.gd:33)
+Loading cache for shader CanvasShaderRD, variant 0
+Loading cache for shader CanvasShaderRD, variant 1
+Loading cache for shader CanvasShaderRD, variant 2
+Loading cache for shader CanvasShaderRD, variant 3
+Loading cache for shader CanvasShaderRD, variant 4
+Loading cache for shader CanvasShaderRD, variant 5
+PASS render_blur_quality_reference: D:\NRLSE\nnets\teachneurons\.superpowers\low-perf-proxy\intel-probe.png

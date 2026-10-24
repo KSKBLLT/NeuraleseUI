@@ -1,0 +1,48 @@
+[gd_scene format=3 uid="uid://brjp4gbk2apvw"]
+
+[ext_resource type="Script" uid="uid://0mjxgyuacgp3" path="res://scripts/node_palette_item.gd" id="1_item"]
+[ext_resource type="FontFile" uid="uid://d0xcffxoyd14k" path="res://game_assets/fonts/JetBrainsMono-VariableFont_wght.ttf" id="2_font"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleItem"]
+
+[node name="NodePaletteItem" type="PanelContainer" unique_id=187958039]
+custom_minimum_size = Vector2(216, 126)
+mouse_default_cursor_shape = 6
+theme_override_styles/panel = SubResource("StyleItem")
+script = ExtResource("1_item")
+
+[node name="Margin" type="MarginContainer" parent="." unique_id=692653377]
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 5
+
+[node name="Preview" type="TextureRect" parent="Margin" unique_id=433305795]
+custom_minimum_size = Vector2(0, 116)
+layout_mode = 2
+mouse_filter = 2
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Fallback" type="ColorRect" parent="Margin" unique_id=1804438829]
+visible = false
+layout_mode = 2
+mouse_filter = 2
+color = Color(0.12, 0.12, 0.12, 0.72)
+
+[node name="Label" type="Label" parent="Margin/Fallback" unique_id=1522128237]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.86, 0.86, 0.86, 1)
+theme_override_fonts/font = ExtResource("2_font")
+theme_override_font_sizes/font_size = 13
+text = "Node"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2

@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://dcaf22622upx5"]
+
+[ext_resource type="Script" uid="uid://de5smtteqqd61" path="res://scripts/simulations/simulation_tab.gd" id="1_tab"]
+[ext_resource type="PackedScene" uid="uid://cjdvoig6jjvto" path="res://scenes/simulations/simulation_editor.tscn" id="2_editor"]
+[ext_resource type="PackedScene" uid="uid://by1briddb0hwg" path="res://scenes/bg.tscn" id="3_background"]
+
+[node name="SimulationTab" type="Node2D" unique_id=1525858876 node_paths=PackedStringArray("camera")]
+script = ExtResource("1_tab")
+window_name = "env"
+camera = NodePath("SimulationEditor/Camera2D")
+
+[node name="Background" parent="." instance=ExtResource("3_background")]
+register_global = false
+
+[node name="SimulationEditor" parent="." unique_id=581176104 instance=ExtResource("2_editor")]

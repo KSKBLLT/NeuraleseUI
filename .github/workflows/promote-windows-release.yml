@@ -1,0 +1,184 @@
+name: Promote Windows Release
+
+on:
+  workflow_dispatch:
+    inputs:
+      version:
+        description: Candidate version without v prefix
+        required: true
+        type: string
+
+permissions:
+  contents: read
+
+concurrency:
+  group: neuralese-windows-production-release
+  cancel-in-progress: false
+
+jobs:
+  verify:
+    runs-on: windows-latest
+    timeout-minutes: 20
+    steps:
+      - name: Checkout main history
+        uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python 3.11
+        uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065
+        with:
+          python-version: "3.11"
+
+      - name: Verify candidate state, commit and required checks
+        shell: pwsh
+        env:
+          GH_TOKEN: ${{ github.token }}
+          VERSION: ${{ inputs.version }}
+        run: |
+          if ($env:VERSION -notmatch '^(0|[1-9][0-9]*)\.(0|[1-9][0-9]*)\.(0|[1-9][0-9]*)$') {
+            throw "Version must use N.N.N"
+          }
+          $release = gh api "repos/${{ github.repository }}/releases/tags/v$env:VERSION" | ConvertFrom-Json
+          if ($release.draft -ne $false -or $release.prerelease -ne $true) {
+            throw "Release must be a published pre-release candidate"
+          }
+          $target = [string]$release.target_commitish
+          if ($target -notmatch '^[0-9a-f]{40}$') { throw "Release target must be an exact commit SHA" }
+          git fetch origin prod-deploy --no-tags
+          git merge-base --is-ancestor $target origin/prod-deploy
+          if ($LASTEXITCODE -ne 0) { throw "Release target is not in prod-deploy history" }
+          $lock = (git show "${target}:release/setup-lock.json") | ConvertFrom-Json
+          $lockKeys = @($lock.PSObject.Properties.Name | Sort-Object)
+          if (($lockKeys -join ',') -ne 'commit_sha,repository' -or $lock.repository -ne 'hex358/neuralese-setup' -or [string]$lock.commit_sha -notmatch '^[0-9a-f]{40}$') {
+            throw "Release target contains an invalid Setup lock"
+          }
+          "BUILDER_SHA=$target" | Out-File -FilePath $env:GITHUB_ENV -Encoding utf8 -Append
+          "SETUP_SHA=$([string]$lock.commit_sha)" | Out-File -FilePath $env:GITHUB_ENV -Encoding utf8 -Append
+
+          try {
+            $required = gh api "repos/${{ github.repository }}/branches/prod-deploy/protection/required_status_checks" | ConvertFrom-Json
+            $contexts = @()
+            if ($null -ne $required.checks) { $contexts += @($required.checks | ForEach-Object { [string]$_.context }) }
+            if ($null -ne $required.contexts) { $contexts += @($required.contexts | ForEach-Object { [string]$_ }) }
+            $contexts = @($contexts | Where-Object { $_ } | Sort-Object -Unique)
+            if ($contexts.Count -gt 0) {
+              $checkRuns = (gh api -H "Accept: application/vnd.github+json" "repos/${{ github.repository }}/commits/$target/check-runs?per_page=100" | ConvertFrom-Json).check_runs
+              $statuses = (gh api "repos/${{ github.repository }}/commits/$target/status" | ConvertFrom-Json).statuses
+              foreach ($context in $contexts) {
+                $run = $checkRuns | Where-Object { $_.name -eq $context } | Sort-Object completed_at -Descending | Select-Object -First 1
+                $status = $statuses | Where-Object { $_.context -eq $context } | Select-Object -First 1
+                $runOk = $null -ne $run -and $run.status -eq 'completed' -and $run.conclusion -eq 'success'
+                $statusOk = $null -ne $status -and $status.state -eq 'success'
+                if (!$runOk -and !$statusOk) { throw "Required check is not successful: $context" }
+              }
+            }
+          } catch {
+            Write-Host "Warning: Could not check branch protection (likely private repo without Pro). Skipping status checks verification."
+          }
+
+      - name: Download and verify candidate assets and QA
+        shell: pwsh
+        env:
+          GH_TOKEN: ${{ github.token }}
+          VERSION: ${{ inputs.version }}
+        run: |
+          $assets = Join-Path $env:RUNNER_TEMP "candidate-assets"
+          New-Item -ItemType Directory -Path $assets -Force | Out-Null
+          gh release download "v$env:VERSION" --repo ${{ github.repository }} --dir $assets --pattern "Neuralese-Setup.exe" --pattern "latest.json" --pattern "qa-report.json"
+          foreach ($name in @("Neuralese-Setup.exe", "latest.json", "qa-report.json")) {
+            if (!(Test-Path -LiteralPath (Join-Path $assets $name))) { throw "Missing release asset: $name" }
+          }
+          python tools/release/verify_release_candidate.py `
+            --installer (Join-Path $assets "Neuralese-Setup.exe") `
+            --manifest (Join-Path $assets "latest.json") `
+            --qa-report (Join-Path $assets "qa-report.json") `
+            --expected-version $env:VERSION `
+            --expected-builder-commit-sha $env:BUILDER_SHA `
+            --expected-setup-commit-sha $env:SETUP_SHA
+
+  promote:
+    needs: verify
+    runs-on: windows-latest
+    timeout-minutes: 20
+    environment: production
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout verified release tooling
+        uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python 3.11
+        uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065
+        with:
+          python-version: "3.11"
+
+      - name: Re-download immutable candidate after approval
+        shell: pwsh
+        env:
+          GH_TOKEN: ${{ github.token }}
+          VERSION: ${{ inputs.version }}
+        run: |
+          $release = gh api "repos/${{ github.repository }}/releases/tags/v$env:VERSION" | ConvertFrom-Json
+          if ($release.draft -ne $false -or $release.prerelease -ne $true) {
+            throw "Candidate state changed while waiting for approval"
+          }
+          $target = [string]$release.target_commitish
+          if ($target -notmatch '^[0-9a-f]{40}$') { throw "Release target must be an exact commit SHA" }
+          git fetch origin prod-deploy --no-tags
+          git merge-base --is-ancestor $target origin/prod-deploy
+          if ($LASTEXITCODE -ne 0) { throw "Release target left prod-deploy history" }
+          $lock = (git show "${target}:release/setup-lock.json") | ConvertFrom-Json
+          $lockKeys = @($lock.PSObject.Properties.Name | Sort-Object)
+          if (($lockKeys -join ',') -ne 'commit_sha,repository' -or $lock.repository -ne 'hex358/neuralese-setup' -or [string]$lock.commit_sha -notmatch '^[0-9a-f]{40}$') {
+            throw "Release target contains an invalid Setup lock"
+          }
+          $assets = Join-Path $env:RUNNER_TEMP "approved-assets"
+          New-Item -ItemType Directory -Path $assets -Force | Out-Null
+          gh release download "v$env:VERSION" --repo ${{ github.repository }} --dir $assets --pattern "Neuralese-Setup.exe" --pattern "latest.json" --pattern "qa-report.json"
+          python tools/release/verify_release_candidate.py `
+            --installer (Join-Path $assets "Neuralese-Setup.exe") `
+            --manifest (Join-Path $assets "latest.json") `
+            --qa-report (Join-Path $assets "qa-report.json") `
+            --expected-version $env:VERSION `
+            --expected-builder-commit-sha $target `
+            --expected-setup-commit-sha ([string]$lock.commit_sha)
+          "BUILDER_SHA=$target" | Out-File -FilePath $env:GITHUB_ENV -Encoding utf8 -Append
+          "SETUP_SHA=$([string]$lock.commit_sha)" | Out-File -FilePath $env:GITHUB_ENV -Encoding utf8 -Append
+
+      - name: Promote existing release without rebuilding
+        shell: pwsh
+        env:
+          GH_TOKEN: ${{ github.token }}
+          VERSION: ${{ inputs.version }}
+        run: gh release edit "v$env:VERSION" --repo ${{ github.repository }} --prerelease=false --latest
+
+      - name: Verify production URLs and bytes
+        shell: pwsh
+        env:
+          VERSION: ${{ inputs.version }}
+        run: |
+          $production = Join-Path $env:RUNNER_TEMP "production-assets"
+          New-Item -ItemType Directory -Path $production -Force | Out-Null
+          $manifestPath = Join-Path $production "latest.json"
+          $found = $false
+          for ($attempt = 1; $attempt -le 12; $attempt++) {
+            $response = Invoke-WebRequest "https://github.com/${{ github.repository }}/releases/latest/download/latest.json" -SkipHttpErrorCheck
+            if ($response.StatusCode -eq 200) {
+              Set-Content -LiteralPath $manifestPath -Value $response.Content -Encoding utf8
+              $manifest = $response.Content | ConvertFrom-Json
+              if ([string]$manifest.version -eq $env:VERSION) { $found = $true; break }
+            }
+            Start-Sleep -Seconds 5
+          }
+          if (!$found) { throw "Production latest.json did not switch to the promoted version" }
+          $installerPath = Join-Path $production "Neuralese-Setup.exe"
+          Invoke-WebRequest ([string]$manifest.downloads.windows.url) -OutFile $installerPath
+          python tools/release/verify_release_candidate.py `
+            --installer $installerPath `
+            --manifest $manifestPath `
+            --expected-version $env:VERSION `
+            --expected-builder-commit-sha $env:BUILDER_SHA `
+            --expected-setup-commit-sha $env:SETUP_SHA

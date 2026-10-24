@@ -1,0 +1,65 @@
+Godot Engine v4.7.1.stable.official.a13da4feb - https://godotengine.org
+WARNING: Started the engine as `root`/superuser. This is a security risk, and subsystems like audio may not work correctly.
+Set the environment variable `GODOT_SILENCE_ROOT_WARNING` to 1 to silence this warning.
+     at: setup2 (main/main.cpp:3577)
+
+Unicode parsing error, some characters were replaced with � (U+FFFD): Unexpected NUL character
+Unicode parsing error, some characters were replaced with � (U+FFFD): Unexpected NUL character
+Unicode parsing error, some characters were replaced with � (U+FFFD): Unexpected NUL character
+ERROR: Cannot assign contents of "Array[PackedStringArray]" to "Array[String]".
+   at: assign (core/variant/array.cpp:276)
+Test Debug Scene Running...
+Frame 0 - res://scripts/node_palette.gd:234 in function '_apply_toggle_endpoint'
+Frame 1 - res://scripts/node_palette.gd:214 in function 'set_collapsed'
+Frame 2 - res://scripts/node_palette.gd:33 in function '_ready'
+python.exe: can't open file 'D:\\mnt\\d\\NRLSE\\nnets\\teachneurons\\local_runtime\\neuralese_local\\train_worker.py': [Errno 2] No such file or directory
+[SIM PERF] Ready. Space=start/stop report; F1-F10 toggle A/B subsystems.
+Simulation Navigator successfully loaded!
+[DEBUG-PERSPECTIVE] Inferred perspective from loaded world: side_view
+WARNING: Nodes with non-equal opposite anchors will have their size overridden after _ready(). 
+If you want to set size, change the anchors or consider using set_deferred().
+     at: _set_size (scene/gui/control.cpp:1519)
+     GDScript backtrace (most recent call first):
+         [0] _ready (res://scripts/virtualt.gd:197)
+         [1] loaded (res://scripts/glob.gd:160)
+         [2] _window_scenes (res://scripts/glob.gd:3142)
+         [3] _ready (res://scripts/glob.gd:3395)
+ERROR: Node not found: "Control/view/Label/run" (relative to "/root/@Node@211/Control").
+   at: get_node (scene/main/node.cpp:1975)
+   GDScript backtrace (most recent call first):
+       [0] @implicit_ready (res://scripts/dataset_tab.gd:543)
+       [1] loaded (res://scripts/glob.gd:160)
+       [2] _window_scenes (res://scripts/glob.gd:3142)
+       [3] _ready (res://scripts/glob.gd:3395)
+aa
+graph
+ERROR: Condition "!enabled || !is_inside_tree()" is true.
+   at: make_current (scene/2d/camera_2d.cpp:588)
+   GDScript backtrace (most recent call first):
+       [0] window_show (res://scripts/win_graph.gd:79)
+       [1] go_window (res://scripts/glob.gd:179)
+       [2] _ready (res://scripts/glob.gd:3396)
+28.0
+0.0
+PERFBENCH quality=high tab=graph scenario=forced_redraw median_ms=6.896 p95_ms=7.091 mean_ms=6.872
+PERFBENCH quality=high tab=graph scenario=hover median_ms=6.832 p95_ms=7.118 mean_ms=6.856
+PERFBENCH quality=high tab=graph scenario=sweep median_ms=6.917 p95_ms=7.114 mean_ms=6.883
+PERFBENCH quality=high tab=graph scenario=camera_pan median_ms=6.892 p95_ms=7.137 mean_ms=6.882
+aa
+PERFBENCH quality=high tab=env scenario=forced_redraw median_ms=6.864 p95_ms=7.275 mean_ms=6.862
+PERFBENCH quality=high tab=env scenario=hover median_ms=6.854 p95_ms=7.207 mean_ms=6.871
+PERFBENCH quality=high tab=env scenario=sweep median_ms=6.910 p95_ms=7.235 mean_ms=6.883
+PERFBENCH quality=high tab=env scenario=camera_pan median_ms=6.877 p95_ms=7.131 mean_ms=6.888
+PERFBENCH PASS
+WARNING: 50 RIDs of type "CanvasItem" were leaked.
+   at: _free_rids (servers/rendering/renderer_canvas_cull.cpp:2735)
+ERROR: 4 RID allocations of type 'N13RendererDummy15MaterialStorage13DummyMaterialE' were leaked at exit.
+ERROR: 3 RID allocations of type 'N13RendererDummy15MaterialStorage11DummyShaderE' were leaked at exit.
+ERROR: 24 RID allocations of type 'PN13RendererDummy14TextureStorage12DummyTextureE' were leaked at exit.
+ERROR: 135 RID allocations of type 'PN18TextServerAdvanced22ShapedTextDataAdvancedE' were leaked at exit.
+ERROR: 4 RID allocations of type 'PN18TextServerAdvanced12FontAdvancedE' were leaked at exWARNING: 375 ObjectDB instances were leaked at exit (run with `--verbose` for details).
+   at: cleanup (core/object/object.cpp:2536)
+ERROR: 70 resources still in use at exit (run with --verbose for details).
+   at: clear (core/io/resource.cpp:822)
+it.
+ERROR: 2 RID allocations of type 'PN13RichTextLabel4ItemE' were leaked at exit.

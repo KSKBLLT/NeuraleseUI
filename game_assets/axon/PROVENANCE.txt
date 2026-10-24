@@ -1,0 +1,34 @@
+Axon mascot artwork
+
+axon-frog.png - Axon, hand drawn, mint, 1717 x 916 with a transparent
+background. The screenshot cut used before (axon_mascot.png) was taken from
+this drawing.
+
+Source: the second designer's private review snapshot of the Neuralese UI,
+branch codex/claude-design-integration
+(neuralese-ui-clone-codex-claude-design-integration, game_assets/axon/),
+itself derived from https://github.com/Neuralese-LLP/neuralese-builder
+(upstream dev base 573dc78bb28fec1e8eb899d576d905ff0023d9b6, UI checkpoint
+561aca428d139c8a274fb15e8da6af6a5dee9fed). The image is copied unchanged;
+only its import settings add mipmaps.
+
+The snapshot does not name the illustrator. Its SOURCE-PROVENANCE.md says the
+upstream tree has no root project license and that the snapshot grants no
+additional redistribution rights. Its UPSTREAM-AUTHORS.txt records these
+upstream commit authors:
+
+  Adilbek Sarsembayev
+  Alim
+  Berdibek
+  Hex358 // Pantone 358C
+  Lyam
+  Lyamon4
+  Yernar Merkhanov
+  root
+  ученик8
+
+scripts/ui/axon_mascot.gd follows the snapshot's scripts/axon_mascot.gd in
+how reactions behave: they start on an event, end at rest by themselves and
+stop when the mascot is hidden. The snapshot's sage cel sheet
+(axon-handdrawn-sheet.png) is not used: it is drawn in other proportions and
+colours than this drawing.

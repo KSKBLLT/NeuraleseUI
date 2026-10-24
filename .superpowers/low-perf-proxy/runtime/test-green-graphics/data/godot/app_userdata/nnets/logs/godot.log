@@ -1,0 +1,61 @@
+Godot Engine v4.7.1.stable.official.a13da4feb - https://godotengine.org
+WARNING: Started the engine as `root`/superuser. This is a security risk, and subsystems like audio may not work correctly.
+Set the environment variable `GODOT_SILENCE_ROOT_WARNING` to 1 to silence this warning.
+   at: setup2 (main/main.cpp:3577)
+
+Unicode parsing error, some characters were replaced with � (U+FFFD): Unexpected NUL character
+Unicode parsing error, some characters were replaced with � (U+FFFD): Unexpected NUL character
+Unicode parsing error, some characters were replaced with � (U+FFFD): Unexpected NUL character
+PASS test_graphics_quality
+ERROR: Condition "len < 4" is true. Returning: ERR_INVALID_DATA
+   at: decode_variant (core/io/marshalls.cpp:191)
+   GDScript backtrace (most recent call first):
+       [0] get_stored (res://scripts/glob.gd:386)
+       [1] get_var (res://scripts/glob.gd:381)
+       [2] _enter_tree (res://scripts/glob.gd:1539)
+ERROR: Error when trying to encode Variant.
+   at: get_var (core/io/file_access.cpp:372)
+   GDScript backtrace (most recent call first):
+       [0] get_stored (res://scripts/glob.gd:386)
+       [1] get_var (res://scripts/glob.gd:381)
+       [2] _enter_tree (res://scripts/glob.gd:1539)
+ERROR: Condition "len < 4" is true. Returning: ERR_INVALID_DATA
+   at: decode_variant (core/io/marshalls.cpp:191)
+   GDScript backtrace (most recent call first):
+       [0] get_stored (res://scripts/glob.gd:386)
+       [1] get_var (res://scripts/glob.gd:381)
+       [2] _enter_tree (res://scripts/glob.gd:1544)
+ERROR: Error when trying to encode Variant.
+   at: get_var (core/io/file_access.cpp:372)
+   GDScript backtrace (most recent call first):
+       [0] get_stored (res://scripts/glob.gd:386)
+       [1] get_var (res://scripts/glob.gd:381)
+       [2] _enter_tree (res://scripts/glob.gd:1544)
+ERROR: Condition "len < 4" is true. Returning: ERR_INVALID_DATA
+   at: decode_variant (core/io/marshalls.cpp:191)
+   GDScript backtrace (most recent call first):
+       [0] get_stored (res://scripts/glob.gd:386)
+       [1] get_var (res://scripts/glob.gd:381)
+       [2] cache (res://scripts/learner.gd:19)
+       [3] _enter_tree (res://scripts/learner.gd:33)
+ERROR: Error when trying to encode Variant.
+   at: get_var (core/io/file_access.cpp:372)
+   GDScript backtrace (most recent call first):
+       [0] get_stored (res://scripts/glob.gd:386)
+       [1] get_var (res://scripts/glob.gd:381)
+       [2] cache (res://scripts/learner.gd:19)
+       [3] _enter_tree (res://scripts/learner.gd:33)
+ERROR: Condition "len < 4" is true. Returning: ERR_INVALID_DATA
+   at: decode_variant (core/io/marshalls.cpp:191)
+   GDScript backtrace (most recent call first):
+       [0] get_stored (res://scripts/glob.gd:386)
+       [1] set_var (res://scripts/glob.gd:375)
+       [2] cache (res://scripts/learner.gd:25)
+       [3] _enter_tree (res://scripts/learner.gd:33)
+ERROR: Error when trying to encode Variant.
+   at: get_var (core/io/file_access.cpp:372)
+   GDScript backtrace (most recent call first):
+       [0] get_stored (res://scripts/glob.gd:386)
+       [1] set_var (res://scripts/glob.gd:375)
+       [2] cache (res://scripts/learner.gd:25)
+       [3] _enter_tree (res://scripts/learner.gd:33)

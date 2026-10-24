@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "id": "lua_env",
+  "source": {
+    "kind": "scene",
+    "path": "res://scenes/env_tag.tscn"
+  },
+  "load_order": 50,
+  "menu": {
+    "visible": false,
+    "section": "data_context",
+    "order": 30
+  },
+  "roles": [],
+  "llm": {
+    "type": "load_environment"
+  },
+  "runtime": {},
+  "display": {
+    "category": "data",
+    "title": {
+      "en": "RL Environment",
+      "ru": "Среда обучения",
+      "kz": "RL ортасы"
+    }
+  }
+}

@@ -1,0 +1,361 @@
+{
+  "schema_version": 1,
+  "node_id": "gru_cell",
+  "status": "stable",
+  "generated": {
+    "node_id": "gru_cell",
+    "created_with": "gru_cell",
+    "scene_path": "res://scenes/gru_cell.tscn",
+    "scene_uid": "uid://cnpa0x4va0608",
+    "root_instance_path": null,
+    "script_path": "res://scripts/gru_cell.gd",
+    "inheritance_chain": [
+      "res://scripts/gru_cell.gd",
+      "res://scripts/base_layer.gd",
+      "res://scripts/io_graph.gd",
+      "res://scripts/base_graph.gd"
+    ],
+    "inherits_graph": true,
+    "server_typename": "GRUCell",
+    "layer_name": "GRUCell",
+    "title_candidates": {
+      "en": "MemCellGRU",
+      "ru": "ПамятьGRU",
+      "kz": "ЖадGRU"
+    },
+    "localized_properties": {
+      "ports": {},
+      "settings": {
+        "hidden_size": {
+          "label": {
+            "source_path": "ColorRect/root/hidden_size",
+            "property": "text",
+            "values": {
+              "en": "Memory",
+              "ru": "Размер",
+              "kz": "Жад"
+            }
+          },
+          "options": []
+        }
+      },
+      "controls": {
+        "ColorRect/root/Label": {
+          "property": "text",
+          "values": {
+            "en": "MemCellGRU",
+            "ru": "ПамятьGRU",
+            "kz": "ЖадGRU"
+          }
+        },
+        "ColorRect/root/hidden_size": {
+          "property": "text",
+          "values": {
+            "en": "Memory",
+            "ru": "Размер",
+            "kz": "Жад"
+          }
+        }
+      },
+      "title": {
+        "source_path": "ColorRect/root/Label",
+        "property": "text",
+        "values": {
+          "en": "MemCellGRU",
+          "ru": "ПамятьGRU",
+          "kz": "ЖадGRU"
+        }
+      }
+    },
+    "base_config": {
+      "hidden_size": 16
+    },
+    "ports": [
+      {
+        "id": "input_ni_layer_in",
+        "scene_node": "ni",
+        "scene_path": ".",
+        "hint": 1,
+        "server_name": "layer_in",
+        "direction": "input",
+        "datatypes": [
+          "layer1d",
+          "input1d"
+        ],
+        "multiple": true,
+        "config_conn": false,
+        "keyword": null,
+        "conn_count_keyword": "layer",
+        "visual": {
+          "color": "#4ce6baff",
+          "gradient_color": "#4ce6baff",
+          "dir_vector": {
+            "x": -1.0,
+            "y": 0.0
+          },
+          "side": "left",
+          "relative_to": {
+            "role": "graph_rect",
+            "scene_path": "ColorRect"
+          },
+          "absolute_scene_rect": {
+            "x": -55.0,
+            "y": -8.0,
+            "w": 16.0,
+            "h": 17.0
+          },
+          "reference_rect": {
+            "x": -47.0,
+            "y": -42.0,
+            "w": 102.0,
+            "h": 62.0
+          },
+          "relative_rect": {
+            "x": -0.0784313725490196,
+            "y": 0.5483870967741935,
+            "w": 0.1568627450980392,
+            "h": 0.27419354838709675
+          },
+          "relative_origin": {
+            "x": -0.0784313725490196,
+            "y": 0.6854838709677419
+          },
+          "color_family": "green",
+          "color_label": {
+            "en": "Green",
+            "ru": "Зелёный",
+            "kz": "Жасыл"
+          },
+          "side_label": {
+            "en": "on the left",
+            "ru": "слева",
+            "kz": "сол жақта"
+          },
+          "verbal_label": {
+            "en": "Green port on the left",
+            "ru": "Зелёный порт слева",
+            "kz": "Жасыл порт сол жақта"
+          },
+          "text_color": "#138665"
+        }
+      },
+      {
+        "id": "output_o_layer_out",
+        "scene_node": "o",
+        "scene_path": ".",
+        "hint": 0,
+        "server_name": "layer_out",
+        "direction": "output",
+        "datatypes": [
+          "layer1d"
+        ],
+        "multiple": true,
+        "config_conn": false,
+        "keyword": null,
+        "conn_count_keyword": "layer",
+        "visual": {
+          "color": "#4ce6baff",
+          "gradient_color": "#4ce6baff",
+          "dir_vector": {
+            "x": 1.0,
+            "y": 0.0
+          },
+          "side": "right",
+          "relative_to": {
+            "role": "graph_rect",
+            "scene_path": "ColorRect"
+          },
+          "absolute_scene_rect": {
+            "x": 46.0,
+            "y": -8.0,
+            "w": 16.0,
+            "h": 17.0
+          },
+          "reference_rect": {
+            "x": -47.0,
+            "y": -42.0,
+            "w": 102.0,
+            "h": 62.0
+          },
+          "relative_rect": {
+            "x": 0.9117647058823529,
+            "y": 0.5483870967741935,
+            "w": 0.1568627450980392,
+            "h": 0.27419354838709675
+          },
+          "relative_origin": {
+            "x": 1.0686274509803921,
+            "y": 0.6854838709677419
+          },
+          "color_family": "green",
+          "color_label": {
+            "en": "Green",
+            "ru": "Зелёный",
+            "kz": "Жасыл"
+          },
+          "side_label": {
+            "en": "on the right",
+            "ru": "справа",
+            "kz": "оң жақта"
+          },
+          "verbal_label": {
+            "en": "Green port on the right",
+            "ru": "Зелёный порт справа",
+            "kz": "Жасыл порт оң жақта"
+          },
+          "text_color": "#138665"
+        }
+      }
+    ],
+    "settings": [
+      {
+        "id": "hidden_size",
+        "source": "base_config",
+        "default": 16,
+        "ui_kind": "instance",
+        "ui_path": "hidden_size_input",
+        "options": []
+      }
+    ],
+    "icon_source": "res://node_icons/en/IconGruCell.png",
+    "static_compatible_nodes": [
+      {
+        "from_port": "output_o_layer_out",
+        "to_node": "classifier",
+        "to_port": "input_ni_layer_in",
+        "datatypes": [
+          "layer1d"
+        ],
+        "confidence": "static_datatype_intersection"
+      },
+      {
+        "from_port": "output_o_layer_out",
+        "to_node": "reshape2d",
+        "to_port": "input_o2_layer_in",
+        "datatypes": [
+          "layer1d"
+        ],
+        "confidence": "static_datatype_intersection"
+      },
+      {
+        "from_port": "output_o_layer_out",
+        "to_node": "softmax",
+        "to_port": "input_o2_layer_in",
+        "datatypes": [
+          "layer1d"
+        ],
+        "confidence": "static_datatype_intersection"
+      },
+      {
+        "from_port": "output_o_layer_out",
+        "to_node": "layer",
+        "to_port": "input_ni_layer_in",
+        "datatypes": [
+          "layer1d"
+        ],
+        "confidence": "static_datatype_intersection"
+      },
+      {
+        "from_port": "output_o_layer_out",
+        "to_node": "dropout",
+        "to_port": "input_o2_layer_in",
+        "datatypes": [
+          "layer1d"
+        ],
+        "confidence": "static_datatype_intersection"
+      },
+      {
+        "from_port": "output_o_layer_out",
+        "to_node": "gru_cell",
+        "to_port": "input_ni_layer_in",
+        "datatypes": [
+          "layer1d"
+        ],
+        "confidence": "static_datatype_intersection"
+      },
+      {
+        "from_port": "output_o_layer_out",
+        "to_node": "concat",
+        "to_port": "input_connection_o_layer_in",
+        "datatypes": [
+          "layer1d"
+        ],
+        "confidence": "static_datatype_intersection"
+      }
+    ]
+  },
+  "docs": {
+    "title": {
+      "en": "GRUCell",
+      "ru": "GRU-ячейка",
+      "kz": "GRU ұяшығы"
+    },
+    "summary": {
+      "en": "Reads a chain of numbers step by step and builds a short memory of what matters most.",
+      "ru": "Читает цепочку чисел по очереди и собирает из неё короткую память о самом важном.",
+      "kz": "Сандар тізбегін ретімен оқып, ең маңыздысы туралы қысқа жад жинайды."
+    },
+    "operation": {
+      "en": "The node reads the input chain from left to right, one number at a time. At every step, three internal gates decide what to keep in memory, what to forget, and what new information to add. The result therefore depends on the earlier numbers as well as the last one. The node outputs a fixed-length memory chain. In this minimal version, each input number is treated as one step.",
+      "ru": "Нода получает цепочку чисел и читает её слева направо, по одному числу за шаг. На каждом шаге три внутренних «ворота» решают, какую часть уже собранной памяти оставить, что забыть и чем её дополнить. Поэтому результат зависит не только от последнего числа, но и от того, что встречалось раньше. Справа нода выдаёт новую цепочку — память фиксированной длины. В этой минимальной версии каждое входное число считается отдельным шагом.",
+      "kz": "Нода сандар тізбегін солдан оңға қарай, әр қадамда бір саннан оқиды. Әр қадамда үш ішкі «қақпа» жадта нені қалдыру, нені ұмыту және қандай жаңа ақпарат қосу керегін шешеді. Сондықтан нәтиже соңғы санға ғана емес, бұрын оқылған сандарға да байланысты. Оң жақтан нода ұзындығы тұрақты жаңа жад тізбегін шығарады. Бұл ықшам нұсқада әр кіріс саны жеке қадам болып есептеледі."
+    },
+    "compact": {
+      "body": {
+        "en": "Reads numbers in order and remembers what matters.",
+        "ru": "Читает числа по очереди и запоминает важное.",
+        "kz": "Сандарды ретімен оқып, маңыздысын есте сақтайды."
+      }
+    },
+    "ports": {
+      "input_ni_layer_in": {
+        "label": {
+          "en": "Input chain",
+          "ru": "Входная цепочка",
+          "kz": "Кіріс тізбегі"
+        },
+        "description": {
+          "en": "The green port on the left receives a chain of numbers. The node reads them in order, starting with the first one.",
+          "ru": "Зелёный порт слева принимает цепочку чисел. Нода читает их по очереди, начиная с первого.",
+          "kz": "Сол жақтағы жасыл порт сандар тізбегін қабылдайды. Нода оларды бірінші саннан бастап ретімен оқиды."
+        }
+      },
+      "output_o_layer_out": {
+        "label": {
+          "en": "Memory",
+          "ru": "Память",
+          "kz": "Жад"
+        },
+        "description": {
+          "en": "The green port on the right sends a chain that stores the memory of the whole input.",
+          "ru": "Зелёный порт справа передаёт цепочку, в которой собрана память обо всём прочитанном входе.",
+          "kz": "Оң жақтағы жасыл порт бүкіл оқылған кіріс туралы жад сақталған тізбекті береді."
+        }
+      }
+    },
+    "settings": {
+      "hidden_size": {
+        "label": {
+          "en": "Memory size",
+          "ru": "Размер памяти",
+          "kz": "Жад өлшемі"
+        },
+        "description": {
+          "en": "Sets how many numbers the output memory chain contains. A larger memory can preserve more different information but needs more computation. For example, 16 creates a memory of 16 numbers.",
+          "ru": "Задаёт, сколько чисел будет в выходной цепочке памяти. Большее число позволяет сохранить больше разных сведений, но требует больше вычислений. Например, значение 16 создаёт память из 16 чисел.",
+          "kz": "Шығыс жад тізбегінде қанша сан болатынын анықтайды. Үлкен жад көбірек түрлі ақпаратты сақтай алады, бірақ көбірек есептеуді қажет етеді. Мысалы, 16 мәні 16 саннан тұратын жад жасайды."
+        }
+      }
+    },
+    "connects_to": [],
+    "examples": [
+      {
+        "body": {
+          "en": "If the input is a chain of 20 sensor readings and the memory size is 8, GRUCell reads all 20 readings in order and outputs a memory chain of 8 numbers.",
+          "ru": "Если на входе находится цепочка из 20 показаний датчика, а размер памяти равен 8, GRU-ячейка прочитает все 20 чисел по очереди и выдаст память из 8 чисел.",
+          "kz": "Кірісте датчиктің 20 көрсеткішінен тұратын тізбек болып, жад өлшемі 8 болса, GRU ұяшығы 20 санның бәрін ретімен оқып, 8 саннан тұратын жад шығарады."
+        }
+      }
+    ]
+  }
+}

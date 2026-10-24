@@ -1,0 +1,76 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://neuralese.dev/schemas/node-definition.schema.json",
+  "title": "Neuralese graph node definition",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "id", "source", "load_order", "menu"],
+  "properties": {
+    "schema_version": {"const": 1},
+    "id": {"type": "string", "pattern": "^[a-z][a-z0-9_]*$"},
+    "source": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["kind", "path"],
+      "properties": {
+        "kind": {"enum": ["scene", "provider"]},
+        "path": {"type": "string", "pattern": "^res://"}
+      },
+      "allOf": [
+        {
+          "if": {"properties": {"kind": {"const": "scene"}}},
+          "then": {"properties": {"path": {"pattern": "\\.tscn$"}}}
+        },
+        {
+          "if": {"properties": {"kind": {"const": "provider"}}},
+          "then": {"properties": {"path": {"pattern": "\\.gd$"}}}
+        }
+      ]
+    },
+    "load_order": {"type": "integer", "minimum": 0},
+    "menu": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["visible", "section", "order"],
+      "properties": {
+        "visible": {"type": "boolean"},
+        "section": {"type": "string", "minLength": 1},
+        "order": {"type": "integer", "minimum": 0}
+      }
+    },
+    "roles": {"type": "array", "uniqueItems": true, "items": {"type": "string", "minLength": 1}},
+    "llm": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "type": {"type": "string", "minLength": 1},
+        "aliases": {"type": "array", "uniqueItems": true, "items": {"type": "string", "minLength": 1}}
+      }
+    },
+    "runtime": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "handler": {"type": "string", "minLength": 1},
+        "aliases": {"type": "array", "uniqueItems": true, "items": {"type": "string", "minLength": 1}},
+        "roles": {"type": "array", "uniqueItems": true, "items": {"type": "string", "minLength": 1}},
+        "default_input_port": {"type": "string", "minLength": 1},
+        "default_output_port": {"type": "string", "minLength": 1}
+      }
+    },
+    "display": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "title": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {"en": {"type": "string", "minLength": 1}, "ru": {"type": "string", "minLength": 1}, "kz": {"type": "string", "minLength": 1}}
+        },
+        "outline_color": {"type": "string", "pattern": "^#[0-9a-fA-F]{8}$"},
+        "tuning_color": {"type": "string", "pattern": "^#[0-9a-fA-F]{8}$"},
+        "category": {"enum": ["data", "learn", "ops", "shape", "output", "train"]}
+      }
+    }
+  }
+}

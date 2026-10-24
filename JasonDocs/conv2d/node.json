@@ -1,0 +1,486 @@
+{
+  "schema_version": 1,
+  "node_id": "conv2d",
+  "status": "stable",
+  "generated": {
+    "node_id": "conv2d",
+    "created_with": "conv2d",
+    "scene_path": "res://scenes/conv2d.tscn",
+    "scene_uid": "uid://70bqejl8x5np",
+    "root_instance_path": null,
+    "script_path": "res://scripts/conv_2d.gd",
+    "inheritance_chain": [
+      "res://scripts/conv_2d.gd",
+      "res://scripts/base_layer.gd",
+      "res://scripts/io_graph.gd",
+      "res://scripts/base_graph.gd"
+    ],
+    "inherits_graph": true,
+    "server_typename": "NeuronLayer",
+    "layer_name": "Conv2D",
+    "title_candidates": {
+      "en": "Conv2D",
+      "ru": "Свёрт2D",
+      "kz": "Свёрт2D"
+    },
+    "localized_properties": {
+      "ports": {},
+      "settings": {
+        "filters": {
+          "label": {
+            "source_path": "Label3",
+            "property": "text",
+            "values": {
+              "en": "Filters",
+              "ru": "Фильтры",
+              "kz": "Сүзгі"
+            }
+          },
+          "options": []
+        },
+        "stride": {
+          "label": {
+            "source_path": "Label2",
+            "property": "text",
+            "values": {
+              "en": "Stride",
+              "ru": "Прыжок",
+              "kz": "Қадам"
+            }
+          },
+          "options": []
+        },
+        "window": {
+          "label": {
+            "source_path": "Label",
+            "property": "text",
+            "values": {
+              "en": "Window",
+              "ru": "Кернел",
+              "kz": "Кернел"
+            }
+          },
+          "options": []
+        }
+      },
+      "controls": {
+        "ColorRect/root/Label": {
+          "property": "text",
+          "values": {
+            "en": "Conv2D",
+            "ru": "Свёрт2D",
+            "kz": "Свёрт2D"
+          }
+        },
+        "Label": {
+          "property": "text",
+          "values": {
+            "en": "Window",
+            "ru": "Кернел",
+            "kz": "Кернел"
+          }
+        },
+        "Label2": {
+          "property": "text",
+          "values": {
+            "en": "Stride",
+            "ru": "Прыжок",
+            "kz": "Қадам"
+          }
+        },
+        "Label3": {
+          "property": "text",
+          "values": {
+            "en": "Filters",
+            "ru": "Фильтры",
+            "kz": "Сүзгі"
+          }
+        }
+      },
+      "title": {
+        "source_path": "ColorRect/root/Label",
+        "property": "text",
+        "values": {
+          "en": "Conv2D",
+          "ru": "Свёрт2D",
+          "kz": "Свёрт2D"
+        }
+      }
+    },
+    "base_config": {
+      "filters": 16,
+      "stride": 1,
+      "window": 2
+    },
+    "ports": [
+      {
+        "id": "input_activ_activ_in",
+        "scene_node": "activ",
+        "scene_path": ".",
+        "hint": 0,
+        "server_name": "activ_in",
+        "direction": "input",
+        "datatypes": [
+          "activation"
+        ],
+        "multiple": true,
+        "config_conn": true,
+        "keyword": null,
+        "conn_count_keyword": "activ",
+        "visual": {
+          "color": "#4cabe6ff",
+          "gradient_color": "#4cabe6ff",
+          "dir_vector": {
+            "x": 0.0,
+            "y": -1.0
+          },
+          "side": "top",
+          "relative_to": {
+            "role": "graph_rect",
+            "scene_path": "ColorRect"
+          },
+          "absolute_scene_rect": {
+            "x": 8.0,
+            "y": -72.0,
+            "w": 18.0,
+            "h": 19.0
+          },
+          "reference_rect": {
+            "x": -36.0,
+            "y": -64.0,
+            "w": 109.0,
+            "h": 73.0
+          },
+          "relative_rect": {
+            "x": 0.4036697247706422,
+            "y": -0.1095890410958904,
+            "w": 0.1651376146788991,
+            "h": 0.2602739726027397
+          },
+          "relative_origin": {
+            "x": 0.48623853211009177,
+            "y": -0.1095890410958904
+          },
+          "color_family": "blue",
+          "color_label": {
+            "en": "Blue",
+            "ru": "Синий",
+            "kz": "Көк"
+          },
+          "side_label": {
+            "en": "at the top",
+            "ru": "сверху",
+            "kz": "жоғарыда"
+          },
+          "verbal_label": {
+            "en": "Blue port at the top",
+            "ru": "Синий порт сверху",
+            "kz": "Көк порт жоғарыда"
+          },
+          "text_color": "#1a7bb7"
+        }
+      },
+      {
+        "id": "input_ni_layer_in",
+        "scene_node": "ni",
+        "scene_path": ".",
+        "hint": 1,
+        "server_name": "layer_in",
+        "direction": "input",
+        "datatypes": [
+          "input2d",
+          "layer2d"
+        ],
+        "multiple": true,
+        "config_conn": false,
+        "keyword": null,
+        "conn_count_keyword": "layer",
+        "visual": {
+          "color": "#e6b175ff",
+          "gradient_color": "#e6b175ff",
+          "dir_vector": {
+            "x": -1.0,
+            "y": 0.0
+          },
+          "side": "left",
+          "relative_to": {
+            "role": "graph_rect",
+            "scene_path": "ColorRect"
+          },
+          "absolute_scene_rect": {
+            "x": -44.0,
+            "y": -36.0,
+            "w": 18.0,
+            "h": 19.0
+          },
+          "reference_rect": {
+            "x": -36.0,
+            "y": -64.0,
+            "w": 109.0,
+            "h": 73.0
+          },
+          "relative_rect": {
+            "x": -0.07339449541284404,
+            "y": 0.3835616438356164,
+            "w": 0.1651376146788991,
+            "h": 0.2602739726027397
+          },
+          "relative_origin": {
+            "x": -0.07339449541284404,
+            "y": 0.5136986301369864
+          },
+          "color_family": "orange",
+          "color_label": {
+            "en": "Orange",
+            "ru": "Оранжевый",
+            "kz": "Қызғылт сары"
+          },
+          "side_label": {
+            "en": "on the left",
+            "ru": "слева",
+            "kz": "сол жақта"
+          },
+          "verbal_label": {
+            "en": "Orange port on the left",
+            "ru": "Оранжевый порт слева",
+            "kz": "Қызғылт сары порт сол жақта"
+          },
+          "text_color": "#a4651e"
+        }
+      },
+      {
+        "id": "output_o_layer_out",
+        "scene_node": "o",
+        "scene_path": ".",
+        "hint": 0,
+        "server_name": "layer_out",
+        "direction": "output",
+        "datatypes": [
+          "layer2d"
+        ],
+        "multiple": true,
+        "config_conn": false,
+        "keyword": null,
+        "conn_count_keyword": "layer",
+        "visual": {
+          "color": "#e6b175ff",
+          "gradient_color": "#e6b175ff",
+          "dir_vector": {
+            "x": 1.0,
+            "y": 0.0
+          },
+          "side": "right",
+          "relative_to": {
+            "role": "graph_rect",
+            "scene_path": "ColorRect"
+          },
+          "absolute_scene_rect": {
+            "x": 63.0,
+            "y": -36.0,
+            "w": 18.0,
+            "h": 19.0
+          },
+          "reference_rect": {
+            "x": -36.0,
+            "y": -64.0,
+            "w": 109.0,
+            "h": 73.0
+          },
+          "relative_rect": {
+            "x": 0.908256880733945,
+            "y": 0.3835616438356164,
+            "w": 0.1651376146788991,
+            "h": 0.2602739726027397
+          },
+          "relative_origin": {
+            "x": 1.073394495412844,
+            "y": 0.5136986301369864
+          },
+          "color_family": "orange",
+          "color_label": {
+            "en": "Orange",
+            "ru": "Оранжевый",
+            "kz": "Қызғылт сары"
+          },
+          "side_label": {
+            "en": "on the right",
+            "ru": "справа",
+            "kz": "оң жақта"
+          },
+          "verbal_label": {
+            "en": "Orange port on the right",
+            "ru": "Оранжевый порт справа",
+            "kz": "Қызғылт сары порт оң жақта"
+          },
+          "text_color": "#a4651e"
+        }
+      }
+    ],
+    "settings": [
+      {
+        "id": "filters",
+        "source": "base_config",
+        "default": 16,
+        "ui_kind": null,
+        "ui_path": null,
+        "options": []
+      },
+      {
+        "id": "stride",
+        "source": "base_config",
+        "default": 1,
+        "ui_kind": null,
+        "ui_path": null,
+        "options": []
+      },
+      {
+        "id": "window",
+        "source": "base_config",
+        "default": 2,
+        "ui_kind": null,
+        "ui_path": null,
+        "options": []
+      }
+    ],
+    "icon_source": "res://node_icons/en/IconConv2d.png",
+    "static_compatible_nodes": [
+      {
+        "from_port": "output_o_layer_out",
+        "to_node": "flatten",
+        "to_port": "input_o2_layer_in",
+        "datatypes": [
+          "layer2d"
+        ],
+        "confidence": "static_datatype_intersection"
+      },
+      {
+        "from_port": "output_o_layer_out",
+        "to_node": "conv2d",
+        "to_port": "input_ni_layer_in",
+        "datatypes": [
+          "layer2d"
+        ],
+        "confidence": "static_datatype_intersection"
+      },
+      {
+        "from_port": "output_o_layer_out",
+        "to_node": "maxpool",
+        "to_port": "input_ni_layer_in",
+        "datatypes": [
+          "layer2d"
+        ],
+        "confidence": "static_datatype_intersection"
+      }
+    ]
+  },
+  "docs": {
+    "title": {
+      "en": "Conv2D",
+      "ru": "Свёрточный слой",
+      "kz": "2D свертка"
+    },
+    "summary": {
+      "en": "Extracts spatial patterns from images or two-dimensional feature maps.",
+      "ru": "Просматривает изображение небольшими окнами и ищет знакомые детали.",
+      "kz": "Кескіндерден немесе екі өлшемді карталардан кеңістік белгілерін шығарады."
+    },
+    "operation": {
+      "en": "Slides trainable filters across the input. Filter count controls output channels, window controls kernel size, stride controls movement, and an optional Activation node selects the nonlinearity.",
+      "ru": "Свёрточный слой двигает по изображению небольшие окна-фильтры. Каждый фильтр учится замечать свой вид детали: например, край, угол или простую форму. На выходе получается несколько новых сеток чисел. Большое число в такой сетке означает, что в этом месте фильтр заметил знакомую деталь.",
+      "kz": "Үйретілетін сүзгілерді кіріс бойымен жылжытады. Сүзгі саны шығыс арналарын, терезе ядро өлшемін, қадам жылжуды анықтайды, ал Activation сызықтық емес функцияны таңдайды."
+    },
+    "compact": {
+      "body": {
+        "en": "Extracts spatial patterns from images or two-dimensional feature maps.",
+        "ru": "Ищет детали в разных участках изображения.",
+        "kz": "Кескіндерден немесе екі өлшемді карталардан кеңістік белгілерін шығарады."
+      }
+    },
+    "ports": {
+      "input_activ_activ_in": {
+        "label": {
+          "en": "activ_in",
+          "ru": "Функция активации",
+          "kz": "activ_in"
+        },
+        "description": {
+          "en": "Receives activation data through the activ_in input.",
+          "ru": "Синий порт сверху принимает правило обработки ответов фильтров, например ReLU.",
+          "kz": "activ_in кірісі арқылы activation түріндегі деректерді қабылдайды."
+        }
+      },
+      "input_ni_layer_in": {
+        "label": {
+          "en": "layer_in",
+          "ru": "Изображение",
+          "kz": "layer_in"
+        },
+        "description": {
+          "en": "Receives input2d, layer2d data through the layer_in input.",
+          "ru": "Оранжевый порт слева принимает изображение или сетки, созданные предыдущим свёрточным слоем.",
+          "kz": "layer_in кірісі арқылы input2d, layer2d түріндегі деректерді қабылдайды."
+        }
+      },
+      "output_o_layer_out": {
+        "label": {
+          "en": "layer_out",
+          "ru": "Найденные детали",
+          "kz": "layer_out"
+        },
+        "description": {
+          "en": "Sends layer2d data to compatible downstream nodes.",
+          "ru": "Оранжевый порт справа передаёт сетки, которые показывают, где фильтры нашли знакомые детали.",
+          "kz": "layer2d түріндегі деректерді үйлесімді келесі түйіндерге береді."
+        }
+      }
+    },
+    "settings": {
+      "filters": {
+        "label": {
+          "en": "filters",
+          "ru": "Количество фильтров",
+          "kz": "filters"
+        },
+        "description": {
+          "en": "Sets the number of learned output filters.",
+          "ru": "Задаёт, сколько разных видов деталей слой сможет искать одновременно. Каждый фильтр создаёт свою сетку ответов.",
+          "kz": "Үйретілетін шығыс сүзгілерінің санын анықтайды."
+        }
+      },
+      "stride": {
+        "label": {
+          "en": "stride",
+          "ru": "Шаг",
+          "kz": "stride"
+        },
+        "description": {
+          "en": "Sets how far the convolution window moves per step.",
+          "ru": "Задаёт, на сколько пикселей окно сдвигается за один раз. Большой шаг обрабатывает изображение быстрее, но может пропустить мелкие детали.",
+          "kz": "Свертка терезесінің әр қадамдағы жылжуын анықтайды."
+        }
+      },
+      "window": {
+        "label": {
+          "en": "window",
+          "ru": "Размер окна",
+          "kz": "window"
+        },
+        "description": {
+          "en": "Sets the convolution kernel size.",
+          "ru": "Задаёт размер участка, который фильтр рассматривает за один раз, например 3 × 3 пикселя.",
+          "kz": "Свертка ядросының өлшемін анықтайды."
+        }
+      }
+    },
+    "connects_to": [],
+    "examples": [
+      {
+        "body": {
+          "ru": "Для первого распознавания цифр можно взять 8 фильтров, окно 3 × 3 и шаг 1. Слой будет искать восемь разных видов простых деталей.",
+          "en": "For basic digit recognition, start with 8 filters of size 3 × 3 and a stride of 1.",
+          "kz": "Цифрларды қарапайым тану үшін өлшемі 3 × 3 болатын 8 сүзгіден және 1 қадамнан бастаңыз."
+        }
+      }
+    ]
+  }
+}

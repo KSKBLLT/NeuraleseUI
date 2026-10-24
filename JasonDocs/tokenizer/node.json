@@ -1,0 +1,259 @@
+{
+  "schema_version": 1,
+  "node_id": "tokenizer",
+  "status": "stable",
+  "generated": {
+    "node_id": "tokenizer",
+    "created_with": "tokenizer",
+    "scene_path": "res://scenes/language_models/tokenizer.tscn",
+    "scene_uid": "uid://dn7f4npuqwkha",
+    "root_instance_path": "res://scenes/base_graph.tscn",
+    "script_path": "res://scripts/language_models/language_node.gd",
+    "inheritance_chain": [
+      "res://scripts/language_models/language_node.gd",
+      "res://scripts/base_graph.gd"
+    ],
+    "inherits_graph": true,
+    "server_typename": "TokenizerNode",
+    "layer_name": null,
+    "title_candidates": {
+      "en": "Tokenizer",
+      "ru": "Токенизатор",
+      "kz": "Токенизатор"
+    },
+    "localized_properties": {
+      "ports": {},
+      "settings": {},
+      "controls": {
+        "ColorRect/root/Label": {
+          "property": "text",
+          "values": {
+            "en": "Tokenizer",
+            "ru": "Токенизатор",
+            "kz": "Токенизатор"
+          }
+        }
+      },
+      "title": {
+        "source_path": "ColorRect/root/Label",
+        "property": "text",
+        "values": {
+          "en": "Tokenizer",
+          "ru": "Токенизатор",
+          "kz": "Токенизатор"
+        }
+      }
+    },
+    "base_config": {},
+    "ports": [
+      {
+        "id": "input_input_text_in",
+        "scene_node": "Input",
+        "scene_path": ".",
+        "hint": 1,
+        "server_name": "text_in",
+        "direction": "input",
+        "datatypes": [
+          "language_text"
+        ],
+        "multiple": false,
+        "config_conn": false,
+        "keyword": null,
+        "conn_count_keyword": "layer",
+        "visual": {
+          "color": "#7f9effff",
+          "gradient_color": "#7f9effff",
+          "dir_vector": {
+            "x": -1.0,
+            "y": 0.0
+          },
+          "side": "left",
+          "relative_to": {
+            "role": "graph_rect",
+            "scene_path": "ColorRect"
+          },
+          "absolute_scene_rect": {
+            "x": -8.0,
+            "y": 46.5,
+            "w": 18.0,
+            "h": 19.0
+          },
+          "reference_rect": {
+            "x": 0.0,
+            "y": 0.0,
+            "w": 109.0,
+            "h": 73.0
+          },
+          "relative_rect": {
+            "x": -0.07339449541284404,
+            "y": 0.636986301369863,
+            "w": 0.1651376146788991,
+            "h": 0.2602739726027397
+          },
+          "relative_origin": {
+            "x": -0.07339449541284404,
+            "y": 0.7671232876712328
+          },
+          "color_family": "lilac",
+          "color_label": {
+            "en": "Lilac",
+            "ru": "Сиреневый",
+            "kz": "Ашық күлгін"
+          },
+          "side_label": {
+            "en": "on the left",
+            "ru": "слева",
+            "kz": "сол жақта"
+          },
+          "verbal_label": {
+            "en": "Lilac port on the left",
+            "ru": "Сиреневый порт слева",
+            "kz": "Ашық күлгін порт сол жақта"
+          },
+          "text_color": "#3868ff"
+        }
+      },
+      {
+        "id": "output_output_tokens_out",
+        "scene_node": "Output",
+        "scene_path": ".",
+        "hint": 0,
+        "server_name": "tokens_out",
+        "direction": "output",
+        "datatypes": [
+          "language_tokens"
+        ],
+        "multiple": true,
+        "config_conn": false,
+        "keyword": null,
+        "conn_count_keyword": "layer",
+        "visual": {
+          "color": "#7f9effff",
+          "gradient_color": "#7f9effff",
+          "dir_vector": {
+            "x": 1.0,
+            "y": 0.0
+          },
+          "side": "right",
+          "relative_to": {
+            "role": "graph_rect",
+            "scene_path": "ColorRect"
+          },
+          "absolute_scene_rect": {
+            "x": 222.0,
+            "y": 46.5,
+            "w": 18.0,
+            "h": 19.0
+          },
+          "reference_rect": {
+            "x": 0.0,
+            "y": 0.0,
+            "w": 109.0,
+            "h": 73.0
+          },
+          "relative_rect": {
+            "x": 2.036697247706422,
+            "y": 0.636986301369863,
+            "w": 0.1651376146788991,
+            "h": 0.2602739726027397
+          },
+          "relative_origin": {
+            "x": 2.2018348623853212,
+            "y": 0.7671232876712328
+          },
+          "color_family": "lilac",
+          "color_label": {
+            "en": "Lilac",
+            "ru": "Сиреневый",
+            "kz": "Ашық күлгін"
+          },
+          "side_label": {
+            "en": "on the right",
+            "ru": "справа",
+            "kz": "оң жақта"
+          },
+          "verbal_label": {
+            "en": "Lilac port on the right",
+            "ru": "Сиреневый порт справа",
+            "kz": "Ашық күлгін порт оң жақта"
+          },
+          "text_color": "#3868ff"
+        }
+      }
+    ],
+    "settings": [],
+    "icon_source": "res://node_icons/en/IconTokenizer.png",
+    "static_compatible_nodes": [
+      {
+        "from_port": "output_output_tokens_out",
+        "to_node": "embedding",
+        "to_port": "input_input_tokens_in",
+        "datatypes": [
+          "language_tokens"
+        ],
+        "confidence": "language_sequence_contract"
+      }
+    ]
+  },
+  "docs": {
+    "title": {
+      "en": "Tokenizer",
+      "ru": "Токенизатор",
+      "kz": "Токенизатор"
+    },
+    "summary": {
+      "en": "Splits text into token pills.",
+      "ru": "Разбивает текст на токены-пиллы.",
+      "kz": "Мәтінді токендерге бөледі."
+    },
+    "operation": {
+      "en": "Uses tokenizer.json from the installed model: 20,002 token IDs. Pills show readable source spans; dots preserve spaces. Several byte tokens for one Unicode character share a readable pill, while IDs preserve every original number. Selecting a token also selects its whole word in Embedding.",
+      "ru": "Использует tokenizer.json установленной модели: 20 002 ID токенов. Пиллы показывают читаемые фрагменты текста; точки обозначают пробелы. Байтовые токены одного Unicode-символа объединяются в читаемую пиллу, а ID сохраняют все исходные номера. Выбор токена выделяет его слово в Эмбеддинге.",
+      "kz": "Орнатылған модельдің tokenizer.json файлын қолданады: 20 002 токен ID. Элементтер мәтін бөліктерін, нүктелер бос орындарды көрсетеді. Бір Unicode таңбасының байт токендері оқылатын бір элементке бірігеді; барлық ID сақталады. Токенді таңдағанда Эмбеддингтегі сөзі де таңдалады."
+    },
+    "compact": {
+      "body": {
+        "en": "Splits text into token pills.",
+        "ru": "Разбивает текст на токены-пиллы.",
+        "kz": "Мәтінді токендерге бөледі."
+      }
+    },
+    "ports": {
+      "input_input_text_in": {
+        "label": {
+          "en": "text_in",
+          "ru": "text_in",
+          "kz": "text_in"
+        },
+        "description": {
+          "en": "UTF-8 text.",
+          "ru": "Текст UTF-8.",
+          "kz": "UTF-8 мәтіні."
+        }
+      },
+      "output_output_tokens_out": {
+        "label": {
+          "en": "tokens_out",
+          "ru": "tokens_out",
+          "kz": "tokens_out"
+        },
+        "description": {
+          "en": "Token IDs: int32 [T], with source spans.",
+          "ru": "ID токенов: int32 [T], с позициями в исходном тексте.",
+          "kz": "Токен ID: int32 [T], бастапқы мәтіндегі орындарымен."
+        }
+      }
+    },
+    "settings": {},
+    "connects_to": [],
+    "examples": [
+      {
+        "body": {
+          "en": "Build TextInput → Tokenizer → Embedding → AttentionHead → Softmax → BestAnswer → Autoregression. Enter “Copy exactly: red cup”, set Bold to 0 and press Step. Each press adds one model token.",
+          "ru": "Соберите ВводТекста → Токенизатор → Эмбеддинг → ГоловаВнимания → Софтмакс → ЛучшийОтвет → Авторегрессия. Введите «Copy exactly: red cup», поставьте «Смело» на 0 и нажимайте «Шаг». Каждое нажатие добавляет один токен модели.",
+          "kz": "МәтінКірісі → Токенизатор → Эмбеддинг → НазарБасы → Softmax → ҮздікЖауап → Авторегрессия тізбегін құрыңыз. «Copy exactly: red cup» енгізіп, «Батыл» мәнін 0 етіңіз. Әр «Қадам» модельдің бір токенін қосады."
+        }
+      }
+    ]
+  }
+}

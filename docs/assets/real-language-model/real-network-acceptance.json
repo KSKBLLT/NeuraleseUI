@@ -1,0 +1,226 @@
+{
+  "decoded_text": "red cup",
+  "default_dense_width": 8192,
+  "embedding_words": [
+    "Copy",
+    "exactly",
+    "red",
+    "cup"
+  ],
+  "errors": [],
+  "forward_count": 8,
+  "generated_ids": [
+    768,
+    7700
+  ],
+  "is_dummy": false,
+  "long_generated_ids": [
+    34,
+    14094,
+    2389,
+    2168,
+    18576,
+    264,
+    4323,
+    424,
+    264,
+    5154,
+    290,
+    5166,
+    280,
+    658,
+    259,
+    5834,
+    6088,
+    2033,
+    285,
+    6435,
+    15
+  ],
+  "long_output": "A curious little cat watched the rain from the window and dreamed about a bright garden full of flowers.",
+  "mapping": {
+    "cache_key": "7238293d5b3dd6ef20863ce82f609e2f3cbfa37becba25ed1dfaf384bdd9ba31",
+    "effective_depth": 10,
+    "node_mapping": {
+      "12863899": {
+        "head": 0,
+        "layer": 9,
+        "layers": [
+          5,
+          6,
+          7,
+          8,
+          9
+        ],
+        "op": "attention_head",
+        "stage": 2
+      },
+      "35294444": {
+        "head": 0,
+        "layer": 4,
+        "layers": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        "op": "attention_head",
+        "stage": 1
+      },
+      "42348245": {
+        "layer": 4,
+        "layers": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        "op": "token_labels",
+        "stage": 1
+      },
+      "49666137": {
+        "layer": 4,
+        "layers": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        "op": "autoregression",
+        "stage": 1
+      },
+      "51594303": {
+        "layer": 4,
+        "layers": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        "op": "concat",
+        "stage": 1
+      },
+      "61152229": {
+        "layer": 4,
+        "layers": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        "op": "text_input",
+        "stage": 1
+      },
+      "67546404": {
+        "layer": 4,
+        "layers": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        "op": "softmax",
+        "stage": 1
+      },
+      "73393511": {
+        "layer": 4,
+        "layers": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        "op": "layer",
+        "stage": 1
+      },
+      "76593748": {
+        "head": 1,
+        "layer": 4,
+        "layers": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        "op": "attention_head",
+        "stage": 1
+      },
+      "82612074": {
+        "layer": 4,
+        "layers": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        "op": "tokenizer",
+        "stage": 1
+      },
+      "84310717": {
+        "head": 3,
+        "layer": 4,
+        "layers": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        "op": "attention_head",
+        "stage": 1
+      },
+      "86304498": {
+        "head": 2,
+        "layer": 4,
+        "layers": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        "op": "attention_head",
+        "stage": 1
+      },
+      "99015906": {
+        "layer": 4,
+        "layers": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        "op": "embedding",
+        "stage": 1
+      }
+    },
+    "profile_id": "identity",
+    "requested_depth": 2
+  },
+  "model_id": "clean1000-6f27137365b90aaa",
+  "provider_id": "onnx-clean1000",
+  "real_attention_heads": 4,
+  "unicode_words": [
+    "мама",
+    "папа",
+    "король",
+    "королева",
+    "ана",
+    "әке",
+    "патша",
+    "патшайым",
+    "hello",
+    "world"
+  ],
+  "vocab_size": 20002
+}

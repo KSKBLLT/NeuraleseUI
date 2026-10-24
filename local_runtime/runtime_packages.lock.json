@@ -1,0 +1,35 @@
+{
+  "packages": [
+    {
+      "metadata_sha256": "5a27a0e272b1f6e597acbbf58e8da39ae350b2318db8df4cf49d72518e62eebc",
+      "name": "numpy",
+      "version": "1.26.4"
+    },
+    {
+      "metadata_sha256": "da693408936c2a33c328a60698d0469aba242447c845deac4b36433ff9936e54",
+      "name": "onnx",
+      "version": "1.14.1"
+    },
+    {
+      "metadata_sha256": "3ad12e7a6d4fecc4c721b468687042999731ef90b531a92f92ba067407f7eff3",
+      "name": "onnxruntime-training-cpu",
+      "version": "1.19.2"
+    },
+    {
+      "metadata_sha256": "68b725048d8fc10a08006c36fee453dc34711a5fc8138a41a39e3f93d908ebe6",
+      "name": "lmdb",
+      "version": "2.2.0"
+    },
+    {
+      "metadata_sha256": "42a8ab7e94ef0b7baa7e94cdac65d6b9254c608476f630120c990007bf472943",
+      "name": "pyserial",
+      "version": "3.5"
+    }
+  ],
+  "python": {
+    "implementation": "cpython",
+    "major_minor": "3.11"
+  },
+  "requirements_sha256": "7978045f08a5db845ed3f117dc55ac1cfed258201bed49caa426c3b3c04496e2",
+  "schema": 1
+}

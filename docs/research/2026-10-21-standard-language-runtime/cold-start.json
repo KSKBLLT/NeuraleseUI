@@ -1,0 +1,68 @@
+{
+  "environment": "3.11.15 (main, May 10 2026, 19:23:07) [Clang 22.1.3 ]",
+  "path": "train_entry.py \u2192 PreparedSession \u2192 PreparedLanguageSession",
+  "cold_cache_each_trial": true,
+  "runs": [
+    {
+      "trial": 0,
+      "first_event_seconds": 0.08280587499029934,
+      "total_seconds": 0.9348121671937406,
+      "epoch_seconds": [
+        0.15084949997253716,
+        0.12328587495721877,
+        0.08160641696304083
+      ],
+      "visualizations": 3,
+      "ipc_bytes": 98798
+    },
+    {
+      "trial": 1,
+      "first_event_seconds": 0.09528633393347263,
+      "total_seconds": 0.9325855418574065,
+      "epoch_seconds": [
+        0.15139274997636676,
+        0.12852216605097055,
+        0.08208833285607398
+      ],
+      "visualizations": 3,
+      "ipc_bytes": 98800
+    },
+    {
+      "trial": 2,
+      "first_event_seconds": 0.09691875008866191,
+      "total_seconds": 0.9325617079157382,
+      "epoch_seconds": [
+        0.16248345794156194,
+        0.12115987506695092,
+        0.08150783297605813
+      ],
+      "visualizations": 3,
+      "ipc_bytes": 98799
+    },
+    {
+      "trial": 3,
+      "first_event_seconds": 0.0996668329462409,
+      "total_seconds": 0.9467203330714256,
+      "epoch_seconds": [
+        0.15121795888990164,
+        0.12582566682249308,
+        0.08331191702745855
+      ],
+      "visualizations": 3,
+      "ipc_bytes": 98798
+    },
+    {
+      "trial": 4,
+      "first_event_seconds": 0.09884916595183313,
+      "total_seconds": 0.9292035829275846,
+      "epoch_seconds": [
+        0.1486803749576211,
+        0.12488137488253415,
+        0.08267849986441433
+      ],
+      "visualizations": 3,
+      "ipc_bytes": 98796
+    }
+  ],
+  "epoch_median_seconds": 0.12488137488253415
+}

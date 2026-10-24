@@ -1,0 +1,34 @@
+# Godot 4+ specific ignores
+.godot/
+/android/
+
+# FullyLocal runtime artifacts
+/local_runtime/python/
+# Only the portable, verified inference bundle is versioned. Derived models,
+# training checkpoints and research artifacts remain local.
+/local_runtime/models/*
+!/local_runtime/models/clean1000/
+/local_runtime/models/clean1000/*
+!/local_runtime/models/clean1000/decoder.onnx
+!/local_runtime/models/clean1000/tokenizer.json
+!/local_runtime/models/clean1000/config.json
+!/local_runtime/models/clean1000/chat_template.jinja
+!/local_runtime/models/clean1000/language_bundle.json
+!/local_runtime/models/clean1000/tokenizer_config.json
+!/local_runtime/models/clean1000/special_tokens_map.json
+/local_runtime/tmp_smoke_job/
+/local_runtime/tmp*/
+/local_runtime/tmp_*
+/local_runtime/**/__pycache__/
+# Emulator checkouts for the robot tests: nested git clones, fetched locally
+/local_runtime/.emulators/
+**/__pycache__/
+.pytest_cache/
+/.runtime_payload_build/
+/ui_captures/
+/docs/generated/
+/addons/**/~*.TMP
+.mcp/
+
+# Built by local_runtime/tools/build_builtin_datasets.py; 169 MB, over the 100 MB limit of a git host file.
+/local_runtime/datasets/cifar10/train.npz

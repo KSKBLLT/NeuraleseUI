@@ -1,0 +1,81 @@
+[gd_scene format=3 uid="uid://kmwxdlngmx3a"]
+
+[ext_resource type="PackedScene" uid="uid://dvy7srp0sk1qm" path="res://scenes/base_graph.tscn" id="1_base"]
+[ext_resource type="Script" uid="uid://cpq64ecgwyv1k" path="res://scripts/language_models/language_node.gd" id="2_script"]
+[ext_resource type="PackedScene" uid="uid://cyyhr5tmi4ljw" path="res://scenes/Connection.tscn" id="3_conn"]
+[ext_resource type="Script" uid="uid://dtwj74o465brs" path="res://scripts/loc.gd" id="4_loc"]
+
+[node name="Base" unique_id=1790543484 instance=ExtResource("1_base")]
+offset_right = 109.0
+offset_bottom = 73.0
+script = ExtResource("2_script")
+language_kind = &"attention_head"
+server_typename = &"AttentionHeadNode"
+
+[node name="ColorRect" parent="." index="0"]
+instance_shader_parameters/corner_radius_width_add = Vector2(-3, 0)
+instance_shader_parameters/outline_color = Color(0.49804, 0.61961, 1, 1)
+instance_shader_parameters/tuning = Color(0.1, 0.12, 0.2, 0.7)
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 109.0
+mouse_filter = 2
+
+[node name="Label" parent="ColorRect/root" index="0"]
+self_modulate = Color(0.9, 0.9, 0.9, 1)
+offset_left = 12.0
+offset_top = 4.0
+offset_right = 492.0
+offset_bottom = 49.0
+scale = Vector2(0.374766, 0.374766)
+text = "AttentionHead"
+
+[node name="Loc" type="Node" parent="ColorRect/root/Label" index="0" unique_id=1024340286]
+script = ExtResource("4_loc")
+auto = true
+localizations_ru = Dictionary[String, String]({
+"_": "ГоловаВнимания"
+})
+localizations_kz = Dictionary[String, String]({
+"_": "НазарБасы"
+})
+
+[node name="Input" parent="." index="1" unique_id=1938308838 node_paths=PackedStringArray("parent_graph") instance=ExtResource("3_conn")]
+layout_mode = 0
+offset_left = -8.0
+offset_top = 112.5
+offset_right = 10.0
+offset_bottom = 131.5
+color = Color(0.49804, 0.61961, 1, 1)
+_accepted_datatypes = "language_vectors"
+hint = 1
+server_name = &"layer_in"
+connection_type = 0
+area_paddings = Vector4(10, 5, 10, 5)
+origin_offset = Vector2(-5, 0)
+unpadded_area = Vector4(10, 10, 0, 10)
+dir_vector = Vector2(-1, 0)
+parent_graph = NodePath("..")
+conn_count_keyword = "layer"
+gradient_color = Color(0.49804, 0.61961, 1, 1)
+
+[node name="Output" parent="." index="2" unique_id=194204423 node_paths=PackedStringArray("parent_graph") instance=ExtResource("3_conn")]
+layout_mode = 0
+offset_left = 250.0
+offset_top = 112.5
+offset_right = 268.0
+offset_bottom = 131.5
+color = Color(0.49804, 0.61961, 1, 1)
+_accepted_datatypes = "language_vectors"
+server_name = &"layer_out"
+connection_type = 1
+area_paddings = Vector4(10, 5, 10, 5)
+multiple_splines = true
+origin_offset = Vector2(9, 0)
+unpadded_area = Vector4(0, 10, 10, 10)
+max_splines_by_keyword = Dictionary[StringName, int]({
+&"layer": 32
+})
+parent_graph = NodePath("..")
+conn_count_keyword = "layer"
+gradient_color = Color(0.49804, 0.61961, 1, 1)

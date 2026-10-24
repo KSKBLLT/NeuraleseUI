@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "id": "conv2d",
+  "source": {
+    "kind": "scene",
+    "path": "res://scenes/conv2d.tscn"
+  },
+  "load_order": 100,
+  "menu": {
+    "visible": true,
+    "section": "layers",
+    "order": 21
+  },
+  "roles": [],
+  "llm": {
+    "type": "conv2d_layer"
+  },
+  "runtime": {
+    "handler": "neuron_layer",
+    "default_input_port": "layer_in",
+    "default_output_port": "layer_out"
+  },
+  "display": {
+    "category": "learn",
+    "title": {
+      "en": "Conv2DLayer",
+      "ru": "СвёртСлой2D",
+      "kz": "СвёртҚабат2D"
+    }
+  }
+}

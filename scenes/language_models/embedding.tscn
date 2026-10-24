@@ -1,0 +1,86 @@
+[gd_scene format=3]
+
+[ext_resource type="PackedScene" path="res://scenes/base_graph.tscn" id="1_base"]
+[ext_resource type="Script" path="res://scripts/language_models/language_node.gd" id="2_script"]
+[ext_resource type="PackedScene" path="res://scenes/Connection.tscn" id="3_conn"]
+[ext_resource type="Script" path="res://scripts/loc.gd" id="4_loc"]
+
+[node name="Base" instance=ExtResource("1_base")]
+offset_right = 109.0
+offset_bottom = 73.0
+script = ExtResource("2_script")
+language_kind = &"embedding"
+server_typename = &"EmbeddingNode"
+is_input = false
+area_padding = 0.0
+base_config = Dictionary[StringName, Variant]({})
+
+[node name="ColorRect" parent="." index="0"]
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 109.0
+offset_bottom = 73.0
+mouse_filter = 2
+instance_shader_parameters/corner_radius_width_add = Vector2(-3, 0)
+instance_shader_parameters/outline_color = Color(0.49804,0.61961,1,1)
+instance_shader_parameters/tuning = Color(0.10,0.12,0.2,0.7)
+
+[node name="Label" parent="ColorRect/root" index="0"]
+offset_left = 12.0
+offset_top = 4.0
+offset_right = 492.0
+offset_bottom = 49.0
+scale = Vector2(0.374766,0.374766)
+text = "Embedding"
+self_modulate = Color(0.9,0.9,0.9,1)
+
+[node name="Loc" type="Node" parent="ColorRect/root/Label" index="0"]
+script = ExtResource("4_loc")
+auto = true
+localizations_ru = Dictionary[String, String]({
+"_":"Эмбеддинг"
+})
+localizations_kz = Dictionary[String, String]({
+"_":"Эмбеддинг"
+})
+
+[node name="Input" parent="." node_paths=PackedStringArray("parent_graph") instance=ExtResource("3_conn")]
+z_index = 0
+offset_left = -8
+offset_top = 112.5
+offset_right = 10
+offset_bottom = 131.5
+color = Color(0.49804,0.61961,1,1)
+_accepted_datatypes = "language_tokens"
+server_name = &"tokens_in"
+connection_type = 0
+hint = 1
+multiple_splines = false
+area_paddings = Vector4(10, 5, 10, 5)
+origin_offset = Vector2(-5, 0)
+unpadded_area = Vector4(10, 10, 0, 10)
+dir_vector = Vector2(-1,0)
+parent_graph = NodePath("..")
+conn_count_keyword = "layer"
+gradient_color = Color(0.49804,0.61961,1,1)
+
+[node name="Output" parent="." node_paths=PackedStringArray("parent_graph") instance=ExtResource("3_conn")]
+z_index = 0
+offset_left = 250
+offset_top = 112.5
+offset_right = 268
+offset_bottom = 131.5
+color = Color(0.49804,0.61961,1,1)
+_accepted_datatypes = "language_vectors"
+server_name = &"layer_out"
+connection_type = 1
+hint = 0
+multiple_splines = true
+max_splines_by_keyword = Dictionary[StringName, int]({&"layer":32})
+area_paddings = Vector4(10, 5, 10, 5)
+origin_offset = Vector2(9, 0)
+unpadded_area = Vector4(0, 10, 10, 10)
+dir_vector = Vector2(1,0)
+parent_graph = NodePath("..")
+conn_count_keyword = "layer"
+gradient_color = Color(0.49804,0.61961,1,1)

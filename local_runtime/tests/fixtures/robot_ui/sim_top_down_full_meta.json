@@ -1,0 +1,80 @@
+{
+ "name": "top_down_rover_samples_3",
+ "arr": [],
+ "storage": "packed_float32",
+ "row_count": 5400,
+ "column_count": 14,
+ "col_names": [
+  "Ray 1:float",
+  "Ray 2:float",
+  "Ray 3:float",
+  "Ray 4:float",
+  "Ray 5:float",
+  "Ray 6:float",
+  "Ray 7:float",
+  "Ray 8:float",
+  "Speed:float",
+  "Local goal X:float",
+  "Local goal Y:float",
+  "Steering:float",
+  "Throttle:float",
+  "Brake:float"
+ ],
+ "outputs_from": 11,
+ "inputs": {
+  "x": 11,
+  "datatype": "1d"
+ },
+ "outputs": [
+  {
+   "label": "actions",
+   "x": 3,
+   "datatype": "1d"
+  }
+ ],
+ "input_hints": [],
+ "cache": {},
+ "metadata": {
+  "generator": "threaded_physics_spaces_v3",
+  "binding": {
+   "agent_id": "top_down_rover",
+   "input_width": 11,
+   "output_width": 3,
+   "version": 1,
+   "inputs": [
+    {
+     "sensor_id": "ray_distance",
+     "start": 0,
+     "length": 8
+    },
+    {
+     "sensor_id": "speed",
+     "start": 8,
+     "length": 1
+    },
+    {
+     "sensor_id": "local_goal_direction",
+     "start": 9,
+     "length": 2
+    }
+   ],
+   "outputs": [
+    {
+     "actuator_id": "steering",
+     "start": 0,
+     "length": 1
+    },
+    {
+     "actuator_id": "throttle",
+     "start": 1,
+     "length": 1
+    },
+    {
+     "actuator_id": "brake",
+     "start": 2,
+     "length": 1
+    }
+   ]
+  }
+ }
+}

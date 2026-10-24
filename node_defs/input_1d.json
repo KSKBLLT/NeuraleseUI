@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "id": "input_1d",
+  "source": {
+    "kind": "scene",
+    "path": "res://scenes/input_1d.tscn"
+  },
+  "load_order": 20,
+  "menu": {
+    "visible": true,
+    "section": "inputs_outputs",
+    "order": 2
+  },
+  "roles": [
+    "input"
+  ],
+  "llm": {
+    "type": "input_1d"
+  },
+  "runtime": {
+    "handler": "input",
+    "default_output_port": "input_out"
+  },
+  "display": {
+    "category": "data"
+  }
+}

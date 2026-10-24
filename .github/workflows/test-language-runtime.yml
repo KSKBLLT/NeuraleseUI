@@ -1,0 +1,155 @@
+name: Offline Windows language runtime
+
+on:
+  push:
+    branches: [codex/real-language-model]
+    paths:
+      - 'local_runtime/**'
+      - 'tools/build*.ps1'
+      - 'tools/prepare_windows_installer_payload.ps1'
+      - 'tools/export_windows_with_runtime.ps1'
+      - 'tools/stage_runtime_code.py'
+      - 'tools/language_models/prepare_bundle.py'
+      - 'tools/language_models/stage_language_runtime.py'
+      - 'tools/language_models/check_language_runtime.py'
+      - 'tools/language_models/vendor_dependencies.py'
+      - '.github/workflows/test-language-runtime.yml'
+      - 'tests/godot/test_language_real_backend.gd'
+      - 'tests/godot/language_backend_case.gd'
+      - 'tests/godot/language_runtime_smoke.tscn'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: offline-language-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  offline-windows:
+    runs-on: windows-latest
+    timeout-minutes: 25
+    steps:
+      - name: Enable Git checkout of existing long shader-cache paths
+        shell: pwsh
+        run: git config --global core.longpaths true
+      - uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5
+      - name: Install Godot and Windows export templates
+        shell: pwsh
+        run: |
+          $godotDir = Join-Path $env:RUNNER_TEMP "godot"
+          $archive = Join-Path $env:RUNNER_TEMP "godot.zip"
+          Invoke-WebRequest "https://github.com/godotengine/godot/releases/download/4.7.1-stable/Godot_v4.7.1-stable_win64.exe.zip" -OutFile $archive
+          Expand-Archive -LiteralPath $archive -DestinationPath $godotDir
+          $godot = Get-ChildItem -LiteralPath $godotDir -Filter "Godot_v4.7.1-stable_win64_console.exe" -File | Select-Object -First 1
+          "GODOT_BIN=$($godot.FullName)" | Out-File -FilePath $env:GITHUB_ENV -Encoding utf8 -Append
+          $templates = Join-Path $env:RUNNER_TEMP "templates.zip"
+          Invoke-WebRequest "https://github.com/godotengine/godot/releases/download/4.7.1-stable/Godot_v4.7.1-stable_export_templates.tpz" -OutFile $templates
+          $unpacked = Join-Path $env:RUNNER_TEMP "templates"
+          Expand-Archive -LiteralPath $templates -DestinationPath $unpacked
+          $target = Join-Path $env:APPDATA "Godot\export_templates\4.7.1.stable"
+          New-Item -ItemType Directory -Force -Path $target | Out-Null
+          Copy-Item -Path (Join-Path $unpacked "templates\*") -Destination $target -Recurse -Force
+      - name: Prepare language fixture using the existing runtime archive and staging tools
+        shell: pwsh
+        run: |
+          $game = Join-Path $env:RUNNER_TEMP "Neuralese clean export Пример"
+          New-Item -ItemType Directory -Force -Path $game | Out-Null
+          $archive = ".\runtime_payload\windows-x64-runtime.zip"
+          $expected = (Get-Content -LiteralPath ".\runtime_payload\windows-x64-runtime.sha256" -Raw).Trim().Split()[0]
+          if ((Get-FileHash -LiteralPath $archive -Algorithm SHA256).Hash.ToLowerInvariant() -ne $expected) { throw "Runtime archive SHA mismatch" }
+          $runtime = Join-Path $game "local_runtime\windows-x64"
+          Expand-Archive -LiteralPath $archive -DestinationPath $runtime -Force
+          $python = Join-Path $runtime "python\python.exe"
+          # Same operations called by prepare_windows_installer_payload.ps1.
+          # This fixture exercises the language feature without downloading
+          # the unrelated image-training dataset or publishing an installer.
+          $fingerprint = & $python -I tools\stage_runtime_code.py local_runtime\neuralese_local $runtime
+          if ($LASTEXITCODE -ne 0) { throw "Runtime code staging failed" }
+          & $python -I tools\language_models\stage_language_runtime.py --source-runtime local_runtime --destination-runtime $runtime --platform windows-x64
+          if ($LASTEXITCODE -ne 0) { throw "Language asset staging failed" }
+          @{platform="windows-x64"; pruned=$true; source="native_language_test_fixture"; code_fingerprint=[string]$fingerprint} |
+              ConvertTo-Json -Compress |
+              Set-Content -LiteralPath (Join-Path $runtime ".neuralese_runtime_manifest.json") -Encoding utf8
+          "OFFLINE_GAME=$game" | Out-File -FilePath $env:GITHUB_ENV -Encoding utf8 -Append
+      - name: Export the real application with the existing export script
+        shell: pwsh
+        run: |
+          # Official release templates disable --script overrides. Use a
+          # test scene selected only in this CI checkout before normal export.
+          $project = Join-Path $pwd.Path "project.godot"
+          $settings = [regex]::Replace([IO.File]::ReadAllText($project), '(?m)^run/main_scene=.*$', 'run/main_scene="res://tests/godot/language_runtime_smoke.tscn"')
+          [IO.File]::WriteAllText($project,$settings)
+          & $env:GODOT_BIN --headless --editor --path . --import
+          if ($LASTEXITCODE -ne 0) { throw "Godot import failed" }
+          & .\tools\export_windows_with_runtime.ps1 -ProjectRoot $pwd.Path -GodotExe $env:GODOT_BIN -Output (Join-Path $env:OFFLINE_GAME "Neuralese.exe") -SkipExportSmokeTest
+          if ($LASTEXITCODE -ne 0) { throw "Existing Windows export script failed" }
+      - name: Disable source runtime and prepare OS network isolation
+        shell: pwsh
+        run: |
+          # The exported app must not be able to fall back to checkout assets.
+          Move-Item -LiteralPath .\local_runtime -Destination (Join-Path $env:RUNNER_TEMP "disabled-source-runtime")
+          $moved = Join-Path $env:RUNNER_TEMP "Moved offline application"
+          Move-Item -LiteralPath $env:OFFLINE_GAME -Destination $moved
+          $python = Join-Path $moved "local_runtime\windows-x64\python\python.exe"
+          # Prove the same interpreter can connect before the OS rule is added.
+          & $python -I -c "import socket; socket.create_connection(('1.1.1.1',443),timeout=10).close()"
+          if ($LASTEXITCODE -ne 0) { throw "Network isolation baseline failed" }
+          Set-NetFirewallProfile -Profile Domain,Public,Private -Enabled True
+          if (Get-NetFirewallProfile | Where-Object { !$_.Enabled }) { throw "Firewall is disabled" }
+          New-NetFirewallRule -Name NeuraleseOfflinePython -DisplayName NeuraleseOfflinePython -Direction Outbound -Program $python -Action Block -Profile Any | Out-Null
+          New-NetFirewallRule -Name NeuraleseOfflineApp -DisplayName NeuraleseOfflineApp -Direction Outbound -Program (Join-Path $moved "Neuralese.exe") -Action Block -Profile Any | Out-Null
+          & $python -I -c "import socket; s=socket.socket(); s.settimeout(3); result=s.connect_ex(('1.1.1.1',443)); print('OS network block:',result); assert result != 0"
+          if ($LASTEXITCODE -ne 0) { throw "OS network isolation failed" }
+          @{firewall=$true; baseline_connected=$true; blocked_connection=$true; source_runtime_removed=$true} |
+            ConvertTo-Json | Set-Content (Join-Path $env:RUNNER_TEMP "language-isolation.json")
+      - name: Relocate and run with an empty profile and no external Python paths
+        shell: pwsh
+        run: |
+          $moved = Join-Path $env:RUNNER_TEMP "Moved offline application"
+          $runtime = Join-Path $moved "local_runtime\windows-x64"
+          Remove-Item Env:PYTHONHOME, Env:PYTHONPATH, Env:NEURALESE_LANGUAGE_PYTHON, Env:NEURALESE_LANGUAGE_MODEL_DIR -ErrorAction SilentlyContinue
+          $env:PYTHONNOUSERSITE = "1"
+          $env:USERPROFILE = Join-Path $env:RUNNER_TEMP "empty-model-profile"
+          New-Item -ItemType Directory -Force -Path $env:USERPROFILE | Out-Null
+          $env:APPDATA = Join-Path $env:USERPROFILE "AppData\Roaming"
+          $env:LOCALAPPDATA = Join-Path $env:USERPROFILE "AppData\Local"
+          New-Item -ItemType Directory -Force -Path $env:APPDATA,$env:LOCALAPPDATA | Out-Null
+          $env:NEURALESE_ISOLATED_TEST = "1"
+          $env:PATH = "$env:WINDIR\System32;$env:WINDIR"
+          & (Join-Path $runtime "python\python.exe") -I .\tools\language_models\check_language_runtime.py --runtime $runtime |
+              Tee-Object -FilePath (Join-Path $env:RUNNER_TEMP "language-runtime-check.json")
+          if ($LASTEXITCODE -ne 0) { throw "Relocated offline inference failed" }
+          Push-Location $moved
+          try {
+            $stdout = Join-Path $env:RUNNER_TEMP "exported-language-backend.log"
+            $stderr = Join-Path $env:RUNNER_TEMP "exported-language-backend.stderr.log"
+            $process = Start-Process -FilePath (Join-Path $moved "Neuralese.exe") -ArgumentList @("--headless", "--", "--perfbench") -PassThru -RedirectStandardOutput $stdout -RedirectStandardError $stderr
+            if (!$process.WaitForExit(60000)) { $process.Kill(); $process.WaitForExit(); throw "Exported language backend timed out" }
+            $log = Get-Content -LiteralPath $stdout -Raw
+            Write-Host $log
+            if ($process.ExitCode -ne 0 -or $log -notmatch "PASS test_language_real_backend") {
+              throw "The exported application's language backend failed"
+            }
+          } finally {
+            Pop-Location
+            foreach ($path in @($stdout,$stderr)) {
+              if (Test-Path -LiteralPath $path) { Get-Content -LiteralPath $path }
+            }
+            Get-ChildItem -LiteralPath $env:APPDATA -Filter worker.log -Recurse -ErrorAction SilentlyContinue | ForEach-Object { Get-Content -LiteralPath $_.FullName }
+          }
+      - name: Remove test firewall rules
+        if: always()
+        shell: pwsh
+        run: |
+          Get-NetFirewallRule -Name NeuraleseOfflinePython,NeuraleseOfflineApp -ErrorAction SilentlyContinue | Remove-NetFirewallRule
+      - name: Save native verification result in CI log
+        if: always()
+        shell: pwsh
+        run: |
+          foreach ($name in @("language-isolation.json","language-runtime-check.json","exported-language-backend.log","exported-language-backend.stderr.log")) {
+            $path = Join-Path $env:RUNNER_TEMP $name
+            Write-Host "Verification file: $name"
+            if (Test-Path -LiteralPath $path) { Get-Content -LiteralPath $path }
+          }

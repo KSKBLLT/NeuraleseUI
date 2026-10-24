@@ -1,0 +1,11 @@
+{
+  "version": 1,
+  "skills": {
+    "design-review": {
+      "source": "Superfuture/design-review",
+      "sourceType": "github",
+      "skillPath": "design-review/skills/design-review/SKILL.md",
+      "computedHash": "3b53647c5b6db7574c78d07c7c058527d15ffe37335d7833878703fe5f1f167c"
+    }
+  }
+}

@@ -1,0 +1,339 @@
+{
+  "schema_version": 1,
+  "node_id": "output_map",
+  "status": "stable",
+  "generated": {
+    "node_id": "output_map",
+    "created_with": "output_map",
+    "scene_path": "res://scenes/branch_mapping.tscn",
+    "scene_uid": "uid://tl4ael3dfb7d",
+    "root_instance_path": null,
+    "script_path": "res://scripts/branches.gd",
+    "inheritance_chain": [
+      "res://scripts/branches.gd",
+      "res://scripts/io_graph.gd",
+      "res://scripts/base_graph.gd"
+    ],
+    "inherits_graph": true,
+    "server_typename": "OutputMap",
+    "layer_name": null,
+    "title_candidates": {
+      "en": "OutputMap",
+      "ru": "КартаВывода",
+      "kz": "ШығысКартасы"
+    },
+    "localized_properties": {
+      "ports": {},
+      "settings": {},
+      "controls": {
+        "ColorRect/root/Label": {
+          "property": "text",
+          "values": {
+            "en": "OutputMap",
+            "ru": "КартаВывода",
+            "kz": "ШығысКартасы"
+          }
+        }
+      },
+      "title": {
+        "source_path": "ColorRect/root/Label",
+        "property": "text",
+        "values": {
+          "en": "OutputMap",
+          "ru": "КартаВывода",
+          "kz": "ШығысКартасы"
+        }
+      }
+    },
+    "base_config": {},
+    "ports": [
+      {
+        "id": "input_i2_model_in",
+        "scene_node": "i2",
+        "scene_path": ".",
+        "hint": 0,
+        "server_name": "model_in",
+        "direction": "input",
+        "datatypes": [
+          "model_output"
+        ],
+        "multiple": false,
+        "config_conn": false,
+        "keyword": null,
+        "conn_count_keyword": "train",
+        "visual": {
+          "color": "#7673d9ff",
+          "gradient_color": "#7673d9ff",
+          "dir_vector": {
+            "x": -1.0,
+            "y": 0.0
+          },
+          "side": "left",
+          "relative_to": {
+            "role": "graph_rect",
+            "scene_path": "ColorRect"
+          },
+          "absolute_scene_rect": {
+            "x": -66.0,
+            "y": -12.0,
+            "w": 18.0,
+            "h": 18.0
+          },
+          "reference_rect": {
+            "x": -58.0,
+            "y": -22.0,
+            "w": 109.0,
+            "h": 36.0
+          },
+          "relative_rect": {
+            "x": -0.07339449541284404,
+            "y": 0.2777777777777778,
+            "w": 0.1651376146788991,
+            "h": 0.5
+          },
+          "relative_origin": {
+            "x": -0.07339449541284404,
+            "y": 0.5277777777777778
+          },
+          "color_family": "violet",
+          "color_label": {
+            "en": "Violet",
+            "ru": "Фиолетовый",
+            "kz": "Күлгін"
+          },
+          "side_label": {
+            "en": "on the left",
+            "ru": "слева",
+            "kz": "сол жақта"
+          },
+          "verbal_label": {
+            "en": "Violet port on the left",
+            "ru": "Фиолетовый порт слева",
+            "kz": "Күлгін порт сол жақта"
+          },
+          "text_color": "#6a67d6"
+        }
+      },
+      {
+        "id": "output_i_model_out",
+        "scene_node": "i",
+        "scene_path": ".",
+        "hint": 0,
+        "server_name": "model_out",
+        "direction": "output",
+        "datatypes": [
+          "output_mapped"
+        ],
+        "multiple": false,
+        "config_conn": false,
+        "keyword": null,
+        "conn_count_keyword": "train",
+        "visual": {
+          "color": "#7673d9ff",
+          "gradient_color": "#7673d9ff",
+          "dir_vector": {
+            "x": 1.0,
+            "y": 0.0
+          },
+          "side": "right",
+          "relative_to": {
+            "role": "graph_rect",
+            "scene_path": "ColorRect"
+          },
+          "absolute_scene_rect": {
+            "x": 41.0,
+            "y": -12.0,
+            "w": 18.0,
+            "h": 18.0
+          },
+          "reference_rect": {
+            "x": -58.0,
+            "y": -22.0,
+            "w": 109.0,
+            "h": 36.0
+          },
+          "relative_rect": {
+            "x": 0.908256880733945,
+            "y": 0.2777777777777778,
+            "w": 0.1651376146788991,
+            "h": 0.5
+          },
+          "relative_origin": {
+            "x": 1.073394495412844,
+            "y": 0.5277777777777778
+          },
+          "color_family": "violet",
+          "color_label": {
+            "en": "Violet",
+            "ru": "Фиолетовый",
+            "kz": "Күлгін"
+          },
+          "side_label": {
+            "en": "on the right",
+            "ru": "справа",
+            "kz": "оң жақта"
+          },
+          "verbal_label": {
+            "en": "Violet port on the right",
+            "ru": "Фиолетовый порт справа",
+            "kz": "Күлгін порт оң жақта"
+          },
+          "text_color": "#6a67d6"
+        }
+      },
+      {
+        "id": "input_connection_i_model_out",
+        "scene_node": "i",
+        "scene_path": "connection",
+        "hint": 4,
+        "server_name": "model_out",
+        "direction": "input",
+        "datatypes": [
+          "pellet"
+        ],
+        "multiple": false,
+        "config_conn": false,
+        "keyword": null,
+        "conn_count_keyword": "pell",
+        "visual": {
+          "color": "#a8a8a8ff",
+          "gradient_color": "#a8a8a8ff",
+          "dir_vector": {
+            "x": -1.0,
+            "y": 0.0
+          },
+          "side": "left",
+          "relative_to": {
+            "role": "graph_rect",
+            "scene_path": "ColorRect"
+          },
+          "absolute_scene_rect": {
+            "x": -65.0,
+            "y": 13.0,
+            "w": 18.0,
+            "h": 14.0
+          },
+          "reference_rect": {
+            "x": -58.0,
+            "y": -22.0,
+            "w": 109.0,
+            "h": 36.0
+          },
+          "relative_rect": {
+            "x": -0.06422018348623854,
+            "y": 0.9722222222222222,
+            "w": 0.1651376146788991,
+            "h": 0.3888888888888889
+          },
+          "relative_origin": {
+            "x": -0.06422018348623854,
+            "y": 1.1666666666666667
+          },
+          "color_family": "gray",
+          "color_label": {
+            "en": "Gray",
+            "ru": "Серый",
+            "kz": "Сұр"
+          },
+          "side_label": {
+            "en": "on the left",
+            "ru": "слева",
+            "kz": "сол жақта"
+          },
+          "verbal_label": {
+            "en": "Gray port on the left",
+            "ru": "Серый порт слева",
+            "kz": "Сұр порт сол жақта"
+          },
+          "text_color": "#757575"
+        }
+      }
+    ],
+    "settings": [],
+    "icon_source": "res://node_icons/IconOutputMap.png",
+    "static_compatible_nodes": [
+      {
+        "from_port": "output_i_model_out",
+        "to_node": "train_input",
+        "to_port": "input_i_pred_in",
+        "datatypes": [
+          "output_mapped"
+        ],
+        "confidence": "static_datatype_intersection"
+      }
+    ]
+  },
+  "docs": {
+    "title": {
+      "en": "OutputMap",
+      "ru": "Подготовка ответа",
+      "kz": "Шығыс картасы"
+    },
+    "summary": {
+      "en": "Maps raw model outputs to the values required by the training step.",
+      "ru": "Соединяет предсказание модели с правильным ответом из учебного примера.",
+      "kz": "Өңделмеген модель шығысын оқу қадамына қажет мәндермен сәйкестендіреді."
+    },
+    "operation": {
+      "en": "Receives model output and creates mapped training outputs through its configurable rows. The mapped result is consumed by Training Step.",
+      "ru": "Чтобы модель могла учиться, нужно сравнить её предсказание с правильным ответом. Эта нода получает оба результата и указывает, какие числа нужно сравнить между собой. После этого подготовленная пара отправляется в ноду «Шаг обучения», которая вычисляет ошибку и исправляет модель.",
+      "kz": "Модель шығысын қабылдап, бапталатын жолдар арқылы сәйкестендірілген оқу мәндерін жасайды. Нәтижені Training Step қолданады."
+    },
+    "compact": {
+      "body": {
+        "en": "Maps raw model outputs to the values required by the training step.",
+        "ru": "Готовит предсказание и правильный ответ к сравнению.",
+        "kz": "Өңделмеген модель шығысын оқу қадамына қажет мәндермен сәйкестендіреді."
+      }
+    },
+    "ports": {
+      "input_i2_model_in": {
+        "label": {
+          "en": "model_in",
+          "ru": "Предсказание модели",
+          "kz": "model_in"
+        },
+        "description": {
+          "en": "Receives model_output data through the model_in input.",
+          "ru": "Фиолетовый порт слева принимает ответ от ноды «Запуск модели».",
+          "kz": "model_in кірісі арқылы model_output түріндегі деректерді қабылдайды."
+        }
+      },
+      "output_i_model_out": {
+        "label": {
+          "en": "model_out",
+          "ru": "Пара для сравнения",
+          "kz": "model_out"
+        },
+        "description": {
+          "en": "Sends output_mapped data to compatible downstream nodes.",
+          "ru": "Фиолетовый порт справа передаёт предсказание и правильный ответ в ноду «Шаг обучения».",
+          "kz": "output_mapped түріндегі деректерді үйлесімді келесі түйіндерге береді."
+        }
+      },
+      "input_connection_i_model_out": {
+        "label": {
+          "en": "model_out",
+          "ru": "Правильный ответ",
+          "kz": "model_out"
+        },
+        "description": {
+          "en": "Receives pellet data through the model_out input.",
+          "ru": "Серый порт снизу слева принимает ту часть учебного примера, где записан правильный ответ.",
+          "kz": "model_out кірісі арқылы pellet түріндегі деректерді қабылдайды."
+        }
+      }
+    },
+    "settings": {},
+    "connects_to": [],
+    "examples": [
+      {
+        "body": {
+          "ru": "При распознавании цифр соедините предсказание модели с фиолетовым портом, а поле с правильной цифрой — с серым портом снизу.",
+          "en": "For digit classification, map the model output to the dataset column containing the correct digit.",
+          "kz": "Цифрларды классификациялау кезінде модель шығысын дұрыс цифр жазылған деректер бағанымен сәйкестендіріңіз."
+        }
+      }
+    ]
+  }
+}

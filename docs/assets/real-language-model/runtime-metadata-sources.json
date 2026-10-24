@@ -1,0 +1,58 @@
+[
+  {
+    "name": "numpy",
+    "version": "1.26.4",
+    "wheel": "numpy-1.26.4-cp311-cp311-win_amd64.whl",
+    "wheel_sha256": "cd25bcecc4974d09257ffcd1f098ee778f7834c3ad767fe5db785be9a4aa9cb2",
+    "metadata_sha256": "5a27a0e272b1f6e597acbbf58e8da39ae350b2318db8df4cf49d72518e62eebc",
+    "metadata_url": "https://files.pythonhosted.org/packages/3f/6b/5610004206cf7f8e7ad91c5a85a8c71b2f2f8051a0c0c4d5916b76d6cbb2/numpy-1.26.4-cp311-cp311-win_amd64.whl.metadata"
+  },
+  {
+    "name": "onnx",
+    "version": "1.14.1",
+    "wheel": "onnx-1.14.1-cp311-cp311-win_amd64.whl",
+    "wheel_sha256": "16a6667aff34431ab828b393ed8153c0a0cf15152d76f8d93aa48fb206217827",
+    "metadata_sha256": "da693408936c2a33c328a60698d0469aba242447c845deac4b36433ff9936e54",
+    "metadata_url": "https://files.pythonhosted.org/packages/03/49/7263b3806ffebd3c967341986df32a5e62b2fa78beca2cdf9516d876b3fc/onnx-1.14.1-cp311-cp311-win_amd64.whl.metadata"
+  },
+  {
+    "name": "onnxruntime-training-cpu",
+    "version": "1.19.2",
+    "wheel": "onnxruntime_training_cpu-1.19.2-cp311-cp311-win_amd64.whl",
+    "wheel_sha256": "e84887e098f4dff9a39926f8fe9d44bd59d0804c77b08a072d686264fea10889",
+    "metadata_sha256": "3ad12e7a6d4fecc4c721b468687042999731ef90b531a92f92ba067407f7eff3",
+    "metadata_url": "https://files.pythonhosted.org/packages/f8/9f/22ed0b48a347cf7847b7d9fd6a0f4e76524581546a06c9fc4a6e4a8d2bd6/onnxruntime_training_cpu-1.19.2-cp311-cp311-win_amd64.whl.metadata"
+  },
+  {
+    "name": "lmdb",
+    "version": "2.2.0",
+    "wheel": "lmdb-2.2.0-cp311-cp311-win_amd64.whl",
+    "wheel_sha256": "beacb2aed281cc806cb9a91663ed1a772fecd7a125d16b694cfc7af94a9864be",
+    "metadata_sha256": "68b725048d8fc10a08006c36fee453dc34711a5fc8138a41a39e3f93d908ebe6",
+    "metadata_url": "https://files.pythonhosted.org/packages/8a/1a/6c5931ee1412a9d8c0c3859ed33bb64ed00ea8ef418413c56524e0372ef3/lmdb-2.2.0-cp311-cp311-win_amd64.whl.metadata"
+  },
+  {
+    "name": "tokenizers",
+    "version": "0.22.2",
+    "wheel": "tokenizers-0.22.2-cp39-abi3-win_amd64.whl",
+    "wheel_sha256": "c9ea31edff2968b44a88f97d784c2f16dc0729b8b143ed004699ebca91f05c48",
+    "metadata_sha256": "5ad9bccf21ae53d45f812703c80c7c03ecea300823655a2968f9e6778779bdb3",
+    "metadata_url": "https://files.pythonhosted.org/packages/65/71/0670843133a43d43070abeb1949abfdef12a86d490bea9cd9e18e37c5ff7/tokenizers-0.22.2-cp39-abi3-win_amd64.whl.metadata"
+  },
+  {
+    "name": "Jinja2",
+    "version": "3.1.6",
+    "wheel": "jinja2-3.1.6-py3-none-any.whl",
+    "wheel_sha256": "85ece4451f492d0c13c5dd7c13a64681a86afae63a5f347908daf103ce6d2f67",
+    "metadata_sha256": "68c5548fb67c4132a13898d9b31ec50c6bea2abdd915d921f214355c3a6499c8",
+    "metadata_url": "https://files.pythonhosted.org/packages/62/a1/3d680cbfd5f4b8f15abc1d571870c5fc3e594bb582bc3b64ea099db13e56/jinja2-3.1.6-py3-none-any.whl.metadata"
+  },
+  {
+    "name": "pyserial",
+    "version": "3.5",
+    "wheel": "pyserial-3.5-py2.py3-none-any.whl",
+    "wheel_sha256": "c4451db6ba391ca6ca299fb3ec7bae67a5c55dde170964c7a14ceefec02f2cf0",
+    "metadata_sha256": "42a8ab7e94ef0b7baa7e94cdac65d6b9254c608476f630120c990007bf472943",
+    "metadata_url": "https://files.pythonhosted.org/packages/07/bc/587a445451b253b285629263eb51c2d8e9bcea4fc97826266d186f96f558/pyserial-3.5-py2.py3-none-any.whl.metadata"
+  }
+]

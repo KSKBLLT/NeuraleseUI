@@ -1,0 +1,66 @@
+Godot Engine v4.7.1.stable.steam.a13da4feb - https://godotengine.org
+
+Unicode parsing error, some characters were replaced with � (U+FFFD): Unexpected NUL character
+Unicode parsing error, some characters were replaced with � (U+FFFD): Unexpected NUL character
+Unicode parsing error, some characters were replaced with � (U+FFFD): Unexpected NUL character
+ERROR: Failed to read the root certificate store.
+   at: get_system_ca_certificates (platform/windows/os_windows.cpp:2582)
+ERROR: Failed to open or create file: user://memory.bin
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] open_or_create (res://scripts/cookie_manager.gd:451)
+       [1] get_stored (res://scripts/glob.gd:385)
+       [2] get_var (res://scripts/glob.gd:382)
+       [3] _enter_tree (res://scripts/glob.gd:1537)
+ERROR: Failed to open or create file: user://memory.bin
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] open_or_create (res://scripts/cookie_manager.gd:451)
+       [1] get_stored (res://scripts/glob.gd:385)
+       [2] get_var (res://scripts/glob.gd:382)
+       [3] _enter_tree (res://scripts/glob.gd:1542)
+ERROR: Failed to open or create file: user://classroom.bin
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] open_or_create (res://scripts/cookie_manager.gd:451)
+       [1] get_stored (res://scripts/glob.gd:385)
+       [2] get_var (res://scripts/glob.gd:382)
+       [3] cache (res://scripts/learner.gd:19)
+       [4] _enter_tree (res://scripts/learner.gd:33)
+ERROR: Failed to open or create file: user://classroom.bin
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] open_or_create (res://scripts/cookie_manager.gd:451)
+       [1] get_stored (res://scripts/glob.gd:385)
+       [2] set_var (res://scripts/glob.gd:376)
+       [3] cache (res://scripts/learner.gd:25)
+       [4] _enter_tree (res://scripts/learner.gd:33)
+ERROR: Failed to open or create file: user://classroom.bin
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] open_or_create (res://scripts/cookie_manager.gd:451)
+       [1] set_var (res://scripts/glob.gd:378)
+       [2] cache (res://scripts/learner.gd:25)
+       [3] _enter_tree (res://scripts/learner.gd:33)
+SCRIPT ERROR: Invalid call. Nonexistent function 'store_var' in base 'Nil'.
+   at: set_var (res://scripts/glob.gd:379)
+   GDScript backtrace (most recent call first):
+       [0] set_var (res://scripts/glob.gd:379)
+       [1] cache (res://scripts/learner.gd:25)
+       [2] _enter_tree (res://scripts/learner.gd:33)
+ERROR: Node not found: "base/WIN_GRAPH" (relative to "/root").
+   at: get_node (scene/main/node.cpp:1975)
+   GDScript backtrace (most recent call first):
+       [0] _ready (res://scripts/glob.gd:3390)
+SCRIPT ERROR: Cannot call method 'add_child' on a null value.
+   at: _ready (res://scripts/glob.gd:3390)
+   GDScript backtrace (most recent call first):
+       [0] _ready (res://scripts/glob.gd:3390)
+WARNING: Resident local training worker failed: {"code":"worker_pid_mismatch","message":"Local training worker bootstrap belongs to another process"}
+   at: push_warning (core/variant/variant_utility.cpp:1033)
+   GDScript backtrace (most recent call first):
+       [0] _on_local_training_worker_failed (res://scripts/run_manager.gd:304)
+       [1] _fail (res://scripts/local_training_worker.gd:267)
+       [2] _poll_bootstrap (res://scripts/local_training_worker.gd:136)
+       [3] poll (res://scripts/local_training_worker.gd:73)
+       [4] _process (res://scripts/run_manager.gd:2078)

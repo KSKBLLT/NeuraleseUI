@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "id": "neuron",
+  "source": {
+    "kind": "scene",
+    "path": "res://scenes/neuron.tscn"
+  },
+  "load_order": 60,
+  "menu": {
+    "visible": true,
+    "section": "layers",
+    "order": 24
+  },
+  "roles": [],
+  "llm": {
+    "type": "activation"
+  },
+  "runtime": {},
+  "display": {
+    "category": "ops"
+  }
+}

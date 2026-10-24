@@ -1,0 +1,198 @@
+{
+  "schema_version": 1,
+  "node_id": "input",
+  "status": "stable",
+  "generated": {
+    "node_id": "input",
+    "created_with": "input",
+    "scene_path": "res://scenes/input_graph.tscn",
+    "scene_uid": "uid://e3l6g3u21slb",
+    "root_instance_path": "res://scenes/input_base.tscn",
+    "script_path": "res://scripts/input_graph.gd",
+    "inheritance_chain": [
+      "res://scripts/input_graph.gd",
+      "res://scripts/input_base.gd",
+      "res://scripts/base_graph.gd"
+    ],
+    "inherits_graph": true,
+    "server_typename": "InputNode",
+    "layer_name": null,
+    "title_candidates": {
+      "en": "Input2D",
+      "ru": "Ввод2D",
+      "kz": "Кіріс2D"
+    },
+    "localized_properties": {
+      "ports": {},
+      "settings": {},
+      "controls": {
+        "ColorRect/root/Label": {
+          "property": "text",
+          "values": {
+            "en": "Input2D",
+            "ru": "Ввод2D",
+            "kz": "Кіріс2D"
+          }
+        },
+        "run": {
+          "property": "text",
+          "values": {
+            "en": "Run!",
+            "ru": "Пуск",
+            "kz": "Қосу"
+          }
+        }
+      },
+      "title": {
+        "source_path": "ColorRect/root/Label",
+        "property": "text",
+        "values": {
+          "en": "Input2D",
+          "ru": "Ввод2D",
+          "kz": "Кіріс2D"
+        }
+      }
+    },
+    "base_config": {},
+    "ports": [
+      {
+        "id": "output_o_input_out",
+        "scene_node": "o",
+        "scene_path": ".",
+        "hint": 0,
+        "server_name": "input_out",
+        "direction": "output",
+        "datatypes": [
+          "input2d"
+        ],
+        "multiple": true,
+        "config_conn": false,
+        "keyword": null,
+        "conn_count_keyword": null,
+        "visual": {
+          "color": "#fffc99ff",
+          "gradient_color": "#fffc99ff",
+          "dir_vector": {
+            "x": 1.0,
+            "y": 0.0
+          },
+          "side": "right",
+          "relative_to": {
+            "role": "graph_rect",
+            "scene_path": "ColorRect"
+          },
+          "absolute_scene_rect": {
+            "x": 42.0,
+            "y": 28.0,
+            "w": 16.0,
+            "h": 21.0
+          },
+          "reference_rect": {
+            "x": -87.0,
+            "y": -35.0,
+            "w": 135.0,
+            "h": 151.0
+          },
+          "relative_rect": {
+            "x": 0.9555555555555556,
+            "y": 0.41721854304635764,
+            "w": 0.11851851851851852,
+            "h": 0.1390728476821192
+          },
+          "relative_origin": {
+            "x": 1.0740740740740742,
+            "y": 0.4867549668874172
+          },
+          "color_family": "yellow",
+          "color_label": {
+            "en": "Yellow",
+            "ru": "Жёлтый",
+            "kz": "Сары"
+          },
+          "side_label": {
+            "en": "on the right",
+            "ru": "справа",
+            "kz": "оң жақта"
+          },
+          "verbal_label": {
+            "en": "Yellow port on the right",
+            "ru": "Жёлтый порт справа",
+            "kz": "Сары порт оң жақта"
+          },
+          "text_color": "#7a7700"
+        }
+      }
+    ],
+    "settings": [],
+    "icon_source": "res://node_icons/en/IconInput.png",
+    "static_compatible_nodes": [
+      {
+        "from_port": "output_o_input_out",
+        "to_node": "flatten",
+        "to_port": "input_o2_layer_in",
+        "datatypes": [
+          "input2d"
+        ],
+        "confidence": "static_datatype_intersection"
+      },
+      {
+        "from_port": "output_o_input_out",
+        "to_node": "conv2d",
+        "to_port": "input_ni_layer_in",
+        "datatypes": [
+          "input2d"
+        ],
+        "confidence": "static_datatype_intersection"
+      }
+    ]
+  },
+  "docs": {
+    "title": {
+      "en": "Input2D",
+      "ru": "Вход изображения",
+      "kz": "Кіріс2D"
+    },
+    "summary": {
+      "en": "Defines a two-dimensional image input for the model.",
+      "ru": "Вводит изображение в нейросеть, чтобы следующие ноды могли его обработать.",
+      "kz": "Модель үшін екі өлшемді кескін кірісін анықтайды."
+    },
+    "operation": {
+      "en": "Provides image-shaped data to compatible 2D layers such as Conv2D, Flatten, or Image Tuning. The model link associates the input with the active model flow.",
+      "ru": "Эту ноду ставят в начале модели, которая работает с изображениями. Она принимает картинку и передаёт её дальше как прямоугольную сетку пикселей. Сама нода изображение не изменяет — обработка начинается в следующих слоях.",
+      "kz": "Кескін пішініндегі деректерді Conv2D, Flatten немесе кескінді баптау сияқты үйлесімді 2D түйіндеріне береді. Модель байланысы кірісті белсенді модель ағынымен байланыстырады."
+    },
+    "compact": {
+      "body": {
+        "en": "Defines a two-dimensional image input for the model.",
+        "ru": "Вводит изображение в модель.",
+        "kz": "Модель үшін екі өлшемді кескін кірісін анықтайды."
+      }
+    },
+    "ports": {
+      "output_o_input_out": {
+        "label": {
+          "en": "input_out",
+          "ru": "Изображение",
+          "kz": "input_out"
+        },
+        "description": {
+          "en": "Sends input2d data to compatible downstream nodes.",
+          "ru": "Жёлтый порт справа передаёт изображение в свёрточный слой или в Flatten.",
+          "kz": "input2d түріндегі деректерді үйлесімді келесі түйіндерге береді."
+        }
+      }
+    },
+    "settings": {},
+    "connects_to": [],
+    "examples": [
+      {
+        "body": {
+          "ru": "Для распознавания цифр MNIST соедините жёлтый порт этой ноды со свёрточным слоем. Для самой простой модели его можно соединить сразу с Flatten.",
+          "en": "For MNIST digit recognition, connect Image Input to a convolution layer or directly to Flatten.",
+          "kz": "MNIST цифрларын тану үшін «Кескін кірісін» свертка қабатына немесе тікелей Flatten нодына қосыңыз."
+        }
+      }
+    ]
+  }
+}

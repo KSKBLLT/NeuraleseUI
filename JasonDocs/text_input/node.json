@@ -1,0 +1,205 @@
+{
+  "schema_version": 1,
+  "node_id": "text_input",
+  "status": "stable",
+  "generated": {
+    "node_id": "text_input",
+    "created_with": "text_input",
+    "scene_path": "res://scenes/language_models/text_input.tscn",
+    "scene_uid": "uid://bj7ktnxomy241",
+    "root_instance_path": "res://scenes/input_base.tscn",
+    "script_path": "res://scripts/language_models/text_input.gd",
+    "inheritance_chain": [
+      "res://scripts/language_models/text_input.gd",
+      "res://scripts/input_base.gd",
+      "res://scripts/base_graph.gd"
+    ],
+    "inherits_graph": true,
+    "server_typename": "TextInputNode",
+    "layer_name": null,
+    "title_candidates": {
+      "en": "TextInput",
+      "ru": "ВводТекста",
+      "kz": "МәтінКірісі"
+    },
+    "localized_properties": {
+      "ports": {},
+      "settings": {},
+      "controls": {
+        "ColorRect/root/Label": {
+          "property": "text",
+          "values": {
+            "en": "TextInput",
+            "ru": "ВводТекста",
+            "kz": "МәтінКірісі"
+          }
+        }
+      },
+      "title": {
+        "source_path": "ColorRect/root/Label",
+        "property": "text",
+        "values": {
+          "en": "TextInput",
+          "ru": "ВводТекста",
+          "kz": "МәтінКірісі"
+        }
+      }
+    },
+    "base_config": {
+      "text": "The cat sat on the"
+    },
+    "ports": [
+      {
+        "id": "output_o_text_out",
+        "scene_node": "o",
+        "scene_path": ".",
+        "hint": 0,
+        "server_name": "text_out",
+        "direction": "output",
+        "datatypes": [
+          "language_text"
+        ],
+        "multiple": false,
+        "config_conn": false,
+        "keyword": null,
+        "conn_count_keyword": "layer",
+        "visual": {
+          "color": "#fffc99ff",
+          "gradient_color": "#fffc99ff",
+          "dir_vector": {
+            "x": 1.0,
+            "y": 0.0
+          },
+          "side": "right",
+          "relative_to": {
+            "role": "graph_rect",
+            "scene_path": "ColorRect"
+          },
+          "absolute_scene_rect": {
+            "x": 103.0,
+            "y": 26.0,
+            "w": 16.0,
+            "h": 21.0
+          },
+          "reference_rect": {
+            "x": 0.0,
+            "y": 0.0,
+            "w": 109.0,
+            "h": 73.0
+          },
+          "relative_rect": {
+            "x": 0.944954128440367,
+            "y": 0.3561643835616438,
+            "w": 0.14678899082568808,
+            "h": 0.2876712328767123
+          },
+          "relative_origin": {
+            "x": 1.091743119266055,
+            "y": 0.5
+          },
+          "color_family": "yellow",
+          "color_label": {
+            "en": "Yellow",
+            "ru": "Жёлтый",
+            "kz": "Сары"
+          },
+          "side_label": {
+            "en": "on the right",
+            "ru": "справа",
+            "kz": "оң жақта"
+          },
+          "verbal_label": {
+            "en": "Yellow port on the right",
+            "ru": "Жёлтый порт справа",
+            "kz": "Сары порт оң жақта"
+          },
+          "text_color": "#7a7700"
+        }
+      }
+    ],
+    "settings": [
+      {
+        "id": "text",
+        "source": "base_config",
+        "default": "The cat sat on the",
+        "ui_kind": null,
+        "ui_path": null,
+        "options": []
+      }
+    ],
+    "icon_source": "res://node_icons/en/IconTextInput.png",
+    "static_compatible_nodes": [
+      {
+        "from_port": "output_o_text_out",
+        "to_node": "tokenizer",
+        "to_port": "input_input_text_in",
+        "datatypes": [
+          "language_text"
+        ],
+        "confidence": "language_sequence_contract"
+      }
+    ]
+  },
+  "docs": {
+    "title": {
+      "en": "TextInput",
+      "ru": "ВводТекста",
+      "kz": "МәтінКірісі"
+    },
+    "summary": {
+      "en": "Enter the text that the graph continues.",
+      "ru": "Введите текст, который продолжит граф.",
+      "kz": "Граф жалғастыратын мәтінді енгізіңіз."
+    },
+    "operation": {
+      "en": "Enter a prompt. After a 0.3 second pause the model updates the connected previews without generating text. A new accepted language connection previews its receiving node; moving nodes does not rerun the model. Step adds the continuation here. Empty input clears results.",
+      "ru": "Введите запрос. Через 0,3 секунды модель обновит связанные визуализации без генерации текста. Новое соединение языковых нод обновляет принимающую ноду; перемещение нод не запускает модель. «Шаг» дописывает продолжение сюда. Пустой ввод очищает результат.",
+      "kz": "Сұрау енгізіңіз. 0,3 секундтан соң модель мәтін жасамай, байланысқан көріністерді жаңартады. Жаңа байланыс қабылдаушы нодты жаңартады; нодты жылжыту модельді іске қоспайды. «Қадам» жалғасын осы жерге қосады. Бос кіріс нәтижені тазартады."
+    },
+    "compact": {
+      "body": {
+        "en": "Enter the text that the graph continues.",
+        "ru": "Введите текст, который продолжит граф.",
+        "kz": "Граф жалғастыратын мәтінді енгізіңіз."
+      }
+    },
+    "ports": {
+      "output_o_text_out": {
+        "label": {
+          "en": "text_out",
+          "ru": "text_out",
+          "kz": "text_out"
+        },
+        "description": {
+          "en": "UTF-8 text.",
+          "ru": "Текст UTF-8.",
+          "kz": "UTF-8 мәтіні."
+        }
+      }
+    },
+    "settings": {
+      "text": {
+        "label": {
+          "en": "Text",
+          "ru": "Текст",
+          "kz": "Мәтін"
+        },
+        "description": {
+          "en": "Prompt typed in the native text field. The field grows with its content; edits run the connected graph automatically and send the shared Input visual signal.",
+          "ru": "Начало текста в нативном поле. Размер поля следует за содержимым; ввод автоматически запускает граф и общий визуальный сигнал Input.",
+          "kz": "Бастапқы мәтінді енгізетін төл өріс. Өлшемі мазмұнға сай өзгереді; енгізу граф пен Input визуалды сигналын автоматты іске қосады."
+        }
+      }
+    },
+    "connects_to": [],
+    "examples": [
+      {
+        "body": {
+          "en": "Build TextInput → Tokenizer → Embedding → AttentionHead → Softmax → BestAnswer → Autoregression. Enter “Copy exactly: red cup”, set Bold to 0 and press Step. Each press adds one model token.",
+          "ru": "Соберите ВводТекста → Токенизатор → Эмбеддинг → ГоловаВнимания → Софтмакс → ЛучшийОтвет → Авторегрессия. Введите «Copy exactly: red cup», поставьте «Смело» на 0 и нажимайте «Шаг». Каждое нажатие добавляет один токен модели.",
+          "kz": "МәтінКірісі → Токенизатор → Эмбеддинг → НазарБасы → Softmax → ҮздікЖауап → Авторегрессия тізбегін құрыңыз. «Copy exactly: red cup» енгізіп, «Батыл» мәнін 0 етіңіз. Әр «Қадам» модельдің бір токенін қосады."
+        }
+      }
+    ]
+  }
+}

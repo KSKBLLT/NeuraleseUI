@@ -1,0 +1,355 @@
+{
+  "schema_version": 1,
+  "node_id": "concat",
+  "status": "stable",
+  "generated": {
+    "node_id": "concat",
+    "created_with": "concat",
+    "scene_path": "res://scenes/layer_concat.tscn",
+    "scene_uid": "uid://dedy0f202jvre",
+    "root_instance_path": null,
+    "script_path": "res://scripts/layer_concat.gd",
+    "inheritance_chain": [
+      "res://scripts/layer_concat.gd",
+      "res://scripts/io_graph.gd",
+      "res://scripts/base_graph.gd"
+    ],
+    "inherits_graph": true,
+    "server_typename": "Concat",
+    "layer_name": null,
+    "title_candidates": {
+      "en": "LayerConcat",
+      "ru": "Склейка",
+      "kz": "Біріктіру"
+    },
+    "localized_properties": {
+      "ports": {},
+      "settings": {},
+      "controls": {
+        "ColorRect/root/Label": {
+          "property": "text",
+          "values": {
+            "en": "LayerConcat",
+            "ru": "Склейка",
+            "kz": "Біріктіру"
+          }
+        },
+        "input/ColorRect2": {
+          "property": "text",
+          "values": {
+            "en": "Add +",
+            "ru": "Слот+",
+            "kz": "Слот+"
+          }
+        }
+      },
+      "title": {
+        "source_path": "ColorRect/root/Label",
+        "property": "text",
+        "values": {
+          "en": "LayerConcat",
+          "ru": "Склейка",
+          "kz": "Біріктіру"
+        }
+      }
+    },
+    "base_config": {
+      "uns": "[]"
+    },
+    "ports": [
+      {
+        "id": "input_connection_o_layer_in",
+        "scene_node": "o",
+        "scene_path": "connection",
+        "hint": 0,
+        "server_name": "layer_in",
+        "direction": "input",
+        "datatypes": [
+          "layer1d"
+        ],
+        "multiple": false,
+        "config_conn": false,
+        "keyword": null,
+        "conn_count_keyword": null,
+        "visual": {
+          "color": "#e3e3e3ff",
+          "gradient_color": "#e3e3e3ff",
+          "dir_vector": {
+            "x": -1.0,
+            "y": 0.0
+          },
+          "side": "left",
+          "relative_to": {
+            "role": "graph_rect",
+            "scene_path": "ColorRect"
+          },
+          "absolute_scene_rect": {
+            "x": -94.0,
+            "y": -18.0,
+            "w": 15.0,
+            "h": 17.0
+          },
+          "reference_rect": {
+            "x": -87.0,
+            "y": -64.0,
+            "w": 127.0,
+            "h": 55.0
+          },
+          "relative_rect": {
+            "x": -0.05511811023622047,
+            "y": 0.8363636363636363,
+            "w": 0.11811023622047244,
+            "h": 0.3090909090909091
+          },
+          "relative_origin": {
+            "x": -0.05511811023622047,
+            "y": 0.990909090909091
+          },
+          "color_family": "gray",
+          "color_label": {
+            "en": "Gray",
+            "ru": "Серый",
+            "kz": "Сұр"
+          },
+          "side_label": {
+            "en": "on the left",
+            "ru": "слева",
+            "kz": "сол жақта"
+          },
+          "verbal_label": {
+            "en": "Gray port on the left",
+            "ru": "Серый порт слева",
+            "kz": "Сұр порт сол жақта"
+          },
+          "text_color": "#757575"
+        }
+      },
+      {
+        "id": "output_o_layer_out",
+        "scene_node": "o",
+        "scene_path": ".",
+        "hint": 0,
+        "server_name": "layer_out",
+        "direction": "output",
+        "datatypes": [
+          "layer1d"
+        ],
+        "multiple": false,
+        "config_conn": false,
+        "keyword": null,
+        "conn_count_keyword": null,
+        "visual": {
+          "color": "#e3e3e3ff",
+          "gradient_color": "#e3e3e3ff",
+          "dir_vector": {
+            "x": 1.0,
+            "y": 0.0
+          },
+          "side": "right",
+          "relative_to": {
+            "role": "graph_rect",
+            "scene_path": "ColorRect"
+          },
+          "absolute_scene_rect": {
+            "x": 34.0,
+            "y": -44.0,
+            "w": 15.0,
+            "h": 20.0
+          },
+          "reference_rect": {
+            "x": -87.0,
+            "y": -64.0,
+            "w": 127.0,
+            "h": 55.0
+          },
+          "relative_rect": {
+            "x": 0.952755905511811,
+            "y": 0.36363636363636365,
+            "w": 0.11811023622047244,
+            "h": 0.36363636363636365
+          },
+          "relative_origin": {
+            "x": 1.0708661417322836,
+            "y": 0.5454545454545454
+          },
+          "color_family": "gray",
+          "color_label": {
+            "en": "Gray",
+            "ru": "Серый",
+            "kz": "Сұр"
+          },
+          "side_label": {
+            "en": "on the right",
+            "ru": "справа",
+            "kz": "оң жақта"
+          },
+          "verbal_label": {
+            "en": "Gray port on the right",
+            "ru": "Серый порт справа",
+            "kz": "Сұр порт оң жақта"
+          },
+          "text_color": "#757575"
+        }
+      }
+    ],
+    "settings": [
+      {
+        "id": "uns",
+        "source": "base_config",
+        "default": "[]",
+        "ui_kind": null,
+        "ui_path": null,
+        "options": []
+      }
+    ],
+    "icon_source": "res://node_icons/en/IconConcat.png",
+    "static_compatible_nodes": [
+      {
+        "from_port": "output_o_layer_out",
+        "to_node": "classifier",
+        "to_port": "input_ni_layer_in",
+        "datatypes": [
+          "layer1d"
+        ],
+        "confidence": "static_datatype_intersection"
+      },
+      {
+        "from_port": "output_o_layer_out",
+        "to_node": "reshape2d",
+        "to_port": "input_o2_layer_in",
+        "datatypes": [
+          "layer1d"
+        ],
+        "confidence": "static_datatype_intersection"
+      },
+      {
+        "from_port": "output_o_layer_out",
+        "to_node": "softmax",
+        "to_port": "input_o2_layer_in",
+        "datatypes": [
+          "layer1d"
+        ],
+        "confidence": "static_datatype_intersection"
+      },
+      {
+        "from_port": "output_o_layer_out",
+        "to_node": "layer",
+        "to_port": "input_ni_layer_in",
+        "datatypes": [
+          "layer1d"
+        ],
+        "confidence": "static_datatype_intersection"
+      },
+      {
+        "from_port": "output_o_layer_out",
+        "to_node": "dropout",
+        "to_port": "input_o2_layer_in",
+        "datatypes": [
+          "layer1d"
+        ],
+        "confidence": "static_datatype_intersection"
+      },
+      {
+        "from_port": "output_o_layer_out",
+        "to_node": "gru_cell",
+        "to_port": "input_ni_layer_in",
+        "datatypes": [
+          "layer1d"
+        ],
+        "confidence": "static_datatype_intersection"
+      },
+      {
+        "from_port": "output_o_layer_out",
+        "to_node": "concat",
+        "to_port": "input_connection_o_layer_in",
+        "datatypes": [
+          "layer1d"
+        ],
+        "confidence": "static_datatype_intersection"
+      },
+      {
+        "from_port": "output_o_layer_out",
+        "to_node": "attention_head",
+        "to_port": "input_input_layer_in",
+        "datatypes": [
+          "language_vectors"
+        ],
+        "confidence": "language_sequence_contract"
+      }
+    ]
+  },
+  "docs": {
+    "title": {
+      "en": "Concatenate",
+      "ru": "Объединение",
+      "kz": "Біріктіру"
+    },
+    "summary": {
+      "en": "Joins several one-dimensional feature branches into one vector.",
+      "ru": "Склеивает несколько цепочек чисел в одну общую цепочку.",
+      "kz": "Бірнеше бір өлшемді белгілер тармағын бір векторға біріктіреді."
+    },
+    "operation": {
+      "en": "Accepts multiple compatible layer outputs and concatenates them along the feature dimension. The output width is the sum of connected input widths.",
+      "ru": "Иногда модель обрабатывает одни и те же данные несколькими путями. Эта нода берёт результаты всех таких веток и записывает их друг за другом в одну длинную цепочку. Числа не смешиваются и не пропадают — каждая ветка сохраняет свою часть общей цепочки.",
+      "kz": "Бірнеше үйлесімді қабат шығысын қабылдап, оларды белгілер өлшемі бойынша біріктіреді. Шығыс ені кіріс ендерінің қосындысына тең."
+    },
+    "compact": {
+      "body": {
+        "en": "Joins several one-dimensional feature branches into one vector.",
+        "ru": "Склеивает результаты нескольких веток.",
+        "kz": "Бірнеше бір өлшемді белгілер тармағын бір векторға біріктіреді."
+      }
+    },
+    "ports": {
+      "input_connection_o_layer_in": {
+        "label": {
+          "en": "layer_in",
+          "ru": "Ветки модели",
+          "kz": "layer_in"
+        },
+        "description": {
+          "en": "Receives layer1d data through the layer_in input.",
+          "ru": "Серый порт снизу слева принимает цепочки чисел из нескольких веток модели.",
+          "kz": "layer_in кірісі арқылы layer1d түріндегі деректерді қабылдайды."
+        }
+      },
+      "output_o_layer_out": {
+        "label": {
+          "en": "layer_out",
+          "ru": "Общая цепочка",
+          "kz": "layer_out"
+        },
+        "description": {
+          "en": "Sends layer1d data to compatible downstream nodes.",
+          "ru": "Серый порт справа передаёт все полученные цепочки, склеенные друг за другом.",
+          "kz": "layer1d түріндегі деректерді үйлесімді келесі түйіндерге береді."
+        }
+      }
+    },
+    "settings": {
+      "uns": {
+        "label": {
+          "en": "uns",
+          "ru": "Подключённые ветки",
+          "kz": "uns"
+        },
+        "description": {
+          "en": "Stores the dynamically configured concatenation inputs.",
+          "ru": "Автоматически хранит список веток, соединённых с серым входным портом.",
+          "kz": "Динамикалық бапталған біріктіру кірістерін сақтайды."
+        }
+      }
+    },
+    "connects_to": [],
+    "examples": [
+      {
+        "body": {
+          "ru": "Если первая ветка выдаёт 8 чисел, а вторая — 4, после объединения получится одна цепочка из 12 чисел.",
+          "en": "If one branch outputs 8 numbers and another outputs 4, the combined list contains 12 numbers.",
+          "kz": "Бір тармақ 8 сан, ал екіншісі 4 сан шығарса, біріктірілген тізімде 12 сан болады."
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,66 @@
+{
+ "name": "side_view_car_samples_21",
+ "arr": [],
+ "storage": "packed_float32",
+ "row_count": 5400,
+ "column_count": 10,
+ "col_names": [
+  "Ray 1:float",
+  "Ray 2:float",
+  "Ray 3:float",
+  "Ray 4:float",
+  "Ray 5:float",
+  "Ray 6:float",
+  "Ray 7:float",
+  "Speed:float",
+  "Steering:float",
+  "Throttle:float"
+ ],
+ "outputs_from": 8,
+ "inputs": {
+  "x": 8,
+  "datatype": "1d"
+ },
+ "outputs": [
+  {
+   "label": "actions",
+   "x": 2,
+   "datatype": "1d"
+  }
+ ],
+ "input_hints": [],
+ "cache": {},
+ "metadata": {
+  "generator": "threaded_physics_spaces_v3",
+  "binding": {
+   "agent_id": "side_view_car",
+   "input_width": 8,
+   "output_width": 2,
+   "version": 1,
+   "inputs": [
+    {
+     "sensor_id": "ray_distance",
+     "start": 0,
+     "length": 7
+    },
+    {
+     "sensor_id": "speed",
+     "start": 7,
+     "length": 1
+    }
+   ],
+   "outputs": [
+    {
+     "actuator_id": "steering",
+     "start": 0,
+     "length": 1
+    },
+    {
+     "actuator_id": "throttle",
+     "start": 1,
+     "length": 1
+    }
+   ]
+  }
+ }
+}

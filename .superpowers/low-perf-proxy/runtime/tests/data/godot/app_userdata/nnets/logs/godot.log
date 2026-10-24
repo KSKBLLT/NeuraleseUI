@@ -1,0 +1,41 @@
+Godot Engine v4.7.1.stable.official.a13da4feb - https://godotengine.org
+WARNING: Started the engine as `root`/superuser. This is a security risk, and subsystems like audio may not work correctly.
+Set the environment variable `GODOT_SILENCE_ROOT_WARNING` to 1 to silence this warning.
+   at: setup2 (main/main.cpp:3577)
+
+Unicode parsing error, some characters were replaced with � (U+FFFD): Unexpected NUL character
+Unicode parsing error, some characters were replaced with � (U+FFFD): Unexpected NUL character
+Unicode parsing error, some characters were replaced with � (U+FFFD): Unexpected NUL character
+ERROR: Condition "len < 4" is true. Returning: ERR_INVALID_DATA
+   at: decode_variant (core/io/marshalls.cpp:191)
+   GDScript backtrace (most recent call first):
+       [0] get_stored (res://scripts/glob.gd:386)
+       [1] get_var (res://scripts/glob.gd:381)
+       [2] _enter_tree (res://scripts/glob.gd:1529)
+ERROR: Error when trying to encode Variant.
+   at: get_var (core/io/file_access.cpp:372)
+   GDScript backtrace (most recent call first):
+       [0] get_stored (res://scripts/glob.gd:386)
+       [1] get_var (res://scripts/glob.gd:381)
+       [2] _enter_tree (res://scripts/glob.gd:1529)
+ERROR: Node not found: "base/WIN_GRAPH" (relative to "/root").
+   at: get_node (scene/main/node.cpp:1975)
+   GDScript backtrace (most recent call first):
+       [0] _ready (res://scripts/glob.gd:3377)
+SCRIPT ERROR: Cannot call method 'add_child' on a null value.
+   at: _ready (res://scripts/glob.gd:3377)
+   GDScript backtrace (most recent call first):
+       [0] _ready (res://scripts/glob.gd:3377)
+SCRIPT ERROR: Invalid access of index '4' on a base object of type: 'Array'.
+   at: _test_dialog_contract_and_prefill (res://tests/godot/test_profile_onboarding.gd:185)
+   GDScript backtrace (most recent call first):
+       [0] _test_dialog_contract_and_prefill (res://tests/godot/test_profile_onboarding.gd:185)
+       [1] _run (res://tests/godot/test_profile_onboarding.gd:150)
+ERROR: local profile includes graphics quality: expected ["first_name", "last_name", "role", "language", "graphics_quality"], got ["first_name", "last_name", "role", "language"]
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] _run (res://tests/godot/test_profile_onboarding.gd:163)
+ERROR: pilot asks for names, language, and graphics quality: expected ["first_name", "last_name", "language", "graphics_quality"], got ["first_name", "last_name", "language"]
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] _run (res://tests/godot/test_profile_onboarding.gd:163)

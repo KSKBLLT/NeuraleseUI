@@ -1,0 +1,10 @@
+{
+  "dataset": "car_track",
+  "seed": 7,
+  "epochs": 20,
+  "validation_samples": 600,
+  "model_mae": 0.013971052132546902,
+  "constant_baseline_mae": 0.1995576024055481,
+  "relative_improvement": 0.9299898777889983,
+  "status": "ok"
+}

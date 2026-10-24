@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "id": "token_labels",
+  "source": {
+    "kind": "scene",
+    "path": "res://scenes/language_models/token_labels.tscn"
+  },
+  "load_order": 214,
+  "menu": {
+    "visible": true,
+    "section": "language",
+    "order": 64
+  },
+  "roles": [
+    "language",
+    "output"
+  ],
+  "llm": {
+    "type": "token_labels"
+  },
+  "runtime": {
+    "handler": "passthrough",
+    "default_input_port": "model_in",
+    "default_output_port": "model_out"
+  },
+  "display": {
+    "category": "output",
+    "title": {
+      "en": "BestAnswer",
+      "ru": "ЛучшийОтвет",
+      "kz": "ҮздікЖауап"
+    },
+    "outline_color": "#9ad6c5ff"
+  }
+}

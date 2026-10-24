@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "id": "reshape2d",
+  "source": {
+    "kind": "scene",
+    "path": "res://scenes/reshape.tscn"
+  },
+  "load_order": 160,
+  "menu": {
+    "visible": true,
+    "section": "shape_output",
+    "order": 11
+  },
+  "roles": [],
+  "llm": {
+    "type": "reshape2d"
+  },
+  "runtime": {
+    "handler": "reshape2d",
+    "default_input_port": "layer_in",
+    "default_output_port": "layer_out"
+  },
+  "display": {
+    "category": "shape",
+    "outline_color": "#ffb8f4ff"
+  }
+}

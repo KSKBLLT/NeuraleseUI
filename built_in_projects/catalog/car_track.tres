@@ -1,0 +1,23 @@
+[gd_resource type="Resource" script_class="BuiltinProjectDefinition" load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://scripts/builtin_project_definition.gd" id="1_definition"]
+[ext_resource type="Texture2D" path="res://built_in_projects/previews/car_track.png" id="2_preview"]
+
+[resource]
+script = ExtResource("1_definition")
+id = &"car_track"
+source_scene = "res://built_in_projects/Car Track.scn"
+version = 1
+sort_order = 30
+preview = ExtResource("2_preview")
+emoji = "🚗"
+accent_color = Color(0.39, 0.86, 0.86, 1)
+title_ru = "Умная машинка"
+description_ru = "Учит машинку видеть дорогу и добираться до финиша на небольшой трассе."
+tags_ru = PackedStringArray("Игра", "Дорога", "Симуляция")
+title_en = "Smart car"
+description_en = "Teaches a little car to see the road and reach the finish line."
+tags_en = PackedStringArray("Game", "Road", "Simulation")
+title_kz = "Ақылды көлік"
+description_kz = "Кішкентай көлікке жолды көріп, мәреге жетуді үйретеді."
+tags_kz = PackedStringArray("Ойын", "Жол", "Симуляция")

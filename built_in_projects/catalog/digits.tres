@@ -1,0 +1,23 @@
+[gd_resource type="Resource" script_class="BuiltinProjectDefinition" load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://scripts/builtin_project_definition.gd" id="1_definition"]
+[ext_resource type="Texture2D" path="res://built_in_projects/previews/digits.png" id="2_preview"]
+
+[resource]
+script = ExtResource("1_definition")
+id = &"digits"
+source_scene = "res://built_in_projects/Digits.scn"
+version = 1
+sort_order = 20
+preview = ExtResource("2_preview")
+emoji = "✍️"
+accent_color = Color(0.98, 0.78, 0.34, 1)
+title_ru = "Распознаватель цифр"
+description_ru = "Рассматривает нарисованную цифру и пытается назвать её от нуля до девяти."
+tags_ru = PackedStringArray("Рисование", "10 ответов", "Картинки")
+title_en = "Digit recognizer"
+description_en = "Looks at a drawn digit and tries to name it from zero to nine."
+tags_en = PackedStringArray("Drawing", "10 answers", "Images")
+title_kz = "Цифрларды тану"
+description_kz = "Салынған цифрға қарап, оның нөлден тоғызға дейінгі атауын табады."
+tags_kz = PackedStringArray("Сурет салу", "10 жауап", "Кескіндер")

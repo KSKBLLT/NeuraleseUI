@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "id": "dataset",
+  "source": {
+    "kind": "scene",
+    "path": "res://scenes/dataset.tscn"
+  },
+  "load_order": 30,
+  "menu": {
+    "visible": true,
+    "section": "data_context",
+    "order": 30
+  },
+  "roles": [],
+  "llm": {
+    "type": "load_dataset"
+  },
+  "runtime": {
+    "handler": "ignored_training",
+    "roles": [
+      "final_ignored"
+    ]
+  },
+  "display": {
+    "category": "data"
+  }
+}

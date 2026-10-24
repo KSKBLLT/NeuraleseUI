@@ -1,0 +1,242 @@
+{
+  "graph": {
+    "expect": {
+      "33787797": {
+        "layer_in": 1
+      },
+      "44282135": {
+        "layer_in": 1
+      },
+      "60931669": {
+        "layer_in": 1
+      },
+      "68561394": {
+        "layer_in": 1
+      },
+      "71103725": {
+        "layer_in": 1
+      },
+      "80214551": {
+        "layer_in": 1
+      },
+      "94292728": {
+        "layer_in": 1
+      }
+    },
+    "pages": {
+      "0": {
+        "31611154": {
+          "emit": {
+            "input_out": {
+              "94292728": [
+                "layer_in"
+              ]
+            }
+          },
+          "props": {
+            "config": {
+              "channels": 3,
+              "columns": 32,
+              "rows": 32,
+              "subname": "Input2D"
+            },
+            "shape": 3072
+          },
+          "type": "InputNode"
+        }
+      },
+      "1": {
+        "94292728": {
+          "emit": {
+            "layer_out": {
+              "80214551": [
+                "layer_in"
+              ]
+            }
+          },
+          "props": {
+            "cache_tag": "94292728",
+            "config": {
+              "activation": "relu",
+              "filters": 16,
+              "stride": 2,
+              "type": "Conv2D",
+              "window": 3
+            },
+            "neuron_count": 1024
+          },
+          "type": "NeuronLayer"
+        }
+      },
+      "2": {
+        "80214551": {
+          "emit": {
+            "layer_out": {
+              "33787797": [
+                "layer_in"
+              ]
+            }
+          },
+          "props": {
+            "cache_tag": "80214551",
+            "config": {
+              "activation": "relu",
+              "filters": 32,
+              "stride": 2,
+              "type": "Conv2D",
+              "window": 3
+            },
+            "neuron_count": 256
+          },
+          "type": "NeuronLayer"
+        }
+      },
+      "3": {
+        "33787797": {
+          "emit": {
+            "layer_out": {
+              "44282135": [
+                "layer_in"
+              ]
+            }
+          },
+          "props": {},
+          "type": "Flatten"
+        }
+      },
+      "4": {
+        "44282135": {
+          "emit": {
+            "layer_out": {
+              "60931669": [
+                "layer_in"
+              ]
+            }
+          },
+          "props": {
+            "cache_tag": "44282135",
+            "config": {
+              "activation": "relu"
+            },
+            "neuron_count": 64
+          },
+          "type": "NeuronLayer"
+        }
+      },
+      "5": {
+        "60931669": {
+          "emit": {
+            "layer_out": {
+              "71103725": [
+                "layer_in"
+              ]
+            }
+          },
+          "props": {
+            "cache_tag": "60931669",
+            "config": {
+              "activation": "none"
+            },
+            "neuron_count": 10
+          },
+          "type": "NeuronLayer"
+        }
+      },
+      "6": {
+        "71103725": {
+          "emit": {
+            "soft_out": {
+              "68561394": [
+                "layer_in"
+              ]
+            }
+          },
+          "props": {
+            "config": {
+              "role": "output"
+            }
+          },
+          "type": "SoftmaxNode"
+        }
+      },
+      "7": {
+        "68561394": {
+          "emit": {},
+          "props": {},
+          "type": "ClassifierNode"
+        }
+      }
+    },
+    "train": 1
+  },
+  "train_graph": {
+    "expect": {
+      "46841562": {
+        "pred_in": 1
+      },
+      "67646795": {
+        "model_in": 1
+      }
+    },
+    "pages": {
+      "0": {
+        "93277759": {
+          "emit": {
+            "input_out": {
+              "67646795": [
+                "model_in"
+              ]
+            }
+          },
+          "props": {},
+          "type": "TrainBegin"
+        }
+      },
+      "1": {
+        "67646795": {
+          "emit": {
+            "model_out": {
+              "46841562": [
+                "pred_in"
+              ]
+            }
+          },
+          "props": {
+            "config": {
+              "branch_losses": {
+                "71103725": "cross_entropy"
+              },
+              "branch_maps": {
+                "71103725": "object"
+              },
+              "forward_mode": "fused"
+            }
+          },
+          "type": "RunModel"
+        }
+      },
+      "2": {
+        "46841562": {
+          "emit": {},
+          "props": {
+            "config": {
+              "lr": "3e-3",
+              "momentum": 0.0,
+              "optimizer": "adam",
+              "weight_decay": ""
+            }
+          },
+          "type": "TrainInput"
+        }
+      }
+    },
+    "train": 1
+  },
+  "dataset": "cifar10",
+  "dataset_ref": {
+    "kind": "builtin_numpy",
+    "name": "cifar10"
+  },
+  "epochs": 1,
+  "batch_size": 0
+}

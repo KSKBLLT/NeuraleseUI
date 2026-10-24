@@ -1,0 +1,65 @@
+{
+ "name": "car_track",
+ "size": 5400,
+ "inputs": {
+  "x": 8,
+  "datatype": "1d"
+ },
+ "outputs": [
+  {
+   "label": "control",
+   "x": 2,
+   "datatype": "1d",
+   "label_names": [
+    "steer",
+    "throttle"
+   ]
+  }
+ ],
+ "input_hints": [
+  {
+   "name": "ray_0",
+   "value": "0..1",
+   "dtype": "float"
+  },
+  {
+   "name": "ray_1",
+   "value": "0..1",
+   "dtype": "float"
+  },
+  {
+   "name": "ray_2",
+   "value": "0..1",
+   "dtype": "float"
+  },
+  {
+   "name": "ray_3",
+   "value": "0..1",
+   "dtype": "float"
+  },
+  {
+   "name": "ray_4",
+   "value": "0..1",
+   "dtype": "float"
+  },
+  {
+   "name": "ray_5",
+   "value": "0..1",
+   "dtype": "float"
+  },
+  {
+   "name": "ray_6",
+   "value": "0..1",
+   "dtype": "float"
+  },
+  {
+   "name": "ray_7",
+   "value": "0..1",
+   "dtype": "float"
+  }
+ ],
+ "description": "Synthetic 2D driving dataset with eight normalized raycast distances, signed steering (-1..1), and throttle (0..1).",
+ "fully_local": true,
+ "storage": "numpy",
+ "training_loss": "mse"
+}

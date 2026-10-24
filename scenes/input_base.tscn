@@ -1,0 +1,38 @@
+[gd_scene format=3]
+
+[ext_resource type="PackedScene" path="res://scenes/base_graph.tscn" id="1"]
+[ext_resource type="Script" path="res://scripts/input_base.gd" id="2"]
+[ext_resource type="PackedScene" path="res://scenes/Connection.tscn" id="3"]
+
+[node name="Base" instance=ExtResource("1")]
+script = ExtResource("2")
+is_input = true
+
+[node name="ColorRect" parent="." index="0"]
+instance_shader_parameters/corner_radius_width_add = Vector2(-4, 0)
+instance_shader_parameters/outline_color = Color(0.89, 0.88703334, 0.80099994, 1)
+instance_shader_parameters/tuning = Color(0.0509804, 0.0509804, 0.0509804, 0.541176)
+offset_top = -35.0
+offset_right = 48.0
+offset_bottom = 116.0
+
+[node name="Label" parent="ColorRect/root" index="0"]
+offset_left = 7.0
+offset_top = 5.0
+offset_right = 142.0
+offset_bottom = 48.0
+scale = Vector2(0.5097783, 0.5097783)
+theme_override_colors/font_color = Color(1, 0.986667, 0.6, 1)
+
+[node name="o" parent="." node_paths=PackedStringArray("parent_graph") instance=ExtResource("3")]
+offset_left = 42.0
+offset_top = 28.0
+offset_right = 58.0
+offset_bottom = 49.0
+color = Color(1, 0.988235, 0.6, 1)
+connection_type = 1
+area_paddings = Vector4(20, 20, 20, 20)
+multiple_splines = true
+origin_offset = Vector2(8, 0)
+parent_graph = NodePath("..")
+gradient_color = Color(1, 0.988235, 0.6, 1)

@@ -1,0 +1,214 @@
+name: Build Windows Branch Installer
+
+on:
+  push:
+    branches: [alim, pilot-deploy, prod-deploy]
+  workflow_dispatch:
+    inputs:
+      build_msi:
+        description: Also package the managed school MSI
+        type: boolean
+        default: true
+
+permissions:
+  contents: read
+  checks: read
+
+concurrency:
+  group: windows-branch-installer-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: windows-2022
+    timeout-minutes: 120
+    steps:
+      - name: Checkout Neuralese
+        uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5
+
+      - name: Verify commit CI status
+        shell: pwsh
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          $checks = gh api "repos/$env:GITHUB_REPOSITORY/commits/$env:GITHUB_SHA/check-runs" | ConvertFrom-Json
+          $verified = @($checks.check_runs | Where-Object { $_.name -eq "Verify" -and $_.conclusion -eq "success" })
+          if ($verified.Count -eq 0) { throw "Commit $env:GITHUB_SHA has no successful Verify check" }
+
+      - name: Restore Godot download cache
+        uses: actions/cache@0057852bfaa89a56745cba8c7296529d2fc39830
+        with:
+          path: .ci-cache/downloads
+          key: godot-4.7.1-windows-downloads
+
+      - name: Install Godot 4.7.1 and export templates
+        shell: pwsh
+        run: |
+          New-Item -ItemType Directory -Path ".\.ci-cache\downloads" -Force | Out-Null
+          $godotArchive = ".\.ci-cache\downloads\godot-windows.zip"
+          $godotDir = Join-Path $env:RUNNER_TEMP "godot"
+          if (!(Test-Path -LiteralPath $godotArchive)) {
+            Invoke-WebRequest "https://github.com/godotengine/godot/releases/download/4.7.1-stable/Godot_v4.7.1-stable_win64.exe.zip" -OutFile $godotArchive
+          }
+          Expand-Archive -LiteralPath $godotArchive -DestinationPath $godotDir
+          $godot = Get-ChildItem -LiteralPath $godotDir -Filter "Godot_v4.7.1-stable_win64*.exe" -File | Select-Object -First 1
+          if ($null -eq $godot) { throw "Godot executable was not found" }
+          "GODOT_BIN=$($godot.FullName.Replace('\', '/'))" | Out-File -FilePath $env:GITHUB_ENV -Encoding utf8 -Append
+          "GODOT_EXE=$($godot.FullName)" | Out-File -FilePath $env:GITHUB_ENV -Encoding utf8 -Append
+
+          $templatesArchive = ".\.ci-cache\downloads\godot-templates.tpz"
+          $templatesDir = Join-Path $env:RUNNER_TEMP "templates-unpacked"
+          if (!(Test-Path -LiteralPath $templatesArchive)) {
+            Invoke-WebRequest "https://github.com/godotengine/godot/releases/download/4.7.1-stable/Godot_v4.7.1-stable_export_templates.tpz" -OutFile $templatesArchive
+          }
+          Expand-Archive -LiteralPath $templatesArchive -DestinationPath $templatesDir
+          $source = Get-ChildItem -LiteralPath $templatesDir -Directory -Recurse | Where-Object Name -eq "templates" | Select-Object -First 1
+          if ($null -eq $source) { throw "Godot export templates were not found" }
+          $target = Join-Path $env:APPDATA "Godot\export_templates\4.7.1.stable"
+          New-Item -ItemType Directory -Path $target -Force | Out-Null
+          Copy-Item -Path (Join-Path $source.FullName "*") -Destination $target -Recurse -Force
+
+      - name: Restore pinned Neuralese Setup source
+        shell: pwsh
+        run: |
+          $lock = Get-Content -LiteralPath ".\release\setup-lock.json" -Raw | ConvertFrom-Json
+          if ($lock.repository -ne "hex358/neuralese-setup" -or [string]$lock.commit_sha -notmatch "^[0-9a-f]{40}$") {
+            throw "Invalid Neuralese Setup lock"
+          }
+          $setupDir = Join-Path $env:RUNNER_TEMP "neuralese-setup"
+          $setupArchive = ".\.ci\neuralese-setup-source.zip"
+          if (!(Test-Path -LiteralPath $setupArchive)) { throw "Pinned Neuralese Setup source is missing" }
+          Expand-Archive -LiteralPath $setupArchive -DestinationPath $setupDir
+          if (!(Test-Path -LiteralPath (Join-Path $setupDir "build.ps1"))) { throw "Pinned Neuralese Setup source is invalid" }
+          "SETUP_DIR=$setupDir" | Out-File -FilePath $env:GITHUB_ENV -Encoding utf8 -Append
+
+      - name: Verify managed updater behavior
+        if: github.ref_name == 'codex/enterprise-msi-app'
+        shell: pwsh
+        run: |
+          & $env:GODOT_EXE --headless --editor --path . --quit-after 1
+          & $env:GODOT_EXE --headless --path . --script tests/godot/test_update_flow.gd
+          if ($LASTEXITCODE -ne 0) { throw "Managed updater test failed" }
+
+      - name: Restore installer Cargo cache
+        if: github.ref_name != 'codex/enterprise-msi-app'
+        uses: Swatinem/rust-cache@6323deb102c322ba6fcbdcafc7e3dddab59af2b6
+        with:
+          workspaces: ${{ runner.temp }}/neuralese-setup/src-tauri
+          shared-key: neuralese-win7-installer
+          cache-on-failure: true
+
+      - name: Restore verified Windows runtime
+        shell: pwsh
+        run: |
+          $archive = ".\runtime_payload\windows-x64-runtime.zip"
+          $expected = (Get-Content -LiteralPath ".\runtime_payload\windows-x64-runtime.sha256" -Raw).Trim().Split()[0]
+          $actual = (Get-FileHash -LiteralPath $archive -Algorithm SHA256).Hash.ToLowerInvariant()
+          if ($actual -ne $expected) { throw "Versioned runtime archive SHA mismatch" }
+          $stage = ".\.runtime_payload_build\windows-x64"
+          New-Item -ItemType Directory -Path $stage -Force | Out-Null
+          Expand-Archive -LiteralPath $archive -DestinationPath $stage -Force
+          $manifest = Get-Content -LiteralPath (Join-Path $stage "runtime_manifest.json") -Raw | ConvertFrom-Json
+          if ($manifest.pruned -ne $true -or [int]$manifest.files_final -gt 5000) {
+            throw "Runtime stage is not a pruned release payload"
+          }
+
+      # The app ships every builtin dataset; CIFAR-10 is too large for git and
+      # is built here (local_runtime/datasets/README.md).
+      - name: Restore builtin CIFAR-10 dataset
+        uses: actions/cache@0057852bfaa89a56745cba8c7296529d2fc39830
+        with:
+          path: local_runtime/datasets/cifar10/train.npz
+          key: builtin-cifar10-${{ hashFiles('local_runtime/tools/build_builtin_datasets.py', 'local_runtime/neuralese_local/image_datasets.py') }}
+
+      - name: Build and check builtin datasets
+        shell: pwsh
+        run: |
+          $python = ".\.runtime_payload_build\windows-x64\python\python.exe"
+          & $python local_runtime\tools\build_builtin_datasets.py
+          if ($LASTEXITCODE -ne 0) { throw "Building the builtin datasets failed" }
+          & $python local_runtime\tools\check_builtin_datasets.py
+          if ($LASTEXITCODE -ne 0) { throw "Builtin datasets are missing" }
+
+      - name: Export Neuralese and build installer
+        if: github.ref_name != 'codex/enterprise-msi-app'
+        shell: pwsh
+        run: |
+          $outputDir = Join-Path $env:RUNNER_TEMP "windows-installer"
+          $gameDir = Join-Path $env:RUNNER_TEMP "game"
+          New-Item -ItemType Directory -Path $outputDir, $gameDir -Force | Out-Null
+          .\tools\export_windows_with_runtime.ps1 -ProjectRoot $PWD -GodotExe $env:GODOT_EXE -Output (Join-Path $gameDir "Neuralese.exe")
+          $gameZip = Join-Path $env:RUNNER_TEMP "game.zip"
+          .\tools\prepare_windows_installer_payload.ps1 -ProjectRoot $PWD -GameDir $gameDir -OutputZip $gameZip
+
+          $project = Get-Content -LiteralPath ".\project.godot" -Raw
+          $versionMatch = [regex]::Match($project, '(?m)^config/version="([^"\r\n]+)"\r?$')
+          if (!$versionMatch.Success) { throw "Neuralese version is missing" }
+          $logo = Join-Path $PWD "neuralese.png"
+          & (Join-Path $env:SETUP_DIR "build.ps1") -PayloadZip $gameZip -LogoPng $logo -AppName "Neuralese" -AppVersion $versionMatch.Groups[1].Value -GameExeName "Neuralese.exe" -OutputDir $outputDir
+
+          $installer = Join-Path $outputDir "Neuralese-Setup.exe"
+          if (!(Test-Path -LiteralPath $installer)) { throw "Installer was not produced" }
+          if ((Get-Item -LiteralPath $installer).Length -le 10MB) { throw "Installer is unexpectedly small" }
+          $bytes = [System.IO.File]::ReadAllBytes($installer)
+          if ($bytes[0] -ne 0x4d -or $bytes[1] -ne 0x5a) { throw "Installer has no PE MZ signature" }
+          $sha = (Get-FileHash -LiteralPath $installer -Algorithm SHA256).Hash.ToLowerInvariant()
+          Set-Content -LiteralPath (Join-Path $outputDir "Neuralese-Setup.exe.sha256") -Value "$sha  Neuralese-Setup.exe" -Encoding ascii
+          $setupLock = Get-Content -LiteralPath ".\release\setup-lock.json" -Raw | ConvertFrom-Json
+          Set-Content -LiteralPath (Join-Path $outputDir "build-info.txt") -Value @(
+            "version=$($versionMatch.Groups[1].Value)",
+            "builder_commit=$env:GITHUB_SHA",
+            "setup_commit=$([string]$setupLock.commit_sha)",
+            "sha256=$sha"
+          ) -Encoding utf8
+
+      - name: Export Neuralese for managed MSI
+        if: github.ref_name == 'codex/enterprise-msi-app'
+        shell: pwsh
+        run: |
+          $gameDir = Join-Path $env:RUNNER_TEMP "game"
+          New-Item -ItemType Directory -Path $gameDir -Force | Out-Null
+          .\tools\export_windows_with_runtime.ps1 -ProjectRoot $PWD -GodotExe $env:GODOT_EXE -Output (Join-Path $gameDir "Neuralese.exe")
+          $gameZip = Join-Path $env:RUNNER_TEMP "game.zip"
+          .\tools\prepare_windows_installer_payload.ps1 -ProjectRoot $PWD -GameDir $gameDir -OutputZip $gameZip
+          if (!(Test-Path -LiteralPath $gameZip)) { throw "Managed MSI payload was not produced" }
+
+      - name: Build managed school MSI
+        if: github.event_name != 'workflow_dispatch' || inputs.build_msi || github.ref_name == 'codex/enterprise-msi-app'
+        shell: pwsh
+        run: |
+          $project = Get-Content -LiteralPath ".\project.godot" -Raw
+          $versionMatch = [regex]::Match($project, '(?m)^config/version="([^"\r\n]+)"\r?$')
+          if (!$versionMatch.Success) { throw "Neuralese version is missing" }
+          $version = $versionMatch.Groups[1].Value
+          $gameZip = Join-Path $env:RUNNER_TEMP "game.zip"
+          $outputDir = Join-Path $env:RUNNER_TEMP "windows-installer"
+          $msiBuild = Join-Path $env:SETUP_DIR "build-msi.ps1"
+          $maxAttempts = 3
+          for ($attempt = 1; $attempt -le $maxAttempts; $attempt++) {
+            try {
+              & $msiBuild -PayloadZip $gameZip -AppVersion $version -GameExeName "Neuralese.exe" -OutputDir $outputDir
+              break
+            }
+            catch {
+              if ($attempt -eq $maxAttempts) { throw }
+              Write-Warning "MSI packaging attempt $attempt failed; retrying on the same runner. $($_.Exception.Message)"
+              Remove-Item -LiteralPath $outputDir -Recurse -Force -ErrorAction SilentlyContinue
+              New-Item -ItemType Directory -Path $outputDir -Force | Out-Null
+              Start-Sleep -Seconds (5 * $attempt)
+            }
+          }
+
+          $msi = Join-Path $outputDir "Neuralese-$version-x64.msi"
+          if (!(Test-Path -LiteralPath $msi)) { throw "Managed MSI was not produced" }
+          if ((Get-Item -LiteralPath $msi).Length -le 10MB) { throw "Managed MSI is unexpectedly small" }
+          $sha = (Get-FileHash -LiteralPath $msi -Algorithm SHA256).Hash.ToLowerInvariant()
+          Set-Content -LiteralPath "$msi.sha256" -Value "$sha  $([System.IO.Path]::GetFileName($msi))" -Encoding ascii
+
+      - name: Upload Windows installer
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: neuralese-windows-${{ github.ref_name }}-${{ github.sha }}
+          path: ${{ runner.temp }}\windows-installer
+          if-no-files-found: error
+          retention-days: 14

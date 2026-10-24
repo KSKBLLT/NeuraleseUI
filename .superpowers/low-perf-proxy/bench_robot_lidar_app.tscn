@@ -1,0 +1,9 @@
+[gd_scene format=3]
+
+[ext_resource type="PackedScene" path="res://scenes/project.tscn" id="1_project"]
+[ext_resource type="Script" path="res://.superpowers/low-perf-proxy/bench_robot_lidar_app.gd" id="2_bench"]
+
+[node name="base" instance=ExtResource("1_project")]
+
+[node name="RobotLidarAppBench" type="Node" parent="."]
+script = ExtResource("2_bench")

@@ -1,0 +1,147 @@
+{
+  "schema_version": 1,
+  "node_id": "model_name",
+  "status": "stable",
+  "generated": {
+    "node_id": "model_name",
+    "created_with": "model_name",
+    "scene_path": "res://scenes/netname.tscn",
+    "scene_uid": "uid://wav7n44fxbkf",
+    "root_instance_path": null,
+    "script_path": "res://scripts/netname.gd",
+    "inheritance_chain": [
+      "res://scripts/netname.gd",
+      "res://scripts/base_graph.gd"
+    ],
+    "inherits_graph": true,
+    "server_typename": "ModelName",
+    "layer_name": null,
+    "title_candidates": {
+      "en": "Model",
+      "ru": "ИмяМодели",
+      "kz": "МодельАтауы"
+    },
+    "base_config": {
+      "name": ""
+    },
+    "ports": [
+      {
+        "id": "output_o2_netname",
+        "scene_node": "o2",
+        "scene_path": ".",
+        "hint": 0,
+        "server_name": "netname",
+        "direction": "output",
+        "datatypes": [
+          "netname"
+        ],
+        "multiple": true,
+        "config_conn": false,
+        "keyword": null,
+        "conn_count_keyword": null
+      }
+    ],
+    "settings": [
+      {
+        "id": "name",
+        "source": "base_config",
+        "default": "",
+        "ui_kind": "instance",
+        "ui_path": "LineEdit",
+        "options": []
+      }
+    ],
+    "icon_source": "res://node_icons/IconModelName.png",
+    "static_compatible_nodes": [
+      {
+        "from_port": "output_o2_netname",
+        "to_node": "input",
+        "to_port": "input_o2_runmodel",
+        "datatypes": [
+          "netname"
+        ],
+        "confidence": "static_datatype_intersection"
+      },
+      {
+        "from_port": "output_o2_netname",
+        "to_node": "run_model",
+        "to_port": "input_o2_runmodel",
+        "datatypes": [
+          "netname"
+        ],
+        "confidence": "static_datatype_intersection"
+      },
+      {
+        "from_port": "output_o2_netname",
+        "to_node": "input_1d",
+        "to_port": "input_o2_runmodel",
+        "datatypes": [
+          "netname"
+        ],
+        "confidence": "static_datatype_intersection"
+      }
+    ]
+  },
+  "docs": {
+    "title": {
+      "en": "Model",
+      "ru": "Model",
+      "kz": "Model"
+    },
+    "summary": {
+      "en": "Defines the model identifier used by connected training-flow nodes.",
+      "ru": "Даёт модели имя, чтобы учебные ноды работали с одной и той же сетью.",
+      "kz": "Байланысқан оқу ағыны түйіндері қолданатын модель идентификаторын анықтайды."
+    },
+    "operation": {
+      "en": "Outputs the configured model name so input and RunModel nodes can refer to the same assembled model.",
+      "ru": "Этот нод не обрабатывает числа. Он передаёт имя собранной модели другим нодам и помогает им понять, какую сеть нужно запустить.",
+      "kz": "Кіріс түйіндері мен RunModel бір құрастырылған модельге сілтеме жасауы үшін берілген модель атауын шығарады."
+    },
+    "compact": {
+      "body": {
+        "en": "Defines the model identifier used by connected training-flow nodes.",
+        "ru": "Связывает учебный граф с моделью.",
+        "kz": "Байланысқан оқу ағыны түйіндері қолданатын модель идентификаторын анықтайды."
+      }
+    },
+    "ports": {
+      "output_o2_netname": {
+        "label": {
+          "en": "netname",
+          "ru": "netname",
+          "kz": "netname"
+        },
+        "description": {
+          "en": "Sends netname data to compatible downstream nodes.",
+          "ru": "Передаёт ссылку на модель в ноды, которым она нужна.",
+          "kz": "netname түріндегі деректерді үйлесімді келесі түйіндерге береді."
+        }
+      }
+    },
+    "settings": {
+      "name": {
+        "label": {
+          "en": "name",
+          "ru": "name",
+          "kz": "name"
+        },
+        "description": {
+          "en": "Stores the selected model, dataset, or environment identifier.",
+          "ru": "Укажите имя модели, которую нужно использовать.",
+          "kz": "Таңдалған модель, деректер жиыны немесе орта идентификаторын сақтайды."
+        }
+      }
+    },
+    "connects_to": [],
+    "examples": [
+      {
+        "body": {
+          "ru": "Если модель называется «digits», используйте это же имя во всём учебном графе.",
+          "en": "If the model is named “digits”, use the same name throughout the training graph.",
+          "kz": "Егер модель «digits» деп аталса, осы атауды бүкіл оқыту графында қолданыңыз."
+        }
+      }
+    ]
+  }
+}

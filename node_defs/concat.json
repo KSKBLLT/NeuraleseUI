@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "id": "concat",
+  "source": {
+    "kind": "scene",
+    "path": "res://scenes/layer_concat.tscn"
+  },
+  "load_order": 170,
+  "menu": {
+    "visible": true,
+    "section": "composition",
+    "order": 50
+  },
+  "roles": [
+    "sequence_capable"
+  ],
+  "llm": {
+    "type": "concat"
+  },
+  "runtime": {
+    "handler": "concat",
+    "default_input_port": "layer_in",
+    "default_output_port": "layer_out"
+  },
+  "display": {
+    "category": "shape"
+  }
+}

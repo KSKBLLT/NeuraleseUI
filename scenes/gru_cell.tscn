@@ -1,0 +1,150 @@
+[gd_scene format=3 uid="uid://cnpa0x4va0608"]
+
+[ext_resource type="Script" uid="uid://dwe6rjilicwtt" path="res://scripts/gru_cell.gd" id="1_gru"]
+[ext_resource type="PackedScene" uid="uid://cyyhr5tmi4ljw" path="res://scenes/Connection.tscn" id="2_conn"]
+[ext_resource type="Material" uid="uid://c556teg3qs0aw" path="res://resources/graph.tres" id="3_graph"]
+[ext_resource type="Theme" uid="uid://cxe1714v2p0a1" path="res://resources/theme.tres" id="4_theme"]
+[ext_resource type="Script" uid="uid://dtwj74o465brs" path="res://scripts/loc.gd" id="6_loc"]
+[ext_resource type="PackedScene" uid="uid://cbe74hclhjp0e" path="res://scenes/validate.tscn" id="7_validate"]
+[ext_resource type="Script" uid="uid://b0wh6bvd6pdc5" path="res://scripts/validate_number.gd" id="8_number"]
+
+[node name="Base" type="Control" unique_id=353475789]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 200.0
+offset_bottom = 50.0
+script = ExtResource("1_gru")
+layer_name = "GRUCell"
+target_size = 82.0
+server_typename = &"GRUCell"
+area_padding = 0.0
+base_config = Dictionary[StringName, Variant]({
+&"hidden_size": 16
+})
+
+[node name="ni" parent="." unique_id=943482870 node_paths=PackedStringArray("parent_graph") instance=ExtResource("2_conn")]
+layout_mode = 0
+offset_left = -55.0
+offset_top = -8.0
+offset_right = -39.0
+offset_bottom = 9.0
+color = Color(0.298039, 0.901961, 0.729412, 1)
+_accepted_datatypes = "layer1d input1d"
+hint = 1
+server_name = &"layer_in"
+connection_type = 0
+area_paddings = Vector4(10, 10, 10, 10)
+multiple_splines = true
+origin_offset = Vector2(-5, 0)
+unpadded_area = Vector4(10, 10, 0, 10)
+dir_vector = Vector2(-1, 0)
+parent_graph = NodePath("..")
+conn_count_keyword = "layer"
+gradient_color = Color(0.298039, 0.901961, 0.729412, 1)
+
+[node name="o" parent="." unique_id=338833617 node_paths=PackedStringArray("parent_graph") instance=ExtResource("2_conn")]
+layout_mode = 0
+offset_left = 46.0
+offset_top = -8.0
+offset_right = 62.0
+offset_bottom = 9.0
+color = Color(0.298039, 0.901961, 0.729412, 1)
+_accepted_datatypes = "layer1d"
+server_name = &"layer_out"
+connection_type = 1
+area_paddings = Vector4(10, 10, 10, 10)
+multiple_splines = true
+origin_offset = Vector2(8, 0)
+unpadded_area = Vector4(0, 10, 10, 10)
+max_splines_by_keyword = Dictionary[StringName, int]({
+&"layer": 32,
+&"train": 1
+})
+parent_graph = NodePath("..")
+conn_count_keyword = "layer"
+gradient_color = Color(0.298039, 0.901961, 0.729412, 1)
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=184772174]
+material = ExtResource("3_graph")
+instance_shader_parameters/corner_radius_width_add = Vector2(-3, 0)
+instance_shader_parameters/outline_color = Color(0.556863, 0.768627, 0.698039, 1)
+instance_shader_parameters/tuning = Color(0.0588235, 0.168627, 0.141176, 0.62)
+layout_mode = 0
+offset_left = -47.0
+offset_top = -42.0
+offset_right = 55.0
+offset_bottom = 20.0
+
+[node name="root" type="Control" parent="ColorRect" unique_id=1836502735]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Label" type="Label" parent="ColorRect/root" unique_id=2132189869]
+z_index = 1
+layout_mode = 0
+offset_top = 4.0
+offset_right = 258.97437
+offset_bottom = 47.0
+scale = Vector2(0.39, 0.39)
+theme = ExtResource("4_theme")
+text = "MemCellGRU"
+horizontal_alignment = 1
+
+[node name="Loc" type="Node" parent="ColorRect/root/Label" unique_id=1321818749]
+script = ExtResource("6_loc")
+auto = true
+localizations_ru = Dictionary[String, String]({
+"_": "ПамятьGRU"
+})
+localizations_kz = Dictionary[String, String]({
+"_": "ЖадGRU"
+})
+
+[node name="hidden_size" type="Label" parent="ColorRect/root" unique_id=1103028224]
+self_modulate = Color(0.78, 0.78, 0.78, 1)
+z_index = 1
+layout_mode = 0
+offset_left = 9.0
+offset_top = 25.0
+offset_right = 166.0
+offset_bottom = 68.0
+scale = Vector2(0.305, 0.305)
+theme = ExtResource("4_theme")
+text = "Memory"
+
+[node name="Loc" type="Node" parent="ColorRect/root/hidden_size" unique_id=108597785]
+script = ExtResource("6_loc")
+auto = true
+localizations_ru = Dictionary[String, String]({
+"_": "Размер"
+})
+localizations_kz = Dictionary[String, String]({
+"_": "Жад"
+})
+
+[node name="hidden_size_input" parent="." unique_id=1053975561 instance=ExtResource("7_validate")]
+layout_mode = 0
+offset_left = 1.0
+offset_top = -19.0
+offset_right = 70.0
+offset_bottom = 29.0
+scale = Vector2(0.27, 0.27)
+text = "16"
+placeholder_text = "16"
+max_length = 4
+expand_to_text_length = true
+context_menu_enabled = false
+emoji_menu_enabled = false
+virtual_keyboard_type = 2
+script = ExtResource("8_number")
+min_value = 1.0
+max_value = 256.0
+allow_float = false
+decimal_places = 2
+empty_on_min = false
+resize_after = 4
+change_always_accepted = false
+
+[connection signal="changed" from="hidden_size_input" to="." method="_on_hidden_size_changed"]
+[connection signal="submitted" from="hidden_size_input" to="." method="_on_hidden_size_submitted"]

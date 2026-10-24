@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "id": "autoregression",
+  "source": {
+    "kind": "scene",
+    "path": "res://scenes/language_models/autoregression.tscn"
+  },
+  "load_order": 216,
+  "menu": {
+    "visible": true,
+    "section": "language",
+    "order": 66
+  },
+  "roles": [
+    "language",
+    "output"
+  ],
+  "llm": {
+    "type": "autoregression"
+  },
+  "runtime": {},
+  "display": {
+    "category": "output",
+    "title": {
+      "en": "Autoregression",
+      "ru": "Авторегрессия",
+      "kz": "Авторегрессия"
+    },
+    "outline_color": "#ffffffff"
+  }
+}

@@ -1,0 +1,135 @@
+[gd_scene format=3 uid="uid://7kw3nabbnxgl"]
+
+[ext_resource type="Script" uid="uid://b4uoqcc01mwrm" path="res://scripts/multipurpose_dialog.gd" id="1_dialog"]
+[ext_resource type="Material" uid="uid://crjr13k12egng" path="res://scenes/splash.tres" id="2_splash"]
+[ext_resource type="Theme" uid="uid://cx365ld2mgjne" path="res://resources/theme_base.tres" id="3_base"]
+[ext_resource type="Theme" uid="uid://74kwx22ikciq" path="res://resources/theme_headers.tres" id="4_headers"]
+[ext_resource type="Texture2D" uid="uid://c6ofmypwaon64" path="res://game_assets/icons/warn.png" id="5_warn"]
+[ext_resource type="FontFile" uid="uid://d0xcffxoyd14k" path="res://game_assets/fonts/JetBrainsMono-VariableFont_wght.ttf" id="6_font"]
+[ext_resource type="Script" uid="uid://dog0wpjftm7uk" path="res://scripts/validate_line.gd" id="7_valid_input"]
+
+[node name="MultipurposeDialog" type="Control" unique_id=550106216]
+process_mode = 3
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1152.0
+offset_bottom = 648.0
+script = ExtResource("1_dialog")
+typename = "multipurpose_dialog"
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=536046250]
+z_index = 8
+material = ExtResource("2_splash")
+instance_shader_parameters/corner_radius_width_add = Vector2(9.365, 1)
+instance_shader_parameters/outline_color = Color(0.85, 0.85, 0.85, 1)
+instance_shader_parameters/tuning = Color(0, 0, 0, 0.7529412)
+layout_mode = 0
+offset_left = 336.0
+offset_top = 184.0
+offset_right = 816.0
+offset_bottom = 464.0
+
+[node name="Margin" type="MarginContainer" parent="ColorRect" unique_id=1069808301]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 24
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 24
+theme_override_constants/margin_bottom = 18
+
+[node name="VBox" type="VBoxContainer" parent="ColorRect/Margin" unique_id=492574555]
+layout_mode = 2
+theme_override_constants/separation = 14
+
+[node name="Header" type="HBoxContainer" parent="ColorRect/Margin/VBox" unique_id=1508382556]
+custom_minimum_size = Vector2(0, 34)
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="Icon" type="TextureRect" parent="ColorRect/Margin/VBox/Header" unique_id=56347159]
+custom_minimum_size = Vector2(28, 28)
+layout_mode = 2
+texture = ExtResource("5_warn")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Title" type="Label" parent="ColorRect/Margin/VBox/Header" unique_id=1194589145]
+layout_mode = 2
+size_flags_horizontal = 3
+theme = ExtResource("3_base")
+theme_override_colors/font_color = Color(0.85, 0.85, 0.85, 1)
+theme_override_font_sizes/font_size = 22
+text = "Dialog"
+vertical_alignment = 1
+
+[node name="Body" type="RichTextLabel" parent="ColorRect/Margin/VBox" unique_id=35580428]
+custom_minimum_size = Vector2(0, 120)
+layout_mode = 2
+size_flags_vertical = 3
+focus_mode = 2
+theme = ExtResource("4_headers")
+theme_override_font_sizes/normal_font_size = 16
+theme_override_font_sizes/bold_font_size = 16
+theme_override_font_sizes/italics_font_size = 16
+theme_override_font_sizes/mono_font_size = 15
+bbcode_enabled = true
+text = "Dialog body"
+selection_enabled = true
+
+[node name="FieldsSection" type="VBoxContainer" parent="ColorRect/Margin/VBox"]
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="InputTemplate" type="LineEdit" parent="ColorRect/Margin/VBox/FieldsSection"]
+visible = false
+custom_minimum_size = Vector2(0, 36)
+layout_mode = 2
+theme = ExtResource("4_headers")
+theme_override_fonts/font = ExtResource("6_font")
+theme_override_font_sizes/font_size = 18
+expand_to_text_length = true
+script = ExtResource("7_valid_input")
+auto_red = true
+metadata/_custom_type_script = "uid://dog0wpjftm7uk"
+
+[node name="DropdownTemplate" type="OptionButton" parent="ColorRect/Margin/VBox/FieldsSection"]
+visible = false
+custom_minimum_size = Vector2(0, 36)
+layout_mode = 2
+theme = ExtResource("4_headers")
+theme_override_fonts/font = ExtResource("6_font")
+theme_override_font_sizes/font_size = 18
+
+[node name="ProgressSection" type="VBoxContainer" parent="ColorRect/Margin/VBox"]
+visible = false
+custom_minimum_size = Vector2(0, 58)
+layout_mode = 2
+theme_override_constants/separation = 4
+
+[node name="Status" type="Label" parent="ColorRect/Margin/VBox/ProgressSection"]
+layout_mode = 2
+theme = ExtResource("3_base")
+theme_override_colors/font_color = Color(0.85, 0.85, 0.85, 1)
+theme_override_font_sizes/font_size = 14
+text = "Downloading"
+
+[node name="Bar" type="ProgressBar" parent="ColorRect/Margin/VBox/ProgressSection"]
+custom_minimum_size = Vector2(0, 12)
+layout_mode = 2
+show_percentage = false
+
+[node name="Detail" type="Label" parent="ColorRect/Margin/VBox/ProgressSection"]
+layout_mode = 2
+theme = ExtResource("3_base")
+theme_override_colors/font_color = Color(0.65, 0.65, 0.65, 1)
+theme_override_font_sizes/font_size = 12
+text = "0 MB"
+
+[node name="Actions" type="VBoxContainer" parent="ColorRect/Margin/VBox" unique_id=1727960668]
+custom_minimum_size = Vector2(0, 36)
+layout_mode = 2
+theme_override_constants/separation = 10

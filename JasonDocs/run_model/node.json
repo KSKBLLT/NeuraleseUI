@@ -1,0 +1,305 @@
+{
+  "schema_version": 1,
+  "node_id": "run_model",
+  "status": "stable",
+  "generated": {
+    "node_id": "run_model",
+    "created_with": "run_model",
+    "scene_path": "res://scenes/run_model.tscn",
+    "scene_uid": "uid://bajnadkdpiu3h",
+    "root_instance_path": null,
+    "script_path": "res://scripts/run_m.gd",
+    "inheritance_chain": [
+      "res://scripts/run_m.gd",
+      "res://scripts/io_graph.gd",
+      "res://scripts/base_graph.gd"
+    ],
+    "inherits_graph": true,
+    "server_typename": "RunModel",
+    "layer_name": null,
+    "title_candidates": {
+      "en": "RunModel",
+      "ru": "ЗапускМодели",
+      "kz": "МодельОрын"
+    },
+    "localized_properties": {
+      "ports": {},
+      "settings": {},
+      "controls": {
+        "ColorRect/root/Label": {
+          "property": "text",
+          "values": {
+            "en": "RunModel",
+            "ru": "ЗапускМодели",
+            "kz": "МодельОрын"
+          }
+        }
+      },
+      "title": {
+        "source_path": "ColorRect/root/Label",
+        "property": "text",
+        "values": {
+          "en": "RunModel",
+          "ru": "ЗапускМодели",
+          "kz": "МодельОрын"
+        }
+      }
+    },
+    "base_config": {
+      "branches": "{}",
+      "mapped": "{}"
+    },
+    "ports": [
+      {
+        "id": "input_i2_model_in",
+        "scene_node": "i2",
+        "scene_path": ".",
+        "hint": 0,
+        "server_name": "model_in",
+        "direction": "input",
+        "datatypes": [
+          "data"
+        ],
+        "multiple": false,
+        "config_conn": false,
+        "keyword": null,
+        "conn_count_keyword": "train",
+        "visual": {
+          "color": "#7673d9ff",
+          "gradient_color": "#7673d9ff",
+          "dir_vector": {
+            "x": -1.0,
+            "y": 0.0
+          },
+          "side": "left",
+          "relative_to": {
+            "role": "graph_rect",
+            "scene_path": "ColorRect"
+          },
+          "absolute_scene_rect": {
+            "x": -66.0,
+            "y": -12.0,
+            "w": 18.0,
+            "h": 18.0
+          },
+          "reference_rect": {
+            "x": -58.0,
+            "y": -22.0,
+            "w": 109.0,
+            "h": 36.0
+          },
+          "relative_rect": {
+            "x": -0.07339449541284404,
+            "y": 0.2777777777777778,
+            "w": 0.1651376146788991,
+            "h": 0.5
+          },
+          "relative_origin": {
+            "x": -0.07339449541284404,
+            "y": 0.5277777777777778
+          },
+          "color_family": "violet",
+          "color_label": {
+            "en": "Violet",
+            "ru": "Фиолетовый",
+            "kz": "Күлгін"
+          },
+          "side_label": {
+            "en": "on the left",
+            "ru": "слева",
+            "kz": "сол жақта"
+          },
+          "verbal_label": {
+            "en": "Violet port on the left",
+            "ru": "Фиолетовый порт слева",
+            "kz": "Күлгін порт сол жақта"
+          },
+          "text_color": "#6a67d6"
+        }
+      },
+      {
+        "id": "output_i_model_out",
+        "scene_node": "i",
+        "scene_path": ".",
+        "hint": 0,
+        "server_name": "model_out",
+        "direction": "output",
+        "datatypes": [
+          "model_output"
+        ],
+        "multiple": false,
+        "config_conn": false,
+        "keyword": null,
+        "conn_count_keyword": "train",
+        "visual": {
+          "color": "#7673d9ff",
+          "gradient_color": "#7673d9ff",
+          "dir_vector": {
+            "x": 1.0,
+            "y": 0.0
+          },
+          "side": "right",
+          "relative_to": {
+            "role": "graph_rect",
+            "scene_path": "ColorRect"
+          },
+          "absolute_scene_rect": {
+            "x": 41.0,
+            "y": -12.0,
+            "w": 18.0,
+            "h": 18.0
+          },
+          "reference_rect": {
+            "x": -58.0,
+            "y": -22.0,
+            "w": 109.0,
+            "h": 36.0
+          },
+          "relative_rect": {
+            "x": 0.908256880733945,
+            "y": 0.2777777777777778,
+            "w": 0.1651376146788991,
+            "h": 0.5
+          },
+          "relative_origin": {
+            "x": 1.073394495412844,
+            "y": 0.5277777777777778
+          },
+          "color_family": "violet",
+          "color_label": {
+            "en": "Violet",
+            "ru": "Фиолетовый",
+            "kz": "Күлгін"
+          },
+          "side_label": {
+            "en": "on the right",
+            "ru": "справа",
+            "kz": "оң жақта"
+          },
+          "verbal_label": {
+            "en": "Violet port on the right",
+            "ru": "Фиолетовый порт справа",
+            "kz": "Күлгін порт оң жақта"
+          },
+          "text_color": "#6a67d6"
+        }
+      }
+    ],
+    "settings": [
+      {
+        "id": "branches",
+        "source": "base_config",
+        "default": "{}",
+        "ui_kind": null,
+        "ui_path": null,
+        "options": []
+      },
+      {
+        "id": "mapped",
+        "source": "base_config",
+        "default": "{}",
+        "ui_kind": null,
+        "ui_path": null,
+        "options": []
+      }
+    ],
+    "icon_source": "res://node_icons/en/IconRunModel.png",
+    "static_compatible_nodes": [
+      {
+        "from_port": "output_i_model_out",
+        "to_node": "train_input",
+        "to_port": "input_i_pred_in",
+        "datatypes": [
+          "model_output"
+        ],
+        "confidence": "static_datatype_intersection"
+      }
+    ]
+  },
+  "docs": {
+    "title": {
+      "en": "RunModel",
+      "ru": "Запуск модели",
+      "kz": "Модельді іске қосу"
+    },
+    "summary": {
+      "en": "Runs the assembled model's forward pass inside the training flow.",
+      "ru": "Проводит текущий пример через нейросеть и получает её ответ.",
+      "kz": "Құрастырылған модельдің тура өтуін оқу ағыны ішінде орындайды."
+    },
+    "operation": {
+      "en": "Runs the selected model in a training chain. For language_stories, use one TextInput in the project: its English text supplies the live preview while the model improves. The training chain stays separate from the text-processing connections.",
+      "ru": "Запускает выбранную модель в цепочке обучения. Для language_stories оставь в проекте один ВводТекста: его английский текст используется для живого превью, пока модель улучшается. Соединения цепочки обучения и цепочки обработки текста собираются отдельно.",
+      "kz": "Таңдалған модельді оқыту тізбегінде іске қосады. language_stories үшін жобада бір МәтінКірісі қалдыр: оның ағылшын мәтіні модель жақсарған сайын алдын ала көрсетіледі. Оқыту мен мәтінді өңдеу тізбектері бөлек қосылады."
+    },
+    "compact": {
+      "body": {
+        "en": "Runs the assembled model's forward pass inside the training flow.",
+        "ru": "Запускает модель и получает её ответ.",
+        "kz": "Құрастырылған модельдің тура өтуін оқу ағыны ішінде орындайды."
+      }
+    },
+    "ports": {
+      "input_i2_model_in": {
+        "label": {
+          "en": "model_in",
+          "ru": "Учебный пример",
+          "kz": "model_in"
+        },
+        "description": {
+          "en": "Receives data data through the model_in input.",
+          "ru": "Фиолетовый порт слева принимает текущий пример из набора данных.",
+          "kz": "model_in кірісі арқылы data түріндегі деректерді қабылдайды."
+        }
+      },
+      "output_i_model_out": {
+        "label": {
+          "en": "model_out",
+          "ru": "Ответ модели",
+          "kz": "model_out"
+        },
+        "description": {
+          "en": "The violet port on the right sends the model output directly to Training Step.",
+          "ru": "Фиолетовый порт справа передаёт результат работы нейросети прямо в ноду «Шаг обучения».",
+          "kz": "Оң жақтағы күлгін порт модель жауабын тікелей «Оқыту қадамы» нодына береді."
+        }
+      }
+    },
+    "settings": {
+      "branches": {
+        "label": {
+          "en": "branches",
+          "ru": "Входы модели",
+          "kz": "branches"
+        },
+        "description": {
+          "en": "Stores configured model input branches.",
+          "ru": "Хранит список входов модели, к которым можно направить части учебного примера.",
+          "kz": "Бапталған модель кіріс тармақтарын сақтайды."
+        }
+      },
+      "mapped": {
+        "label": {
+          "en": "mapped",
+          "ru": "Подключённые части",
+          "kz": "mapped"
+        },
+        "description": {
+          "en": "Stores input-to-model field mappings.",
+          "ru": "Хранит выбранные соответствия: какая часть примера отправляется в какой вход модели.",
+          "kz": "Кіріс пен модель өрістерінің сәйкестігін сақтайды."
+        }
+      }
+    },
+    "connects_to": [],
+    "examples": [
+      {
+        "body": {
+          "ru": "Для MNIST направьте изображение цифры во «Вход изображения», а фиолетовый выход RunModel соедините прямо с нодой «Шаг обучения».",
+          "en": "For MNIST, pass the digit image into the model and connect the RunModel output directly to Training Step.",
+          "kz": "MNIST үшін цифр кескінін модельге беріп, RunModel шығысын тікелей «Оқыту қадамы» нодына қосыңыз."
+        }
+      }
+    ]
+  }
+}

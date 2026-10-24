@@ -1,0 +1,199 @@
+{
+  "schema_version": 1,
+  "node_id": "input_rgb",
+  "status": "stable",
+  "generated": {
+    "node_id": "input_rgb",
+    "created_with": "input_rgb",
+    "scene_path": "res://scenes/input_rgb.tscn",
+    "scene_uid": null,
+    "root_instance_path": "res://scenes/base_graph.tscn",
+    "script_path": "res://scripts/input_rgb.gd",
+    "inheritance_chain": [
+      "res://scripts/input_rgb.gd",
+      "res://scripts/input_graph.gd",
+      "res://scripts/input_base.gd",
+      "res://scripts/base_graph.gd"
+    ],
+    "inherits_graph": true,
+    "server_typename": "InputNode",
+    "layer_name": null,
+    "title_candidates": {
+      "en": "InputRGB",
+      "ru": "Ввод RGB",
+      "kz": "КірісRGB"
+    },
+    "localized_properties": {
+      "ports": {},
+      "settings": {},
+      "controls": {
+        "ColorRect/root/Label": {
+          "property": "text",
+          "values": {
+            "en": "InputRGB",
+            "ru": "Ввод RGB",
+            "kz": "КірісRGB"
+          }
+        },
+        "run": {
+          "property": "text",
+          "values": {
+            "en": "Run!",
+            "ru": "Пуск",
+            "kz": "Қосу"
+          }
+        }
+      },
+      "title": {
+        "source_path": "ColorRect/root/Label",
+        "property": "text",
+        "values": {
+          "en": "InputRGB",
+          "ru": "Ввод RGB",
+          "kz": "КірісRGB"
+        }
+      }
+    },
+    "base_config": {},
+    "ports": [
+      {
+        "id": "output_o_input_out",
+        "scene_node": "o",
+        "scene_path": ".",
+        "hint": 0,
+        "server_name": "input_out",
+        "direction": "output",
+        "datatypes": [
+          "input2d"
+        ],
+        "multiple": true,
+        "config_conn": false,
+        "keyword": null,
+        "conn_count_keyword": null,
+        "visual": {
+          "color": "#fffc99ff",
+          "gradient_color": "#fffc99ff",
+          "dir_vector": {
+            "x": 1.0,
+            "y": 0.0
+          },
+          "side": "right",
+          "relative_to": {
+            "role": "graph_rect",
+            "scene_path": "ColorRect"
+          },
+          "absolute_scene_rect": {
+            "x": 42.0,
+            "y": 28.0,
+            "w": 16.0,
+            "h": 21.0
+          },
+          "reference_rect": {
+            "x": -87.0,
+            "y": -35.0,
+            "w": 135.0,
+            "h": 175.0
+          },
+          "relative_rect": {
+            "x": 0.9555555555555556,
+            "y": 0.36,
+            "w": 0.11851851851851852,
+            "h": 0.12
+          },
+          "relative_origin": {
+            "x": 1.0740740740740742,
+            "y": 0.42
+          },
+          "color_family": "yellow",
+          "color_label": {
+            "en": "Yellow",
+            "ru": "Жёлтый",
+            "kz": "Сары"
+          },
+          "side_label": {
+            "en": "on the right",
+            "ru": "справа",
+            "kz": "оң жақта"
+          },
+          "verbal_label": {
+            "en": "Yellow port on the right",
+            "ru": "Жёлтый порт справа",
+            "kz": "Сары порт оң жақта"
+          },
+          "text_color": "#7a7700"
+        }
+      }
+    ],
+    "settings": [],
+    "icon_source": "res://node_icons/en/IconInputRgb.png",
+    "static_compatible_nodes": [
+      {
+        "from_port": "output_o_input_out",
+        "to_node": "flatten",
+        "to_port": "input_o2_layer_in",
+        "datatypes": [
+          "input2d"
+        ],
+        "confidence": "static_datatype_intersection"
+      },
+      {
+        "from_port": "output_o_input_out",
+        "to_node": "conv2d",
+        "to_port": "input_ni_layer_in",
+        "datatypes": [
+          "input2d"
+        ],
+        "confidence": "static_datatype_intersection"
+      }
+    ]
+  },
+  "docs": {
+    "title": {
+      "en": "InputRGB",
+      "ru": "Ввод RGB",
+      "kz": "КірісRGB"
+    },
+    "summary": {
+      "en": "Feeds a colour picture into the network: draw it or open it from a file.",
+      "ru": "Вводит в нейросеть цветную картинку: её можно нарисовать или открыть из файла.",
+      "kz": "Нейрожеліге түсті сурет береді: оны салуға немесе файлдан ашуға болады."
+    },
+    "operation": {
+      "en": "Put this node at the start of a model that recognises colour pictures. Draw on the canvas with the mouse; pick the brush colour from the circles under the canvas, black erases. The arrow button opens a picture from the computer, or drop one onto the canvas. The picture keeps its colours and is scaled to the canvas. The node takes the canvas size from the dataset the model learns on: 32 by 32 pixels for CIFAR-10.",
+      "ru": "Эту ноду ставят в начале модели, которая распознаёт цветные картинки. Рисуют на холсте мышью: цвет кисти выбирают в кружках под холстом, чёрный цвет стирает. Кнопка со стрелкой открывает картинку с компьютера, а ещё картинку можно просто перетащить на холст. Картинка сохраняет свои цвета и уменьшается до размера холста. Размер холста нода берёт из датасета, на котором учится модель: для CIFAR-10 это 32 на 32 пикселя.",
+      "kz": "Бұл түйінді түсті суреттерді танитын модельдің басына қояды. Кенепке тінтуірмен салады: қылқалам түсін кенеп астындағы дөңгелектерден таңдайды, қара түс өшіреді. Нұсқары бар батырма компьютерден сурет ашады, суретті кенепке жай сүйреп әкелуге де болады. Сурет өз түстерін сақтап, кенеп өлшеміне дейін кішірейеді. Кенеп өлшемін түйін модель үйренетін деректер жиынынан алады: CIFAR-10 үшін ол 32-ге 32 пиксель."
+    },
+    "compact": {
+      "body": {
+        "en": "Feeds a colour picture into the model.",
+        "ru": "Вводит в модель цветную картинку.",
+        "kz": "Модельге түсті сурет береді."
+      }
+    },
+    "ports": {
+      "output_o_input_out": {
+        "label": {
+          "en": "Picture",
+          "ru": "Картинка",
+          "kz": "Сурет"
+        },
+        "description": {
+          "en": "The yellow port on the right sends the picture to a convolution layer or to Flatten: all the red values first, then green, then blue.",
+          "ru": "Жёлтый порт справа передаёт картинку в свёрточный слой или во Flatten: сначала все красные значения, потом зелёные, потом синие.",
+          "kz": "Оң жақтағы сары порт суретті свертка қабатына немесе Flatten-ге береді: алдымен барлық қызыл мәндер, содан кейін жасыл, содан кейін көк."
+        }
+      }
+    },
+    "settings": {},
+    "connects_to": [],
+    "examples": [
+      {
+        "body": {
+          "en": "To recognise CIFAR-10 objects, connect this node's yellow port to a convolution layer and choose cifar10 in the dataset node.",
+          "ru": "Чтобы распознавать предметы из CIFAR-10, соедините жёлтый порт этой ноды со свёрточным слоем, а в ноде датасета выберите cifar10.",
+          "kz": "CIFAR-10 заттарын тану үшін осы түйіннің сары портын свертка қабатына қосып, деректер жиыны түйінінен cifar10 таңдаңыз."
+        }
+      }
+    ]
+  }
+}

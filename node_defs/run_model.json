@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "id": "run_model",
+  "source": {
+    "kind": "scene",
+    "path": "res://scenes/run_model.tscn"
+  },
+  "load_order": 140,
+  "menu": {
+    "visible": true,
+    "section": "training",
+    "order": 41
+  },
+  "roles": [],
+  "llm": {
+    "type": "run_model"
+  },
+  "runtime": {
+    "handler": "passthrough",
+    "aliases": [
+      "train_run_model"
+    ],
+    "roles": [
+      "final_ignored"
+    ],
+    "default_input_port": "model_in",
+    "default_output_port": "model_out"
+  },
+  "display": {
+    "category": "train"
+  }
+}

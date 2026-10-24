@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://tests/godot/test_settings_quality_carousel.gd" id="1"]
+
+[node name="SettingsQualityCarouselTest" type="Node"]
+script = ExtResource("1")

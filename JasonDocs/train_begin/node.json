@@ -1,0 +1,275 @@
+{
+  "schema_version": 1,
+  "node_id": "train_begin",
+  "status": "stable",
+  "generated": {
+    "node_id": "train_begin",
+    "created_with": "train_begin",
+    "scene_path": "res://scenes/train_begin.tscn",
+    "scene_uid": "uid://274a5p56vhfv",
+    "root_instance_path": null,
+    "script_path": "res://scripts/train_begin.gd",
+    "inheritance_chain": [
+      "res://scripts/train_begin.gd",
+      "res://scripts/base_graph.gd"
+    ],
+    "inherits_graph": true,
+    "server_typename": "TrainBegin",
+    "layer_name": null,
+    "title_candidates": {
+      "en": "TrainBegin",
+      "ru": "НачОбучения",
+      "kz": "ОқытуБастау"
+    },
+    "localized_properties": {
+      "ports": {},
+      "settings": {},
+      "controls": {
+        "ColorRect/root/Label": {
+          "property": "text",
+          "values": {
+            "en": "TrainBegin",
+            "ru": "НачОбучения",
+            "kz": "ОқытуБастау"
+          }
+        },
+        "train": {
+          "property": "text",
+          "values": {
+            "en": "Train!",
+            "ru": "Учись!",
+            "kz": "Оку!"
+          }
+        },
+        "train2": {
+          "property": "text",
+          "values": {
+            "en": "Clear",
+            "ru": "Сброс",
+            "kz": "Тазарт"
+          }
+        }
+      },
+      "title": {
+        "source_path": "ColorRect/root/Label",
+        "property": "text",
+        "values": {
+          "en": "TrainBegin",
+          "ru": "НачОбучения",
+          "kz": "ОқытуБастау"
+        }
+      }
+    },
+    "base_config": {},
+    "ports": [
+      {
+        "id": "input_o2_netname",
+        "scene_node": "o2",
+        "scene_path": ".",
+        "hint": 0,
+        "server_name": "netname",
+        "direction": "input",
+        "datatypes": [
+          "dataset_type"
+        ],
+        "multiple": false,
+        "config_conn": true,
+        "keyword": null,
+        "conn_count_keyword": "netname",
+        "visual": {
+          "color": "#c387ffff",
+          "gradient_color": "#d1a3ffff",
+          "dir_vector": {
+            "x": -1.0,
+            "y": 0.0
+          },
+          "side": "left",
+          "relative_to": {
+            "role": "graph_rect",
+            "scene_path": "ColorRect"
+          },
+          "absolute_scene_rect": {
+            "x": -87.0,
+            "y": -98.0,
+            "w": 20.0,
+            "h": 20.0
+          },
+          "reference_rect": {
+            "x": -79.0,
+            "y": -115.0,
+            "w": 131.0,
+            "h": 184.0
+          },
+          "relative_rect": {
+            "x": -0.061068702290076333,
+            "y": 0.09239130434782608,
+            "w": 0.15267175572519084,
+            "h": 0.10869565217391304
+          },
+          "relative_origin": {
+            "x": -0.061068702290076333,
+            "y": 0.14673913043478262
+          },
+          "color_family": "lilac",
+          "color_label": {
+            "en": "Lilac",
+            "ru": "Сиреневый",
+            "kz": "Ашық күлгін"
+          },
+          "side_label": {
+            "en": "on the left",
+            "ru": "слева",
+            "kz": "сол жақта"
+          },
+          "verbal_label": {
+            "en": "Lilac port on the left",
+            "ru": "Сиреневый порт слева",
+            "kz": "Ашық күлгін порт сол жақта"
+          },
+          "text_color": "#9e3dff"
+        }
+      },
+      {
+        "id": "output_i_input_out",
+        "scene_node": "i",
+        "scene_path": ".",
+        "hint": 0,
+        "server_name": "input_out",
+        "direction": "output",
+        "datatypes": [
+          "data"
+        ],
+        "multiple": false,
+        "config_conn": false,
+        "keyword": null,
+        "conn_count_keyword": "train",
+        "visual": {
+          "color": "#7673d9ff",
+          "gradient_color": "#7673d9ff",
+          "dir_vector": {
+            "x": 1.0,
+            "y": 0.0
+          },
+          "side": "right",
+          "relative_to": {
+            "role": "graph_rect",
+            "scene_path": "ColorRect"
+          },
+          "absolute_scene_rect": {
+            "x": 42.0,
+            "y": -42.0,
+            "w": 18.0,
+            "h": 20.0
+          },
+          "reference_rect": {
+            "x": -79.0,
+            "y": -115.0,
+            "w": 131.0,
+            "h": 184.0
+          },
+          "relative_rect": {
+            "x": 0.9236641221374046,
+            "y": 0.3967391304347826,
+            "w": 0.13740458015267176,
+            "h": 0.10869565217391304
+          },
+          "relative_origin": {
+            "x": 1.0610687022900764,
+            "y": 0.45108695652173914
+          },
+          "color_family": "violet",
+          "color_label": {
+            "en": "Violet",
+            "ru": "Фиолетовый",
+            "kz": "Күлгін"
+          },
+          "side_label": {
+            "en": "on the right",
+            "ru": "справа",
+            "kz": "оң жақта"
+          },
+          "verbal_label": {
+            "en": "Violet port on the right",
+            "ru": "Фиолетовый порт справа",
+            "kz": "Күлгін порт оң жақта"
+          },
+          "text_color": "#6a67d6"
+        }
+      }
+    ],
+    "settings": [],
+    "icon_source": "res://node_icons/en/IconTrainBegin.png",
+    "static_compatible_nodes": [
+      {
+        "from_port": "output_i_input_out",
+        "to_node": "run_model",
+        "to_port": "input_i2_model_in",
+        "datatypes": [
+          "data"
+        ],
+        "confidence": "static_datatype_intersection"
+      }
+    ]
+  },
+  "docs": {
+    "title": {
+      "en": "Training Input",
+      "ru": "Начало обучения",
+      "kz": "Оқыту кірісі"
+    },
+    "summary": {
+      "en": "Starts a training data flow from a selected dataset.",
+      "ru": "Берёт очередной учебный пример и отправляет его в цепочку обучения.",
+      "kz": "Таңдалған деректер жиынынан оқу деректерінің ағынын бастайды."
+    },
+    "operation": {
+      "en": "Connect Dataset → TrainBegin → RunModel → TrainStep. With language_stories, the language model gradually recovers its knowledge and updates the word, attention, and answer previews for the latest TextInput. You can edit that text while training or stop and start again.",
+      "ru": "Соедини Датасет → НачОбучения → ЗапускМодели → ШагОбучения. С набором language_stories языковая модель постепенно восстанавливает свои знания и обновляет слова, внимание и варианты ответа для текущего текста в ВводТекста. Текст можно менять прямо во время обучения; обучение можно остановить и запустить снова.",
+      "kz": "ДеректерЖиыны → ОқытуБастау → МодельІскеҚосу → ОқытуҚадамы тізбегін қос. language_stories арқылы тіл моделі білімін біртіндеп қалпына келтіріп, МәтінКірісі ішіндегі ағымдағы мәтіннің сөздерін, назарын және жауаптарын жаңартады. Оқыту кезінде мәтінді өзгертіп, оқытуды тоқтатып, қайта бастауға болады."
+    },
+    "compact": {
+      "body": {
+        "en": "Starts a training data flow from a selected dataset.",
+        "ru": "Подаёт учебные примеры по одному.",
+        "kz": "Таңдалған деректер жиынынан оқу деректерінің ағынын бастайды."
+      }
+    },
+    "ports": {
+      "input_o2_netname": {
+        "label": {
+          "en": "netname",
+          "ru": "Набор данных",
+          "kz": "netname"
+        },
+        "description": {
+          "en": "Receives dataset_type data through the netname input.",
+          "ru": "Сиреневый порт слева принимает выбранный набор учебных примеров.",
+          "kz": "netname кірісі арқылы dataset_type түріндегі деректерді қабылдайды."
+        }
+      },
+      "output_i_input_out": {
+        "label": {
+          "en": "input_out",
+          "ru": "Учебный пример",
+          "kz": "input_out"
+        },
+        "description": {
+          "en": "Sends data data to compatible downstream nodes.",
+          "ru": "Фиолетовый порт справа передаёт текущий пример нодам, которые запускают модель и проверяют её ответ.",
+          "kz": "data түріндегі деректерді үйлесімді келесі түйіндерге береді."
+        }
+      }
+    },
+    "settings": {},
+    "connects_to": [],
+    "examples": [
+      {
+        "body": {
+          "ru": "Соедините ноду «Набор данных» с сиреневым портом слева, а фиолетовый порт справа — с нодой «Запуск модели».",
+          "en": "Connect Dataset to this node, then connect its output to Run Model.",
+          "kz": "«Деректер жинағын» осы нодқа, ал оның шығысын «Модельді іске қосу» нодына жалғаңыз."
+        }
+      }
+    ]
+  }
+}

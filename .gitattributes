@@ -1,0 +1,9 @@
+# Auto detect text files and perform LF normalization
+* text=auto
+
+# Manifests hash original bytes, including upstream wheel line endings.
+# A Windows checkout must never rewrite them with core.autocrlf.
+local_runtime/models/clean1000/** -text
+local_runtime/language_vendor/** -text -whitespace
+local_runtime/requirements.txt text eol=lf
+docs/licenses/Tokenizers.txt -text

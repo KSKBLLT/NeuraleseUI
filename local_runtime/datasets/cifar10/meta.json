@@ -1,0 +1,38 @@
+{
+  "name": "cifar10",
+  "size": 60000,
+  "inputs": {
+    "x": 32,
+    "y": 32,
+    "channels": 3,
+    "datatype": "2d"
+  },
+  "outputs": [
+    {
+      "label": "object",
+      "x": 10,
+      "datatype": "1d",
+      "label_names": [
+        "airplane",
+        "automobile",
+        "bird",
+        "cat",
+        "deer",
+        "dog",
+        "frog",
+        "horse",
+        "ship",
+        "truck"
+      ]
+    }
+  ],
+  "input_hints": [
+    {
+      "name": "image",
+      "value": "32x32 RGB",
+      "dtype": "image"
+    }
+  ],
+  "fully_local": true,
+  "storage": "numpy"
+}

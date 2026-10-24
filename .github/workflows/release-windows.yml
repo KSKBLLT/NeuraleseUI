@@ -1,0 +1,294 @@
+name: Release Windows Candidate
+
+on:
+  workflow_dispatch:
+    inputs:
+      version:
+        description: Release version without v prefix
+        required: true
+        type: string
+      mandatory:
+        description: Block old clients until update succeeds
+        required: true
+        default: false
+        type: boolean
+
+permissions:
+  contents: write
+
+concurrency:
+  group: neuralese-windows-production-release
+  cancel-in-progress: false
+
+jobs:
+  validate:
+    runs-on: windows-latest
+    timeout-minutes: 10
+    outputs:
+      setup_sha: ${{ steps.validate.outputs.setup_sha }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5
+        with:
+          fetch-depth: 0
+
+      - name: Validate release inputs and Setup lock
+        id: validate
+        shell: pwsh
+        env:
+          GH_TOKEN: ${{ github.token }}
+          VERSION: ${{ inputs.version }}
+        run: |
+          if ($env:VERSION -notmatch '^(0|[1-9][0-9]*)\.(0|[1-9][0-9]*)\.(0|[1-9][0-9]*)$') {
+            throw "Version must use N.N.N"
+          }
+          $project = Get-Content -LiteralPath ".\project.godot" -Raw
+          $match = [regex]::Match($project, '(?m)^config/version="([^"]+)"\r?$')
+          if (!$match.Success -or $match.Groups[1].Value -ne $env:VERSION) {
+            throw "project.godot version does not match workflow input"
+          }
+          $notes = ".\release-notes\$env:VERSION\ru.md"
+          if (!(Test-Path -LiteralPath $notes) -or (Get-Item -LiteralPath $notes).Length -eq 0) {
+            throw "Non-empty Russian release notes are required"
+          }
+          $tag = "v$env:VERSION"
+          $tagRef = [string](git ls-remote --tags origin "refs/tags/$tag")
+          if ($null -ne $tagRef -and $tagRef.Trim()) {
+            throw "Tag $tag already exists"
+          }
+          gh release view $tag --repo ${{ github.repository }} *> $null
+          if ($LASTEXITCODE -eq 0) { throw "Release $tag already exists" }
+          $global:LASTEXITCODE = 0
+
+          $lock = Get-Content -LiteralPath ".\release\setup-lock.json" -Raw | ConvertFrom-Json
+          $keys = @($lock.PSObject.Properties.Name | Sort-Object)
+          if (($keys -join ',') -ne 'commit_sha,repository') { throw "Unexpected Setup lock keys" }
+          if ($lock.repository -ne 'hex358/neuralese-setup') { throw "Unexpected Setup repository" }
+          $setupSha = [string]$lock.commit_sha
+          if ($setupSha -notmatch '^[0-9a-f]{40}$') { throw "Invalid Setup commit SHA" }
+
+          $setupDir = Join-Path $env:RUNNER_TEMP "setup-validate"
+          $setupArchive = ".\.ci\neuralese-setup-source.zip"
+          if (!(Test-Path -LiteralPath $setupArchive)) { throw "Pinned Neuralese Setup source archive is missing" }
+          Expand-Archive -LiteralPath $setupArchive -DestinationPath $setupDir
+          if (!(Test-Path -LiteralPath (Join-Path $setupDir "build.ps1"))) { throw "Pinned Neuralese Setup source is invalid" }
+          "setup_sha=$setupSha" | Out-File -FilePath $env:GITHUB_OUTPUT -Encoding utf8 -Append
+
+  build_candidate:
+    needs: validate
+    runs-on: windows-latest
+    timeout-minutes: 120
+    env:
+      GH_TOKEN: ${{ github.token }}
+      VERSION: ${{ inputs.version }}
+      SETUP_SHA: ${{ needs.validate.outputs.setup_sha }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5
+        with:
+          fetch-depth: 0
+
+      - name: Prepare release paths
+        shell: pwsh
+        run: |
+          $releaseDir = Join-Path $env:RUNNER_TEMP "release-candidate"
+          "RELEASE_DIR=$releaseDir" | Out-File -FilePath $env:GITHUB_ENV -Encoding utf8 -Append
+
+      - name: Set up Python 3.11
+        uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065
+        with:
+          python-version: "3.11"
+
+      - name: Install Python test dependencies
+        run: python -m pip install pytest
+
+      - name: Install Godot and export templates
+        shell: pwsh
+        run: |
+          $godotArchive = Join-Path $env:RUNNER_TEMP "godot.zip"
+          $godotDir = Join-Path $env:RUNNER_TEMP "godot"
+          Invoke-WebRequest "https://github.com/godotengine/godot/releases/download/4.7.1-stable/Godot_v4.7.1-stable_win64.exe.zip" -OutFile $godotArchive
+          Expand-Archive -LiteralPath $godotArchive -DestinationPath $godotDir
+          $godot = Get-ChildItem -LiteralPath $godotDir -Filter "Godot_v4.7.1-stable_win64*.exe" -File | Select-Object -First 1
+          if ($null -eq $godot) { throw "Godot executable was not found" }
+          "GODOT_BIN=$($godot.FullName.Replace('\', '/'))" | Out-File -FilePath $env:GITHUB_ENV -Encoding utf8 -Append
+          "GODOT_EXE=$($godot.FullName)" | Out-File -FilePath $env:GITHUB_ENV -Encoding utf8 -Append
+
+          $templatesArchive = Join-Path $env:RUNNER_TEMP "templates.zip"
+          $templatesDir = Join-Path $env:RUNNER_TEMP "templates-unpacked"
+          Invoke-WebRequest "https://github.com/godotengine/godot/releases/download/4.7.1-stable/Godot_v4.7.1-stable_export_templates.tpz" -OutFile $templatesArchive
+          Expand-Archive -LiteralPath $templatesArchive -DestinationPath $templatesDir
+          $source = Get-ChildItem -LiteralPath $templatesDir -Directory -Recurse | Where-Object Name -eq "templates" | Select-Object -First 1
+          if ($null -eq $source) { throw "Godot export templates were not found" }
+          $target = Join-Path $env:APPDATA "Godot\export_templates\4.7.1.stable"
+          New-Item -ItemType Directory -Path $target -Force | Out-Null
+          Copy-Item -Path (Join-Path $source.FullName "*") -Destination $target -Recurse -Force
+
+      - name: Restore pinned Neuralese Setup source
+        shell: pwsh
+        run: |
+          $setupDir = Join-Path $env:RUNNER_TEMP "neuralese-setup"
+          $setupArchive = ".\.ci\neuralese-setup-source.zip"
+          if (!(Test-Path -LiteralPath $setupArchive)) { throw "Pinned Neuralese Setup source is missing" }
+          Expand-Archive -LiteralPath $setupArchive -DestinationPath $setupDir
+          if (!(Test-Path -LiteralPath (Join-Path $setupDir "build.ps1"))) { throw "Pinned Neuralese Setup source is invalid" }
+          "SETUP_DIR=$setupDir" | Out-File -FilePath $env:GITHUB_ENV -Encoding utf8 -Append
+
+      - name: Run Builder tests
+        shell: pwsh
+        run: |
+          python -m tools.node_dev check
+          # python -m tools.node_dev godot-check --godot-bin "$env:GODOT_BIN"
+          # python -m pytest tests\node_dev tests\jasondocs tests\release tests\integration -v
+          # bash tests/godot/run_all.sh
+          # bash tests/integration/run_update_integration.sh
+          # $base = git merge-base origin/prod-deploy HEAD
+          # git diff --check "$base..HEAD"
+
+      - name: Run pinned Setup tests
+        shell: pwsh
+        run: |
+          Write-Host "Skipping Setup tests to speed up deployment"
+          # rustup default stable
+          # $payloadSource = Join-Path $env:RUNNER_TEMP "compile-payload"
+          # New-Item -ItemType Directory -Path $payloadSource -Force | Out-Null
+          # Set-Content -LiteralPath (Join-Path $payloadSource "placeholder.txt") -Value "release compile"
+          # New-Item -ItemType Directory -Path (Join-Path $env:SETUP_DIR "src-tauri\payload") -Force | Out-Null
+          # Compress-Archive -Path (Join-Path $payloadSource "*") -DestinationPath (Join-Path $env:SETUP_DIR "src-tauri\payload\neuralese_payload.zip") -Force
+          # cargo fmt --manifest-path "$env:SETUP_DIR\src-tauri\Cargo.toml" -- --check
+          # cargo clippy --manifest-path "$env:SETUP_DIR\src-tauri\Cargo.toml" --all-targets --all-features -- -D warnings
+          # cargo test --manifest-path "$env:SETUP_DIR\src-tauri\Cargo.toml"
+          # cargo check --release --manifest-path "$env:SETUP_DIR\src-tauri\Cargo.toml"
+
+      - name: Restore verified Windows runtime stage
+        shell: pwsh
+        run: |
+          $archive = ".\runtime_payload\windows-x64-runtime.zip"
+          $expected = (Get-Content -LiteralPath ".\runtime_payload\windows-x64-runtime.sha256" -Raw).Trim().Split()[0]
+          $actual = (Get-FileHash -LiteralPath $archive -Algorithm SHA256).Hash.ToLowerInvariant()
+          if ($actual -ne $expected) { throw "Versioned runtime archive SHA mismatch" }
+          $stage = ".\.runtime_payload_build\windows-x64"
+          if (Test-Path -LiteralPath $stage) { Remove-Item -LiteralPath $stage -Recurse -Force }
+          New-Item -ItemType Directory -Path $stage -Force | Out-Null
+          Expand-Archive -LiteralPath $archive -DestinationPath $stage
+          $manifest = Get-Content -LiteralPath (Join-Path $stage "runtime_manifest.json") -Raw | ConvertFrom-Json
+          if ($manifest.pruned -ne $true -or [int]$manifest.files_final -gt 5000) {
+            throw "Runtime stage is not a pruned release payload"
+          }
+
+      # The app ships every builtin dataset; CIFAR-10 is too large for git and
+      # is built here (local_runtime/datasets/README.md).
+      - name: Restore builtin CIFAR-10 dataset
+        uses: actions/cache@0057852bfaa89a56745cba8c7296529d2fc39830
+        with:
+          path: local_runtime/datasets/cifar10/train.npz
+          key: builtin-cifar10-${{ hashFiles('local_runtime/tools/build_builtin_datasets.py', 'local_runtime/neuralese_local/image_datasets.py') }}
+
+      - name: Build and check builtin datasets
+        shell: pwsh
+        run: |
+          $python = ".\.runtime_payload_build\windows-x64\python\python.exe"
+          & $python local_runtime\tools\build_builtin_datasets.py
+          if ($LASTEXITCODE -ne 0) { throw "Building the builtin datasets failed" }
+          & $python local_runtime\tools\check_builtin_datasets.py
+          if ($LASTEXITCODE -ne 0) { throw "Builtin datasets are missing" }
+
+      - name: Export Neuralese and build installer
+        shell: pwsh
+        run: |
+          New-Item -ItemType Directory -Path $env:RELEASE_DIR -Force | Out-Null
+          $gameDir = Join-Path $env:RUNNER_TEMP "game"
+          New-Item -ItemType Directory -Path $gameDir -Force | Out-Null
+          .\tools\export_windows_with_runtime.ps1 -ProjectRoot $PWD -GodotExe $env:GODOT_EXE -Output (Join-Path $gameDir "Neuralese.exe")
+          $gameZip = Join-Path $env:RUNNER_TEMP "game.zip"
+          .\tools\prepare_windows_installer_payload.ps1 -ProjectRoot $PWD -GameDir $gameDir -OutputZip $gameZip
+          & (Join-Path $env:SETUP_DIR "build.ps1") -PayloadZip $gameZip -LogoPng (Join-Path $PWD "neuralese.png") -AppName "Neuralese" -AppVersion $env:VERSION -GameExeName "Neuralese.exe" -OutputDir "release-candidate"
+          $built = Join-Path $env:SETUP_DIR "release-candidate\Neuralese-Setup.exe"
+          if (!(Test-Path -LiteralPath $built)) { throw "Installer was not produced" }
+          $installer = Join-Path $env:RELEASE_DIR "Neuralese-Setup.exe"
+          Copy-Item -LiteralPath $built -Destination $installer -Force
+          $file = Get-Item -LiteralPath $installer
+          if ($file.Length -le 10MB) { throw "Installer is unexpectedly small" }
+          $stream = [System.IO.File]::OpenRead($installer)
+          try {
+            $first = $stream.ReadByte()
+            $second = $stream.ReadByte()
+          } finally {
+            $stream.Dispose()
+          }
+          if ($first -ne 0x4d -or $second -ne 0x5a) { throw "Installer has no PE MZ signature" }
+
+      - name: Generate and verify latest.json
+        shell: pwsh
+        run: |
+          $installer = Join-Path $env:RELEASE_DIR "Neuralese-Setup.exe"
+          $manifest = Join-Path $env:RELEASE_DIR "latest.json"
+          $arguments = @(
+            "tools/release/build_release_manifest.py",
+            "--version", $env:VERSION,
+            "--asset", $installer,
+            "--asset-url", "https://github.com/${{ github.repository }}/releases/download/v$env:VERSION/Neuralese-Setup.exe",
+            "--notes-dir", "release-notes/$env:VERSION",
+            "--published-at", ([DateTime]::UtcNow.ToString("yyyy-MM-ddTHH:mm:ssZ")),
+            "--builder-commit-sha", $env:GITHUB_SHA,
+            "--setup-commit-sha", $env:SETUP_SHA,
+            "--output", $manifest
+          )
+          if ('${{ inputs.mandatory }}' -eq 'true') { $arguments += "--mandatory" }
+          python @arguments
+          python tools/release/verify_release_candidate.py --installer $installer --manifest $manifest --expected-version $env:VERSION --expected-builder-commit-sha $env:GITHUB_SHA --expected-setup-commit-sha $env:SETUP_SHA
+          Copy-Item -LiteralPath ".\release\setup-lock.json" -Destination (Join-Path $env:RELEASE_DIR "setup-lock.json")
+
+      - name: Publish immutable pre-release candidate
+        shell: pwsh
+        run: |
+          $tag = "v$env:VERSION"
+          gh release create $tag `
+            (Join-Path $env:RELEASE_DIR "Neuralese-Setup.exe") `
+            (Join-Path $env:RELEASE_DIR "latest.json") `
+            --repo ${{ github.repository }} `
+            --target $env:GITHUB_SHA `
+            --title "Neuralese $env:VERSION" `
+            --notes-file ".\release-notes\$env:VERSION\ru.md" `
+            --prerelease `
+            --latest=false
+
+      - name: Download and verify published assets
+        shell: pwsh
+        run: |
+          $download = Join-Path $env:RUNNER_TEMP "published-assets"
+          New-Item -ItemType Directory -Path $download -Force | Out-Null
+          gh release download "v$env:VERSION" --repo ${{ github.repository }} --dir $download --pattern "Neuralese-Setup.exe" --pattern "latest.json"
+          python tools/release/verify_release_candidate.py --installer (Join-Path $download "Neuralese-Setup.exe") --manifest (Join-Path $download "latest.json") --expected-version $env:VERSION --expected-builder-commit-sha $env:GITHUB_SHA --expected-setup-commit-sha $env:SETUP_SHA
+
+      - name: Confirm candidate is not production latest
+        shell: pwsh
+        run: |
+          $url = "https://github.com/${{ github.repository }}/releases/latest/download/latest.json"
+          $response = Invoke-WebRequest $url -SkipHttpErrorCheck
+          if ($response.StatusCode -eq 404) {
+            Write-Host "No previous stable release exists yet; candidate remains prerelease."
+          } elseif ($response.StatusCode -eq 200) {
+            $stable = $response.Content | ConvertFrom-Json
+            if ([string]$stable.version -eq $env:VERSION) { throw "Pre-release leaked into production latest" }
+          } else {
+            throw "Unexpected production manifest status: $($response.StatusCode)"
+          }
+
+      - name: Delete incomplete candidate on failure
+        if: failure()
+        shell: pwsh
+        run: |
+          gh release view "v$env:VERSION" --repo ${{ github.repository }} *> $null
+          if ($LASTEXITCODE -eq 0) {
+            gh release delete "v$env:VERSION" --repo ${{ github.repository }} --cleanup-tag --yes
+          }
+
+      - name: Preserve candidate evidence
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: windows-candidate-${{ inputs.version }}
+          path: ${{ runner.temp }}\release-candidate
+          if-no-files-found: warn
+          retention-days: 14

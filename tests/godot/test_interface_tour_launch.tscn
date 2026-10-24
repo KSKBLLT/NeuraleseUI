@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://c3jqemtuachn8"]
+
+[ext_resource type="PackedScene" uid="uid://dbgi78pifb8xh" path="res://scenes/project.tscn" id="1_project"]
+[ext_resource type="Script" uid="uid://cgitckoagp3vd" path="res://tests/godot/test_interface_tour_launch.gd" id="2_test"]
+
+[node name="base" unique_id=430078299 instance=ExtResource("1_project")]
+
+[node name="InterfaceTourLaunchTest" type="Node" parent="." index="4" unique_id=65762184]
+script = ExtResource("2_test")

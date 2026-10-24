@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "id": "softmax",
+  "source": {
+    "kind": "scene",
+    "path": "res://scenes/softmax.tscn"
+  },
+  "load_order": 120,
+  "menu": {
+    "visible": true,
+    "section": "shape_output",
+    "order": 12
+  },
+  "roles": [
+    "sequence_capable"
+  ],
+  "llm": {
+    "type": "softmax"
+  },
+  "runtime": {
+    "handler": "softmax",
+    "roles": [
+      "output_softmax"
+    ],
+    "default_input_port": "model_in",
+    "default_output_port": "soft_out"
+  },
+  "display": {
+    "category": "output"
+  }
+}

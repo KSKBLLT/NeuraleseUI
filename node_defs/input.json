@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "id": "input",
+  "source": {
+    "kind": "scene",
+    "path": "res://scenes/input_graph.tscn"
+  },
+  "load_order": 10,
+  "menu": {
+    "visible": true,
+    "section": "inputs_outputs",
+    "order": 0
+  },
+  "roles": [
+    "input"
+  ],
+  "llm": {
+    "type": "input_image_small"
+  },
+  "runtime": {
+    "handler": "input",
+    "aliases": [
+      "input_2d"
+    ],
+    "default_output_port": "input_out"
+  },
+  "display": {
+    "category": "data"
+  }
+}

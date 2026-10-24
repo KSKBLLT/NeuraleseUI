@@ -1,0 +1,179 @@
+[gd_scene format=3 uid="uid://c41t2vymf80b"]
+
+[ext_resource type="Script" uid="uid://16uqjjjfaneu" path="res://scripts/node_palette.gd" id="1_palette"]
+[ext_resource type="Script" uid="uid://xtbhm1lf0bqd" path="res://scripts/node_palette_drop_surface.gd" id="2_drop"]
+[ext_resource type="Script" uid="uid://dtwj74o465brs" path="res://scripts/loc.gd" id="3_dtgii"]
+[ext_resource type="FontFile" uid="uid://d0xcffxoyd14k" path="res://game_assets/fonts/JetBrainsMono-VariableFont_wght.ttf" id="3_font"]
+[ext_resource type="Theme" uid="uid://74kwx22ikciq" path="res://resources/theme_headers.tres" id="3_ng138"]
+[ext_resource type="FontFile" uid="uid://cgdpqvf45jw1j" path="res://game_assets/fonts/JetBrainsSans[wght]-VF.ttf" id="4_title_font"]
+
+[sub_resource type="StyleBoxEmpty" id="StylePanel"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleTitleHeader"]
+content_margin_left = 12.0
+content_margin_top = 10.0
+content_margin_right = 10.0
+content_margin_bottom = 0.0
+
+[sub_resource type="StyleBoxEmpty" id="StyleHeader"]
+content_margin_left = 10.0
+content_margin_top = 9.0
+content_margin_right = 10.0
+content_margin_bottom = 7.0
+
+[sub_resource type="StyleBoxEmpty" id="StyleButton"]
+
+[sub_resource type="StyleBoxFlat" id="StyleButtonPressed"]
+bg_color = Color(0.28, 0.28, 0.28, 0.3)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleButtonHover"]
+bg_color = Color(0.42, 0.42, 0.42, 0.215686)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxEmpty" id="StyleScroll"]
+
+[node name="NodePaletteLayer" type="CanvasLayer" unique_id=104481639]
+layer = 127
+script = ExtResource("1_palette")
+
+[node name="Root" type="Control" parent="." unique_id=1223781044]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="DropSurface" type="Control" parent="Root" unique_id=524981020]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("2_drop")
+
+[node name="Panel" type="PanelContainer" parent="Root" unique_id=101397087 groups=["tutorial_ui_target"]]
+custom_minimum_size = Vector2(248, 0)
+layout_mode = 1
+anchors_preset = 9
+anchor_bottom = 1.0
+offset_top = 45.0
+offset_right = 248.0
+offset_bottom = 1.0
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StylePanel")
+metadata/tutorial_target_id = "node_palette"
+
+[node name="Background" type="ColorRect" parent="Root/Panel" unique_id=213446106]
+layout_mode = 2
+mouse_filter = 2
+
+[node name="Content" type="VBoxContainer" parent="Root/Panel" unique_id=1965755427]
+layout_mode = 2
+theme_override_constants/separation = 3
+
+[node name="TitleContainer" type="PanelContainer" parent="Root/Panel/Content" unique_id=148192031]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleTitleHeader")
+
+[node name="Title" type="Label" parent="Root/Panel/Content/TitleContainer" unique_id=148192032]
+custom_minimum_size = Vector2(0, 39)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_fonts/font = ExtResource("4_title_font")
+theme_override_font_sizes/font_size = 23
+text = "Nodes"
+vertical_alignment = 1
+
+[node name="Loc" type="Node" parent="Root/Panel/Content/TitleContainer/Title" unique_id=148192033]
+script = ExtResource("3_dtgii")
+auto = true
+localizations_ru = Dictionary[String, String]({
+"nodes": "Ноды"
+})
+localizations_kz = Dictionary[String, String]({
+"nodes": "Нодтар"
+})
+metadata/_custom_type_script = "uid://dtwj74o465brs"
+
+[node name="Header" type="PanelContainer" parent="Root/Panel/Content" unique_id=780387578]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleHeader")
+
+[node name="Controls" type="HBoxContainer" parent="Root/Panel/Content/Header" unique_id=1259742317]
+layout_mode = 2
+theme_override_constants/separation = 7
+
+[node name="Search" type="LineEdit" parent="Root/Panel/Content/Header/Controls" unique_id=1641952912]
+custom_minimum_size = Vector2(0, 33.03)
+layout_mode = 2
+size_flags_horizontal = 3
+offset_transform_enabled = true
+offset_transform_position = Vector2(3, -2)
+theme = ExtResource("3_ng138")
+placeholder_text = "Find a node..."
+clear_button_enabled = true
+
+[node name="Loc" type="Node" parent="Root/Panel/Content/Header/Controls/Search" unique_id=1968904534]
+script = ExtResource("3_dtgii")
+auto = true
+localizations_ru = Dictionary[String, String]({
+"_": "Найти нод..."
+})
+localizations_kz = Dictionary[String, String]({
+"_": "Нодты іздеу…"
+})
+metadata/_custom_type_script = "uid://dtwj74o465brs"
+
+[node name="Collapse" type="Button" parent="Root/Panel/Content/Header/Controls" unique_id=1838512607]
+custom_minimum_size = Vector2(32, 34)
+layout_mode = 2
+offset_transform_enabled = true
+offset_transform_position = Vector2(0, -1)
+tooltip_text = "Hide node palette"
+mouse_default_cursor_shape = 2
+theme_override_colors/font_color = Color(0.82, 0.82, 0.82, 1)
+theme_override_fonts/font = ExtResource("3_font")
+theme_override_font_sizes/font_size = 17
+theme_override_styles/normal = SubResource("StyleButton")
+theme_override_styles/pressed = SubResource("StyleButtonPressed")
+theme_override_styles/hover = SubResource("StyleButtonHover")
+text = "<"
+
+[node name="Scroll" type="ScrollContainer" parent="Root/Panel/Content" unique_id=1541388797]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_styles/panel = SubResource("StyleScroll")
+horizontal_scroll_mode = 0
+
+[node name="Items" type="VBoxContainer" parent="Root/Panel/Content/Scroll" unique_id=1493310936]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 2
+
+[node name="Reopen" type="Button" parent="Root" unique_id=802633503]
+visible = false
+custom_minimum_size = Vector2(38, 40)
+layout_mode = 0
+offset_top = 52.0
+offset_right = 38.0
+offset_bottom = 92.0
+tooltip_text = "Show node palette"
+mouse_default_cursor_shape = 2
+theme_override_colors/font_color = Color(0.82, 0.82, 0.82, 1)
+theme_override_fonts/font = ExtResource("3_font")
+theme_override_font_sizes/font_size = 17
+theme_override_styles/normal = SubResource("StyleButton")
+theme_override_styles/pressed = SubResource("StyleButtonPressed")
+theme_override_styles/hover = SubResource("StyleButtonHover")
+text = ">"

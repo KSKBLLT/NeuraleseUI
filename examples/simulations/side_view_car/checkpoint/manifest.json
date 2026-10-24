@@ -1,0 +1,17 @@
+{
+  "status": "ok",
+  "backend": "fullylocal_ort",
+  "artifact": "/Users/alim/Documents/neuralese-node-palette-parity/examples/simulations/side_view_car/checkpoint/inference.onnx",
+  "checkpoint_dir": "/Users/alim/Documents/neuralese-node-palette-parity/examples/simulations/side_view_car/checkpoint",
+  "dataset": "car_track",
+  "context": "prepared-side-view-car",
+  "scene_id": "",
+  "model_outputs": [
+    "tensor_output_layer_out"
+  ],
+  "loss": "mse",
+  "optimizer": "adam",
+  "actual_optimizer": "adamw",
+  "learning_rate": 0.001,
+  "export_eval_interval": 5
+}

@@ -1,0 +1,264 @@
+{
+  "schema_version": 1,
+  "node_id": "autoregression",
+  "status": "stable",
+  "generated": {
+    "node_id": "autoregression",
+    "created_with": "autoregression",
+    "scene_path": "res://scenes/language_models/autoregression.tscn",
+    "scene_uid": null,
+    "root_instance_path": null,
+    "script_path": "res://scripts/language_models/autoregression.gd",
+    "inheritance_chain": [
+      "res://scripts/language_models/autoregression.gd",
+      "res://scripts/base_graph.gd"
+    ],
+    "inherits_graph": true,
+    "server_typename": "AutoregressionNode",
+    "layer_name": null,
+    "title_candidates": {
+      "en": "Autoregression",
+      "ru": "Авторегрессия",
+      "kz": "Авторегрессия"
+    },
+    "localized_properties": {
+      "ports": {},
+      "settings": {
+        "candidates": {
+          "label": {
+            "source_path": "ColorRect/Candidates",
+            "property": "text",
+            "values": {
+              "en": "Choice",
+              "ru": "Выбор",
+              "kz": "Таңдау"
+            }
+          },
+          "options": []
+        },
+        "creativity": {
+          "label": {
+            "source_path": "ColorRect/Creativity",
+            "property": "text",
+            "values": {
+              "en": "Bold",
+              "ru": "Смело",
+              "kz": "Батыл"
+            }
+          },
+          "options": []
+        }
+      },
+      "controls": {
+        "ColorRect/root/Label": {
+          "property": "placeholder_text",
+          "values": {
+            "en": "Autoregression",
+            "ru": "Авторегрессия",
+            "kz": "Авторегрессия"
+          }
+        },
+        "ColorRect/Creativity": {
+          "property": "text",
+          "values": {
+            "en": "Bold",
+            "ru": "Смело",
+            "kz": "Батыл"
+          }
+        },
+        "ColorRect/Candidates": {
+          "property": "text",
+          "values": {
+            "en": "Choice",
+            "ru": "Выбор",
+            "kz": "Таңдау"
+          }
+        },
+        "ColorRect/Step": {
+          "property": "text",
+          "values": {
+            "en": "Step",
+            "ru": "Шаг",
+            "kz": "Қадам"
+          }
+        }
+      },
+      "title": {
+        "source_path": "ColorRect/root/Label",
+        "property": "placeholder_text",
+        "values": {
+          "en": "Autoregression",
+          "ru": "Авторегрессия",
+          "kz": "Авторегрессия"
+        }
+      }
+    },
+    "base_config": {
+      "candidates": 5,
+      "creativity": 0.7
+    },
+    "ports": [
+      {
+        "id": "input_autoregress_in_autoregress_in",
+        "scene_node": "autoregress_in",
+        "scene_path": ".",
+        "hint": 0,
+        "server_name": "autoregress_in",
+        "direction": "input",
+        "datatypes": [
+          "autoregression"
+        ],
+        "multiple": false,
+        "config_conn": false,
+        "keyword": null,
+        "conn_count_keyword": null,
+        "visual": {
+          "color": "#4ce6baff",
+          "gradient_color": "#4ce6baff",
+          "dir_vector": {
+            "x": 0.0,
+            "y": -1.0
+          },
+          "side": "top",
+          "relative_to": {
+            "role": "graph_rect",
+            "scene_path": "ColorRect"
+          },
+          "absolute_scene_rect": {
+            "x": 75.5,
+            "y": -8.0,
+            "w": 18.0,
+            "h": 19.0
+          },
+          "reference_rect": {
+            "x": 0.0,
+            "y": 0.0,
+            "w": 169.0,
+            "h": 180.0
+          },
+          "relative_rect": {
+            "x": 0.4467455621301775,
+            "y": -0.044444444444444446,
+            "w": 0.10650887573964497,
+            "h": 0.10555555555555556
+          },
+          "relative_origin": {
+            "x": 0.5,
+            "y": -0.044444444444444446
+          },
+          "color_family": "green",
+          "color_label": {
+            "en": "Green",
+            "ru": "Зелёный",
+            "kz": "Жасыл"
+          },
+          "side_label": {
+            "en": "at the top",
+            "ru": "сверху",
+            "kz": "жоғарыда"
+          },
+          "verbal_label": {
+            "en": "Green port at the top",
+            "ru": "Зелёный порт сверху",
+            "kz": "Жасыл порт жоғарыда"
+          },
+          "text_color": "#138665"
+        }
+      }
+    ],
+    "settings": [
+      {
+        "id": "candidates",
+        "source": "base_config",
+        "default": 5,
+        "ui_kind": "HSlider",
+        "ui_path": "ColorRect/Candidates",
+        "options": []
+      },
+      {
+        "id": "creativity",
+        "source": "base_config",
+        "default": 0.7,
+        "ui_kind": "HSlider",
+        "ui_path": "ColorRect/Creativity",
+        "options": []
+      }
+    ],
+    "icon_source": "res://node_icons/en/IconAutoregression.png",
+    "static_compatible_nodes": []
+  },
+  "docs": {
+    "title": {
+      "en": "Autoregression",
+      "ru": "Авторегрессия",
+      "kz": "Авторегрессия"
+    },
+    "summary": {
+      "en": "Adds one model token per step.",
+      "ru": "Добавляет один токен модели за шаг.",
+      "kz": "Әр қадамда модельдің бір токенін қосады."
+    },
+    "operation": {
+      "en": "Connect the single top port to BestAnswer. Bold controls variety (0 always picks the most likely token); Choice limits the candidate count. Step samples exactly one real token and adds its decoded text both here and in TextInput. A second click while busy is ignored. EOS ends the answer without printing a special token.",
+      "ru": "Соедините единственный верхний порт с «Лучшим ответом». «Смело» меняет разнообразие (0 всегда выбирает самый вероятный токен), «Выбор» ограничивает число кандидатов. «Шаг» выбирает ровно один реальный токен и дописывает его текст здесь и во «ВводТекста». Повторный клик во время расчёта игнорируется. EOS завершает ответ без печати служебного токена.",
+      "kz": "Жалғыз жоғарғы портты «ҮздікЖауапқа» қосыңыз. «Батыл» әртүрлілікті басқарады (0 ең ықтимал токенді таңдайды), «Таңдау» үміткер санын шектейді. «Қадам» нақты бір токен таңдап, мәтінін осы жерге және МәтінКірісіне қосады. Есеп кезінде екінші басу еленбейді. EOS арнайы токенді баспай, жауапты аяқтайды."
+    },
+    "compact": {
+      "body": {
+        "en": "Adds one model token per step.",
+        "ru": "Добавляет один токен модели за шаг.",
+        "kz": "Әр қадамда модельдің бір токенін қосады."
+      }
+    },
+    "ports": {
+      "input_autoregress_in_autoregress_in": {
+        "label": {
+          "en": "Answer",
+          "ru": "Ответ",
+          "kz": "Жауап"
+        },
+        "description": {
+          "en": "Connect BestAnswer here.",
+          "ru": "Подключите «ЛучшийОтвет».",
+          "kz": "«ҮздікЖауапты» қосыңыз."
+        }
+      }
+    },
+    "settings": {
+      "candidates": {
+        "label": {
+          "en": "Choice",
+          "ru": "Выбор",
+          "kz": "Таңдау"
+        },
+        "description": {
+          "en": "Choose among the best 1–20 candidates.",
+          "ru": "Выбираем среди 1–20 лучших кандидатов.",
+          "kz": "Үздік 1–20 үміткер арасынан таңдау."
+        }
+      },
+      "creativity": {
+        "label": {
+          "en": "Bold",
+          "ru": "Смело",
+          "kz": "Батыл"
+        },
+        "description": {
+          "en": "Variety from 0 to 2; 0 is greedy.",
+          "ru": "Разнообразие от 0 до 2; 0 — самый вероятный токен.",
+          "kz": "Әртүрлілік 0–2; 0 ең ықтимал токенді таңдайды."
+        }
+      }
+    },
+    "connects_to": [],
+    "examples": [
+      {
+        "body": {
+          "en": "Build TextInput → Tokenizer → Embedding → AttentionHead → Softmax → BestAnswer → Autoregression. Enter “Copy exactly: red cup”, set Bold to 0 and press Step. Each press adds one model token.",
+          "ru": "Соберите ВводТекста → Токенизатор → Эмбеддинг → ГоловаВнимания → Софтмакс → ЛучшийОтвет → Авторегрессия. Введите «Copy exactly: red cup», поставьте «Смело» на 0 и нажимайте «Шаг». Каждое нажатие добавляет один токен модели.",
+          "kz": "МәтінКірісі → Токенизатор → Эмбеддинг → НазарБасы → Softmax → ҮздікЖауап → Авторегрессия тізбегін құрыңыз. «Copy exactly: red cup» енгізіп, «Батыл» мәнін 0 етіңіз. Әр «Қадам» модельдің бір токенін қосады."
+        }
+      }
+    ]
+  }
+}

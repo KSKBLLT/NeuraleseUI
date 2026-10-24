@@ -1,0 +1,116 @@
+[gd_scene format=3 uid="uid://b5i7krtoxgkhs"]
+
+[ext_resource type="Script" uid="uid://cg50boabbuv0r" path="res://scripts/project_card.gd" id="1_card"]
+[ext_resource type="Shader" uid="uid://pgxkyhcutym8" path="res://shaders/block_screen.gdshader" id="2_t1toe"]
+[ext_resource type="Material" path="res://resources/card_alphamult.tres" id="4_card_mat"]
+[ext_resource type="Theme" uid="uid://cx365ld2mgjne" path="res://resources/theme_base.tres" id="3_theme"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleRoot"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_uup45"]
+shader = ExtResource("2_t1toe")
+shader_parameter/shape = 0
+shader_parameter/mult_tuning = Color(0.26, 0.26, 0.26, 1)
+shader_parameter/color_mult = Color(0.91, 0.91, 0.91, 1)
+shader_parameter/smoothness = 20.0
+shader_parameter/corner_radius = 17.833
+shader_parameter/blurred_background = true
+shader_parameter/outline_width = 1.5
+shader_parameter/mult = 1.7
+shader_parameter/blur_level = 7.0
+shader_parameter/gaussian_mix = 1.0
+shader_parameter/gaussian_step = 1.0
+shader_parameter/use_bg = false
+
+[sub_resource type="StyleBoxEmpty" id="StyleDeleteNormal"]
+
+[sub_resource type="StyleBoxFlat" id="StyleDeletePressed"]
+bg_color = Color(0.92, 0.28, 0.31, 0.44)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+
+[sub_resource type="StyleBoxFlat" id="StyleDeleteHover"]
+bg_color = Color(0.92, 0.28, 0.31, 0.28)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+
+[node name="ProjectCard" type="PanelContainer" unique_id=197826002]
+custom_minimum_size = Vector2(230, 192)
+focus_mode = 2
+mouse_default_cursor_shape = 2
+theme_override_styles/panel = SubResource("StyleRoot")
+script = ExtResource("1_card")
+
+[node name="Surface" type="ColorRect" parent="." unique_id=1319286666]
+material = SubResource("ShaderMaterial_uup45")
+instance_shader_parameters/outline_color = Color(0.43, 0.59, 0.9, 0.72)
+instance_shader_parameters/tuning = Color(0.24, 0.29, 0.42, 0.52)
+layout_mode = 2
+mouse_filter = 2
+
+[node name="Margin" type="MarginContainer" parent="Surface" unique_id=1681875715]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 7
+theme_override_constants/margin_top = 7
+theme_override_constants/margin_right = 7
+theme_override_constants/margin_bottom = 7
+
+[node name="Content" type="VBoxContainer" parent="Surface/Margin" unique_id=239900356]
+layout_mode = 2
+theme = ExtResource("3_theme")
+theme_override_constants/separation = 4
+
+[node name="Preview" type="TextureRect" parent="Surface/Margin/Content" unique_id=766001314]
+material = ExtResource("4_card_mat")
+custom_minimum_size = Vector2(206, 116)
+layout_mode = 2
+mouse_filter = 2
+expand_mode = 1
+stretch_mode = 6
+
+[node name="TitleRow" type="HBoxContainer" parent="Surface/Margin/Content" unique_id=1288302815]
+layout_mode = 2
+theme_override_constants/separation = 6
+
+[node name="Title" type="Label" parent="Surface/Margin/Content/TitleRow" unique_id=67868305]
+material = ExtResource("4_card_mat")
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "Project"
+text_overrun_behavior = 3
+
+[node name="Delete" type="Button" parent="Surface/Margin/Content/TitleRow" unique_id=1670318763]
+material = ExtResource("4_card_mat")
+custom_minimum_size = Vector2(30, 30)
+layout_mode = 2
+mouse_default_cursor_shape = 2
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleDeleteNormal")
+theme_override_styles/pressed = SubResource("StyleDeletePressed")
+theme_override_styles/hover = SubResource("StyleDeleteHover")
+theme_override_styles/focus = SubResource("StyleDeleteHover")
+text = "×"
+
+[node name="Current" type="Label" parent="Surface/Margin/Content" unique_id=1618291899]
+material = ExtResource("4_card_mat")
+layout_mode = 2
+theme_override_colors/font_color = Color(0.47, 0.84, 0.64, 1)
+theme_override_font_sizes/font_size = 11
+text = "Open now"
+
+[node name="Modified" type="Label" parent="Surface/Margin/Content" unique_id=59367847]
+material = ExtResource("4_card_mat")
+layout_mode = 2
+theme_override_colors/font_color = Color(0.72, 0.74, 0.78, 1)
+theme_override_font_sizes/font_size = 11
+text = "Modified"

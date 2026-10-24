@@ -1,0 +1,231 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://scripts/language_models/autoregression.gd" id="script"]
+[ext_resource type="Material" path="res://resources/graph.tres" id="frame"]
+[ext_resource type="Theme" path="res://resources/theme_base.tres" id="header_theme"]
+[ext_resource type="Theme" path="res://resources/theme.tres" id="parameter_theme"]
+[ext_resource type="PackedScene" path="res://scenes/Connection.tscn" id="port"]
+[ext_resource type="PackedScene" path="res://scenes/BaseBComponent.tscn" id="button"]
+[ext_resource type="Material" path="res://resources/button_mat.tres" id="button_material"]
+[ext_resource type="Material" path="res://resources/panel.tres" id="panel"]
+[ext_resource type="Script" path="res://scripts/button_config.gd" id="button_config"]
+[ext_resource type="Script" path="res://scripts/loc.gd" id="loc"]
+
+[sub_resource type="StyleBoxEmpty" id="empty"]
+
+[sub_resource type="Resource" id="step_config"]
+script = ExtResource("button_config")
+hover_color = Color(0.68, 1, 0.834667, 1)
+hover_mult = 1.4
+_hover_scale = 1.037
+press_color = Color(0.9, 0.9, 0.9, 1)
+_press_scale = 0.97
+animation_speed = 1.951
+animation_decay = 4.564
+
+[node name="Base" type="Control"]
+layout_mode = 3
+mouse_filter = 2
+script = ExtResource("script")
+server_typename = &"AutoregressionNode"
+area_padding = 0.0
+base_config = Dictionary[StringName, Variant]({
+&"candidates": 5,
+&"creativity": 0.7
+})
+
+[node name="autoregress_in" parent="." node_paths=PackedStringArray("parent_graph") instance=ExtResource("port")]
+layout_mode = 0
+offset_left = 75.5
+offset_top = -8.0
+offset_right = 93.5
+offset_bottom = 11.0
+color = Color(0.297, 0.9, 0.72915, 1)
+_accepted_datatypes = "autoregression"
+server_name = &"autoregress_in"
+connection_type = 0
+area_paddings = Vector4(10, 10, 10, 10)
+origin_offset = Vector2(0, -6)
+dir_vector = Vector2(0, -1)
+parent_graph = NodePath("..")
+gradient_color = Color(0.298039, 0.901961, 0.729412, 1)
+
+[node name="ColorRect" type="ColorRect" parent="."]
+z_index = 1
+material = ExtResource("frame")
+instance_shader_parameters/corner_radius_width_add = Vector2(-2, 0)
+instance_shader_parameters/outline_color = Color(1, 1, 1, 1)
+instance_shader_parameters/tuning = Color(0.050980393, 0.050980393, 0.050980393, 0.5411765)
+layout_mode = 0
+offset_right = 169.0
+offset_bottom = 180.0
+mouse_filter = 2
+
+[node name="root" type="Control" parent="ColorRect"]
+mouse_filter = 2
+
+[node name="Label" type="LineEdit" parent="ColorRect/root"]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 5.0
+offset_right = 20.05391
+offset_bottom = 53.0
+scale = Vector2(0.414803, 0.414803)
+theme = ExtResource("header_theme")
+theme_override_colors/font_color = Color(0, 1, 0.7176471, 1)
+theme_override_colors/font_placeholder_color = Color(0.3835, 0.65, 0.5744917, 1)
+theme_override_font_sizes/font_size = 31
+theme_override_styles/normal = SubResource("empty")
+theme_override_styles/read_only = SubResource("empty")
+theme_override_styles/focus = SubResource("empty")
+placeholder_text = "Autoregression"
+editable = false
+expand_to_text_length = true
+mouse_filter = 2
+
+[node name="Loc" type="Node" parent="ColorRect/root/Label"]
+script = ExtResource("loc")
+auto = true
+localizations_ru = Dictionary[String, String]({
+"_": "Авторегрессия"
+})
+localizations_kz = Dictionary[String, String]({
+"_": "Авторегрессия"
+})
+
+[node name="Creativity" type="Label" parent="ColorRect"]
+self_modulate = Color(0.811765, 0.811765, 0.811765, 1)
+layout_mode = 0
+offset_left = 12.0
+offset_top = 30.0
+offset_right = 128.0
+offset_bottom = 73.0
+scale = Vector2(0.339489, 0.339489)
+theme = ExtResource("parameter_theme")
+theme_override_font_sizes/font_size = 27
+text = "Bold"
+
+[node name="HSlider" type="HSlider" parent="ColorRect/Creativity"]
+layout_mode = 0
+offset_left = 106.00003
+offset_top = 3.0543976
+offset_right = 174.00003
+offset_bottom = 19.054398
+scale = Vector2(1.8, 1.8)
+focus_mode = 1
+mouse_force_pass_scroll_events = false
+min_value = 0.0
+max_value = 2.0
+step = 0.05
+value = 0.7
+
+[node name="n" type="Label" parent="ColorRect/Creativity"]
+self_modulate = Color(0.6, 0.6, 0.6, 1)
+layout_mode = 0
+offset_left = 232.70227
+offset_top = -2.726
+offset_right = 302.70227
+offset_bottom = 40.274
+scale = Vector2(0.9, 0.9)
+theme = ExtResource("parameter_theme")
+text = "0.70"
+
+[node name="Loc" type="Node" parent="ColorRect/Creativity"]
+script = ExtResource("loc")
+auto = true
+localizations_ru = Dictionary[String, String]({
+"_": "Смело"
+})
+localizations_kz = Dictionary[String, String]({
+"_": "Батыл"
+})
+
+[node name="Candidates" type="Label" parent="ColorRect"]
+self_modulate = Color(0.811765, 0.811765, 0.811765, 1)
+layout_mode = 0
+offset_left = 12.0
+offset_top = 47.0
+offset_right = 128.0
+offset_bottom = 90.0
+scale = Vector2(0.339489, 0.339489)
+theme = ExtResource("parameter_theme")
+theme_override_font_sizes/font_size = 27
+text = "Choice"
+
+[node name="HSlider" type="HSlider" parent="ColorRect/Candidates"]
+layout_mode = 0
+offset_left = 106.00003
+offset_top = 3.0543976
+offset_right = 174.00003
+offset_bottom = 19.054398
+scale = Vector2(1.8, 1.8)
+focus_mode = 1
+mouse_force_pass_scroll_events = false
+min_value = 1.0
+max_value = 20.0
+step = 1.0
+value = 5.0
+
+[node name="n" type="Label" parent="ColorRect/Candidates"]
+self_modulate = Color(0.6, 0.6, 0.6, 1)
+layout_mode = 0
+offset_left = 232.70227
+offset_top = -2.726
+offset_right = 302.70227
+offset_bottom = 40.274
+scale = Vector2(0.9, 0.9)
+theme = ExtResource("parameter_theme")
+text = "5"
+
+[node name="Loc" type="Node" parent="ColorRect/Candidates"]
+script = ExtResource("loc")
+auto = true
+localizations_ru = Dictionary[String, String]({
+"_": "Выбор"
+})
+localizations_kz = Dictionary[String, String]({
+"_": "Таңдау"
+})
+
+[node name="TextPanel" type="ColorRect" parent="ColorRect"]
+material = ExtResource("panel")
+instance_shader_parameters/outline_color = Color(0.501961, 0.501961, 0.501961, 0.490196)
+instance_shader_parameters/tuning = Color(0.5, 0.5, 0.5, 0.490196)
+layout_mode = 0
+offset_left = 12.0
+offset_top = 70.0
+offset_right = 157.0
+offset_bottom = 131.0
+mouse_filter = 2
+
+[node name="Step" parent="ColorRect" node_paths=PackedStringArray("graph") instance=ExtResource("button")]
+material = ExtResource("button_material")
+instance_shader_parameters/outline_color = Color(0.78, 0.78, 0.78, 1)
+instance_shader_parameters/tuning = Color(0, 0, 0, 0.635294)
+layout_mode = 0
+offset_left = 58.833965
+offset_top = 143.0
+offset_right = 146.833965
+offset_bottom = 185.0
+scale = Vector2(0.583319, 0.583319)
+button_type = 1
+auto_wrap = false
+text = "Step"
+base_size = Vector2(88, 42)
+alignment = Vector2(0.5, 0.5)
+config = SubResource("step_config")
+graph = NodePath("../..")
+
+[node name="Loc" type="Node" parent="ColorRect/Step"]
+script = ExtResource("loc")
+auto = true
+localizations_ru = Dictionary[String, String]({
+"_": "Шаг"
+})
+localizations_kz = Dictionary[String, String]({
+"_": "Қадам"
+})
+
+[connection signal="value_changed" from="ColorRect/Creativity/HSlider" to="." method="_creativity_changed"]
+[connection signal="value_changed" from="ColorRect/Candidates/HSlider" to="." method="_candidates_changed"]
+[connection signal="pressed" from="ColorRect/Step" to="." method="request_step"]

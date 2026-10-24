@@ -1,0 +1,329 @@
+{
+  "schema_version": 1,
+  "node_id": "softmax",
+  "status": "stable",
+  "generated": {
+    "node_id": "softmax",
+    "created_with": "softmax",
+    "scene_path": "res://scenes/softmax.tscn",
+    "scene_uid": "uid://bb1li7gs5rtsc",
+    "root_instance_path": "res://scenes/base_graph.tscn",
+    "script_path": "res://scripts/softmax_node.gd",
+    "inheritance_chain": [
+      "res://scripts/softmax_node.gd",
+      "res://scripts/base_graph.gd"
+    ],
+    "inherits_graph": true,
+    "server_typename": "SoftmaxNode",
+    "layer_name": null,
+    "title_candidates": {
+      "en": "Softmax",
+      "ru": "Софтмакс",
+      "kz": "Софтмакс"
+    },
+    "localized_properties": {
+      "ports": {},
+      "settings": {},
+      "controls": {
+        "ColorRect/root/Label": {
+          "property": "text",
+          "values": {
+            "en": "Softmax",
+            "ru": "Софтмакс",
+            "kz": "Софтмакс"
+          }
+        }
+      },
+      "title": {
+        "source_path": "ColorRect/root/Label",
+        "property": "text",
+        "values": {
+          "en": "Softmax",
+          "ru": "Софтмакс",
+          "kz": "Софтмакс"
+        }
+      }
+    },
+    "base_config": {},
+    "ports": [
+      {
+        "id": "input_o2_layer_in",
+        "scene_node": "o2",
+        "scene_path": ".",
+        "hint": 0,
+        "server_name": "layer_in",
+        "direction": "input",
+        "datatypes": [
+          "layer1d"
+        ],
+        "multiple": false,
+        "config_conn": false,
+        "keyword": null,
+        "conn_count_keyword": null,
+        "visual": {
+          "color": "#ffe396ff",
+          "gradient_color": "#ffe396ff",
+          "dir_vector": {
+            "x": -1.0,
+            "y": 0.0
+          },
+          "side": "left",
+          "relative_to": {
+            "role": "graph_rect",
+            "scene_path": "ColorRect"
+          },
+          "absolute_scene_rect": {
+            "x": -75.0,
+            "y": -12.0,
+            "w": 16.0,
+            "h": 17.0
+          },
+          "reference_rect": {
+            "x": -68.0,
+            "y": -26.0,
+            "w": 93.0,
+            "h": 44.0
+          },
+          "relative_rect": {
+            "x": -0.07526881720430108,
+            "y": 0.3181818181818182,
+            "w": 0.17204301075268819,
+            "h": 0.38636363636363635
+          },
+          "relative_origin": {
+            "x": -0.07526881720430108,
+            "y": 0.5113636363636364
+          },
+          "color_family": "orange",
+          "color_label": {
+            "en": "Orange",
+            "ru": "Оранжевый",
+            "kz": "Қызғылт сары"
+          },
+          "side_label": {
+            "en": "on the left",
+            "ru": "слева",
+            "kz": "сол жақта"
+          },
+          "verbal_label": {
+            "en": "Orange port on the left",
+            "ru": "Оранжевый порт слева",
+            "kz": "Қызғылт сары порт сол жақта"
+          },
+          "text_color": "#966e00"
+        }
+      },
+      {
+        "id": "output_o_soft_out",
+        "scene_node": "o",
+        "scene_path": ".",
+        "hint": 0,
+        "server_name": "soft_out",
+        "direction": "output",
+        "datatypes": [
+          "layer1d"
+        ],
+        "multiple": false,
+        "config_conn": false,
+        "keyword": null,
+        "conn_count_keyword": null,
+        "visual": {
+          "color": "#ffe396ff",
+          "gradient_color": "#ffe396ff",
+          "dir_vector": {
+            "x": 1.0,
+            "y": 0.0
+          },
+          "side": "right",
+          "relative_to": {
+            "role": "graph_rect",
+            "scene_path": "ColorRect"
+          },
+          "absolute_scene_rect": {
+            "x": 17.0,
+            "y": -12.0,
+            "w": 16.0,
+            "h": 17.0
+          },
+          "reference_rect": {
+            "x": -68.0,
+            "y": -26.0,
+            "w": 93.0,
+            "h": 44.0
+          },
+          "relative_rect": {
+            "x": 0.9139784946236559,
+            "y": 0.3181818181818182,
+            "w": 0.17204301075268819,
+            "h": 0.38636363636363635
+          },
+          "relative_origin": {
+            "x": 1.086021505376344,
+            "y": 0.5113636363636364
+          },
+          "color_family": "orange",
+          "color_label": {
+            "en": "Orange",
+            "ru": "Оранжевый",
+            "kz": "Қызғылт сары"
+          },
+          "side_label": {
+            "en": "on the right",
+            "ru": "справа",
+            "kz": "оң жақта"
+          },
+          "verbal_label": {
+            "en": "Orange port on the right",
+            "ru": "Оранжевый порт справа",
+            "kz": "Қызғылт сары порт оң жақта"
+          },
+          "text_color": "#966e00"
+        }
+      }
+    ],
+    "settings": [],
+    "icon_source": "res://node_icons/en/IconSoftmax.png",
+    "static_compatible_nodes": [
+      {
+        "from_port": "output_o_soft_out",
+        "to_node": "classifier",
+        "to_port": "input_ni_layer_in",
+        "datatypes": [
+          "layer1d"
+        ],
+        "confidence": "static_datatype_intersection"
+      },
+      {
+        "from_port": "output_o_soft_out",
+        "to_node": "reshape2d",
+        "to_port": "input_o2_layer_in",
+        "datatypes": [
+          "layer1d"
+        ],
+        "confidence": "static_datatype_intersection"
+      },
+      {
+        "from_port": "output_o_soft_out",
+        "to_node": "softmax",
+        "to_port": "input_o2_layer_in",
+        "datatypes": [
+          "layer1d"
+        ],
+        "confidence": "static_datatype_intersection"
+      },
+      {
+        "from_port": "output_o_soft_out",
+        "to_node": "layer",
+        "to_port": "input_ni_layer_in",
+        "datatypes": [
+          "layer1d"
+        ],
+        "confidence": "static_datatype_intersection"
+      },
+      {
+        "from_port": "output_o_soft_out",
+        "to_node": "dropout",
+        "to_port": "input_o2_layer_in",
+        "datatypes": [
+          "layer1d"
+        ],
+        "confidence": "static_datatype_intersection"
+      },
+      {
+        "from_port": "output_o_soft_out",
+        "to_node": "gru_cell",
+        "to_port": "input_ni_layer_in",
+        "datatypes": [
+          "layer1d"
+        ],
+        "confidence": "static_datatype_intersection"
+      },
+      {
+        "from_port": "output_o_soft_out",
+        "to_node": "concat",
+        "to_port": "input_connection_o_layer_in",
+        "datatypes": [
+          "layer1d"
+        ],
+        "confidence": "static_datatype_intersection"
+      },
+      {
+        "from_port": "output_o_soft_out",
+        "to_node": "token_labels",
+        "to_port": "input_input_scores_in",
+        "datatypes": [
+          "language_scores"
+        ],
+        "confidence": "language_sequence_contract"
+      }
+    ]
+  },
+  "docs": {
+    "title": {
+      "en": "Softmax",
+      "ru": "Вероятности",
+      "kz": "Софтмакс"
+    },
+    "summary": {
+      "en": "Converts a vector of scores into normalized class probabilities.",
+      "ru": "Превращает ответы модели в понятные доли уверенности.",
+      "kz": "Бағалар векторын қалыпқа келтірілген класс ықтималдықтарына түрлендіреді."
+    },
+    "operation": {
+      "en": "Exponentiates and normalizes the input values so the outputs are non-negative and sum to one. It is commonly placed before output labels in classification models.",
+      "ru": "Последний слой выдаёт несколько обычных чисел: чем число больше, тем сильнее модель склоняется к этому варианту ответа. Softmax превращает эти числа в доли от 0 до 1. Все доли вместе дают 1, поэтому их удобно читать как уверенность модели в каждом варианте.",
+      "kz": "Кіріс мәндерін экспоненталап қалыпқа келтіреді: шығыстар теріс емес және қосындысы бірге тең. Классификацияда әдетте шығыс белгілерінің алдына қойылады."
+    },
+    "compact": {
+      "body": {
+        "en": "Converts a vector of scores into normalized class probabilities.",
+        "ru": "Превращает ответы модели в доли уверенности.",
+        "kz": "Бағалар векторын қалыпқа келтірілген класс ықтималдықтарына түрлендіреді."
+      }
+    },
+    "ports": {
+      "input_o2_layer_in": {
+        "label": {
+          "en": "layer_in",
+          "ru": "Ответы модели",
+          "kz": "layer_in"
+        },
+        "description": {
+          "en": "Receives layer1d data through the layer_in input.",
+          "ru": "Жёлтый порт слева принимает числа от последнего полносвязного слоя.",
+          "kz": "layer_in кірісі арқылы layer1d түріндегі деректерді қабылдайды."
+        }
+      },
+      "output_o_soft_out": {
+        "label": {
+          "en": "soft_out",
+          "ru": "Доли уверенности",
+          "kz": "soft_out"
+        },
+        "description": {
+          "en": "Sends layer1d data to compatible downstream nodes.",
+          "ru": "Жёлтый порт справа передаёт доли уверенности ноде с названиями классов.",
+          "kz": "layer1d түріндегі деректерді үйлесімді келесі түйіндерге береді."
+        }
+      }
+    },
+    "settings": {},
+    "connects_to": [],
+    "examples": [
+      {
+        "body": {
+          "ru": "Ответы модели могут превратиться в 0,79; 0,14 и 0,07. Это значит, что модель сильнее всего уверена в первом варианте.",
+          "en": "Scores can become probabilities 0.79, 0.14, and 0.07. The model then chooses the first class.",
+          "kz": "Бағалар 0,79, 0,14 және 0,07 ықтималдықтарына айналуы мүмкін. Сонда модель бірінші класты таңдайды."
+        }
+      },
+      {
+        "body": {
+          "ru": "Softmax обычно ставят один раз — после последнего слоя, который выбирает класс.",
+          "en": "Usually Softmax is used once, after the final classification layer.",
+          "kz": "Әдетте Softmax бір рет, классификацияның соңғы қабатынан кейін қойылады."
+        }
+      }
+    ]
+  }
+}

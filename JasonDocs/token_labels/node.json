@@ -1,0 +1,379 @@
+{
+  "schema_version": 1,
+  "node_id": "token_labels",
+  "status": "stable",
+  "generated": {
+    "node_id": "token_labels",
+    "created_with": "token_labels",
+    "scene_path": "res://scenes/language_models/token_labels.tscn",
+    "scene_uid": null,
+    "root_instance_path": null,
+    "script_path": "res://scripts/top_output.gd",
+    "inheritance_chain": [
+      "res://scripts/top_output.gd",
+      "res://scripts/classifier.gd",
+      "res://scripts/io_graph.gd",
+      "res://scripts/base_graph.gd"
+    ],
+    "inherits_graph": true,
+    "server_typename": "ClassifierNode",
+    "layer_name": null,
+    "title_candidates": {
+      "en": "BestAnswer",
+      "ru": "ЛучшийОтвет",
+      "kz": "ҮздікЖауап"
+    },
+    "localized_properties": {
+      "ports": {
+        "output_input_autoregressout_autoregress_out": {
+          "label": {
+            "source_path": "input/ColorRect2",
+            "property": "text",
+            "values": {
+              "en": "Vocab",
+              "ru": "Словарь",
+              "kz": "Сөздік"
+            }
+          }
+        },
+        "input_input_scores_in": {
+          "label": {
+            "source_path": "input/ColorRect2",
+            "property": "text",
+            "values": {
+              "en": "Vocab",
+              "ru": "Словарь",
+              "kz": "Сөздік"
+            }
+          }
+        }
+      },
+      "settings": {},
+      "controls": {
+        "ColorRect/root/Label": {
+          "property": "placeholder_text",
+          "values": {
+            "en": "BestAnswer",
+            "ru": "ЛучшийОтвет",
+            "kz": "ҮздікЖауап"
+          }
+        },
+        "input/ColorRect2": {
+          "property": "text",
+          "values": {
+            "en": "Vocab",
+            "ru": "Словарь",
+            "kz": "Сөздік"
+          }
+        }
+      },
+      "title": {
+        "source_path": "ColorRect/root/Label",
+        "property": "placeholder_text",
+        "values": {
+          "en": "BestAnswer",
+          "ru": "ЛучшийОтвет",
+          "kz": "ҮздікЖауап"
+        }
+      }
+    },
+    "base_config": {
+      "label_names": "[]",
+      "title": "",
+      "top_n": 5,
+      "vocab_source": "bpe_8192"
+    },
+    "ports": [
+      {
+        "id": "output_input_autoregressout_autoregress_out",
+        "scene_node": "AutoregressOut",
+        "scene_path": "input",
+        "hint": 0,
+        "server_name": "autoregress_out",
+        "direction": "output",
+        "datatypes": [
+          "autoregression"
+        ],
+        "multiple": false,
+        "config_conn": false,
+        "keyword": null,
+        "conn_count_keyword": null,
+        "visual": {
+          "color": "#4ce6baff",
+          "gradient_color": "#ffffffff",
+          "dir_vector": {
+            "x": 0.0,
+            "y": 1.0
+          },
+          "side": "bottom",
+          "relative_to": {
+            "role": "graph_rect",
+            "scene_path": "ColorRect"
+          },
+          "absolute_scene_rect": {
+            "x": -9.0,
+            "y": 61.0,
+            "w": 18.0,
+            "h": 19.0
+          },
+          "reference_rect": {
+            "x": -87.0,
+            "y": -64.0,
+            "w": 169.0,
+            "h": 94.0
+          },
+          "relative_rect": {
+            "x": 0.46153846153846156,
+            "y": 1.3297872340425532,
+            "w": 0.10650887573964497,
+            "h": 0.20212765957446807
+          },
+          "relative_origin": {
+            "x": 0.514792899408284,
+            "y": 1.5319148936170213
+          },
+          "color_family": "gray",
+          "color_label": {
+            "en": "Gray",
+            "ru": "Серый",
+            "kz": "Сұр"
+          },
+          "side_label": {
+            "en": "at the bottom",
+            "ru": "снизу",
+            "kz": "төменде"
+          },
+          "verbal_label": {
+            "en": "Gray port at the bottom",
+            "ru": "Серый порт снизу",
+            "kz": "Сұр порт төменде"
+          },
+          "text_color": "#757575"
+        }
+      },
+      {
+        "id": "input_input_scores_in",
+        "scene_node": "Input",
+        "scene_path": ".",
+        "hint": 1,
+        "server_name": "scores_in",
+        "direction": "input",
+        "datatypes": [
+          "language_scores"
+        ],
+        "multiple": false,
+        "config_conn": false,
+        "keyword": null,
+        "conn_count_keyword": "layer",
+        "visual": {
+          "color": "#4ce6baff",
+          "gradient_color": "#4ce6baff",
+          "dir_vector": {
+            "x": -1.0,
+            "y": 0.0
+          },
+          "side": "left",
+          "relative_to": {
+            "role": "graph_rect",
+            "scene_path": "ColorRect"
+          },
+          "absolute_scene_rect": {
+            "x": -95.0,
+            "y": -40.0,
+            "w": 18.0,
+            "h": 19.0
+          },
+          "reference_rect": {
+            "x": -87.0,
+            "y": -64.0,
+            "w": 169.0,
+            "h": 94.0
+          },
+          "relative_rect": {
+            "x": -0.047337278106508875,
+            "y": 0.2553191489361702,
+            "w": 0.10650887573964497,
+            "h": 0.20212765957446807
+          },
+          "relative_origin": {
+            "x": -0.047337278106508875,
+            "y": 0.35638297872340424
+          },
+          "color_family": "green",
+          "color_label": {
+            "en": "Green",
+            "ru": "Зелёный",
+            "kz": "Жасыл"
+          },
+          "side_label": {
+            "en": "on the left",
+            "ru": "слева",
+            "kz": "сол жақта"
+          },
+          "verbal_label": {
+            "en": "Green port on the left",
+            "ru": "Зелёный порт слева",
+            "kz": "Жасыл порт сол жақта"
+          },
+          "text_color": "#138665"
+        }
+      }
+    ],
+    "settings": [
+      {
+        "id": "label_names",
+        "source": "base_config",
+        "default": "[]",
+        "ui_kind": null,
+        "ui_path": null,
+        "options": []
+      },
+      {
+        "id": "title",
+        "source": "base_config",
+        "default": "",
+        "ui_kind": null,
+        "ui_path": null,
+        "options": []
+      },
+      {
+        "id": "top_n",
+        "source": "base_config",
+        "default": 5,
+        "ui_kind": null,
+        "ui_path": null,
+        "options": []
+      },
+      {
+        "id": "vocab_source",
+        "source": "base_config",
+        "default": "bpe_8192",
+        "ui_kind": null,
+        "ui_path": null,
+        "options": []
+      }
+    ],
+    "icon_source": "res://node_icons/en/IconTokenLabels.png",
+    "static_compatible_nodes": [
+      {
+        "from_port": "output_input_autoregressout_autoregress_out",
+        "to_node": "autoregression",
+        "to_port": "input_autoregress_in_autoregress_in",
+        "datatypes": [
+          "autoregression"
+        ],
+        "confidence": "language_sequence_contract"
+      }
+    ]
+  },
+  "docs": {
+    "title": {
+      "en": "BestAnswer",
+      "ru": "ЛучшийОтвет",
+      "kz": "ҮздікЖауап"
+    },
+    "summary": {
+      "en": "Automatically shows the most likely output tokens.",
+      "ru": "Автоматически показывает наиболее вероятные выходные токены.",
+      "kz": "Ең ықтимал шығыс токендерін автоматты көрсетеді."
+    },
+    "operation": {
+      "en": "Displays the most likely tokens from the model’s 20,002-entry vocabulary and their probabilities. Other is the remaining probability mass. Vocabulary searches real model token text or IDs, up to 50 rows per page. The bottom port connects to Autoregression. This node displays probabilities; Step in Autoregression selects a token.",
+      "ru": "Показывает наиболее вероятные токены словаря модели из 20 002 записей и их вероятности. «Остальные» — оставшаяся вероятность. «Словарь» ищет реальные токены по тексту или ID, до 50 строк на странице. Нижний порт соединяется с «Авторегрессией». Эта нода показывает вероятности; токен выбирается по кнопке «Шаг» в «Авторегрессии».",
+      "kz": "Модельдің 20 002 жазбалы сөздігіндегі ең ықтимал токендер мен олардың ықтималдықтарын көрсетеді. «Қалғаны» — қалған ықтималдық. «Сөздік» нақты токендерді мәтін не ID бойынша іздейді, бетте 50 жолға дейін. Төменгі порт Авторегрессияға қосылады. Бұл нод ықтималдықтарды көрсетеді; токенді Авторегрессиядағы «Қадам» таңдайды."
+    },
+    "compact": {
+      "body": {
+        "en": "Automatically shows the most likely output tokens.",
+        "ru": "Автоматически показывает наиболее вероятные выходные токены.",
+        "kz": "Ең ықтимал шығыс токендерін автоматты көрсетеді."
+      }
+    },
+    "ports": {
+      "input_input_scores_in": {
+        "label": {
+          "en": "scores_in",
+          "ru": "scores_in",
+          "kz": "scores_in"
+        },
+        "description": {
+          "en": "Vocabulary probabilities for the last position: float32 [V], total 1.",
+          "ru": "Вероятности словаря для последней позиции: float32 [V], сумма 1.",
+          "kz": "Соңғы орынға арналған сөздік ықтималдықтары: float32 [V], қосындысы 1."
+        }
+      },
+      "output_input_autoregressout_autoregress_out": {
+        "label": {
+          "en": "Continue",
+          "ru": "Продолжить",
+          "kz": "Жалғастыру"
+        },
+        "description": {
+          "en": "Connect to the top port of Autoregression.",
+          "ru": "Соедините с верхним портом Авторегрессии.",
+          "kz": "Авторегрессияның жоғарғы портына қосыңыз."
+        }
+      }
+    },
+    "settings": {
+      "label_names": {
+        "label": {
+          "en": "label_names",
+          "ru": "label_names",
+          "kz": "label_names"
+        },
+        "description": {
+          "en": "Custom labels for numeric classification; language labels come from the tokenizer.",
+          "ru": "Собственные подписи для числовой классификации; языковые подписи берутся из токенизатора.",
+          "kz": "Сандық жіктеудің жеке атаулары; тілдік атаулар токенизатордан алынады."
+        }
+      },
+      "title": {
+        "label": {
+          "en": "title",
+          "ru": "title",
+          "kz": "title"
+        },
+        "description": {
+          "en": "Editable node title.",
+          "ru": "Название ноды.",
+          "kz": "Нод атауы."
+        }
+      },
+      "top_n": {
+        "label": {
+          "en": "top_n",
+          "ru": "top_n",
+          "kz": "top_n"
+        },
+        "description": {
+          "en": "Number of visible candidates, from 1 to 20.",
+          "ru": "Число видимых кандидатов: 1–20.",
+          "kz": "Көрінетін үміткер саны: 1–20."
+        }
+      },
+      "vocab_source": {
+        "label": {
+          "en": "vocab_source",
+          "ru": "vocab_source",
+          "kz": "vocab_source"
+        },
+        "description": {
+          "en": "Vocabulary selection for numeric graphs; language graphs use the installed model vocabulary.",
+          "ru": "Выбор словаря для числовых графов; языковые используют словарь установленной модели.",
+          "kz": "Сандық графтарға сөздік таңдау; тілдік графтар орнатылған модельдің сөздігін қолданады."
+        }
+      }
+    },
+    "connects_to": [],
+    "examples": [
+      {
+        "body": {
+          "en": "Build TextInput → Tokenizer → Embedding → AttentionHead → Softmax → BestAnswer → Autoregression. Enter “Copy exactly: red cup”, set Bold to 0 and press Step. Each press adds one model token.",
+          "ru": "Соберите ВводТекста → Токенизатор → Эмбеддинг → ГоловаВнимания → Софтмакс → ЛучшийОтвет → Авторегрессия. Введите «Copy exactly: red cup», поставьте «Смело» на 0 и нажимайте «Шаг». Каждое нажатие добавляет один токен модели.",
+          "kz": "МәтінКірісі → Токенизатор → Эмбеддинг → НазарБасы → Softmax → ҮздікЖауап → Авторегрессия тізбегін құрыңыз. «Copy exactly: red cup» енгізіп, «Батыл» мәнін 0 етіңіз. Әр «Қадам» модельдің бір токенін қосады."
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,341 @@
+[gd_scene format=3 uid="uid://cjdvoig6jjvto"]
+
+[ext_resource type="Script" uid="uid://dvgvin5xxva44" path="res://scripts/simulations/simulation_editor.gd" id="1_editor"]
+[ext_resource type="Script" uid="uid://qmcc8tkdkkbr" path="res://scripts/simulations/simulation_grid.gd" id="2_grid"]
+[ext_resource type="Script" uid="uid://cimrn708a0480" path="res://scripts/simulations/simulation_camera.gd" id="3_camera"]
+[ext_resource type="Script" uid="uid://d06mbdp4u3cq0" path="res://scripts/simulations/simulation_palette.gd" id="4_palette"]
+[ext_resource type="Script" uid="uid://ch1hv51hw66i3" path="res://scripts/simulations/simulation_inspector.gd" id="5_inspector"]
+[ext_resource type="Script" uid="uid://dww5x1pjpvcwt" path="res://scripts/simulations/simulation_runtime.gd" id="6_runtime"]
+[ext_resource type="Script" uid="uid://5ef4vw6uwpnn" path="res://scripts/simulations/simulation_dataset_generator.gd" id="7_generator"]
+[ext_resource type="Script" uid="uid://bmn47sq5q2ejn" path="res://scripts/simulations/simulation_drop_surface.gd" id="8_drop"]
+[ext_resource type="Script" uid="uid://do1xw853aitcr" path="res://scripts/simulations/simulation_model_runner.gd" id="9_model_runner"]
+[ext_resource type="Script" uid="uid://dvatbxxx4jmhw" path="res://scripts/simulations/simulation_brain_mapping_panel.gd" id="11_mapping"]
+[ext_resource type="Script" uid="uid://bxp3lyauitk3v" path="res://scripts/simulations/simulation_dataset_view.gd" id="12_dataset_view"]
+[ext_resource type="Script" uid="uid://t0teh32wllts" path="res://scripts/simulations/simulation_dataset_dashboard.gd" id="13_dataset_dashboard"]
+[ext_resource type="Script" uid="uid://bv26wigglgx3r" path="res://scripts/simulations/simulation_training_bridge.gd" id="14_training_bridge"]
+[ext_resource type="Resource" uid="uid://b87f7qp31583q" path="res://resources/lite_config.tres" id="17_o8qjj"]
+[ext_resource type="Script" uid="uid://dx40hpbce8w60" path="res://scripts/button_config.gd" id="17_r1hqv"]
+[ext_resource type="PackedScene" uid="uid://wd63efdi6bdn" path="res://scenes/BaseBComponent.tscn" id="base_bcomp"]
+[ext_resource type="Material" uid="uid://jm8oyahk342s" path="res://resources/context_menu.tres" id="ctx_mat"]
+[ext_resource type="Script" uid="uid://dtwj74o465brs" path="res://scripts/loc.gd" id="loc_script"]
+[ext_resource type="Script" uid="uid://dbssybhry68cx" path="res://scripts/edit_sim_obj.gd" id="sim_obj_script"]
+
+[sub_resource type="StyleBoxEmpty" id="StylePanelEmpty"]
+
+[sub_resource type="StyleBoxFlat" id="StyleGenerationOverlay"]
+bg_color = Color(0.035, 0.04, 0.05, 0.96)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.28, 0.56, 0.72, 0.9)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleGenerationProgressBackground"]
+bg_color = Color(0.12, 0.13, 0.15, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[sub_resource type="StyleBoxFlat" id="StyleGenerationProgressFill"]
+bg_color = Color(0.32, 0.74, 0.92, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[sub_resource type="Resource" id="Resource_56hfh"]
+script = ExtResource("17_r1hqv")
+hover_color = Color(1.3, 1.1, 1.1, 1)
+press_color = Color(1.1, 0.9, 0.9, 1)
+_press_scale = 0.97
+animation_speed = 1.951
+animation_decay = 4.564
+metadata/_custom_type_script = "uid://dx40hpbce8w60"
+
+[node name="SimulationEditor" type="Node2D" unique_id=314101443]
+script = ExtResource("1_editor")
+
+[node name="Grid" type="Node2D" parent="." unique_id=753947570]
+process_mode = 4
+visible = false
+script = ExtResource("2_grid")
+
+[node name="WorldRoot" type="Node2D" parent="." unique_id=933350117]
+
+[node name="Runtime" type="Node" parent="." unique_id=1348095649]
+script = ExtResource("6_runtime")
+
+[node name="ModelRunner" type="Node" parent="." unique_id=1444945441]
+script = ExtResource("9_model_runner")
+
+[node name="DatasetGenerator" type="Node" parent="." unique_id=1031846332]
+script = ExtResource("7_generator")
+
+[node name="TrainingBridge" type="Node" parent="." unique_id=102969296]
+script = ExtResource("14_training_bridge")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1669519136]
+limit_enabled = false
+position_smoothing_speed = 12.0
+script = ExtResource("3_camera")
+zoom_speed = 0.3
+drag_button = 3
+edge_pan_rate = 1.2
+
+[node name="UI" type="CanvasLayer" parent="." unique_id=1515700096]
+layer = 20
+
+[node name="Root" type="Control" parent="UI" unique_id=1484005022]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="DropSurface" type="Control" parent="UI/Root" unique_id=377049460]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+script = ExtResource("8_drop")
+
+[node name="Palette" type="PanelContainer" parent="UI/Root" unique_id=2037642467]
+custom_minimum_size = Vector2(248, 0)
+layout_mode = 1
+anchors_preset = 9
+anchor_bottom = 1.0
+offset_right = 248.0
+offset_bottom = -71.0
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StylePanelEmpty")
+script = ExtResource("4_palette")
+
+[node name="Background" type="ColorRect" parent="UI/Root/Palette" unique_id=618733701]
+layout_mode = 2
+mouse_filter = 2
+
+[node name="BrainMappingPanel" type="PanelContainer" parent="UI/Root" unique_id=1822482549]
+visible = false
+custom_minimum_size = Vector2(432, 0)
+layout_mode = 1
+anchors_preset = 9
+anchor_bottom = 1.0
+offset_right = 432.0
+offset_bottom = -71.0
+grow_vertical = 2
+script = ExtResource("11_mapping")
+
+[node name="DatasetGeneration" type="Control" parent="UI/Root" unique_id=291143506]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_bottom = -82.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="EnvironmentView" type="Control" parent="UI/Root/DatasetGeneration" unique_id=705094891]
+layout_mode = 1
+anchor_right = 0.75
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("12_dataset_view")
+
+[node name="Dashboard" type="PanelContainer" parent="UI/Root/DatasetGeneration" unique_id=286998707]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.75
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 0
+grow_vertical = 2
+script = ExtResource("13_dataset_dashboard")
+
+[node name="Inspector" type="PanelContainer" parent="UI/Root" unique_id=193768663]
+visible = false
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -568.0
+offset_top = -365.0
+offset_right = -244.0
+offset_bottom = -98.0
+grow_horizontal = 0
+grow_vertical = 0
+script = ExtResource("5_inspector")
+
+[node name="RuntimeBar" type="PanelContainer" parent="UI/Root" unique_id=432287526]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -74.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_styles/panel = SubResource("StylePanelEmpty")
+
+[node name="Background" type="ColorRect" parent="UI/Root/RuntimeBar" unique_id=15627826]
+layout_mode = 2
+mouse_filter = 2
+
+[node name="Margin" type="MarginContainer" parent="UI/Root/RuntimeBar" unique_id=501350527]
+layout_mode = 2
+theme_override_constants/margin_left = 12
+theme_override_constants/margin_top = 9
+theme_override_constants/margin_right = 12
+theme_override_constants/margin_bottom = 9
+
+[node name="Controls" type="HBoxContainer" parent="UI/Root/RuntimeBar/Margin" unique_id=632149834]
+layout_mode = 2
+theme_override_constants/separation = 12
+alignment = 1
+
+[node name="GenerationOverlay" type="PanelContainer" parent="UI/Root" unique_id=1295650194]
+visible = false
+z_index = 30
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -230.0
+offset_top = 16.0
+offset_right = 230.0
+offset_bottom = 88.0
+grow_horizontal = 2
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleGenerationOverlay")
+
+[node name="Margin" type="MarginContainer" parent="UI/Root/GenerationOverlay" unique_id=1076597926]
+layout_mode = 2
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 16
+theme_override_constants/margin_bottom = 10
+
+[node name="Content" type="VBoxContainer" parent="UI/Root/GenerationOverlay/Margin" unique_id=229693811]
+layout_mode = 2
+theme_override_constants/separation = 7
+
+[node name="Count" type="Label" parent="UI/Root/GenerationOverlay/Margin/Content" unique_id=1021144923]
+layout_mode = 2
+text = "Generated samples: 0 / 0"
+horizontal_alignment = 1
+
+[node name="Progress" type="ProgressBar" parent="UI/Root/GenerationOverlay/Margin/Content" unique_id=311276223]
+custom_minimum_size = Vector2(0, 10)
+layout_mode = 2
+theme_override_styles/background = SubResource("StyleGenerationProgressBackground")
+theme_override_styles/fill = SubResource("StyleGenerationProgressFill")
+show_percentage = false
+
+[node name="edit_sim_obj" parent="UI" unique_id=945231718 instance=ExtResource("base_bcomp")]
+material = ExtResource("ctx_mat")
+instance_shader_parameters/extents = Vector2(0, 0)
+instance_shader_parameters/tuning = Color(0.51, 0.51, 0.51, 0.439216)
+offset_right = 182.66667
+offset_bottom = 46.0
+scale = Vector2(0.75, 0.75)
+mouse_filter = 2
+script = ExtResource("sim_obj_script")
+implement = true
+text = "Object     *"
+base_size = Vector2(182.66667, 46)
+closed_by_rm = true
+_scroll_container = false
+expanded_size = 142
+scale_anim = true
+arrangement_padding = Vector2(10, 8)
+mouse_open = false
+menu_name = &"edit_sim_obj"
+max_size = 0
+config = null
+metadata/block_component_hint = &""
+metadata/block_component_scale_anim = true
+
+[node name="copy" parent="UI/edit_sim_obj" unique_id=741285012 instance=ExtResource("base_bcomp")]
+instance_shader_parameters/extents = Vector2(0, 0)
+instance_shader_parameters/outline_color = Color(0.86, 0.86, 0.86, 1)
+instance_shader_parameters/tuning = Color(0.44, 0.44, 0.44, 0.6392157)
+layout_mode = 0
+offset_left = -94.2857
+offset_top = -68.5714
+offset_right = 124.7143
+offset_bottom = -27.571404
+pivot_offset = Vector2(109.5, 20.5)
+mouse_filter = 2
+button_type = 1
+hint = &"copy"
+text = "Duplicate"
+base_size = Vector2(219, 41)
+alignment = Vector2(0.5, 0.5)
+config = ExtResource("17_o8qjj")
+metadata/block_component_hint = &"copy"
+
+[node name="Loc" type="Node" parent="UI/edit_sim_obj/copy" unique_id=592817451]
+script = ExtResource("loc_script")
+auto = true
+localizations_ru = Dictionary[String, String]({
+"_": "Копировать"
+})
+localizations_kz = Dictionary[String, String]({
+"_": "Көшіру"
+})
+metadata/_custom_type_script = "uid://dtwj74o465brs"
+
+[node name="neuron" parent="UI/edit_sim_obj" unique_id=381920475 instance=ExtResource("base_bcomp")]
+instance_shader_parameters/extents = Vector2(0, 0)
+instance_shader_parameters/outline_color = Color(0.9490196, 0.41960785, 0.41960785, 1)
+instance_shader_parameters/tuning = Color(0.4392157, 0.22352941, 0.22352941, 0.6392157)
+layout_mode = 0
+offset_left = -94.28516
+offset_top = -68.57141
+offset_right = 124.71484
+offset_bottom = -27.571411
+pivot_offset = Vector2(109.5, 20.5)
+mouse_filter = 2
+button_type = 1
+hint = &"delete"
+text = "Delete"
+base_size = Vector2(219, 41)
+alignment = Vector2(0.5, 0.5)
+config = SubResource("Resource_56hfh")
+metadata/block_component_hint = &"delete"
+
+[node name="Loc" type="Node" parent="UI/edit_sim_obj/neuron" unique_id=271948501]
+script = ExtResource("loc_script")
+auto = true
+localizations_ru = Dictionary[String, String]({
+"_": "Удалить"
+})
+localizations_kz = Dictionary[String, String]({
+"_": "Өшіру"
+})
+metadata/_custom_type_script = "uid://dtwj74o465brs"
+
+[node name="Loc" type="Node" parent="UI/edit_sim_obj" unique_id=819274510]
+script = ExtResource("loc_script")
+auto = true
+localizations_ru = Dictionary[String, String]({
+"_": "Изменить    *"
+})
+localizations_kz = Dictionary[String, String]({
+"_": "Өзгерту     *"
+})
+metadata/_custom_type_script = "uid://dtwj74o465brs"

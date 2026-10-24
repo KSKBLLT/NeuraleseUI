@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "id": "model_name",
+  "source": {
+    "kind": "scene",
+    "path": "res://scenes/netname.tscn"
+  },
+  "load_order": 0,
+  "menu": {
+    "visible": false,
+    "section": "data_context",
+    "order": 30
+  },
+  "roles": [],
+  "llm": {
+    "type": "model_name"
+  },
+  "runtime": {
+    "handler": "ignored_training",
+    "roles": [
+      "final_ignored"
+    ]
+  },
+  "display": {
+    "category": "data",
+    "title": {
+      "en": "ModelName",
+      "ru": "ИмяМодели",
+      "kz": "МодельАтауы"
+    }
+  }
+}

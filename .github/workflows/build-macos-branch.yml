@@ -1,0 +1,173 @@
+name: Build macOS Branch DMG
+
+on:
+  push:
+    branches: [pilot-deploy, prod-deploy]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  checks: read
+
+concurrency:
+  group: macos-branch-dmg-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: macos-14
+    timeout-minutes: 90
+    steps:
+      - name: Checkout Neuralese
+        uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5
+
+      - name: Verify commit CI status
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          verified="$(gh api "repos/$GITHUB_REPOSITORY/commits/$GITHUB_SHA/check-runs" \
+            --jq '[.check_runs[] | select(.name == "Verify" and .conclusion == "success")] | length')"
+          [[ "$verified" -gt 0 ]]
+
+      - name: Restore Godot download cache
+        uses: actions/cache@0057852bfaa89a56745cba8c7296529d2fc39830
+        with:
+          path: .ci-cache/downloads
+          key: godot-4.7.1-macos-downloads
+
+      - name: Install Godot 4.7.1 and export templates
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p .ci-cache/downloads
+          godot_archive="$GITHUB_WORKSPACE/.ci-cache/downloads/godot-macos.zip"
+          godot_dir="$RUNNER_TEMP/godot"
+          if [[ ! -s "$godot_archive" ]]; then
+            curl --fail --location --retry 3 \
+              "https://github.com/godotengine/godot/releases/download/4.7.1-stable/Godot_v4.7.1-stable_macos.universal.zip" \
+              --output "$godot_archive"
+          fi
+          mkdir -p "$godot_dir"
+          ditto -x -k "$godot_archive" "$godot_dir"
+          godot_bin="$(find "$godot_dir" -type f -path '*/Godot.app/Contents/MacOS/Godot' -print -quit)"
+          if [[ -z "$godot_bin" ]]; then
+            echo "Godot executable was not found" >&2
+            exit 1
+          fi
+          chmod +x "$godot_bin"
+          {
+            echo 'GODOT_BIN<<EOF'
+            echo "$godot_bin"
+            echo 'EOF'
+          } >> "$GITHUB_ENV"
+
+          templates_archive="$GITHUB_WORKSPACE/.ci-cache/downloads/godot-templates.tpz"
+          templates_dir="$RUNNER_TEMP/templates-unpacked"
+          if [[ ! -s "$templates_archive" ]]; then
+            curl --fail --location --retry 3 \
+              "https://github.com/godotengine/godot/releases/download/4.7.1-stable/Godot_v4.7.1-stable_export_templates.tpz" \
+              --output "$templates_archive"
+          fi
+          mkdir -p "$templates_dir"
+          ditto -x -k "$templates_archive" "$templates_dir"
+          templates_source="$(find "$templates_dir" -type d -name templates -print -quit)"
+          if [[ -z "$templates_source" ]]; then
+            echo "Godot export templates were not found" >&2
+            exit 1
+          fi
+          templates_target="$HOME/Library/Application Support/Godot/export_templates/4.7.1.stable"
+          mkdir -p "$templates_target"
+          ditto "$templates_source" "$templates_target"
+
+      - name: Prepare macOS export metadata
+        shell: bash
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          import re
+          from pathlib import Path
+
+          project_path = Path("project.godot")
+          project = project_path.read_text(encoding="utf-8")
+          version_match = re.search(r'^config/version="([^"\r\n]+)"$', project, re.MULTILINE)
+          if version_match is None:
+              raise SystemExit("Neuralese version is missing")
+          version = version_match.group(1)
+          project = re.sub(
+              r'^config/name="[^"\r\n]+"$',
+              'config/name="Neuralese"',
+              project,
+              count=1,
+              flags=re.MULTILINE,
+          )
+          project_path.write_text(project, encoding="utf-8")
+
+          presets_path = Path("export_presets.cfg")
+          presets = presets_path.read_text(encoding="utf-8")
+          presets, short_count = re.subn(
+              r'^application/short_version="[^"\r\n]+"$',
+              f'application/short_version="{version}"',
+              presets,
+              count=1,
+              flags=re.MULTILINE,
+          )
+          presets, version_count = re.subn(
+              r'^application/version="[^"\r\n]+"$',
+              f'application/version="{version}"',
+              presets,
+              count=1,
+              flags=re.MULTILINE,
+          )
+          if short_count != 1 or version_count != 1:
+              raise SystemExit("macOS export version fields were not found")
+          presets_path.write_text(presets, encoding="utf-8")
+
+          with Path("build-version.txt").open("w", encoding="utf-8") as output:
+              output.write(version + "\n")
+          PY
+
+      - name: Export and verify Neuralese for macOS
+        shell: bash
+        run: |
+          set -euo pipefail
+          output_dir="$RUNNER_TEMP/macos-dmg"
+          APP_PATH="$RUNNER_TEMP/Neuralese.app"
+          mkdir -p "$output_dir"
+          rm -rf "$APP_PATH"
+          "$GODOT_BIN" --headless --path "$GITHUB_WORKSPACE" --export-release macOS "$APP_PATH"
+
+          executable="$APP_PATH/Contents/MacOS/Neuralese"
+          if [[ ! -x "$executable" ]]; then
+            echo "Exported Neuralese executable is missing" >&2
+            exit 1
+          fi
+          codesign --verify --deep --strict "$APP_PATH"
+          architectures="$(lipo -archs "$executable")"
+          [[ "$architectures" == *arm64* && "$architectures" == *x86_64* ]]
+          find "$APP_PATH/Contents/Frameworks" -type f -name '*yaml*.dylib' -print -quit | grep -q .
+          find "$APP_PATH/Contents/Frameworks" -type f -name '*lua*.dylib' -print -quit | grep -q .
+
+          dmg_path="$output_dir/Neuralese-macOS.dmg"
+          hdiutil create -volname Neuralese -srcfolder "$APP_PATH" -ov -format UDZO "$dmg_path"
+          hdiutil verify "$dmg_path"
+          sha="$(shasum -a 256 "$dmg_path" | awk '{print $1}')"
+          printf '%s  %s\n' "$sha" "Neuralese-macOS.dmg" > "$output_dir/Neuralese-macOS.dmg.sha256"
+          version="$(cat build-version.txt)"
+          {
+            echo "version=$version"
+            echo "builder_commit=$GITHUB_SHA"
+            echo "architectures=$architectures"
+            echo "signing=adhoc"
+            echo "notarized=false"
+            echo "sha256=$sha"
+          } > "$output_dir/build-info.txt"
+
+      - name: Upload macOS DMG
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: neuralese-macos-${{ github.ref_name }}-${{ github.sha }}
+          path: ${{ runner.temp }}/macos-dmg
+          if-no-files-found: error
+          retention-days: 14

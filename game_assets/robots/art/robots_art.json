@@ -1,0 +1,253 @@
+{
+ "px_per_cm": 50.0,
+ "tilt_deg": 12.0,
+ "bases": {
+  "ev3": {
+   "image": "ev3_base_top.png",
+   "image_size": [
+    708,
+    740
+   ],
+   "center_px": [
+    353.5,
+    369.5
+   ],
+   "length_cm": 14.02,
+   "width_cm": 14.66,
+   "track_cm": 12.0,
+   "wheel_diameter_cm": 5.6,
+   "wheels": {
+    "left": {
+     "center_px": [
+      484.0,
+      70.0
+     ],
+     "size_px": [
+      280.0,
+      128.0
+     ]
+    },
+    "right": {
+     "center_px": [
+      484.0,
+      670.0
+     ],
+     "size_px": [
+      280.0,
+      128.0
+     ]
+    }
+   },
+   "image_tilt": "ev3_base_tilt.png",
+   "tilt_origin_px": [
+    353.5,
+    413.74
+   ],
+   "sensor_height_cm": 5.6
+  },
+  "spike": {
+   "image": "spike_base_top.png",
+   "image_size": [
+    472,
+    682
+   ],
+   "center_px": [
+    235.5,
+    340.5
+   ],
+   "length_cm": 9.3,
+   "width_cm": 13.5,
+   "track_cm": 12.0,
+   "wheel_diameter_cm": 5.6,
+   "wheels": {
+    "left": {
+     "center_px": [
+      326.0,
+      41.0
+     ],
+     "size_px": [
+      280.0,
+      70.0
+     ]
+    },
+    "right": {
+     "center_px": [
+      326.0,
+      641.0
+     ],
+     "size_px": [
+      280.0,
+      70.0
+     ]
+    }
+   },
+   "image_tilt": "spike_base_tilt.png",
+   "tilt_origin_px": [
+    235.5,
+    388.95
+   ],
+   "sensor_height_cm": 5.6
+  },
+  "microbit": {
+   "image": "microbit_base_top.png",
+   "image_size": [
+    247,
+    408
+   ],
+   "center_px": [
+    123.5,
+    204.0
+   ],
+   "length_cm": 4.94,
+   "width_cm": 8.16,
+   "track_cm": 6.84,
+   "wheel_diameter_cm": 4.3,
+   "wheels": {
+    "left": {
+     "center_px": [
+      123.5,
+      33.0
+     ],
+     "size_px": [
+      227,
+      66
+     ]
+    },
+    "right": {
+     "center_px": [
+      123.5,
+      375.0
+     ],
+     "size_px": [
+      227,
+      66
+     ]
+    }
+   },
+   "stylised": true
+  }
+ },
+ "sensors": {
+  "ev3_ultrasonic": {
+   "tilt": {
+    "0": {
+     "image": "ev3_ultrasonic_tilt_0.png",
+     "anchor_px": [
+      124.55,
+      146.33
+     ]
+    },
+    "45": {
+     "image": "ev3_ultrasonic_tilt_45.png",
+     "anchor_px": [
+      126.6,
+      174.22
+     ]
+    },
+    "90": {
+     "image": "ev3_ultrasonic_tilt_90.png",
+     "anchor_px": [
+      144.0,
+      131.63
+     ]
+    },
+    "135": {
+     "image": "ev3_ultrasonic_tilt_135.png",
+     "anchor_px": [
+      171.85,
+      174.22
+     ]
+    },
+    "180": {
+     "image": "ev3_ultrasonic_tilt_180.png",
+     "anchor_px": [
+      124.55,
+      146.33
+     ]
+    },
+    "225": {
+     "image": "ev3_ultrasonic_tilt_225.png",
+     "anchor_px": [
+      171.85,
+      136.92
+     ]
+    },
+    "270": {
+     "image": "ev3_ultrasonic_tilt_270.png",
+     "anchor_px": [
+      144.0,
+      137.18
+     ]
+    },
+    "315": {
+     "image": "ev3_ultrasonic_tilt_315.png",
+     "anchor_px": [
+      126.6,
+      136.92
+     ]
+    }
+   }
+  },
+  "spike_distance": {
+   "tilt": {
+    "0": {
+     "image": "spike_distance_tilt_0.png",
+     "anchor_px": [
+      85.0,
+      155.0
+     ]
+    },
+    "45": {
+     "image": "spike_distance_tilt_45.png",
+     "anchor_px": [
+      159.44,
+      164.89
+     ]
+    },
+    "90": {
+     "image": "spike_distance_tilt_90.png",
+     "anchor_px": [
+      146.0,
+      91.68
+     ]
+    },
+    "135": {
+     "image": "spike_distance_tilt_135.png",
+     "anchor_px": [
+      159.44,
+      164.89
+     ]
+    },
+    "180": {
+     "image": "spike_distance_tilt_180.png",
+     "anchor_px": [
+      85.0,
+      155.0
+     ]
+    },
+    "225": {
+     "image": "spike_distance_tilt_225.png",
+     "anchor_px": [
+      159.44,
+      164.89
+     ]
+    },
+    "270": {
+     "image": "spike_distance_tilt_270.png",
+     "anchor_px": [
+      146.0,
+      89.73
+     ]
+    },
+    "315": {
+     "image": "spike_distance_tilt_315.png",
+     "anchor_px": [
+      159.44,
+      164.89
+     ]
+    }
+   }
+  }
+ },
+ "source": "LDraw parts library (CC BY 4.0), rendered by tools/build_robot_art.py"
+}

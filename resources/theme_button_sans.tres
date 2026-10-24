@@ -1,0 +1,8 @@
+[gd_resource type="Theme" format=3 uid="uid://d3yq8s1v5b7sa"]
+
+[ext_resource type="FontFile" uid="uid://cgdpqvf45jw1j" path="res://game_assets/fonts/JetBrainsSans[wght]-VF.ttf" id="1_sans"]
+
+[resource]
+Label/font_sizes/font_size = 32
+Label/fonts/font = ExtResource("1_sans")
+TooltipLabel/font_sizes/font_size = 15

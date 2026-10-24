@@ -1,0 +1,102 @@
+Godot Engine v4.7.1.stable.official.a13da4feb - https://godotengine.org
+WARNING: Started the engine as `root`/superuser. This is a security risk, and subsystems like audio may not work correctly.
+Set the environment variable `GODOT_SILENCE_ROOT_WARNING` to 1 to silence this warning.
+   at: setup2 (main/main.cpp:3577)
+
+SCRIPT ERROR: Compile Error: Identifier not found: glob
+   at: GDScript::reload (res://scripts/startup/profile_onboarding.gd:244)
+SCRIPT ERROR: Compile Error: Failed to compile depended scripts.
+   at: GDScript::reload (res://tests/godot/test_profile_onboarding.gd:0)
+ERROR: Failed to load script "res://tests/godot/test_profile_onboarding.gd" with error "Compilation failed".
+   at: load (modules/gdscript/gdscript_resource_format.cpp:46)
+Unicode parsing error, some characters were replaced with � (U+FFFD): Unexpected NUL character
+Unicode parsing error, some characters were replaced with � (U+FFFD): Unexpected NUL character
+Unicode parsing error, some characters were replaced with � (U+FFFD): Unexpected NUL character
+ERROR: Condition "len < 4" is true. Returning: ERR_INVALID_DATA
+   at: decode_variant (core/io/marshalls.cpp:191)
+   GDScript backtrace (most recent call first):
+       [0] get_stored (res://scripts/glob.gd:386)
+       [1] get_var (res://scripts/glob.gd:381)
+       [2] _enter_tree (res://scripts/glob.gd:1539)
+ERROR: Error when trying to encode Variant.
+   at: get_var (core/io/file_access.cpp:372)
+   GDScript backtrace (most recent call first):
+       [0] get_stored (res://scripts/glob.gd:386)
+       [1] get_var (res://scripts/glob.gd:381)
+       [2] _enter_tree (res://scripts/glob.gd:1539)
+ERROR: Condition "len < 4" is true. Returning: ERR_INVALID_DATA
+   at: decode_variant (core/io/marshalls.cpp:191)
+   GDScript backtrace (most recent call first):
+       [0] get_stored (res://scripts/glob.gd:386)
+       [1] get_var (res://scripts/glob.gd:381)
+       [2] _enter_tree (res://scripts/glob.gd:1544)
+ERROR: Error when trying to encode Variant.
+   at: get_var (core/io/file_access.cpp:372)
+   GDScript backtrace (most recent call first):
+       [0] get_stored (res://scripts/glob.gd:386)
+       [1] get_var (res://scripts/glob.gd:381)
+       [2] _enter_tree (res://scripts/glob.gd:1544)
+ERROR: Condition "len < 4" is true. Returning: ERR_INVALID_DATA
+   at: decode_variant (core/io/marshalls.cpp:191)
+   GDScript backtrace (most recent call first):
+       [0] get_stored (res://scripts/glob.gd:386)
+       [1] get_var (res://scripts/glob.gd:381)
+       [2] cache (res://scripts/learner.gd:19)
+       [3] _enter_tree (res://scripts/learner.gd:33)
+ERROR: Error when trying to encode Variant.
+   at: get_var (core/io/file_access.cpp:372)
+   GDScript backtrace (most recent call first):
+       [0] get_stored (res://scripts/glob.gd:386)
+       [1] get_var (res://scripts/glob.gd:381)
+       [2] cache (res://scripts/learner.gd:19)
+       [3] _enter_tree (res://scripts/learner.gd:33)
+ERROR: Condition "len < 4" is true. Returning: ERR_INVALID_DATA
+   at: decode_variant (core/io/marshalls.cpp:191)
+   GDScript backtrace (most recent call first):
+       [0] get_stored (res://scripts/glob.gd:386)
+       [1] set_var (res://scripts/glob.gd:375)
+       [2] cache (res://scripts/learner.gd:25)
+       [3] _enter_tree (res://scripts/learner.gd:33)
+ERROR: Error when trying to encode Variant.
+   at: get_var (core/io/file_access.cpp:372)
+   GDScript backtrace (most recent call first):
+       [0] get_stored (res://scripts/glob.gd:386)
+       [1] set_var (res://scripts/glob.gd:375)
+       [2] cache (res://scripts/learner.gd:25)
+       [3] _enter_tree (res://scripts/learner.gd:33)
+SCRIPT ERROR: Invalid call. Nonexistent function 'dialog_spec' in base 'GDScript'.
+   at: _test_dialog_contract_and_prefill (res://tests/godot/test_profile_onboarding.gd:168)
+   GDScript backtrace (most recent call first):
+       [0] _test_dialog_contract_and_prefill (res://tests/godot/test_profile_onboarding.gd:168)
+       [1] _run (res://tests/godot/test_profile_onboarding.gd:150)
+SCRIPT ERROR: Invalid call. Nonexistent function 'new' in base 'GDScript'.
+   at: _test_normal_onboarding (res://tests/godot/test_profile_onboarding.gd:204)
+   GDScript backtrace (most recent call first):
+       [0] _test_normal_onboarding (res://tests/godot/test_profile_onboarding.gd:204)
+       [1] _run (res://tests/godot/test_profile_onboarding.gd:151)
+SCRIPT ERROR: Invalid call. Nonexistent function 'new' in base 'GDScript'.
+   at: _test_local_onboarding_without_browser_auth (res://tests/godot/test_profile_onboarding.gd:220)
+   GDScript backtrace (most recent call first):
+       [0] _test_local_onboarding_without_browser_auth (res://tests/godot/test_profile_onboarding.gd:220)
+       [1] _run (res://tests/godot/test_profile_onboarding.gd:152)
+SCRIPT ERROR: Invalid call. Nonexistent function 'new' in base 'GDScript'.
+   at: _test_local_profile_handoff_after_browser_login (res://tests/godot/test_profile_onboarding.gd:247)
+   GDScript backtrace (most recent call first):
+       [0] _test_local_profile_handoff_after_browser_login (res://tests/godot/test_profile_onboarding.gd:247)
+       [1] _run (res://tests/godot/test_profile_onboarding.gd:153)
+SCRIPT ERROR: Invalid call. Nonexistent function 'new' in base 'GDScript'.
+   at: _test_completed_profile_is_asked_again (res://tests/godot/test_profile_onboarding.gd:279)
+   GDScript backtrace (most recent call first):
+       [0] _test_completed_profile_is_asked_again (res://tests/godot/test_profile_onboarding.gd:279)
+       [1] _run (res://tests/godot/test_profile_onboarding.gd:154)
+SCRIPT ERROR: Invalid call. Nonexistent function 'new' in base 'GDScript'.
+   at: _test_pilot_registration_path (res://tests/godot/test_profile_onboarding.gd:297)
+   GDScript backtrace (most recent call first):
+       [0] _test_pilot_registration_path (res://tests/godot/test_profile_onboarding.gd:297)
+       [1] _run (res://tests/godot/test_profile_onboarding.gd:155)
+SCRIPT ERROR: Invalid call. Nonexistent function 'new' in base 'GDScript'.
+   at: _test_pilot_mode_asks_names_before_creating_device_session_every_launch (res://tests/godot/test_profile_onboarding.gd:333)
+   GDScript backtrace (most recent call first):
+       [0] _test_pilot_mode_asks_names_before_creating_device_session_every_launch (res://tests/godot/test_profile_onboarding.gd:333)
+       [1] _run (res://tests/godot/test_profile_onboarding.gd:156)
+PASS test_profile_onboarding
